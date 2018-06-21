@@ -27,4 +27,12 @@ class HomeController < ApplicationController
   def blog_show
     render layout: "blog_single_application"
   end
+
+  def sign_in
+    render layout: "plain_application"
+  end
+
+  def sign_up
+    render layout: "plain_application"
+  end
 end

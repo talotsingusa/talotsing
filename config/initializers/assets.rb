@@ -19,7 +19,8 @@ Rails.application.config.assets.precompile += %w( blog_application.css )
 Rails.application.config.assets.precompile += %w( blog_application.js )
 Rails.application.config.assets.precompile += %w( blog_single_application.css )
 Rails.application.config.assets.precompile += %w( blog_single_application.js )
-
+Rails.application.config.assets.precompile += %w( plain_application.css )
+Rails.application.config.assets.precompile += %w( plain_application.js )
 # Precompile additional assets.
 # application.js, application.css.scss, and all non-JS/CSS in the app/assets
 # folder are already added.
