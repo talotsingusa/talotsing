@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/blog_application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/blog_application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/blog_single_application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/blog_single_application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/cart_application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/cart_application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/contact_application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/contact_application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/plain_application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/plain_application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/product_application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/product_application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/shop_application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/shop_application.html.erb" />
-    </list>
+    <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -30,6 +21,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -65,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plain_application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/plain_application.html.erb">
+      <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,16 +98,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="product_application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/product_application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_header_web.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -237,7 +228,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="833" />
@@ -270,40 +261,12 @@
             <path>
               <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
               <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Assets" type="f36ffe3d:AssetsTopLevelFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Assets" type="f36ffe3d:AssetsTopLevelFolderNode" />
-              <item name="Stylesheets" type="8736b8df:AssetsPredefinedGroupFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Assets" type="f36ffe3d:AssetsTopLevelFolderNode" />
-              <item name="Javascripts" type="8736b8df:AssetsPredefinedGroupFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
               <item name="Config" type="9a8f28a7:ConfigFolderNode" />
             </path>
             <path>
               <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
               <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
               <item name="Layouts" type="8e5d065:LayoutsFolder" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Layouts" type="8e5d065:LayoutsFolder" />
-              <item name="partials" type="5687bcba:LayoutsSubFolder" />
             </path>
           </expand>
           <select />
@@ -457,15 +420,15 @@
       <updated>1528585462314</updated>
       <workItem from="1528585463857" duration="4639000" />
       <workItem from="1529267231695" duration="12365000" />
-      <workItem from="1529535008361" duration="10585000" />
+      <workItem from="1529535008361" duration="10914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27589000" />
+    <option name="totallyTimeSpent" value="27918000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="833" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="833" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -566,14 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -764,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/contact_application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -910,6 +857,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="43" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding />
         </state>
       </provider>
