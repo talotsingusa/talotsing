@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-
+  skip_before_action :authenticate_user!
   def index
 
   end
@@ -28,11 +28,4 @@ class HomeController < ApplicationController
     render layout: "blog_single_application"
   end
 
-  def sign_in
-    render layout: "plain_application"
-  end
-
-  def sign_up
-    render layout: "plain_application"
-  end
 end

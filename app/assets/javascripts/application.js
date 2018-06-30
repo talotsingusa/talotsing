@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require jquery-ui
 //= require turbolinks
+//= require datatables
 //= require jquery.easing
 //= require greensock/TweenLite
 //= require greensock/easing/EasePack
@@ -26,6 +27,7 @@
 //= require jquery.parallax
 //= require jquery.slick
 //= require jquery.sliders
+//= require toastr
 //= require custom.js
 
 

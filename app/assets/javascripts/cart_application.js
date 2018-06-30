@@ -26,6 +26,7 @@
 //= require jquery.parallax
 //= require jquery.slick
 //= require jquery.sliders
+//= require toastr
 //= require cart_custom.js
 
 

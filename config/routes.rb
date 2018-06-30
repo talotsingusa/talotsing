@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => {:registrations => "users/registrations", confirmations: 'users/confirmations', sessions: "users/sessions"}
   root to: 'home#index'
   get 'home/shop' => "home#shop", as: :shop
   get 'home/product' => "home#product", as: :product
@@ -6,8 +7,29 @@ Rails.application.routes.draw do
   get 'home/contact' => "home#contact", as: :contact
   get 'home/blog' => "home#blog", as: :blog
   get 'home/blog_show' => "home#blog_show", as: :blog_show
-  get 'home/sign_in' => "home#sign_in", as: :sign_in
-  get 'home/sign_up' => "home#sign_up", as: :sign_up
+  resources :dashboards
+  get 'brands_list' => "dashboards#brands_list", as: :brands_list
+  get 'add_brand' => "dashboards#add_brand", as: :add_brand
+  post 'create_brand' => "dashboards#create_brand", as: :create_brand
 
+  get 'catergory_list' => "dashboards#catergory_list", as: :catergory_list
+  get 'add_catergory' => "dashboards#add_catergory", as: :add_catergory
+  post 'create_catergory' => "dashboards#create_catergory", as: :create_catergory
+
+  get 'sub_category_list' => "dashboards#sub_category_list", as: :sub_category_list
+  get 'add_sub_category' => "dashboards#add_sub_category", as: :add_sub_category
+  post 'create_sub_category' => "dashboards#create_sub_category", as: :create_sub_category
+
+  get 'product_type_list' => "dashboards#product_type_list", as: :product_type_list
+  get 'add_product_type' => "dashboards#add_product_type", as: :add_product_type
+  post 'create_product_type' => "dashboards#create_product_type", as: :create_product_type
+
+  get 'store' => "dashboards#store", as: :store
+  get 'add_store' => "dashboards#add_store", as: :add_store
+  post 'create_store' => "dashboards#create_store", as: :create_store
+
+  get 'product_list' => "dashboards#product_list", as: :product_list
+  get 'add_product' => "dashboards#add_product", as: :add_product
+  post 'create_product' => "dashboards#create_product", as: :create_product
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

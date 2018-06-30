@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
@@ -45,6 +45,16 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  config.paperclip_defaults = {
+      storage: :s3,
+      s3_credentials: {
+          bucket: 'talotsing',
+          access_key_id: 'AKIAJS65XMXQCKKV5OJQ',
+          secret_access_key: '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',
+          s3_region: 'us-east-1',
+          s3_host_name: 's3.amazonaws.com'
+      }
+  }
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

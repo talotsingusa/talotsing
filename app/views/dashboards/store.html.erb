@@ -1,0 +1,48 @@
+<div class="main-content">
+  <div class="section__content section__content--p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Your Store</h2>
+                <%= link_to add_store_path, class: "au-btn au-btn-icon au-btn--blue" do  %>
+                    <i class="zmdi zmdi-plus"></i>Add Store
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="table-responsive table--no-card m-b-30">
+            <table class="table table-borderless table-striped table-earning" id="store_list">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th class="text-right">Description</th>
+                <th class="text-right">Created at</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @store.each do |store| %>
+                  <tr>
+                    <td><%= store.id %></td>
+                    <td><%= store.name %></td>
+                    <td><%= store.description %></td>
+                    <td class="text-right"><%= store.created_at %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $( document ).on('turbolinks:load', function() {
+        $("#store_list").dataTable();
+    });
+</script>

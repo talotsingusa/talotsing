@@ -1,0 +1,36 @@
+
+
+<div class="contact_form">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="contact_form_container">
+          <div class="contact_form_title">Sign In</div>
+
+
+            <%= form_for resource, as: resource_name, url: session_path(resource_name), id: "contact_form"   do |f| %>
+            <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+              <%= f.email_field :email, autofocus: true, class: "contact_form_name input_field", placeholder: "Your Email", required: true %>
+            </div>
+            <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+              <%= f.text_field :password, autofocus: true, class: "contact_form_name input_field", placeholder: "Password", required: true %>
+            </div>
+
+              <% if devise_mapping.rememberable? %>
+                  <%= f.check_box :remember_me %>
+                  <label for="user_remember_me" class="mt20">
+                    <i></i>
+                    <span><%= t('login_page.remember_me') %></span>
+                  </label>
+              <% end %>
+            <div class="contact_form_button">
+              <%= f.submit "Sign In", class: 'button contact_submit_button' %>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel"></div>
+</div>
