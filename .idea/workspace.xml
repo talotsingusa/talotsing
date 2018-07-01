@@ -2,20 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-18bd3ecdda84f244b0c26dec3d8cdc2b.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0116ecfaaa8d073b9aff18cf11355df5ffc9492c0eb5ecb77fbb103e3d3f7be7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0116ecfaaa8d073b9aff18cf11355df5ffc9492c0eb5ecb77fbb103e3d3f7be7.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e40215ca84d6878e393ef27962f80dbda93d3b1fceda786c21d5ae6c612d7723.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-e40215ca84d6878e393ef27962f80dbda93d3b1fceda786c21d5ae6c612d7723.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-b5bc7fe0612c388e93d1c5525b3f3c0b2a970cdd8a40598e82620855707792cf.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-b5bc7fe0612c388e93d1c5525b3f3c0b2a970cdd8a40598e82620855707792cf.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-8c4003ca0c2dbb41bf0108a0beef7d7bc21ee14c0c636f8e3e79817e44e33ba9.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-8c4003ca0c2dbb41bf0108a0beef7d7bc21ee14c0c636f8e3e79817e44e33ba9.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-d456c4549aabba49db71315e1edfca194c5aafb5e761161d1a9a7877b2934cfa.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-d456c4549aabba49db71315e1edfca194c5aafb5e761161d1a9a7877b2934cfa.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dashboard_application-913ec319b5b5cde0ce91c85d82ba7d8c2523489efc6225b559af840b2ff0cc2f.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/dashboard_application-913ec319b5b5cde0ce91c85d82ba7d8c2523489efc6225b559af840b2ff0cc2f.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-989f1229965bb6cdf2be926f6106a42480b05e9fb4f6d364e5adbcdc6e648d70.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-989f1229965bb6cdf2be926f6106a42480b05e9fb4f6d364e5adbcdc6e648d70.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-370842cd0d18a6daa05dca84b0b46261109a9290b4f8398c47d0e362542263b2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-370842cd0d18a6daa05dca84b0b46261109a9290b4f8398c47d0e362542263b2.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/slick-8ca11b5fcbff92ee6378017cf6832dddfa745253202d7c8d01f42d5d17c4cb5c.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/slick-8ca11b5fcbff92ee6378017cf6832dddfa745253202d7c8d01f42d5d17c4cb5c.svg.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/slick/ajax-loader-e7b44c86b050fca766a96ddac2d0932af0126da6f2305280342d909168dcce6b.gif" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/blog_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" afterPath="$PROJECT_DIR$/public/assets/blog_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" afterPath="$PROJECT_DIR$/public/assets/blog_single_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/cart_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" afterPath="$PROJECT_DIR$/public/assets/cart_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/contact_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js.gz" afterPath="$PROJECT_DIR$/public/assets/contact_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/dashboard_application-186dcc12c98da6cbb9a07393fc32dc6fe3843e2dbe0809a6585b5087b47c2d6c.js.gz" afterPath="$PROJECT_DIR$/public/assets/dashboard_application-186dcc12c98da6cbb9a07393fc32dc6fe3843e2dbe0809a6585b5087b47c2d6c.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/plain_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js.gz" afterPath="$PROJECT_DIR$/public/assets/plain_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/product_application-9e6904c8fd2d20dc858e494436773025d224071ae307bed72210ffee440f1be1.js.gz" afterPath="$PROJECT_DIR$/public/assets/product_application-9e6904c8fd2d20dc858e494436773025d224071ae307bed72210ffee440f1be1.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/shop_application-49b09a802adf4a47a3b2d2793f5fc043e0ecc4442d92f7876e42a857804da7a6.js.gz" afterPath="$PROJECT_DIR$/public/assets/shop_application-49b09a802adf4a47a3b2d2793f5fc043e0ecc4442d92f7876e42a857804da7a6.js.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot.gz" afterPath="$PROJECT_DIR$/public/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/slick-37bc99cfdbbc046193a26396787374d00e7b10d3a758a36045c07bd8886360d2.ttf.gz" afterPath="$PROJECT_DIR$/public/assets/slick-37bc99cfdbbc046193a26396787374d00e7b10d3a758a36045c07bd8886360d2.ttf.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/custom.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/main.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sub_category.rb" afterPath="$PROJECT_DIR$/app/models/sub_category.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -31,11 +57,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
               <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -51,76 +97,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="assets.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <file leaf-file-name="application.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard_application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboard_application.js">
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="283">
+              <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog_custom.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/blog_custom.js">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="236">
+              <caret line="3928" column="21" lean-forward="false" selection-start-line="3928" selection-start-column="21" selection-end-line="3928" selection-end-column="21" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1530410526774" expanded="false" signature="7159:7168" ph="..." />
+                <marker date="1530410526774" expanded="false" signature="9947:9956" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboards.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/dashboards.coffee">
+      <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datatables.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/datatables.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.coffee" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plain_application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/plain_application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -128,9 +143,21 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+            <state relative-caret-position="285">
+              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,11 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logo_container</find>
-      <find>car</find>
-      <find>cd-main-nav__item</find>
-      <find>config.assets.compile</find>
-      <find>OneTech shop project</find>
       <find>sqlite3</find>
       <find>images/</find>
       <find>turbolin</find>
@@ -169,6 +191,11 @@
       <find>gem &quot;jquery-slick-rails&quot;</find>
       <find>config.assets.precompile</find>
       <find>slick</find>
+      <find>turbolinks</find>
+      <find>turb</find>
+      <find>panel</find>
+      <find>featured_slider</find>
+      <find>compile</find>
     </findStrings>
     <replaceStrings>
       <replace>/assets/</replace>
@@ -180,8 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/models/store.rb" />
         <option value="$PROJECT_DIR$/app/models/product_color.rb" />
         <option value="$PROJECT_DIR$/app/models/product_size.rb" />
         <option value="$PROJECT_DIR$/app/models/product_brand.rb" />
@@ -216,7 +241,6 @@
         <option value="$PROJECT_DIR$/app/models/size.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/product_list.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
@@ -225,11 +249,14 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb" />
         <option value="$PROJECT_DIR$/app/models/sub_category.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/main.js" />
-        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/custom.js" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/initializers/paperclip.rb" />
       </list>
     </option>
@@ -331,7 +358,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/shop.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;show&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/blog_show.html.erb&#10;hom&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;home&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;brands_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_brands_web.html.erb&#10;asse&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;footer_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;applica&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/application.html.erb&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb" />
+    <property name="SearchEverywhereHistoryKey" value="prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;appl&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/index.html.erb&#10;custo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/custom.js&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/shop.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;show&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/blog_show.html.erb&#10;hom&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;home&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;brands_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_brands_web.html.erb&#10;asse&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;footer_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;applica&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/application.html.erb&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RecentsManager">
@@ -473,12 +500,12 @@
       <updated>1528585462314</updated>
       <workItem from="1528585463857" duration="4639000" />
       <workItem from="1529267231695" duration="12365000" />
-      <workItem from="1529535008361" duration="56118000" />
+      <workItem from="1529535008361" duration="56767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73122000" />
+    <option name="totallyTimeSpent" value="73771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="833" extended-state="0" />
@@ -517,14 +544,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="75" lean-forward="false" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_dashboard_sidenav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
@@ -637,14 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboards/store.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -690,17 +701,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1303">
-          <caret line="94" column="35" lean-forward="false" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
-          <folding>
-            <marker date="1530402590288" expanded="false" signature="7159:7168" ph="..." />
-            <marker date="1530402590288" expanded="false" signature="9947:9956" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,30 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -789,7 +765,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,7 +775,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,7 +785,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -819,7 +795,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -829,7 +805,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -839,7 +815,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -849,17 +825,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -877,7 +843,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -916,14 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -936,6 +894,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="3928" column="21" lean-forward="false" selection-start-line="3928" selection-start-column="21" selection-end-line="3928" selection-end-column="21" />
+          <folding>
+            <marker date="1530410526774" expanded="false" signature="7159:7168" ph="..." />
+            <marker date="1530410526774" expanded="false" signature="9947:9956" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="69" />
           <folding />
         </state>
       </provider>

@@ -10374,7 +10374,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /* Slider */
-/* line 2, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 2, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slider {
   position: relative;
   display: block;
@@ -10389,7 +10389,7 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 21, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 23, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-list {
   position: relative;
   display: block;
@@ -10398,52 +10398,50 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
 }
 
-/* line 31, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 33, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-list:focus {
   outline: none;
 }
 
-/* line 35, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 37, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-/* line 41, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 43, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 51, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 53, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-track {
   position: relative;
   top: 0;
   left: 0;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* line 61, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 61, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-track:before,
 .slick-track:after {
   display: table;
   content: '';
 }
 
-/* line 68, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 68, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-track:after {
   clear: both;
 }
 
-/* line 72, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 72, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-/* line 77, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 77, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide {
   display: none;
   float: left;
@@ -10451,50 +10449,50 @@ a.text-dark:hover, a.text-dark:focus {
   min-height: 1px;
 }
 
-/* line 85, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 85, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 [dir='rtl'] .slick-slide {
   float: right;
 }
 
-/* line 89, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 89, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide img {
   display: block;
 }
 
-/* line 93, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 93, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide.slick-loading img {
   display: none;
 }
 
-/* line 97, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 97, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-/* line 101, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 101, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-initialized .slick-slide {
   display: block;
 }
 
-/* line 105, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 105, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-/* line 109, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 109, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
 
-/* line 117, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 118, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-arrow.slick-hidden {
   display: none;
 }
 
 /* Slider */
-/* line 2, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 2, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slider {
   position: relative;
   display: block;
@@ -10509,7 +10507,7 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 21, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 23, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-list {
   position: relative;
   display: block;
@@ -10518,52 +10516,50 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
 }
 
-/* line 31, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 33, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-list:focus {
   outline: none;
 }
 
-/* line 35, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 37, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-/* line 41, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 43, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slider .slick-track,
 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-/* line 51, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 53, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-track {
   position: relative;
   top: 0;
   left: 0;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* line 61, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 61, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-track:before,
 .slick-track:after {
   display: table;
   content: '';
 }
 
-/* line 68, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 68, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-track:after {
   clear: both;
 }
 
-/* line 72, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 72, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-/* line 77, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 77, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide {
   display: none;
   float: left;
@@ -10571,237 +10567,217 @@ a.text-dark:hover, a.text-dark:focus {
   min-height: 1px;
 }
 
-/* line 85, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 85, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 [dir='rtl'] .slick-slide {
   float: right;
 }
 
-/* line 89, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 89, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide img {
   display: block;
 }
 
-/* line 93, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 93, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide.slick-loading img {
   display: none;
 }
 
-/* line 97, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 97, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-/* line 101, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 101, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-initialized .slick-slide {
   display: block;
 }
 
-/* line 105, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 105, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-/* line 109, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 109, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
 
-/* line 117, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick.css */
+/* line 118, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick.scss */
 .slick-arrow.slick-hidden {
   display: none;
 }
 
 /* Slider */
-/* line 3, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 40, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-loading .slick-list {
-  background: #fff url(/assets/slick/ajax-loader-e7b44c86b050fca766a96ddac2d0932af0126da6f2305280342d909168dcce6b.gif) center center no-repeat;
+  background: #fff url(/assets/ajax-loader-e7b44c86b050fca766a96ddac2d0932af0126da6f2305280342d909168dcce6b.gif) center center no-repeat;
 }
 
 /* Icons */
 @font-face {
-  font-family: 'slick';
+  font-family: "slick";
+  src: url(/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot);
+  src: url(/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot?#iefix) format("embedded-opentype"), url(/assets/slick-26726bac4060abb1226e6ceebc1336e84930fe7a7af1b3895a109d067f5b5dcc.woff) format("woff"), url(/assets/slick-37bc99cfdbbc046193a26396787374d00e7b10d3a758a36045c07bd8886360d2.ttf) format("truetype"), url(/assets/slick-12459f221a0b787bf1eaebf2e4c48fca2bd9f8493f71256c3043e7a0c7e932f6.svg#slick) format("svg");
   font-weight: normal;
   font-style: normal;
-  src: url(/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot);
-  src: url(/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot?#iefix) format("embedded-opentype"), url(/assets/slick-26726bac4060abb1226e6ceebc1336e84930fe7a7af1b3895a109d067f5b5dcc.woff) format("woff"), url(/assets/slick-37bc99cfdbbc046193a26396787374d00e7b10d3a758a36045c07bd8886360d2.ttf) format("truetype"), url(/assets/slick-8ca11b5fcbff92ee6378017cf6832dddfa745253202d7c8d01f42d5d17c4cb5c.svg#slick) format("svg");
 }
 /* Arrows */
-/* line 22, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 58, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-prev,
 .slick-next {
-  font-size: 0;
-  line-height: 0;
   position: absolute;
-  top: 50%;
   display: block;
-  width: 20px;
   height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
   margin-top: -10px;
   padding: 0;
-  cursor: pointer;
-  color: transparent;
   border: none;
   outline: none;
-  background: transparent;
 }
-
-/* line 45, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-.slick-prev:hover,
-.slick-prev:focus,
+/* line 74, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+.slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-  color: transparent;
   outline: none;
   background: transparent;
+  color: transparent;
 }
-
-/* line 54, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-.slick-prev:hover:before,
-.slick-prev:focus:before,
+/* line 78, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+.slick-prev:hover:before, .slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before {
   opacity: 1;
 }
-
-/* line 61, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 82, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
-  opacity: .25;
+  opacity: 0.25;
 }
 
-/* line 67, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-.slick-prev:before,
-.slick-next:before {
-  font-family: 'slick';
+/* line 87, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+.slick-prev:before, .slick-next:before {
+  font-family: "slick";
   font-size: 20px;
   line-height: 1;
-  opacity: .75;
   color: white;
+  opacity: 0.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 81, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 97, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-prev {
   left: -25px;
 }
-
-/* line 85, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-[dir='rtl'] .slick-prev {
-  right: -25px;
+/* line 99, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+[dir="rtl"] .slick-prev {
   left: auto;
+  right: -25px;
 }
-
-/* line 90, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 103, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-prev:before {
-  content: '←';
+  content: "←";
+}
+/* line 105, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+[dir="rtl"] .slick-prev:before {
+  content: "→";
 }
 
-/* line 94, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-[dir='rtl'] .slick-prev:before {
-  content: '→';
-}
-
-/* line 99, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 111, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-next {
   right: -25px;
 }
-
-/* line 103, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-[dir='rtl'] .slick-next {
-  right: auto;
+/* line 113, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+[dir="rtl"] .slick-next {
   left: -25px;
+  right: auto;
 }
-
-/* line 108, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 117, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-next:before {
-  content: '→';
+  content: "→";
 }
-
-/* line 112, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-[dir='rtl'] .slick-next:before {
-  content: '←';
+/* line 119, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+[dir="rtl"] .slick-next:before {
+  content: "←";
 }
 
 /* Dots */
-/* line 118, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 127, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-slider {
   margin-bottom: 30px;
 }
 
-/* line 123, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 131, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-dots {
   position: absolute;
   bottom: -45px;
-  display: block;
-  width: 100%;
-  padding: 0;
   list-style: none;
+  display: block;
   text-align: center;
+  padding: 0;
+  width: 100%;
 }
-
-/* line 137, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 139, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-dots li {
   position: relative;
   display: inline-block;
-  width: 20px;
   height: 20px;
+  width: 20px;
   margin: 0 5px;
   padding: 0;
   cursor: pointer;
 }
-
-/* line 150, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 147, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-dots li button {
-  font-size: 0;
-  line-height: 0;
+  border: 0;
+  background: transparent;
   display: block;
-  width: 20px;
   height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
   padding: 5px;
   cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;
 }
-
-/* line 168, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-.slick-dots li button:hover,
-.slick-dots li button:focus {
+/* line 159, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
   outline: none;
 }
-
-/* line 173, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
+/* line 161, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
   opacity: 1;
 }
-
-/* line 178, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 165, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-dots li button:before {
-  font-family: 'slick';
-  font-size: 6px;
-  line-height: 20px;
   position: absolute;
   top: 0;
   left: 0;
+  content: "•";
   width: 20px;
   height: 20px;
-  content: '•';
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
   text-align: center;
-  opacity: .25;
   color: black;
+  opacity: 0.25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* line 200, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/jquery-slick-rails-1.9.0/app/assets/stylesheets/slick-theme.css.erb */
+/* line 182, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/slick_rails-1.5.9/app/assets/stylesheets/slick-theme.scss */
 .slick-dots li.slick-active button:before {
-  opacity: .75;
   color: black;
+  opacity: 0.75;
 }
 
 /* line 1, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/select2-rails-4.0.3/vendor/assets/stylesheets/select2.css */
