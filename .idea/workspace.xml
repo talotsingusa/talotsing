@@ -2,9 +2,98 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-0116ecfaaa8d073b9aff18cf11355df5ffc9492c0eb5ecb77fbb103e3d3f7be7.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-e40215ca84d6878e393ef27962f80dbda93d3b1fceda786c21d5ae6c612d7723.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bg-title-01-dfef6fdcdc090e99c6156535cb4b5a9ae74257d493c9a1921180e39e3b631f54.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/bg-title-02-b65343a735fc1b6c358cb3f6ccfb9bac8308ba345708eaee414040e25b7a98b0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_application-b5bc7fe0612c388e93d1c5525b3f3c0b2a970cdd8a40598e82620855707792cf.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_single_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_single_application-8c4003ca0c2dbb41bf0108a0beef7d7bc21ee14c0c636f8e3e79817e44e33ba9.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/cart_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/cart_application-d456c4549aabba49db71315e1edfca194c5aafb5e761161d1a9a7877b2934cfa.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/chosen-sprite-8aa69ee6b2376505578d758bfbbc52aec88fa5e591f1a7cabd8adfa80a7b613a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/chosen-sprite@2x-1e349b80fba8c23b63656925fda8dfe3c5927b5d0d8a1672143416caacf460fb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/contact_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/contact_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/dashboard_application-186dcc12c98da6cbb9a07393fc32dc6fe3843e2dbe0809a6585b5087b47c2d6c.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/dashboard_application-913ec319b5b5cde0ce91c85d82ba7d8c2523489efc6225b559af840b2ff0cc2f.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/Untitled-1-a6cd8f3bf90cd8cd28252e343d8871f90399a71ea86690fc8b07d3d8b361fe8d.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/avatar-01-2728bf6879b0d88a1b1174cf11edfdf50924417800c7440a4196cd0360f9e4f7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/avatar-02-287927e27f72bead66105f334e7ec2aeb85c7f488dceb2aa9b7cd1c34866ebc4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/avatar-03-1218796990ebc583859d7211d38c9dc6c1d4cd1eb252ab39f4414a04f54f9aa2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/avatar-04-edf6067d5e7a4b2e825744c57923055afaa156981a42d65af15d5743768693f4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/avatar-05-c338c8211b5c23e5d5d236c0aaf6f0b726dbfd59c91595ed5ab4c805cfa12393.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/avatar-06-a6cd8f3bf90cd8cd28252e343d8871f90399a71ea86690fc8b07d3d8b361fe8d.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/avatar-big-01-9d29fe63bfa6c36de047cf50bf2d81df3d63641b3cc32f2862252939ff64c837.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/logo-8abadebb81e8a1f590d51a5e2d8fe398df4cdae290584449c7968041916dade1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/logo-blue-aab2d3aa14a52b0aaf23072d85aa2a814fa210fcd3fcab4546fb5932ec95ee1a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/logo-mini-e90b40618e9c9db012ef8215693e51ed8c73f51e8e8e80e221abbcff8d32efd4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/icon/logo-white-2526aa5976610919c246db565f715428957c682917411652f4eee82d726e5aa4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/modernizr-654222debe8018b12f1993ceddff30dc163a7d5008d79869c399d6d167321f97.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/plain_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/plain_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/product_application-989f1229965bb6cdf2be926f6106a42480b05e9fb4f6d364e5adbcdc6e648d70.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/product_application-9e6904c8fd2d20dc858e494436773025d224071ae307bed72210ffee440f1be1.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/shop_application-370842cd0d18a6daa05dca84b0b46261109a9290b4f8398c47d0e362542263b2.css.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/shop_application-49b09a802adf4a47a3b2d2793f5fc043e0ecc4442d92f7876e42a857804da7a6.js.gz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-18bd3ecdda84f244b0c26dec3d8cdc2b.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-0116ecfaaa8d073b9aff18cf11355df5ffc9492c0eb5ecb77fbb103e3d3f7be7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/application-e40215ca84d6878e393ef27962f80dbda93d3b1fceda786c21d5ae6c612d7723.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_application-b5bc7fe0612c388e93d1c5525b3f3c0b2a970cdd8a40598e82620855707792cf.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_single_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/blog_single_application-8c4003ca0c2dbb41bf0108a0beef7d7bc21ee14c0c636f8e3e79817e44e33ba9.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/cart_application-7a31dd4e3e2cdeea9056155155e63f71c7a6f3ef652d21a0f03d11d9a83ed494.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/cart_application-d456c4549aabba49db71315e1edfca194c5aafb5e761161d1a9a7877b2934cfa.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/contact_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/contact_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/dashboard_application-186dcc12c98da6cbb9a07393fc32dc6fe3843e2dbe0809a6585b5087b47c2d6c.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/dashboard_application-913ec319b5b5cde0ce91c85d82ba7d8c2523489efc6225b559af840b2ff0cc2f.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/modernizr-654222debe8018b12f1993ceddff30dc163a7d5008d79869c399d6d167321f97.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/plain_application-2c2c952cbe2fda23d8dcfe4395cfcb0437c133a03be4b9a6b1fdce620951ee98.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/plain_application-a74c5176f0f44f8721e22f23e8a16841eac563cf9218af428d6c0328e1981f72.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/product_application-989f1229965bb6cdf2be926f6106a42480b05e9fb4f6d364e5adbcdc6e648d70.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/product_application-9e6904c8fd2d20dc858e494436773025d224071ae307bed72210ffee440f1be1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/shop_application-370842cd0d18a6daa05dca84b0b46261109a9290b4f8398c47d0e362542263b2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/shop_application-49b09a802adf4a47a3b2d2793f5fc043e0ecc4442d92f7876e42a857804da7a6.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-4db8eb9928b1ee3eedba339797e843fc.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-7c9e364cacc2695c9b4e75f7cc2bf5e2c3dea63238ecbe43657587fbf122068a.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-7c9e364cacc2695c9b4e75f7cc2bf5e2c3dea63238ecbe43657587fbf122068a.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-fd2f331dc30d4b81c53d18a2a71f82e6aa6c2417f53ac24acc93d95de9654f14.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-fd2f331dc30d4b81c53d18a2a71f82e6aa6c2417f53ac24acc93d95de9654f14.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-4bc09180be644ea0f34015aaf7f04db548a786273f3e5926a00b541255b2d8c4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-4bc09180be644ea0f34015aaf7f04db548a786273f3e5926a00b541255b2d8c4.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-50f07c7ff9ccdb9c69b87c8a869b155b789b79223e9fbc8cb50d14c93f7ef8aa.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-50f07c7ff9ccdb9c69b87c8a869b155b789b79223e9fbc8cb50d14c93f7ef8aa.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-37390340fd86d6a5d7821ade140cfac05fbee8d95aabd6d833f4f084b77fea6f.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-37390340fd86d6a5d7821ade140cfac05fbee8d95aabd6d833f4f084b77fea6f.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-4bc09180be644ea0f34015aaf7f04db548a786273f3e5926a00b541255b2d8c4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-4bc09180be644ea0f34015aaf7f04db548a786273f3e5926a00b541255b2d8c4.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-4bc09180be644ea0f34015aaf7f04db548a786273f3e5926a00b541255b2d8c4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-4bc09180be644ea0f34015aaf7f04db548a786273f3e5926a00b541255b2d8c4.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-d0f509b59c06ea0cb8c97a21944fbb3eb717b76b09e8a7d7e20fc0c0eae920ab.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-d0f509b59c06ea0cb8c97a21944fbb3eb717b76b09e8a7d7e20fc0c0eae920ab.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-8f9bad239372e8f27a2ecafb7440b22172f5a694b3c2c0656851f2c7d17187da.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-8f9bad239372e8f27a2ecafb7440b22172f5a694b3c2c0656851f2c7d17187da.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-f0829dc51249393c08f580fd296ae011a0bc251ab9bc9cf3135b2ddd6e03ad7b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-f0829dc51249393c08f580fd296ae011a0bc251ab9bc9cf3135b2ddd6e03ad7b.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/modernizr-fab1909d66e177475f7672b0eef8ca0cbd10c083c07b7b84b85d96ff443216f4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/modernizr-fab1909d66e177475f7672b0eef8ca0cbd10c083c07b7b84b85d96ff443216f4.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-8f9bad239372e8f27a2ecafb7440b22172f5a694b3c2c0656851f2c7d17187da.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-8f9bad239372e8f27a2ecafb7440b22172f5a694b3c2c0656851f2c7d17187da.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-f0829dc51249393c08f580fd296ae011a0bc251ab9bc9cf3135b2ddd6e03ad7b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-f0829dc51249393c08f580fd296ae011a0bc251ab9bc9cf3135b2ddd6e03ad7b.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-6120524e013ae82ca0404e25732a0d229e2761fd41bac574d0a48eb750077499.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-6120524e013ae82ca0404e25732a0d229e2761fd41bac574d0a48eb750077499.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-e7d7328e6ee51a54dfba795abb7d41446a656fd2aef1fa3e9a8117b6d6197402.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-e7d7328e6ee51a54dfba795abb7d41446a656fd2aef1fa3e9a8117b6d6197402.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-317ea75d97548098d1adecbecc6b35f1cbe459222abbbebcac584d11d9cbce1f.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-317ea75d97548098d1adecbecc6b35f1cbe459222abbbebcac584d11d9cbce1f.css.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-506833fd4ebcac560f111047cfc339f75b695758c9f1f7178bf417fc3fd787f6.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-506833fd4ebcac560f111047cfc339f75b695758c9f1f7178bf417fc3fd787f6.js.gz" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/paperclip.rb" afterPath="$PROJECT_DIR$/config/initializers/paperclip.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -63,8 +152,8 @@
       <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="322">
+              <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -84,7 +173,7 @@
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
-              <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="41" />
+              <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -104,7 +193,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+              <caret line="94" column="35" lean-forward="false" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
               <folding>
                 <marker date="1530402590288" expanded="false" signature="7159:7168" ph="..." />
                 <marker date="1530402590288" expanded="false" signature="9947:9956" ph="..." />
@@ -434,12 +523,12 @@
       <updated>1528585462314</updated>
       <workItem from="1528585463857" duration="4639000" />
       <workItem from="1529267231695" duration="12365000" />
-      <workItem from="1529535008361" duration="51224000" />
+      <workItem from="1529535008361" duration="51355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68228000" />
+    <option name="totallyTimeSpent" value="68359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="833" extended-state="0" />
@@ -806,14 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -841,7 +922,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+          <caret line="94" column="35" lean-forward="false" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
           <folding>
             <marker date="1530402590288" expanded="false" signature="7159:7168" ph="..." />
             <marker date="1530402590288" expanded="false" signature="9947:9956" ph="..." />
@@ -873,10 +954,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="54" column="41" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="322">
+          <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
           <folding />
         </state>
       </provider>
