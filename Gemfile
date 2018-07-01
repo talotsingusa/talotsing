@@ -60,6 +60,7 @@ gem 'aws-sdk',   '~> 2.6'
 gem 'jquery-datatables'
 gem 'chosen-rails'
 gem "selectize-rails"
+gem 'slick_rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

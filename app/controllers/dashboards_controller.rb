@@ -105,7 +105,7 @@ class DashboardsController < ApplicationController
   end
 
   def product_list
-    @product = current_user.store.products
+    @product = Product.where(store_id: current_user.store.id)
     render layout: "dashboard_application"
   end
 

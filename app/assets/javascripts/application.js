@@ -25,6 +25,7 @@
 //= require jquery.parallaximage
 //= require parallax
 //= require jquery.parallax
+//= require slick
 //= require jquery.slick
 //= require jquery.sliders
 //= require toastr
@@ -32,3 +33,14 @@
 
 
 $('body').css({'overflow' : ''});
+var resetForms = function () {
+    // this depends on your use
+    // this is for foundation 6's abide
+    $('form').each(function () {
+        $(this).foundation('destroy');
+    });
+};
+
+document.addEventListener("turbolinks:before-cache", function() {
+    resetForms();
+});

@@ -23,6 +23,8 @@ Rails.application.config.assets.precompile += %w( plain_application.css )
 Rails.application.config.assets.precompile += %w( plain_application.js )
 Rails.application.config.assets.precompile += %w( dashboard_application.css )
 Rails.application.config.assets.precompile += %w( dashboard_application.js )
+Rails.application.config.assets.precompile += %w( .js .css *.css.scss .svg .eot .woff .ttf)
+
 # Precompile additional assets.
 # application.js, application.css.scss, and all non-JS/CSS in the app/assets
 # folder are already added.

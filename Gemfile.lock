@@ -223,6 +223,8 @@ GEM
     simple_form (4.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    slick_rails (1.5.9)
+      railties (>= 3.1)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -299,6 +301,7 @@ DEPENDENCIES
   selectize-rails
   selenium-webdriver
   simple_form
+  slick_rails
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

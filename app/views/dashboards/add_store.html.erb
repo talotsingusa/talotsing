@@ -24,10 +24,15 @@
               </div>
             </div>
             </div>
-            <%= f.submit 'Submit', class: "btn btn-primary btn-sm" %>
+            <%= f.submit 'Submit', class: "btn btn-primary btn-sm", id: "submit_store" %>
         <% end %>
       </div>
     </div>
 
   </div>
 </div>
+<script>
+    $('#submit_store').click(function(){
+        $("#new_store").submit();
+    });
+</script>
