@@ -132,8 +132,7 @@
 {	
 	.logo_header_trans {
         width: 193px !important;
-	    margin-top: 20px !important;
-	    margin-left: -8px !important;
+	    margin-top: 0px !important;
     }
 	.top_bar
 	{

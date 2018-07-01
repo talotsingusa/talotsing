@@ -49,7 +49,7 @@
 
   <!-- Header Main -->
 
-  <div class="header_main">
+  <div class="header_main" style="background-color: #232f3e;">
     <div class="container">
       <div class="row">
 
@@ -57,9 +57,8 @@
         <div class="col-lg-2 col-sm-3 col-3 order-1">
           <div class="logo_container">
             <!-- <div class="logo"><a href="#">OneTech</a></div> -->
-            <a href="<%= root_path %>"><img src="/assets/logo_header.png" class="logo_header_trans" style="    width: 215px;
-                margin-top: 67px;
-                margin-left: -21px;"></a>
+            <a href="<%= root_path %>"><img src="/assets/logoo 3.png" class="logo_header_trans" style="    width: 195px;
+                margin-top: 43px;"></a>
           </div>
         </div>
 
@@ -70,7 +69,7 @@
               <div class="header_search_form_container">
                 <form action="#" class="header_search_form clearfix">
                   <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
-                  <div class="custom_dropdown">
+                  <div class="custom_dropdown" style="background-color: white;">
                     <div class="custom_dropdown_list">
                       <span class="custom_dropdown_placeholder clc">All Categories</span>
                       <i class="fas fa-chevron-down"></i>
@@ -84,7 +83,7 @@
                       </ul>
                     </div>
                   </div>
-                  <button type="submit" class="header_search_button trans_300" value="Submit"><img src="/assets/search.png" alt=""></button>
+                  <button type="submit" class="header_search_button trans_300" value="Submit" style="background-color: #febd69;"><img src="/assets/search.png" alt=""></button>
                 </form>
               </div>
             </div>
@@ -98,7 +97,7 @@
               <div class="wishlist_icon"><img src="/assets/heart.png" alt=""></div>
               <div class="wishlist_content">
                 <div class="wishlist_text"><a href="#">Wishlist</a></div>
-                <div class="wishlist_count">115</div>
+                <div class="wishlist_count" style="color: white;">115</div>
               </div>
             </div>
 
@@ -107,11 +106,11 @@
               <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                 <div class="cart_icon">
                   <img src="/assets/cart.png" alt="">
-                  <div class="cart_count"><span>10</span></div>
+                  <div class="cart_count" style="background-color: black;"><span>10</span></div>
                 </div>
                 <div class="cart_content">
                   <div class="cart_text"><a href="<%= cart_path %>">Cart</a></div>
-                  <div class="cart_price">$85</div>
+                  <div class="cart_price" style="color: white;">$85</div>
                 </div>
               </div>
             </div>
@@ -132,7 +131,7 @@
 
             <!-- Categories Menu -->
 
-            <div class="cat_menu_container">
+            <div class="cat_menu_container" style="background-color: #232f3e;">
               <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
                 <div class="cat_burger"><span></span><span></span><span></span></div>
                 <div class="cat_menu_text">categories</div>
@@ -333,4 +332,8 @@
 </header>
 
 
-
+<style>
+  .main_nav_dropdown li a {
+    color: #000000;
+  }
+</style>

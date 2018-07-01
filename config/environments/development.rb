@@ -49,8 +49,8 @@ Rails.application.configure do
       storage: :s3,
       s3_credentials: {
           bucket: 'talotsing',
-          access_key_id: 'AKIAJS65XMXQCKKV5OJQ',
-          secret_access_key: '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',
+          access_key_id: 'AKIAI3HXXRO6YIKPTQFQ',
+          secret_access_key: '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',
           s3_region: 'us-east-1',
           s3_host_name: 's3.amazonaws.com'
       }
