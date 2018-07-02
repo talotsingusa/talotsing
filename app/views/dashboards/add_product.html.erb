@@ -12,7 +12,7 @@
                 <label for="text-input" class=" form-control-label">Product Name</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :name, class: "form-control", id: "text-input", label: false %>
+                <%= f.input :name, class: "form-control", id: "text-input", label: false, required: true %>
               </div>
             </div>
             <div class="row form-group">
@@ -20,7 +20,7 @@
                 <label for="text-input" class=" form-control-label">Description</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :description, class: "form-control", id: "text-input", label: false %>
+                <%= f.input :description, class: "form-control", id: "text-input", label: false, required: true %>
               </div>
             </div>
             <div class="row form-group">
@@ -28,7 +28,7 @@
                 <label for="text-input" class=" form-control-label">Sku</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :sku, class: "form-control", id: "text-input", label: false %>
+                <%= f.input :sku, class: "form-control", id: "text-input", label: false, required: true %>
               </div>
             </div>
             <div class="row form-group">
@@ -36,7 +36,7 @@
                 <label for="text-input" class=" form-control-label">Price</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :price, class: "form-control", id: "text-input", label: false %>
+                <%= f.input :price, class: "form-control", id: "text-input", label: false, required: true %>
               </div>
             </div>
             <div class="row form-group">
@@ -44,7 +44,7 @@
                 <label for="text-input" class=" form-control-label">Additional Product Information</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :additional_information, class: "form-control", id: "text-input", label: false %>
+                <%= f.input :additional_information, class: "form-control", id: "text-input", label: false, required: true %>
               </div>
             </div>
             <%= f.hidden_field :store_id, value: current_user.store.id, class: "form-control", id: "text-input" %>
@@ -54,6 +54,7 @@
               </div>
               <div class="col-12 col-md-9">
                 <%= f.input :product_brand, collection: Brand.all.map { |s| [("#{s.name}"), s.id] }, class: "form-control", label: false %>
+                <p style="color: red" id="brand_error">Please select brands to proceed</p>
               </div>
             </div>
             <div class="row form-group">
@@ -62,6 +63,7 @@
               </div>
               <div class="col-12 col-md-9">
                 <%= f.input :product_category, collection: Category.all.map { |s| [("#{s.name}"), s.id] }, class: "form-control", label: false %>
+                <p style="color: red" id="category_error">Please select category to proceed</p>
               </div>
             </div>
             <div class="row form-group">
@@ -70,6 +72,7 @@
               </div>
               <div class="col-12 col-md-9">
                 <%= f.input :product_sub_category, collection: SubCategory.all.map { |s| [("#{s.name}"), s.id] }, class: "form-control", label: false %>
+                <p style="color: red" id="sub_category_error">Please select sub category to proceed</p>
               </div>
             </div>
             <div class="row form-group">
@@ -78,6 +81,7 @@
               </div>
               <div class="col-12 col-md-9">
                 <%= f.input :product_group, collection: ProductType.all.map { |s| [("#{s.name}"), s.id] }, class: "form-control", label: false %>
+                <p style="color: red" id="product_type_error">Please select product type to proceed</p>
               </div>
             </div>
 
@@ -104,7 +108,7 @@
                 <label for="select" class=" form-control-label">Sale</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :sale, as: :radio_buttons, label: false %>
+                <%= f.input :sale, as: :radio_buttons, label: false, required: true %>
 
               </div>
             </div>
@@ -113,7 +117,7 @@
                 <label for="select" class=" form-control-label">Active</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :active, as: :radio_buttons, label: false %>
+                <%= f.input :active, as: :radio_buttons, label: false, required: true %>
               </div>
             </div>
             <div class="row form-group">
@@ -121,16 +125,21 @@
                 <label for="file-input" class=" form-control-label">File input</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= file_field_tag "images[]", type: :file, multiple: true %>
+                <%= file_field_tag "images[]", type: :file, multiple: true, required: true %>
               </div>
             </div>
-            <%= f.submit 'Submit', class: "btn btn-primary btn-sm" %>
+            <%= f.submit 'Submit', class: "btn btn-primary btn-sm", id: "submit_product" %>
         <% end %>
       </div>
     </div>
 
   </div>
 </div>
+<style>
+  #brand_error, #category_error, #sub_category_error, #product_type_error{
+    display: none;
+  }
+</style>
 <script>
     $('#product_product_brand').chosen({
         allow_single_deselect: true,
@@ -151,5 +160,30 @@
         allow_single_deselect: true,
         no_results_text: 'No results matched',
         width: '200px'
+    });
+    $("#submit_product").click(function(e){
+        if($('#product_product_brand').val() == 0){
+            $("#brand_error").show();
+            e.preventDefault()
+        }
+        if($('#product_product_category').val() == 0){
+            $("#category_error").show();
+            e.preventDefault()
+        }
+        if($('#product_product_sub_category').val() == 0){
+            $("#sub_category_error").show();
+            e.preventDefault()
+        }
+        if($('#product_product_group').val() == 0){
+            $("#product_type_error").show();
+            e.preventDefault()
+        }
+        if ($('#product_product_brand').val() > 0 && $('#product_product_category').val() > 0 && $('#product_product_sub_category').val() > 0 && $('#product_product_group').val() > 0){
+            $("#brand_error").hide();
+            $("#category_error").hide();
+            $("#sub_category_error").hide();
+            $("#product_type_error").hide();
+            $("#submit_product").click();
+        }
     });
 </script>

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/simple_form.rb" afterPath="$PROJECT_DIR$/config/initializers/simple_form.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -18,124 +25,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_header_web.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="341" column="5" lean-forward="false" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#header#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_newsletter_web.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_newsletter_web.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="72" lean-forward="false" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_footer_web.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_footer_web.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="87" column="14" lean-forward="false" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_dashboard_sidenav.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_dashboard_sidenav.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="2572">
               <caret line="251" column="51" lean-forward="false" selection-start-line="251" selection-start-column="51" selection-end-line="251" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <file leaf-file-name="dashboards_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="1495" column="83" lean-forward="false" selection-start-line="1495" selection-start-column="83" selection-end-line="1495" selection-end-column="83" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_sign_in_header.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_sign_in_header.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_mobile_dashboard_header.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_mobile_dashboard_header.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/theme.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="270">
+              <caret line="112" column="42" lean-forward="true" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paperclip.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/paperclip.rb">
+      <file leaf-file-name="add_store.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_store.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/responsive.css">
+      <file leaf-file-name="add_product_type.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="314" column="0" lean-forward="false" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="41" />
+            <state relative-caret-position="435">
+              <caret line="29" column="101" lean-forward="false" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_sub_category.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="101" lean-forward="false" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_catergory.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="101" lean-forward="false" selection-start-line="22" selection-start-column="101" selection-end-line="22" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_brand.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="80" lean-forward="false" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_product.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_product.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="179" column="9" lean-forward="false" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#8;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/product.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple_form.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/simple_form.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="132" column="35" lean-forward="false" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -145,8 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>product_grid</find>
-      <find>easing</find>
       <find>uglifier</find>
       <find>homeSports &amp; Outdoors</find>
       <find>Hardware</find>
@@ -171,10 +158,12 @@
       <find>.newsletter_icon img</find>
       <find>header_main</find>
       <find>cat_menu_container</find>
+      <find>page_menu_content</find>
+      <find>full catalog</find>
+      <find>banner_button</find>
       <find>newsletter_button</find>
       <find>footer</find>
-      <find>page_menu_content</find>
-      <find>banner_button</find>
+      <find>validation</find>
     </findStrings>
     <replaceStrings>
       <replace>/assets/</replace>
@@ -189,16 +178,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20180628233238_add_avatar_to_brands.rb" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" />
         <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/app/models/product_type.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180629004547_add_avatar_to_category.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180629004556_add_avatar_to_sub_category.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180629004606_add_avatar_to_product_type.rb" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/brands_list.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/catergory_list.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/sub_category_list.html.erb" />
@@ -209,15 +193,12 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/dashboard_application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/dashboard_application.css.scss" />
-        <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/models/color.rb" />
         <option value="$PROJECT_DIR$/app/models/size.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/product_list.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" />
         <option value="$PROJECT_DIR$/app/models/sub_category.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
@@ -240,6 +221,14 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_footer_web.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/simple_form.rb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/product.rb" />
       </list>
     </option>
   </component>
@@ -256,8 +245,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="833" />
   </component>
@@ -299,13 +288,12 @@
             <path>
               <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
               <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Assets" type="f36ffe3d:AssetsTopLevelFolderNode" />
+              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
             </path>
             <path>
               <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
               <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Assets" type="f36ffe3d:AssetsTopLevelFolderNode" />
-              <item name="Stylesheets" type="8736b8df:AssetsPredefinedGroupFolderNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
             </path>
           </expand>
           <select />
@@ -319,7 +307,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="news&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_newsletter_web.html.erb&#10;foo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;appl&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/index.html.erb&#10;custo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/custom.js&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/shop.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;show&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/blog_show.html.erb&#10;hom&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;home&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;brands_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_brands_web.html.erb&#10;asse&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;footer_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;applica&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/application.html.erb&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb" />
+    <property name="SearchEverywhereHistoryKey" value="simpl&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/simple_form.rb&#10;news&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_newsletter_web.html.erb&#10;foo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;appl&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/index.html.erb&#10;custo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/custom.js&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/shop.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;show&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/blog_show.html.erb&#10;hom&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;home&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;brands_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_brands_web.html.erb&#10;asse&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;footer_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;applica&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/application.html.erb&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RecentsManager">
@@ -461,15 +449,15 @@
       <updated>1528585462314</updated>
       <workItem from="1528585463857" duration="4639000" />
       <workItem from="1529267231695" duration="12365000" />
-      <workItem from="1529535008361" duration="64867000" />
+      <workItem from="1529535008361" duration="68152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81871000" />
+    <option name="totallyTimeSpent" value="85156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="833" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -505,78 +493,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboards/store.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_store.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="33" lean-forward="false" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="112" column="42" lean-forward="true" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_product.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="134" column="29" lean-forward="false" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="59" lean-forward="true" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/product_type.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -851,20 +767,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_dashboard_sidenav.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="251" column="51" lean-forward="false" selection-start-line="251" selection-start-column="51" selection-end-line="251" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_mobile_dashboard_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -885,12 +793,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_sign_in_header.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="143">
+          <caret line="314" column="0" lean-forward="false" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32192">
+          <caret line="1495" column="83" lean-forward="false" selection-start-line="1495" selection-start-column="83" selection-end-line="1495" selection-end-column="83" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="331" column="9" lean-forward="true" selection-start-line="331" selection-start-column="9" selection-end-line="331" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#header#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -909,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_footer_web.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="87" column="14" lean-forward="false" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+        <state relative-caret-position="1140">
+          <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#footer#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
@@ -918,39 +852,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/responsive.css">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_sign_in_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="314" column="0" lean-forward="false" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="41" />
+        <state relative-caret-position="60">
+          <caret line="4" column="117" lean-forward="false" selection-start-line="4" selection-start-column="112" selection-end-line="4" selection-end-column="117" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_dashboard_sidenav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2572">
+          <caret line="251" column="51" lean-forward="false" selection-start-line="251" selection-start-column="51" selection-end-line="251" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/simple_form.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="341" column="5" lean-forward="false" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
+        <state relative-caret-position="220">
+          <caret line="132" column="35" lean-forward="false" selection-start-line="132" selection-start-column="35" selection-end-line="132" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="80" lean-forward="false" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="101" lean-forward="false" selection-start-line="22" selection-start-column="101" selection-end-line="22" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="101" lean-forward="false" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="112" column="42" lean-forward="true" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_product.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="179" column="9" lean-forward="false" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#8;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/product.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="1495" column="83" lean-forward="false" selection-start-line="1495" selection-start-column="83" selection-end-line="1495" selection-end-column="83" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="101" lean-forward="false" selection-start-line="29" selection-start-column="101" selection-end-line="29" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_store.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

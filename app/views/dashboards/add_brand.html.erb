@@ -11,7 +11,7 @@
             <label for="text-input" class=" form-control-label">Brand Name</label>
           </div>
           <div class="col-12 col-md-9">
-            <%= f.text_field :name, class: "form-control", id: "text-input" %>
+            <%= f.text_field :name, class: "form-control", id: "text-input", required: true %>
           </div>
         </div>
 
@@ -20,7 +20,7 @@
             <label for="file-input" class=" form-control-label">File input</label>
           </div>
           <div class="col-12 col-md-9">
-            <%= f.file_field :logo, id: "file-input", class: "form-control-file" %>
+            <%= f.file_field :logo, id: "file-input", class: "form-control-file", required: true %>
           </div>
         </div>
           <%= f.submit 'Submit', class: "btn btn-primary btn-sm" %>
