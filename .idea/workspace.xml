@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/product.rb" afterPath="$PROJECT_DIR$/app/models/product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb" afterPath="$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/simple_form.rb" afterPath="$PROJECT_DIR$/config/initializers/simple_form.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -49,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_store.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -226,9 +219,9 @@
         <option value="$PROJECT_DIR$/app/views/dashboards/add_catergory.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/add_sub_category.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/add_product_type.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
+        <option value="$PROJECT_DIR$/app/views/dashboards/add_store.html.erb" />
       </list>
     </option>
   </component>
@@ -449,12 +442,12 @@
       <updated>1528585462314</updated>
       <workItem from="1528585463857" duration="4639000" />
       <workItem from="1529267231695" duration="12365000" />
-      <workItem from="1529535008361" duration="68152000" />
+      <workItem from="1529535008361" duration="68318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85156000" />
+    <option name="totallyTimeSpent" value="85322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="0" />
@@ -942,7 +935,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_store.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding />
         </state>
       </provider>
