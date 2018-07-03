@@ -55,7 +55,7 @@
             <div class="sidebar_subtitle brands_subtitle">Brands</div>
             <ul class="brands_list">
               <% Brand.all.each do |brand| %>
-                  <li class="brand"><a href="<%= shop_path(brand: brand.id)%>"><%= brand.name %></a></li>
+                  <li class="brand"><a href="<%= shop_path(brand_id: brand.id)%>"><%= brand.name %></a></li>
               <% end %>
               <!--<li class="brand"><a href="#">Beoplay</a></li>-->
               <!--<li class="brand"><a href="#">Google</a></li>-->
