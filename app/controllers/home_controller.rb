@@ -22,15 +22,12 @@ class HomeController < ApplicationController
       @products = Product.where("id IN (?)", ids)
       @category = Brand.where(id: params[:brand_id]).first.name
     elsif params[:search_product][:keyword].present? && params[:search_product][:category].present?
-      binding.pry
       ids = ProductCategory.where(category_id: params[:search_product][:category]).pluck(:product_id)
       products = Product.where("id IN (?)", ids)
       @products = products.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%")
     elsif params[:search_product][:keyword].present?
-      binding.pry
       @products = Product.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%")
     elsif params[:search_product][:category].present?
-      binding.pry
       ids = ProductCategory.where(category_id: params[:search_product][:category]).pluck(:product_id)
       @products = Product.where("id IN (?)", ids)
     else
