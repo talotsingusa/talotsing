@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 
-  <%= stylesheet_link_tag    'blog_application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'blog_application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'blog_application', media: 'all' %>
+  <%= javascript_include_tag 'blog_application' %>
   <%= javascript_include_tag "https://maps.google.com/maps/api/js?key=AIzaSyA7R9zKzT38smEBHrcOKVF4iaKpZND09Hk" %>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 
-<body>
+<body  data-turbolinks="false">
 <div class="super_container">
   <%= render 'layouts/partials/header_web' %>
   <%= yield %>

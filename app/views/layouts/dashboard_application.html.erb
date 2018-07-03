@@ -23,12 +23,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 
-  <%= stylesheet_link_tag    'dashboard_application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'dashboard_application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'dashboard_application', media: 'all'  %>
+  <%= javascript_include_tag 'dashboard_application'  %>
 
 </head>
 
-<body>
+<body data-turbolinks="false">
 <div class="page-wrapper">
   <% unless flash.empty? %>
       <script type="text/javascript">

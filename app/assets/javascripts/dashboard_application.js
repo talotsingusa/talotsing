@@ -15,7 +15,6 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require jquery-ui
-//= require turbolinks
 //= require modernizr
 //= require jquery.slick
 //= require select2

@@ -67,24 +67,29 @@
           <div class="header_search">
             <div class="header_search_content">
               <div class="header_search_form_container">
-                <form action="#" class="header_search_form clearfix">
-                  <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+                <%= form_for :search_product, url: shop_path, class: "header_search_form clearfix", method: :get do |f| %>
+                <!--<form action="#" class="header_search_form clearfix">-->
+                    <%= f.text_field :keyword, class: "header_search_input", required: false, placeholder: "Search for products..." %>
+                    <%= f.hidden_field :category, id: "search_category" %>
+                  <!--<input type="search" required="required" class="header_search_input" placeholder="Search for products...">-->
                   <div class="custom_dropdown" style="background-color: white;">
                     <div class="custom_dropdown_list">
                       <span class="custom_dropdown_placeholder clc">All Categories</span>
                       <i class="fas fa-chevron-down"></i>
-                      <ul class="custom_list clc">
-                        <li><a class="clc" href="#">All Categories</a></li>
-                        <li><a class="clc" href="#">Computers</a></li>
-                        <li><a class="clc" href="#">Laptops</a></li>
-                        <li><a class="clc" href="#">Cameras</a></li>
-                        <li><a class="clc" href="#">Hardware</a></li>
-                        <li><a class="clc" href="#">Smartphones</a></li>
+                      <ul class="custom_list clc" id="category_search_params">
+                        <% Category.all.each do |category| %>
+                            <li><a class="clc" data-value="<%= category.id %>" ><%= category.name %></a></li>
+                        <% end %>
+                        <!--<li><a class="clc" href="#">Computers</a></li>-->
+                        <!--<li><a class="clc" href="#">Laptops</a></li>-->
+                        <!--<li><a class="clc" href="#">Cameras</a></li>-->
+                        <!--<li><a class="clc" href="#">Hardware</a></li>-->
+                        <!--<li><a class="clc" href="#">Smartphones</a></li>-->
                       </ul>
                     </div>
                   </div>
                   <button type="submit" class="header_search_button trans_300" value="Submit" style="background-color: #febd69;"><img src="/assets/search.png" alt=""></button>
-                </form>
+                <% end %>
               </div>
             </div>
           </div>
@@ -142,14 +147,14 @@
                 <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
                 <% Category.all.each do |category| %>
                     <li class="hassubs">
-                      <a href="#"><%= category.name %><i class="fas fa-chevron-right"></i></a>
+                      <a href="<%= shop_path(category: category.id)%>"><%= category.name %><i class="fas fa-chevron-right"></i></a>
                         <ul>
                           <% category.sub_categories.each do |sub_category| %>
                           <li class="hassubs">
-                            <a href="#"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
+                            <a href="<%= shop_path(sub_category: sub_category.id)%>"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
                               <ul>
                                 <% sub_category.product_types.each do |product_type| %>
-                                <li><a href="#"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
@@ -204,9 +209,11 @@
                         <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
                       </ul>
                     </li>
-                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
+                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
+                    <!--<li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
+                    <% Brand.all.each do |brand| %>
+                        <li><a href="<%= shop_path(brand_id: brand.id)%>"><%= brand.name %><i class="fas fa-chevron-down"></i></a></li>
+                    <% end %>
                   </ul>
                 </li>
                 <li class="hassubs">
@@ -333,6 +340,9 @@
 
 
 <style>
+  .header_search_input{
+    height: 50px;
+  }
   .main_nav_dropdown li a {
     color: #000000;
   }
@@ -342,3 +352,9 @@
     }
   }
 </style>
+<script>
+    $(document).on("click", "#category_search_params li a", function() {
+        $("#search_category").val($(this).data("value"));
+        console.log($("#search_category").val());
+    });
+</script>
