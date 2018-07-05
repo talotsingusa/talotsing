@@ -103,6 +103,16 @@
               </div>
             </div>
 
+            <div id="shipments">
+              <%= f.simple_fields_for :product_shipments do |shipment| %>
+
+                  <%= render 'product_shipment_fields', f: shipment %>
+              <% end %>
+              <div class="links">
+                <%= link_to_add_association 'add shipment', f, :product_shipments %>
+              </div>
+            </div>
+            <br>
             <div class="row form-group">
               <div class="col col-md-3">
                 <label for="select" class=" form-control-label">Sale</label>

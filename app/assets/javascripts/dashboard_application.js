@@ -22,6 +22,7 @@
 //= require datatables
 //= require chosen-jquery
 //= require selectize
+//= require cocoon
 //= require main.js
 
 

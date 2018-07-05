@@ -112,6 +112,7 @@ class DashboardsController < ApplicationController
   def add_product
     render layout: "dashboard_application"
     @product = Product.new
+    @product.product_shipments.build
   end
 
   def create_product
@@ -177,6 +178,6 @@ class DashboardsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit( :name, :description, :sku, :price, :additional_information, :store_id, :sale, :active)
+    params.require(:product).permit( :name, :description, :sku, :price, :additional_information, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy])
   end
 end

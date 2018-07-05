@@ -40,6 +40,7 @@ class HomeController < ApplicationController
   end
 
   def product
+    @product = Product.find(params[:id])
     render layout: "product_application"
   end
 

@@ -21,4 +21,6 @@ class Product < ApplicationRecord
 
   has_many :product_images, dependent: :destroy, dependent: :destroy
 
+  has_many :product_shipments, dependent: :destroy
+  accepts_nested_attributes_for :product_shipments,:reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
 end
