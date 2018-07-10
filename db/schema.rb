@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180705021706) do
+ActiveRecord::Schema.define(version: 20180708100320) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -34,6 +34,21 @@ ActiveRecord::Schema.define(version: 20180705021706) do
 
   create_table "colors", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.float "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -123,6 +138,13 @@ ActiveRecord::Schema.define(version: 20180705021706) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "recent_views", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "sizes", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -146,6 +168,13 @@ ActiveRecord::Schema.define(version: 20180705021706) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "user_favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

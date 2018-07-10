@@ -77,11 +77,23 @@
 
               <div class="product_price">$<%= @product.price if @product.price.present? %></div>
               <div class="button_container">
-                <button type="button" class="button cart_button">Add to Cart</button>
-                <div class="product_fav"><i class="fas fa-heart"></i></div>
+                <button type="button" class="button cart_button" id="adding_products_in_cart">Add to Cart</button>
+                <% if check_favorite(@product.id) == true %>
+                    <%= link_to remove_favorite_path(product_id: @product.id), remote: true do %>
+                        <div class="product_fav active"><i class="fas fa-heart"></i></div>
+                    <% end %>
+                <% else %>
+                    <%= link_to add_favorite_path(product_id: @product.id), remote: true do %>
+                        <div class="product_fav"><i class="fas fa-heart"></i></div>
+                    <% end %>
+                <% end %>
               </div>
 
             </form>
+            <%= form_for :add_product_to_cart, url: add_to_cart_path, :html => {:id => "cart_form_for"}, class: "header_search_form clearfix", method: :get do |f| %>
+                <%= f.hidden_field :product_id, value: @product.id %>
+                <%= f.hidden_field :quantity, value: "" , id: "product_quantity_in_cart"%>
+            <% end %>
           </div>
         </div>
       </div>
@@ -92,5 +104,10 @@
 <script>
     $(document).on("click", "#image_slider_new", function() {
         $(".main_image_show").attr("src", $(this).data("image"));
+    });
+    $(document).on("click", "#adding_products_in_cart", function(e) {
+        e.preventDefault();
+        $("#product_quantity_in_cart").val($("#quantity_input").val());
+        $("#cart_form_for").submit();
     });
 </script>

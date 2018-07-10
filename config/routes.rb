@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   get 'home/contact' => "home#contact", as: :contact
   get 'home/blog' => "home#blog", as: :blog
   get 'home/blog_show' => "home#blog_show", as: :blog_show
+  get 'home/add_favorite' => "home#add_favorite", as: :add_favorite
+  get 'home/remove_favorite' => "home#remove_favorite", as: :remove_favorite
+  get 'home/my_favorites' => "home#my_favorites", as: :my_favorites
+  get 'home/add_to_cart' => "home#add_to_cart", as: :add_to_cart
+
   resources :dashboards
   get 'brands_list' => "dashboards#brands_list", as: :brands_list
   get 'add_brand' => "dashboards#add_brand", as: :add_brand
@@ -31,5 +36,7 @@ Rails.application.routes.draw do
   get 'product_list' => "dashboards#product_list", as: :product_list
   get 'add_product' => "dashboards#add_product", as: :add_product
   post 'create_product' => "dashboards#create_product", as: :create_product
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

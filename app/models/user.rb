@@ -4,6 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_one :store
+
+  has_many :user_favorites, dependent: :destroy
+  has_many :products ,through: :user_favorites
+
+  has_many :recent_views, dependent: :destroy
+  has_many :products ,through: :recent_views
+  has_many :orders
   def full_name
     "#{first_name} #{last_name}"
   end

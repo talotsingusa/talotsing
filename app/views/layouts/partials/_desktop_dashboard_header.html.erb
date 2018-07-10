@@ -127,7 +127,7 @@
               <div class="image">
                 <img src="/assets/icon/avatar-01.jpg" alt="John Doe" />
               </div>
-              <div class="content">
+              <div class="content" id="profile_dropdown">
                 <a class="js-acc-btn" href="#"><%= current_user.full_name%></a>
               </div>
               <div class="account-dropdown js-dropdown">
@@ -173,3 +173,24 @@
   </div>
 </header>
 <!-- HEADER DESKTOP-->
+<script>
+    $('#profile_dropdown').click(function(){
+        if ($(this).parent().hasClass('show-dropdown')){
+            $(this).parent().removeClass('show-dropdown');
+        }
+        else{
+            $(this).parent().addClass('show-dropdown');
+        }
+
+    });
+    $('.zmdi').click(function(){
+        if ($(this).parent().hasClass('show-dropdown')){
+            $(this).parent().removeClass('show-dropdown');
+        }
+        else{
+            $(this).parent().addClass('show-dropdown');
+        }
+
+    });
+
+</script>

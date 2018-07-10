@@ -101,8 +101,12 @@
             <div class="wishlist d-flex flex-row align-items-center justify-content-end">
               <div class="wishlist_icon"><img src="/assets/heart.png" alt=""></div>
               <div class="wishlist_content">
-                <div class="wishlist_text"><a href="#">Wishlist</a></div>
-                <div class="wishlist_count" style="color: white;">115</div>
+                <div class="wishlist_text"><a href="<%= my_favorites_path %>" style="    color: #ffffff;">My Favorites</a></div>
+                <% if !session[:favorites].nil? %>
+                <div class="wishlist_count" style="color: #ffffff;"><%= session[:favorites].count if !session[:favorites].nil? %></div>
+                <% elsif current_user.present? %>
+                    <div class="wishlist_count" style="color: #ffffff;"><%= current_user.user_favorites.count if current_user.user_favorites.present? %></div>
+                <% end %>
               </div>
             </div>
 
@@ -111,11 +115,15 @@
               <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                 <div class="cart_icon">
                   <img src="/assets/cart.png" alt="">
-                  <div class="cart_count" style="background-color: black;"><span>10</span></div>
+                  <% if !session[:shop_cart].nil? %>
+                  <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= session[:shop_cart].count if !session[:shop_cart].nil? %></span></div>
+                      <% elsif current_user.present? %>
+                      <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.last.order_items.count if current_user.orders.present? %></span></div>
+                  <% end %>
                 </div>
                 <div class="cart_content">
-                  <div class="cart_text"><a href="<%= cart_path %>">Cart</a></div>
-                  <div class="cart_price" style="color: white;">$85</div>
+                  <div class="cart_text"><a href="<%= cart_path %>" style="    color: #ffffff;">Cart</a></div>
+                  <div class="cart_price" style="color: #ffffff;">$<%= cart_total %></div>
                 </div>
               </div>
             </div>
