@@ -98,8 +98,7 @@ class HomeController < ApplicationController
       end
     end
     respond_to do |format|
-      format.html
-      format.js
+      format.js   { render :nothing => true }
     end
   end
 
@@ -113,8 +112,7 @@ class HomeController < ApplicationController
       session[:favorites].delete(params[:product_id].to_i)
     end
     respond_to do |format|
-      format.html
-      format.js
+      format.js   { render :nothing => true }
     end
   end
 
