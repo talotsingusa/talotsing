@@ -98,6 +98,7 @@ class HomeController < ApplicationController
       end
     end
     respond_to do |format|
+      format.html
       format.js
     end
   end
@@ -112,6 +113,7 @@ class HomeController < ApplicationController
       session[:favorites].delete(params[:product_id].to_i)
     end
     respond_to do |format|
+      format.html
       format.js
     end
   end
