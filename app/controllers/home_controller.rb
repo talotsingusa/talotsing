@@ -97,8 +97,9 @@ class HomeController < ApplicationController
         session[:favorites] << params[:product_id].to_i
       end
     end
-    redirect_to :back
-
+    respond_to do |format|
+      format.js
+    end
   end
 
   def remove_favorite
@@ -110,8 +111,9 @@ class HomeController < ApplicationController
     else
       session[:favorites].delete(params[:product_id].to_i)
     end
-    redirect_to :back
-
+    respond_to do |format|
+      format.js
+    end
   end
 
   def my_favorites

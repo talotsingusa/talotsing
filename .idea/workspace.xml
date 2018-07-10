@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-b8938d1c447ac37bbbefb9bbcdd8357a.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-295f25e4cf4aec3d5e325db0a5cbda4751fa8dc8f7d478d992a87bbc8aed6f15.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_application-295f25e4cf4aec3d5e325db0a5cbda4751fa8dc8f7d478d992a87bbc8aed6f15.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-295f25e4cf4aec3d5e325db0a5cbda4751fa8dc8f7d478d992a87bbc8aed6f15.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/blog_single_application-295f25e4cf4aec3d5e325db0a5cbda4751fa8dc8f7d478d992a87bbc8aed6f15.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-295f25e4cf4aec3d5e325db0a5cbda4751fa8dc8f7d478d992a87bbc8aed6f15.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cart_application-295f25e4cf4aec3d5e325db0a5cbda4751fa8dc8f7d478d992a87bbc8aed6f15.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-49d03171f2f9c55252899f4a07dd5f849e359c4732c67a614f8de47ab46af604.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/contact_application-49d03171f2f9c55252899f4a07dd5f849e359c4732c67a614f8de47ab46af604.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-49d03171f2f9c55252899f4a07dd5f849e359c4732c67a614f8de47ab46af604.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/plain_application-49d03171f2f9c55252899f4a07dd5f849e359c4732c67a614f8de47ab46af604.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-209401e02821df551e0c1eaa838959f774fd5052081ce7b59a28688fc30ca261.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/product_application-209401e02821df551e0c1eaa838959f774fd5052081ce7b59a28688fc30ca261.js.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-533a601a5acc238e637ce6f44dff0c1729d176a6a51a84b00fa14e5fd1e37f53.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/shop_application-533a601a5acc238e637ce6f44dff0c1729d176a6a51a84b00fa14e5fd1e37f53.js.gz" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -22,17 +39,27 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="129" column="47" lean-forward="true" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
+              <caret line="129" column="47" lean-forward="false" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -41,8 +68,8 @@
       <file leaf-file-name="remove_favorite.js.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/remove_favorite.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -62,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/home/add_favorite.js.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -129,8 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/custom.js" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/initializers/paperclip.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/responsive.css" />
@@ -178,8 +203,10 @@
         <option value="$PROJECT_DIR$/app/views/home/product.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/add_product.html.erb" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/views/home/remove_favorite.js.erb" />
         <option value="$PROJECT_DIR$/app/views/home/add_favorite.js.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -282,7 +309,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value=".env&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/.env&#10;pro&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/product.html.erb&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/shop.html.erb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;simpl&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/simple_form.rb&#10;news&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_newsletter_web.html.erb&#10;foo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;appl&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/index.html.erb&#10;custo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/custom.js&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;show&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/blog_show.html.erb&#10;hom&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;home&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;brands_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_brands_web.html.erb&#10;asse&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;footer_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;applica&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/application.html.erb&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb" />
+    <property name="SearchEverywhereHistoryKey" value="pro&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;.env&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/.env&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/shop.html.erb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;simpl&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/simple_form.rb&#10;news&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_newsletter_web.html.erb&#10;foo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;appl&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/index.html.erb&#10;custo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/custom.js&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;show&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/blog_show.html.erb&#10;hom&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;home&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/home_controller.rb&#10;brands_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_brands_web.html.erb&#10;asse&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;footer_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;applica&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/application.html.erb&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
   </component>
   <component name="RecentsManager">
@@ -429,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100462000" />
+    <option name="totallyTimeSpent" value="100890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="833" extended-state="0" />
@@ -789,14 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="85" column="43" lean-forward="false" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -808,15 +827,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
-          <caret line="129" column="47" lean-forward="true" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/add_favorite.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="129" column="47" lean-forward="false" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -829,18 +840,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/add_favorite.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/remove_favorite.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="100" column="6" lean-forward="false" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding />
         </state>
       </provider>
