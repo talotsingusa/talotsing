@@ -97,9 +97,8 @@ class HomeController < ApplicationController
         session[:favorites] << params[:product_id].to_i
       end
     end
-    respond_to do |format|
-      format.js   { render inline: "location.reload();"}
-    end
+    redirect_to :back
+
   end
 
   def remove_favorite
@@ -111,9 +110,8 @@ class HomeController < ApplicationController
     else
       session[:favorites].delete(params[:product_id].to_i)
     end
-    respond_to do |format|
-      format.js   { render inline: "location.reload();"}
-    end
+    redirect_to :back
+
   end
 
   def my_favorites
