@@ -26,9 +26,7 @@
               </tr>
               </thead>
               <tbody>
-              <% @product_types.each do |product_type| %>
-              <%= puts product_type.id %>
-              <%= binding.pry %>
+              <% @product_types.all.each do |product_type| %>
                   <tr>
                     <td><%= product_type.id %></td>
                     <td><%= product_type.name %></td>

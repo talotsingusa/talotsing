@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :sub_categories
+  has_many :sub_categories, dependent: :destroy
   has_one :product_category
   has_one :product , through: :product_category
 
