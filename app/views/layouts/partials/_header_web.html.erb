@@ -33,7 +33,7 @@
               <% if current_user.present? %>
                   <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
                   <div><%= current_user.full_name %></div>
-                  <div><a href=" ">Dashboard</a></div>
+                  <div><a href="<%= dashboards_path%>">Dashboard</a></div>
               <% else %>
                   <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
                   <div><a href="<%= new_user_registration_path %>">Register</a></div>
