@@ -26,16 +26,13 @@
               </tr>
               </thead>
               <tbody>
-              <% @product_types.all.each do |product_type| %>
+              <% @product_types.each do |product_type| %>
                   <tr>
-                    <% if product_type.nil? %>
-                    <% else %>
-                        <td><%= product_type.id %></td>
-                        <td><%= product_type.name %></td>
-                        <td><%= product_type.sub_category.name %></td>
-                        <td><%= image_tag product_type.image.url(:medium) %></td>
-                        <td class="text-right"><%= product_type.created_at %></td>
-                    <% end %>
+                    <td><%= product_type.id %></td>
+                    <td><%= product_type.name %></td>
+                    <td><%= product_type.sub_category.name %></td>
+                    <td><%= image_tag product_type.image.url(:medium) %></td>
+                    <td class="text-right"><%= product_type.created_at %></td>
                   </tr>
               <% end %>
               </tbody>
