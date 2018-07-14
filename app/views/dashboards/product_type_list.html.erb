@@ -28,11 +28,11 @@
               <tbody>
               <% @product_types.all.each do |product_type| %>
                   <tr>
-                    <td><%= product_type.id %></td>
-                    <td><%= product_type.name %></td>
-                    <td><%= product_type.sub_category.name %></td>
-                    <td><%= image_tag product_type.image.url(:medium) %></td>
-                    <td class="text-right"><%= product_type.created_at %></td>
+                    <td><%= product_type.id if !product_type.nil? %></td>
+                    <td><%= product_type.name if !product_type.nil? %></td>
+                    <td><%= product_type.sub_category.name if !product_type.nil? %></td>
+                    <td><%= image_tag product_type.image.url(:medium) if !product_type.nil? %></td>
+                    <td class="text-right"><%= product_type.created_at if !product_type.nil? %></td>
                   </tr>
               <% end %>
               </tbody>
