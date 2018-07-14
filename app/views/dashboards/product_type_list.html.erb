@@ -27,6 +27,7 @@
               </thead>
               <tbody>
               <% @product_types.all.each do |product_type| %>
+                <%= debug(product_type) %>
                   <tr>
                     <td><%= product_type.id if !product_type.nil? %></td>
                     <td><%= product_type.name if !product_type.nil? %></td>
