@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
   skip_before_action :authenticate_user!
   def index
-    session[:shop_cart] = nil
-    session[:favorites] = nil
+
   end
 
   def shop
