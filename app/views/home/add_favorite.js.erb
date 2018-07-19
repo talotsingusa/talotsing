@@ -1,2 +1,6 @@
-window.location.reload(true);
-toastr.success('Added from favorites successfully')
+toastr.success('Added to favorites successfully');
+console.log("<%= @product_id %>");
+var product_id = "<%= @product_id %>";
+var un_fav_link = "<%= "/home/remove_favorite?product_id=#{@product_id}" %>";
+$("#in_product_"+product_id).addClass("active");
+$("#in_product_"+product_id).closest('a').attr("href", un_fav_link);

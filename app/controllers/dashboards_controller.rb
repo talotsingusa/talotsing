@@ -80,6 +80,44 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def product_color_list
+    @product_colors = Color.all
+    render layout: "dashboard_application"
+  end
+
+  def add_product_color
+    render layout: "dashboard_application"
+    @product_color = Color.new
+  end
+
+  def create_product_color
+    product_color = Color.new(color_params)
+    if product_color.save
+      redirect_to product_color_list_path
+    else
+      redirect_to add_product_color_path
+    end
+  end
+
+  def product_size_list
+    @product_sizes = Size.all
+    render layout: "dashboard_application"
+  end
+
+  def add_product_size
+    render layout: "dashboard_application"
+    @product_size = Size.new
+  end
+
+  def create_product_size
+    product_size = Size.new(size_params)
+    if product_size.save
+      redirect_to product_size_list_path
+    else
+      redirect_to add_product_size_path
+    end
+  end
+
   def store
     @store = Store.where(user_id: current_user.id)
     render layout: "dashboard_application"
@@ -177,7 +215,15 @@ class DashboardsController < ApplicationController
     params.require(:store).permit(:name, :description, :user_id)
   end
 
+  def color_params
+    params.require(:color).permit(:name)
+  end
+
+  def size_params
+    params.require(:size).permit(:name)
+  end
+
   def product_params
-    params.require(:product).permit( :name, :description, :sku, :price, :additional_information, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy])
+    params.require(:product).permit( :name, :description, :sku, :price, :additional_information, :article_number, :vendor_store_product_number, :weight, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy])
   end
 end

@@ -1,6 +1,6 @@
 class ProductType < ApplicationRecord
   belongs_to :sub_category
-  has_one :product_group
+  has_one :product_group, dependent: :destroy
   has_one :product , through: :product_group
 
   has_attached_file :image, styles: {

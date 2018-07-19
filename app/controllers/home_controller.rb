@@ -80,6 +80,7 @@ class HomeController < ApplicationController
   end
 
   def add_favorite
+    @product_id = params[:product_id]
     if current_user.present?
       favorite = UserFavorite.where(user_id: current_user.id, product_id: params[:product_id])
       if favorite.present?
@@ -103,6 +104,7 @@ class HomeController < ApplicationController
   end
 
   def remove_favorite
+    @product_id = params[:product_id]
     if current_user.present?
       favorite = UserFavorite.where(user_id: current_user.id, product_id: params[:product_id])
       if favorite.present?

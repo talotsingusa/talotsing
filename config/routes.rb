@@ -37,6 +37,14 @@ Rails.application.routes.draw do
   get 'add_product' => "dashboards#add_product", as: :add_product
   post 'create_product' => "dashboards#create_product", as: :create_product
 
+  get 'product_color_list' => "dashboards#product_color_list", as: :product_color_list
+  get 'add_product_color' => "dashboards#add_product_color", as: :add_product_color
+  post 'create_product_color' => "dashboards#create_product_color", as: :create_product_color
+
+  get 'product_size_list' => "dashboards#product_size_list", as: :product_size_list
+  get 'add_product_size' => "dashboards#add_product_size", as: :add_product_size
+  post 'create_product_size' => "dashboards#create_product_size", as: :create_product_size
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

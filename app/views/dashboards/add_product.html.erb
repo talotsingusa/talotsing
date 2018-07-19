@@ -28,7 +28,7 @@
                 <label for="text-input" class=" form-control-label">Sku</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :sku, class: "form-control", id: "text-input", label: false, required: true %>
+                <%= f.input :sku, class: "form-control", id: "text-input", label: false %>
               </div>
             </div>
             <div class="row form-group">
@@ -39,12 +39,36 @@
                 <%= f.input :price, class: "form-control", id: "text-input", label: false, required: true %>
               </div>
             </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Article number</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :article_number, class: "form-control", id: "text-input", label: false %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Vendor store product number</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :vendor_store_product_number, class: "form-control", id: "text-input", label: false, required: true %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Weight</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :weight, class: "form-control", id: "text-input", label: false %>
+            </div>
+          </div>
             <div class="row form-group">
               <div class="col col-md-3">
                 <label for="text-input" class=" form-control-label">Additional Product Information</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :additional_information, class: "form-control", id: "text-input", label: false, required: true %>
+                <%= f.input :additional_information, class: "form-control", id: "text-input", label: false %>
               </div>
             </div>
             <%= f.hidden_field :store_id, value: current_user.store.id, class: "form-control", id: "text-input" %>
