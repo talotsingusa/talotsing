@@ -10,8 +10,8 @@ class DashboardsController < ApplicationController
   end
 
   def add_brand
-    render layout: "dashboard_application"
     @brand = Brand.new
+    render layout: "dashboard_application"
   end
 
   def create_brand
@@ -29,8 +29,8 @@ class DashboardsController < ApplicationController
   end
 
   def add_catergory
-    render layout: "dashboard_application"
     @category = Category.new
+    render layout: "dashboard_application"
   end
 
   def create_catergory
@@ -48,8 +48,8 @@ class DashboardsController < ApplicationController
   end
 
   def add_sub_category
-    render layout: "dashboard_application"
     @sub_category = SubCategory.new
+    render layout: "dashboard_application"
   end
 
   def create_sub_category
@@ -67,8 +67,8 @@ class DashboardsController < ApplicationController
   end
 
   def add_product_type
-    render layout: "dashboard_application"
     @product_type = ProductType.new
+    render layout: "dashboard_application"
   end
 
   def create_product_type
@@ -86,8 +86,8 @@ class DashboardsController < ApplicationController
   end
 
   def add_product_color
-    render layout: "dashboard_application"
     @product_color = Color.new
+    render layout: "dashboard_application"
   end
 
   def create_product_color
@@ -105,8 +105,8 @@ class DashboardsController < ApplicationController
   end
 
   def add_product_size
-    render layout: "dashboard_application"
     @product_size = Size.new
+    render layout: "dashboard_application"
   end
 
   def create_product_size
@@ -124,8 +124,8 @@ class DashboardsController < ApplicationController
   end
 
   def add_store
-    render layout: "dashboard_application"
     @store = Store.new
+    render layout: "dashboard_application"
   end
 
   def create_store
@@ -148,9 +148,62 @@ class DashboardsController < ApplicationController
   end
 
   def add_product
-    render layout: "dashboard_application"
     @product = Product.new
     @product.product_shipments.build
+    render layout: "dashboard_application"
+  end
+
+  def edit_product
+    @product = Product.find(params[:product_id])
+    @product.product_shipments.build
+    render layout: "dashboard_application"
+  end
+
+  def update_product
+    @product = Product.find(params[:product_id])
+    @product.update_attributes(product_params)
+    if @product.save
+      if params[:product][:product_brand].present?
+        ProductBrand.where(product_id: @product.id).destroy_all
+        ProductBrand.create(product_id: @product.id, brand_id: params[:product][:product_brand].to_i)
+      end
+      if params[:product][:product_category].present?
+        ProductCategory.where(product_id: @product.id).destroy_all
+        ProductCategory.create(product_id: @product.id, category_id: params[:product][:product_category].to_i)
+      end
+      if params[:product][:product_sub_category].present?
+        ProductSubCategory.where(product_id: @product.id).destroy_all
+        ProductSubCategory.create(product_id: @product.id, sub_category_id: params[:product][:product_sub_category].to_i)
+      end
+      if params[:product][:product_group].present?
+        ProductGroup.where(product_id: @product.id).destroy_all
+        ProductGroup.create(product_id: @product.id, product_type_id: params[:product][:product_group].to_i)
+      end
+
+      if params[:product][:color_ids].present?
+        ProductColor.where(product_id: @product.id).destroy_all
+        product_color_ids = params[:product][:color_ids].reject { |c| c.empty? }
+        product_color_ids.each do |color|
+          ProductColor.create(product_id: @product.id, color_id: color.to_i)
+        end
+      end
+
+      if params[:product][:size_ids].present?
+        ProductSize.where(product_id: @product.id).destroy_all
+        product_color_ids = params[:product][:size_ids].reject { |c| c.empty? }
+        product_color_ids.each do |color|
+          ProductSize.create(product_id: @product.id, size_id: color.to_i)
+        end
+      end
+      if params[:images].present?
+        params[:images].each { |image|
+          ProductImage.create(image: image, product_id: @product.id)
+        }
+      end
+      redirect_to product_list_path
+    else
+      redirect_to edit_product_path
+    end
   end
 
   def create_product

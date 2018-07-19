@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get 'product_list' => "dashboards#product_list", as: :product_list
   get 'add_product' => "dashboards#add_product", as: :add_product
   post 'create_product' => "dashboards#create_product", as: :create_product
+  get 'edit_product' => "dashboards#edit_product", as: :edit_product
+  put 'update_product' => "dashboards#update_product", as: :update_product
 
   get 'product_color_list' => "dashboards#product_color_list", as: :product_color_list
   get 'add_product_color' => "dashboards#add_product_color", as: :add_product_color
