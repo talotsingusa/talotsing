@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :authenticate_user!
-  before_action :remove_sessions
+
   def after_sign_in_path_for(resource)
     user = User.find(resource.id)
 
@@ -36,10 +36,5 @@ class ApplicationController < ActionController::Base
     else
       # do nothing
     end
-  end
-
-  def remove_sessions
-    session[:shop_cart] = nil
-    session[:favorites] = nil
   end
 end
