@@ -33,8 +33,6 @@ module ApplicationHelper
   end
 
   def cart_total
-    session[:shop_cart] = nil
-    session[:favorites] = nil
     total_price = []
     if !session[:shop_cart].nil? && session[:shop_cart].count > 0
       session[:shop_cart].each do |product|
