@@ -1,0 +1,252 @@
+.purchase-main {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    list-style: none;
+    overflow: hidden;
+    font: 14px Helvetica;
+    font-weight: 600;
+    display: flex;
+    counter-reset: li;
+}
+
+.progress-bar__steps {
+    background: #ddd;
+    color: #666;
+    width: 33.33%;
+    position: relative;
+    cursor: default;
+    list-style-image: none;
+    list-style-type: none;
+    padding: 20px 5px;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    .progress-bar__steps {
+        padding: 20px 0 20px 65px;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .progress-bar__steps:first-child {
+        padding: 20px 0 20px 30px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .progress-bar__steps:after {
+        border-bottom: 50px solid transparent;
+        border-top: 50px solid transparent;
+        content: " ";
+        display: block;
+        height: 0;
+        left: 100%;
+        margin-top: -50px;
+        position: absolute;
+        top: 50%;
+        width: 0;
+        border-left: 30px solid #ddd;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .progress-bar__steps:before {
+        border-bottom: 50px solid transparent;
+        border-top: 50px solid transparent;
+        content: " ";
+        display: block;
+        height: 0;
+        left: 100%;
+        margin-top: -50px;
+        position: absolute;
+        top: 50%;
+        width: 0;
+        border-left: 30px solid #fff;
+        z-index: 1;
+        margin-left: 5px;
+    }
+}
+
+.progress-bar .current {
+    background: #24303e;
+    color: #fff;
+}
+
+.progress-bar .current:after {
+    border-left: 30px solid #24303e;
+}
+
+.adress-panel {
+    width: 430px;
+    background: rgba(36, 48, 62, 0.23);
+    border: 2px solid #24303e;
+    background-image: url(../images/arrow-selected.png);
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.default {
+    float: right;
+    margin: 3px 6px;
+}
+
+.default p {
+    color: #25313e;
+}
+
+.panel-body {
+    padding: 40px;
+}
+
+.panel-body input[type=radio] {
+    margin-right: 20px;
+}
+
+.panel-body label {
+    color: #313b48;
+}
+
+.caption {
+    position: relative;
+}
+
+.caption img {
+    width: 12px;
+    position: absolute;
+}
+
+.caption p {
+    margin-left: 35px;
+    font-size: 12px;
+    color: #25313e;
+    float: left;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.adress-panel .edit {
+    margin: 10px;
+}
+
+.adress-panel+a {
+    color: #25313e;
+}
+
+.cart_button_clear {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 14px;
+}
+
+.cart_button_checkout {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 14px;
+}
+
+.cart_section .form-control {
+    width: 100% !important;
+    margin: 5px 0;
+}
+
+.cart_section .form-group label {
+    margin-top: 14px;
+}
+
+#form-inputs-group {
+    display: none;
+}
+
+.cc {
+    background: url('http://jbuc.com/look/here/cards.png') 4px 4px no-repeat;
+    font-size: 2em;
+    padding: .3em;
+    padding-left: 60px;
+    margin: -1em auto 0;
+    position: relative;
+    top: 50%;
+    display: block;
+    border-radius: .2em;
+    border: 1px solid #ddd;
+    box-shadow: .05em .05em .1em rgba(50, 50, 50, .08) inset;
+    outline: none;
+    transition: border 500ms;
+    transition: box-shadow 500ms;
+    transition: color 500ms;
+    transition: background-color 500ms;
+    width: 11.15em;
+    position: relative;
+    height: 40px;
+    background-size: 48px;
+}
+
+.cc.error {
+    border-color: rgb(255, 100, 100);
+    box-shadow: .05em .05em .25em rgba(170, 117, 117, .5) inset;
+    background-color: rgba(255, 100, 100, .08);
+    color: rgb(90, 0, 0);
+}
+
+.cc.verified {
+    border-color: rgb(152, 199, 152);
+    box-shadow: .05em .05em .25em rgba(0, 50, 0, .3) inset;
+}
+
+.cc.amex {
+    background-position: 4px -58px;
+}
+
+.cc.discover {
+    background-position: 4px -121px;
+}
+
+.cc.mastercard {
+    background-position: 4px -182px;
+}
+
+.cc.visa {
+    background-position: 4px -245px;
+}
+
+#payment-panel .cc {
+    margin: -1em auto 0 !important;
+    width: 100% !important;
+}
+
+#payment-panel .card-label {
+    margin-bottom: 2rem;
+}
+
+.divider {
+    font-size: 30px;
+}
+
+.thanksforshoping {
+    text-align: center;
+}
+
+.thanksforshoping img {
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+@media (max-width: 415px)
+{
+	.adress-panel {
+        width: 100%;
+    }
+    .progress-bar__steps {
+        font-size: 78%;
+    }
+}
+@media (max-width: 321px)
+{
+    .progress-bar__steps {
+        font-size: 63%;
+    }
+}

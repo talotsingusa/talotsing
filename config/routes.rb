@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'home/contact' => "home#contact", as: :contact
   get 'home/blog' => "home#blog", as: :blog
   get 'home/blog_show' => "home#blog_show", as: :blog_show
+  get 'home/checkout' => "home#checkout", as: :checkout
   get 'home/add_favorite' => "home#add_favorite", as: :add_favorite
   get 'home/remove_favorite' => "home#remove_favorite", as: :remove_favorite
   get 'home/my_favorites' => "home#my_favorites", as: :my_favorites

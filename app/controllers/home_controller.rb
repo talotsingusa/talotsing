@@ -67,6 +67,10 @@ class HomeController < ApplicationController
     render layout: "cart_application"
   end
 
+  def checkout
+    render layout: "purchase_application"
+  end
+
   def contact
     render layout: "contact_application"
   end
