@@ -55,7 +55,7 @@ gem 'jquery-slick-rails'
 gem 'jquery-sliders-rails'
 gem "select2-rails"
 gem 'pry'
-gem 'paperclip', '~> 5.1.0'
+gem 'paperclip', '~> 5.2.0'
 gem 'aws-sdk',   '~> 2.6'
 gem 'jquery-datatables'
 gem 'chosen-rails'
@@ -65,6 +65,9 @@ gem "cocoon"
 gem 'dotenv-rails', groups: [:development, :test]
 # gem 'stripe-rails'
 gem 'stripe'
+gem 'intl-tel-input-rails'
+gem 'will_paginate-bootstrap4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

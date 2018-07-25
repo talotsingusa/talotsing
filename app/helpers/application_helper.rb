@@ -43,7 +43,11 @@ module ApplicationHelper
       if current_user.orders.present?
         @order_items = current_user.orders.last.order_items
         @order_items.each do |product|
-          @price = Product.find(product.product_id).price*product.quantity
+          if product.quantity.nil?
+            @price = Product.find(product.product_id).price*1
+          else
+            @price = Product.find(product.product_id).price*product.quantity
+          end
           total_price << @price
         end
       end

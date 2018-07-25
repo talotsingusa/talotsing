@@ -7,31 +7,31 @@ class HomeController < ApplicationController
   def shop
     if params[:category].present?
       ids = ProductCategory.where(category_id: params[:category]).pluck(:product_id)
-      @products = Product.where("id IN (?)", ids)
+      @products = Product.where("id IN (?)", ids).paginate(:page => params[:page], :per_page => 15)
       @category = Category.where(id: params[:category]).first.name
     elsif params[:sub_category].present?
       ids = ProductSubCategory.where(sub_category_id: params[:sub_category]).pluck(:product_id)
-      @products = Product.where("id IN (?)", ids)
+      @products = Product.where("id IN (?)", ids).paginate(:page => params[:page], :per_page => 15)
       @category = SubCategory.where(id: params[:sub_category]).first.name
     elsif params[:product_type].present?
       ids = ProductGroup.where(product_type_id: params[:product_type]).pluck(:product_id)
-      @products = Product.where("id IN (?)", ids)
+      @products = Product.where("id IN (?)", ids).paginate(:page => params[:page], :per_page => 15)
       @category = ProductType.where(id: params[:product_type]).first.name
     elsif params[:brand_id].present?
       ids = ProductBrand.where(brand_id: params[:brand_id]).pluck(:product_id)
-      @products = Product.where("id IN (?)", ids)
+      @products = Product.where("id IN (?)", ids).paginate(:page => params[:page], :per_page => 15)
       @category = Brand.where(id: params[:brand_id]).first.name
     elsif params[:search_product].present? && params[:search_product][:keyword].present? && params[:search_product][:category].present?
       ids = ProductCategory.where(category_id: params[:search_product][:category]).pluck(:product_id)
       products = Product.where("id IN (?)", ids)
-      @products = products.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%")
+      @products = products.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%").paginate(:page => params[:page], :per_page => 15)
     elsif params[:search_product].present? && params[:search_product][:keyword].present?
-      @products = Product.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%")
+      @products = Product.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%").paginate(:page => params[:page], :per_page => 15)
     elsif params[:search_product].present? && params[:search_product][:category].present?
       ids = ProductCategory.where(category_id: params[:search_product][:category]).pluck(:product_id)
-      @products = Product.where("id IN (?)", ids)
+      @products = Product.where("id IN (?)", ids).paginate(:page => params[:page], :per_page => 15)
     else
-      @products = Product.all
+      @products = Product.all.paginate(:page => params[:page], :per_page => 15)
       if @products.present?
         @category = @products.last.category.name
       end
@@ -68,7 +68,36 @@ class HomeController < ApplicationController
   end
 
   def checkout
-    render layout: "purchase_application"
+    if current_user.present? && current_user.orders.present?
+      @order_items = current_user.orders.last.order_items
+    end
+    if current_user.present?
+      if current_user.shipping.present?
+        @shipping = current_user.shipping
+      else
+        @shipping = Shipping.new
+      end
+      render layout: "purchase_application"
+    else
+      redirect_to user_session_path
+    end
+  end
+
+  def create_shipping
+    if current_user.shipping.present?
+      current_user.shipping.update_attributes(shipping_params)
+    else
+      shipping  = Shipping.create(shipping_params)
+    end
+    redirect_to checkout_path
+  end
+
+  def product_detail_modal
+    @product= Product.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def contact
@@ -158,4 +187,9 @@ class HomeController < ApplicationController
     redirect_to shop_path
   end
 
+  private
+
+  def shipping_params
+    params.require(:shipping).permit( :name, :cntry_name, :street_address_one, :street_address_two, :state, :city, :postal_code, :mobile, :user_id)
+  end
 end

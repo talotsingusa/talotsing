@@ -27,6 +27,7 @@
 //= require jquery.slick
 //= require jquery.sliders
 //= require toastr
+//= require intlTelInput
 //= require cart_custom.js
 
 

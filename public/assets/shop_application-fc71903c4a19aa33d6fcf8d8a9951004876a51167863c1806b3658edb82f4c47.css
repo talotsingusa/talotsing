@@ -13752,6 +13752,344 @@ select option {
   margin-right: 0px;
 }
 
+/* line 1, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product_item {
+  width: 33.333333%;
+  padding-right: 6px;
+}
+
+/* line 6, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product_image {
+  height: 400px;
+}
+
+/* line 10, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product_image > img + img {
+  position: absolute;
+  display: none;
+}
+
+/* line 15, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product_image > img + img + a {
+  position: absolute;
+  display: none;
+  bottom: 20px;
+  padding-right: 28px;
+  color: #fff;
+  background-color: #25313e;
+  border-color: #25313e;
+  opacity: .7;
+}
+
+/* line 26, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product_image > img + img + a:hover {
+  opacity: 1;
+  background-color: #25313e;
+  border-color: #25313e;
+}
+
+/* line 32, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product_item:hover .product_image > img + img,
+.product_item:hover .product_image > img + img + a {
+  display: block;
+}
+
+/* line 37, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product_marks {
+  left: 6px;
+}
+
+/* line 41, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.material-icons {
+  position: absolute;
+}
+
+/* line 44, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.modal-content {
+  border: none;
+  background-color: transparent;
+}
+
+/* line 48, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.modal-body {
+  background-color: #fff;
+}
+
+/* line 51, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.close {
+  font-weight: 400;
+  color: #fff;
+}
+
+/* line 55, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+a:focus {
+  outline: none;
+}
+
+/* line 59, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.carousel-inner {
+  width: 80%;
+  float: left;
+}
+
+/* line 64, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.carousel-inner > .item > img {
+  width: 300px;
+}
+
+/* line 68, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: auto;
+}
+
+/* line 73, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+#myCarousel {
+  margin: 0 auto;
+  background: #fff;
+  height: 450px;
+  overflow: hidden;
+}
+
+/* line 80, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+#thumbCarousel {
+  max-width: 650px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  background: transparent;
+  padding-left: 10px;
+  height: 450px;
+}
+
+/* line 88, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+#thumbCarousel > div > img {
+  width: 60px;
+  height: 90px;
+  border: 1px solid #ccc;
+}
+
+/* line 95, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+#thumbCarousel .thumb {
+  float: left;
+  margin-right: 10px;
+  background: #fff;
+  margin-top: 4px;
+}
+
+/* line 102, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+#thumbCarousel .thumb:last-child {
+  margin-right: 0;
+}
+
+/* line 106, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.thumb:hover {
+  cursor: pointer;
+}
+
+/* line 110, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.thumb img {
+  opacity: 0.5;
+}
+
+/* line 114, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.thumb img:hover {
+  opacity: 1;
+}
+
+/* line 118, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.thumb.active img {
+  opacity: 1;
+  border: 1px solid #1d62b7;
+}
+
+/* line 123, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product-info h3 {
+  font-weight: 200;
+  font-size: 30px;
+}
+
+/* line 127, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.product-info h3 + h3 {
+  font-weight: 600;
+}
+
+/* line 133, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-default > .panel-heading a[aria-expanded="true"] {
+  background-color: transparent !important;
+}
+
+/* line 137, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-default > .panel-heading {
+  color: #333;
+  padding: 0;
+  border-top: 1px solid #e4e5e7;
+  /* border-bottom: 1px solid #e4e5e7; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 148, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-default > .panel-heading .panel-title {
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* line 154, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-default > .panel-heading a {
+  display: block;
+  /* border-bottom: 1px solid #e4e5e7; */
+  color: #6a6c6f;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 162, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-default > .panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: -webkit-transform .25s linear;
+  transition: transform .25s linear;
+  transition: transform .25s linear, -webkit-transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+  position: absolute;
+  right: 0;
+}
+
+/* line 179, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-body ul {
+  list-style: disc;
+  color: #6a6c6f;
+  margin-left: 30px;
+}
+
+/* line 185, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-body table {
+  border-color: #6a6c6f;
+  color: #6a6c6f;
+}
+
+/* line 189, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.panel-body table, th, td {
+  border: 1px solid #6a6c6f;
+  padding: 3px;
+}
+
+/* line 193, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.accordion-option {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 15px 0;
+}
+
+/* line 200, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.accordion-option .title {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 208, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.accordion-option .toggle-accordion {
+  float: right;
+  font-size: 16px;
+  color: #6a6c6f;
+}
+
+/* line 214, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.accordion-option .toggle-accordion:before {
+  content: "Expand All";
+}
+
+/* line 218, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.accordion-option .toggle-accordion.active:before {
+  content: "Collapse All";
+}
+
+/* line 224, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  width: 34%;
+  position: relative;
+  float: left;
+}
+
+/* line 231, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.rating + p {
+  margin-top: 13px;
+}
+
+/* line 234, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.rating > span {
+  display: inline-block;
+  position: relative;
+  color: #fec603;
+  font-size: 20px;
+  width: 20px;
+}
+
+/* line 241, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  cursor: pointer;
+  color: #fec603;
+  -webkit-animation: mymove 2s;
+  animation: mymove 2s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  from {
+    color: #fec603;
+  }
+  to {
+    color: #fec603;
+  }
+}
+/* line 261, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.form-control {
+  color: #929496;
+  margin: 0;
+  width: 100% !important;
+}
+
+/* line 267, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.contact_submit_button {
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+/* line 275, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
+.cart-img {
+  width: 100%;
+  margin-top: 40px;
+}
+
 /* CSS Document */
 /******************************
 

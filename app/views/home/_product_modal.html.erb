@@ -1,0 +1,185 @@
+<div class="modal fade" id="product_modal" style="overflow-y: auto;">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div id="myCarousel" class="carousel slide" data-interval="false">
+
+              <div class="carousel-inner" role="listbox">
+                <% if @product.present? %>
+                <% @product.product_images.each_with_index do |image, index| %>
+                  <div class="item carousel-item" id="<%= "product_large_#{index}" %>">
+                    <img src="<%= image.image.url(:original) if image.present? %>">
+                  </div>
+                <% end %>
+                <% end %>
+
+
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+
+              <div id="thumbCarousel">
+                <% if @product.present? %>
+                <% @product.product_images.each_with_index do |image, index| %>
+                  <div data-target="#myCarousel" data-slide-to="<%= index %>" class="thumb" id="<%= "product_small_#{index}" %>">
+                    <img src="<%= image.image.url(:original) if image.present? %>">
+                  </div>
+                <% end %>
+                <% end %>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="product-info">
+              <h3><%= @product.name if @product.present? %></h3>
+              <h3>$<%= @product.price if @product.present? %> USD</h3>
+              <div class="rating">
+                <span title="five stars">&#9734;</span>
+                <span title="four stars">&#9734;</span>
+                <span title="three stars">&#9734;</span>
+                <span title="two stars">&#9734;</span>
+                <span title="one star">&#9734;</span>
+              </div>
+              <p>3 Reviews</p>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        PRODUCT DETAILS
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse in collapse show" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <ul>
+                        <li><%= @product.description if @product.present? %></li>
+                        <li><%= @product.additional_information if @product.present? %></li>
+<!--                        <li>Ruffle Shoulder</li>-->
+<!--                        <li>Floral Print</li>-->
+<!--                        <li>Mini</li>-->
+<!--                        <li>94% Polyester; 6% Spandex</li>-->
+<!--                        <li>Print Placement Will Vary</li>-->
+<!--                        <li>Made In USA</li>-->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
+                         aria-controls="collapseTwo">
+                        SHIPPING INFORMATION
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                      <table border="1px">
+                        <tbody>
+                        <tr>
+                          <td width="50%"> METHOD </td>
+                          <td width="20%"> COST </td>
+                          <td width="30%"> TIME </td>
+                        </tr>
+                        <tr>
+                          <td>Overnight + Saturday Delivery</td>
+                          <td>$20</td>
+                          <td>1 Business Day</td>
+                        </tr>
+                        <tr>
+                          <td>Standard</td>
+                          <td>$6</td>
+                          <td>2-3 Business Days</td>
+                        </tr>
+                        <tr>
+                          <td>Over $75</td>
+                          <td>FREE</td>
+                          <td>2-3 Business Days</td>
+                        </tr>
+                        <tr>
+                          <td>Canada &amp; U.K. Over $75</td>
+                          <td>FREE</td>
+                          <td>5-7 Business Days</td>
+                        </tr>
+                        <tr>
+                          <td>Canada &amp; UK</td>
+                          <td>$6</td>
+                          <td>5-7 Business Days</td>
+                        </tr>
+                        <tr>
+                          <td>International</td>
+                          <td>$10</td>
+                          <td>5-10 Business Days</td>
+                        </tr>
+                        <tr>
+                          <td>International Express</td>
+                          <td>$25</td>
+                          <td>2-5 Business Days</td>
+                        </tr>
+                        <tr>
+                          <td>International Over $150</td>
+                          <td>FREE</td>
+                          <td>5-10 Business Days</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <%= form_for :add_product_to_cart, url: add_to_cart_path, :html => {:id => "cart_form_for"}, class: "header_search_form clearfix", method: :get do |f| %>
+                <%= f.hidden_field :product_id, value: @product.id if @product.present? %>
+                <%= f.hidden_field :quantity, value: 1 , id: "product_quantity_in_cart"%>
+                <%= f.collection_select(:size, @product.sizes.all,
+                                        :id, :name,
+                                        {:prompt => 'Please select size'}, {class: "form-control"}) if @product.present? %>
+<!--              <select class="form-control">-->
+<!--                <option value="" selected="" disabled="disabled">Size</option>-->
+<!--                <option value="XS">XS</option>-->
+<!--                <option value="S">S</option>-->
+<!--                <option value="M">M</option>-->
+<!--                <option value="L">L</option>-->
+<!--                <option value="XL">XL</option>-->
+<!--              </select>-->
+              <br>
+                <%= f.collection_select(:color, @product.colors.all,
+                                        :id, :name,
+                                        {:prompt => 'Please select color'}, {class: "form-control"}) if @product.present? %>
+                <br>
+                <%= f.select(:shipping, ['5-10 Business Days Free', '2-5 Business Days $25', '5-10 Business Days $10', '5-7 Business Days $6', '5-7 Business Days Free'], {include_blank: "Select shipping"}, {class: "form-control"}) %>
+
+            <% end %>
+
+              <button type="submit" class="button contact_submit_button" id="adding_products_in_cart_modal">Add to bag</button>
+              <img src="/assets/newpdp.gif" class="img-responsive cart-img" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+    $(document).on("click", "#adding_products_in_cart_modal", function(e) {
+        e.preventDefault();
+        // $("#product_quantity_in_cart").val($("#quantity_input").val());
+        $("#cart_form_for").submit();
+    });
+</script>

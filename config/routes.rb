@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'home/remove_favorite' => "home#remove_favorite", as: :remove_favorite
   get 'home/my_favorites' => "home#my_favorites", as: :my_favorites
   get 'home/add_to_cart' => "home#add_to_cart", as: :add_to_cart
+  post 'home/create_shipping' => "home#create_shipping", as: :create_shipping
+  get 'home/product_detail_modal' => "home#product_detail_modal", as: :product_detail_modal
 
   resources :dashboards
   get 'brands_list' => "dashboards#brands_list", as: :brands_list

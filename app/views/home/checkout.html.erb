@@ -27,20 +27,20 @@
             <div class="panel-body">
               <div class="row">
                 <input type="radio" checked>
-                <label>Name here</label>
+                <label><%= current_user.shipping.name if current_user.shipping.present? %></label>
               </div>
               <div class="row">
                 <div class="caption">
                   <img src="/assets/contact_3.png" alt="">
-                  <p>suit 5 Ahmad center I 8 markaz Islamabad Pakistan</p>
-                  <p>Islamabad, Fedral, 44000</p>
-                  <p>Pakistan</p>
+                  <p><%= "#{current_user.shipping.street_address_one}, #{current_user.shipping.street_address_two}" if current_user.shipping.present? %></p>
+                  <p><%= "#{current_user.shipping.city}, #{current_user.shipping.state}, #{current_user.shipping.postal_code}"if current_user.shipping.present? %></p>
+                  <p><%= current_user.shipping.cntry_name if current_user.shipping.present? %></p>
                 </div>
               </div>
               <div class="row">
                 <div class="caption">
                   <img src="/assets/phone.png" alt="">
-                  <p>+92-344######</p>
+                  <p><%= current_user.shipping.mobile if current_user.shipping.present? %></p>
                 </div>
               </div>
             </div>
@@ -59,73 +59,82 @@
       </div>
       <div class="row" id="form-inputs-group">
         <div class="col-lg-6 offset-lg-1">
-          <form>
+          <%= simple_form_for @shipping, url: create_shipping_path, method: :post do |f| %>
             <div class="form-group row">
               <label class="form-label col-md-3">Contact Name:</label>
               <div class="col-md-9">
-                <input type="text" class="form-control">
+                <%= f.input :name, class: "form-control", label: false, required: true %>
               </div>
             </div>
             <div class="form-group row">
               <label class="form-label col-md-3">Country/Region:</label>
               <div class="col-md-9">
-                <select class="form-control">
-                  <option value="example">example</option>
-                  <option value="example">example</option>
-                  <option value="example">example</option>
-                </select>
+                <%= f.input :cntry_name, class: "form-control", label: false, required: true %>
+<!--                <select class="form-control">-->
+<!--                  <option value="example">example</option>-->
+<!--                  <option value="example">example</option>-->
+<!--                  <option value="example">example</option>-->
+<!--                </select>-->
               </div>
             </div>
 
             <div class="form-group row">
               <label class="form-label col-md-3">Street Address:</label>
               <div class="col-md-9">
-                <input type="text" placeholder="Street address" class="form-control">
-                <input type="text" placeholder="Apartment, suite, unit etc. (optional)" class="form-control">
+                <%= f.input :street_address_one, class: "form-control", label: false, required: true, prompt: "Street address" %>
+                <%= f.input :street_address_two, class: "form-control", label: false, required: true, prompt: "Apartment, suite, unit etc. (optional)" %>
+<!--                <input type="text" placeholder="Street address" class="form-control">-->
+<!--                <input type="text" placeholder="Apartment, suite, unit etc. (optional)" class="form-control">-->
               </div>
             </div>
 
             <div class="form-group row">
               <label class="form-label col-md-3">State/Province:</label>
               <div class="col-md-9">
-                <select class="form-control">
-                  <option value="example">example</option>
-                  <option value="example">example</option>
-                  <option value="example">example</option>
-                </select>
+                <%= f.input :state, class: "form-control", label: false, required: true %>
+<!--                <select class="form-control">-->
+<!--                  <option value="example">example</option>-->
+<!--                  <option value="example">example</option>-->
+<!--                  <option value="example">example</option>-->
+<!--                </select>-->
               </div>
             </div>
             <div class="form-group row">
               <label class="form-label col-md-3">City:</label>
               <div class="col-md-9">
-                <input type="text" class="form-control">
+                <%= f.input :city, class: "form-control", label: false, required: true %>
               </div>
             </div>
             <div class="form-group row">
               <label class="form-label col-md-3">Zip/Postal Code:</label>
               <div class="col-md-9">
-                <input type="text" class="form-control">
+                <%= f.input :postal_code, class: "form-control", label: false, required: true %>
+<!--                <input type="text" class="form-control">-->
               </div>
             </div>
             <div class="form-group row">
               <label class="form-label col-md-3">Mobile:</label>
               <div class="col-md-9">
-                <input type="text" class="form-control">
+                <%= f.input :mobile, class: "form-control", label: false, required: true, id: "mobile_no" %>
+<!--                <input type="text" class="form-control">-->
               </div>
             </div>
+            <%= f.hidden_field :user_id, value: current_user.id %>
 
-          </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <div class="cart_buttons">
-            <button type="button" class="button cart_button_clear">Cancel</button>
-            <button type="button" class="button cart_button_checkout">Submit</button>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-10 offset-lg-1">
+                <div class="cart_buttons">
+
+                  <%= link_to "Cancel", shop_path, class: "button cart_button_clear" %>
+                  <%= f.submit 'Submit', class: "button cart_button_checkout" %>
+                  <!--            <button type="button" class="button cart_button_checkout">Submit</button>-->
+                </div>
+              </div>
+            </div>
+          <% end %>
           </div>
-        </div>
-      </div>
-    </div>
 
     <div id="payment-panel">
       <div class="row">
@@ -199,36 +208,68 @@
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
         <div class="cart_container">
+          <div class="cart_title">Shopping Cart</div>
           <div class="cart_items">
             <ul class="cart_list">
-              <li class="cart_item clearfix">
-                <div class="cart_item_image">
-                  <img src="/assets/shopping_cart.jpg" alt="">
-                </div>
-                <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
-                  <div class="cart_item_name cart_info_col">
-                    <div class="cart_item_title">Name</div>
-                    <div class="cart_item_text">MacBook Air 13</div>
-                  </div>
-                  <div class="cart_item_color cart_info_col">
-                    <div class="cart_item_title">Color</div>
-                    <div class="cart_item_text">
-                      <span style="background-color:#999999;"></span>Silver</div>
-                  </div>
-                  <div class="cart_item_quantity cart_info_col">
-                    <div class="cart_item_title">Quantity</div>
-                    <div class="cart_item_text">1</div>
-                  </div>
-                  <div class="cart_item_price cart_info_col">
-                    <div class="cart_item_title">Price</div>
-                    <div class="cart_item_text">$2000</div>
-                  </div>
-                  <div class="cart_item_total cart_info_col">
-                    <div class="cart_item_title">Total</div>
-                    <div class="cart_item_text">$2000</div>
-                  </div>
-                </div>
-              </li>
+              <% if !session[:shop_cart].nil? && session[:shop_cart].count > 0 %>
+                <% session[:shop_cart].each do |product| %>
+                  <li class="cart_item clearfix">
+                    <div class="cart_item_image"><img src="<%= product_details(product[0].to_i).product_images.first.image.url(:thumb) if product_details(product[0].to_i).product_images.present? %>" alt=""></div>
+                    <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                      <div class="cart_item_name cart_info_col">
+                        <div class="cart_item_title">Name</div>
+                        <div class="cart_item_text"><%= product_details(product[0].to_i).name %></div>
+                      </div>
+                      <div class="cart_item_color cart_info_col">
+                        <div class="cart_item_title">Color</div>
+                        <div class="cart_item_text"><span style="background-color:#999999;"></span>Silver</div>
+                      </div>
+                      <div class="cart_item_quantity cart_info_col">
+                        <div class="cart_item_title">Quantity</div>
+                        <div class="cart_item_text"><%= product[1] %></div>
+                      </div>
+                      <div class="cart_item_price cart_info_col">
+                        <div class="cart_item_title">Price</div>
+                        <div class="cart_item_text">$<%= product_details(product[0].to_i).price %></div>
+                      </div>
+                      <div class="cart_item_total cart_info_col">
+                        <div class="cart_item_title">Total</div>
+                        <div class="cart_item_text">$<%= product_details(product[0].to_i).price*product[1].to_i %></div>
+                      </div>
+                    </div>
+                  </li>
+                <% end %>
+              <% else %>
+                <% if @order_items.present? %>
+                  <% @order_items.each do |product| %>
+                    <li class="cart_item clearfix">
+                      <div class="cart_item_image"><img src="<%= product_details(product.product_id).product_images.first.image.url(:thumb) if product_details(product.product_id).product_images.present? %>" alt=""></div>
+                      <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                        <div class="cart_item_name cart_info_col">
+                          <div class="cart_item_title">Name</div>
+                          <div class="cart_item_text"><%= product_details(product.product_id).name %></div>
+                        </div>
+                        <div class="cart_item_color cart_info_col">
+                          <div class="cart_item_title">Color</div>
+                          <div class="cart_item_text"><span style="background-color:#999999;"></span>Silver</div>
+                        </div>
+                        <div class="cart_item_quantity cart_info_col">
+                          <div class="cart_item_title">Quantity</div>
+                          <div class="cart_item_text"><%= product.quantity %></div>
+                        </div>
+                        <div class="cart_item_price cart_info_col">
+                          <div class="cart_item_title">Price</div>
+                          <div class="cart_item_text">$<%= product_details(product.product_id).price %></div>
+                        </div>
+                        <div class="cart_item_total cart_info_col">
+                          <div class="cart_item_title">Total</div>
+                          <div class="cart_item_text">$<%= product_details(product.product_id).price*product.quantity %></div>
+                        </div>
+                      </div>
+                    </li>
+                  <% end %>
+                <% end %>
+              <% end %>
             </ul>
           </div>
 
@@ -236,14 +277,40 @@
           <div class="order_total">
             <div class="order_total_content text-md-right">
               <div class="order_total_title">Order Total:</div>
-              <div class="order_total_amount">$2000</div>
+              <div class="order_total_amount">$<%= cart_total %></div>
             </div>
+          </div>
+
+          <div class="cart_buttons">
+            <!--            <button type="button" class="button cart_button_clear">Checkout</button>-->
+            <%#= link_to "Checkout", checkout_path, class: "button cart_button_checkout" %>
+            <%= link_to "Continue Shopping", shop_path, class: "button cart_button_checkout" %>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<% if current_user.shipping.nil? %>
+  <style>
+    #address-group-penal{
+      display: none;
+    }
+    #form-inputs-group{
+      display: block;
+    }
+  </style>
+<% end %>
+<% if current_user.shipping.present? %>
+  <style>
+    #address-group-penal{
+      display: block;
+    }
+    #form-inputs-group{
+      display: none;
+    }
+  </style>
+<% end %>
 <script>
     $(".progress-bar").css("flex-direction","row");
     $('.show-inputs-group').click(function () {
@@ -318,4 +385,18 @@
 
         $(this).attr('class', 'cc ' + detected[0] + ' ' + errorClass);
     });
+    $("#shipping_mobile").intlTelInput({
+        allowExtensions: true,
+        autoFormat: true,
+        autoHideDialCode: true,
+        autoPlaceholder: true,
+        preferredCountries: ['us', 'gb'],
+        defaultCountry: 'auto',
+        ipinfoToken: 'yolo',
+        nationalMode: false,
+        numberType: 'MOBILE',
+        preventInvalidNumbers: true
+    });
+    var imageUrl = "/assets/flags@2x.png";
+    $('.iti-flag').css('background-image', 'url(' + imageUrl + ')');
 </script>
