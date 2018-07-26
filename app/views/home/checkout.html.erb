@@ -4,15 +4,37 @@
       <div class="col-lg-10 offset-lg-1">
         <div class="purchase-main">
           <ol class="progress-bar">
-            <li class="progress-bar__steps current">
-              <span class="progress-bar__steps--text ">Review your Order</span>
-            </li>
-            <li class="progress-bar__steps ">
-              <span class="progress-bar__steps--text">Payment</span>
-            </li>
-            <li class="progress-bar__steps ">
-              <span class="progress-bar__steps--text">Done</span>
-            </li>
+            <% if @value == "review_order" %>
+              <li class="progress-bar__steps current">
+                <span class="progress-bar__steps--text ">Review your Order</span>
+              </li>
+              <li class="progress-bar__steps">
+                <span class="progress-bar__steps--text">Payment</span>
+              </li>
+              <li class="progress-bar__steps">
+                <span class="progress-bar__steps--text">Done</span>
+              </li>
+            <% elsif @value == "payment" %>
+              <li class="progress-bar__steps">
+                <span class="progress-bar__steps--text ">Review your Order</span>
+              </li>
+              <li class="progress-bar__steps current">
+                <span class="progress-bar__steps--text">Payment</span>
+              </li>
+              <li class="progress-bar__steps">
+                <span class="progress-bar__steps--text">Done</span>
+              </li>
+            <% elsif @value == "done" %>
+              <li class="progress-bar__steps">
+                <span class="progress-bar__steps--text ">Review your Order</span>
+              </li>
+              <li class="progress-bar__steps">
+                <span class="progress-bar__steps--text">Payment</span>
+              </li>
+              <li class="progress-bar__steps current">
+                <span class="progress-bar__steps--text">Done</span>
+              </li>
+            <% end %>
           </ol>
         </div>
       </div>
@@ -120,16 +142,21 @@
               </div>
             </div>
             <%= f.hidden_field :user_id, value: current_user.id %>
+            <%= hidden_field_tag "value", "review_order" %>
+
 
             </div>
             </div>
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
-                <div class="cart_buttons">
+                <div class="cart_buttons" id="shipping_form_button">
 
                   <%= link_to "Cancel", shop_path, class: "button cart_button_clear" %>
                   <%= f.submit 'Submit', class: "button cart_button_checkout" %>
                   <!--            <button type="button" class="button cart_button_checkout">Submit</button>-->
+                </div>
+                <div class="cart_buttons" id="continue_to_payment">
+                  <%= link_to "Continue", checkout_path(value: "payment"), class: "button cart_button_clear" %>
                 </div>
               </div>
             </div>
@@ -139,12 +166,14 @@
     <div id="payment-panel">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
-          <form action="">
+          <%= simple_form_for :card_info, url: add_card_path, method: :post do |f| %>
+
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="card-label form-label">Card number:</label>
-                  <input type="text" class="cc form-control" />
+<!--                  <input type="text" class="cc form-control" />-->
+                  <%= f.input :card, label: false, placeholder: "Add card number", class: "cc form-control" %>
                 </div>
               </div>
             </div>
@@ -154,13 +183,15 @@
                   <label class="form-label">Expiry Date:</label>
                   <div class="row">
                     <div class="col-md-5">
-                      <input type="text" placeholder="MM" class="form-control" />
+                      <%= f.input :month, label: false, placeholder: "MM", class: "form-control" %>
+<!--                      <input type="text" placeholder="MM" class="form-control" />-->
                     </div>
                     <div class="col-md-1">
                       <p class="divider">/</p>
                     </div>
                     <div class="col-md-5">
-                      <input type="text" placeholder="YY" class="form-control" />
+                      <%= f.input :year, label: false, placeholder: "YY", class: "form-control" %>
+<!--                      <input type="text" placeholder="YY" class="form-control" />-->
                     </div>
                   </div>
                 </div>
@@ -169,27 +200,48 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="form-label">Cardholder Name:</label>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <input type="text" placeholder="First Name" class="form-control" />
-                    </div>
-                    <div class="col-md-6">
-                      <input type="text" placeholder="Last Name" class="form-control" />
-                    </div>
-                  </div>
+                  <label class="card-label form-label">CVC:</label>
+                  <!--                  <input type="text" class="cc form-control" />-->
+                  <%= f.input :cvc, label: false, placeholder: "Add cvc number", class: "form-control" %>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-10 offset-lg-1">
-                <div class="cart_buttons">
-                  <button type="button" class="button cart_button_clear">Cancel</button>
-                  <button type="button" class="button cart_button_checkout">Done</button>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="card-label form-label">Cardholder Name:</label>
+                  <!--                  <input type="text" class="cc form-control" />-->
+                  <%= f.input :name, label: false, placeholder: "Add card number", class: "form-control" %>
                 </div>
               </div>
             </div>
-          </form>
+
+<!--            <div class="row">-->
+<!--              <div class="col-md-6">-->
+<!--                <div class="form-group">-->
+<!--                  <label class="form-label">Cardholder Name:</label>-->
+<!--                  <div class="row">-->
+<!--                    <div class="col-md-6">-->
+<!--                      <input type="text" placeholder="First Name" class="form-control" />-->
+<!--                    </div>-->
+<!--                    <div class="col-md-6">-->
+<!--                      <input type="text" placeholder="Last Name" class="form-control" />-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+            <div class="row">
+              <div class="col-lg-10 offset-lg-1">
+                <div class="cart_buttons">
+<!--                  <button type="button" class="button cart_button_clear">Cancel</button>-->
+                  <%= link_to "Cancel", shop_path, class: "button cart_button_clear" %>
+                  <%= f.submit class: "button cart_button_checkout", value: "Process Payment" %>
+<!--                  <button type="button" class="button cart_button_checkout">Done</button>-->
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -301,13 +353,28 @@
     }
   </style>
 <% end %>
-<% if current_user.shipping.present? %>
+<% if current_user.present? && current_user.shipping.present? %>
   <style>
     #address-group-penal{
       display: block;
     }
     #form-inputs-group{
       display: none;
+    }
+      #continue_to_payment{
+        display: block;
+      }
+      #shipping_form_button{
+        display: none;
+      }
+  </style>
+  <% else %>
+  <style>
+    #continue_to_payment{
+      display: none;
+    }
+    #shipping_form_button{
+      display: block;
     }
   </style>
 <% end %>
@@ -316,6 +383,8 @@
     $('.show-inputs-group').click(function () {
         $('#address-group-penal').hide('slow');
         $('#form-inputs-group').show('slow');
+        $('#shipping_form_button').show('slow');
+        $('#continue_to_payment').hide('slow');
     });
     $(document).ready(function () {
         var pro = document.getElementsByClassName('progress-bar');
@@ -399,4 +468,5 @@
     });
     var imageUrl = "/assets/flags@2x.png";
     $('.iti-flag').css('background-image', 'url(' + imageUrl + ')');
+    $("#card_info_card").addClass("cc");
 </script>

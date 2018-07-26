@@ -11,11 +11,11 @@
 
               <div class="carousel-inner" role="listbox">
                 <% if @product.present? %>
-                <% @product.product_images.each_with_index do |image, index| %>
-                  <div class="item carousel-item" id="<%= "product_large_#{index}" %>">
-                    <img src="<%= image.image.url(:original) if image.present? %>">
-                  </div>
-                <% end %>
+                  <% @product.product_images.each_with_index do |image, index| %>
+                    <div class="item carousel-item" id="<%= "product_large_#{index}" %>">
+                      <img src="<%= image.image.url(:original) if image.present? %>">
+                    </div>
+                  <% end %>
                 <% end %>
 
 
@@ -31,11 +31,11 @@
 
               <div id="thumbCarousel">
                 <% if @product.present? %>
-                <% @product.product_images.each_with_index do |image, index| %>
-                  <div data-target="#myCarousel" data-slide-to="<%= index %>" class="thumb" id="<%= "product_small_#{index}" %>">
-                    <img src="<%= image.image.url(:original) if image.present? %>">
-                  </div>
-                <% end %>
+                  <% @product.product_images.each_with_index do |image, index| %>
+                    <div data-target="#myCarousel" data-slide-to="<%= index %>" class="thumb" id="<%= "product_small_#{index}" %>">
+                      <img src="<%= image.image.url(:original) if image.present? %>">
+                    </div>
+                  <% end %>
                 <% end %>
               </div>
 
@@ -67,12 +67,12 @@
                       <ul>
                         <li><%= @product.description if @product.present? %></li>
                         <li><%= @product.additional_information if @product.present? %></li>
-<!--                        <li>Ruffle Shoulder</li>-->
-<!--                        <li>Floral Print</li>-->
-<!--                        <li>Mini</li>-->
-<!--                        <li>94% Polyester; 6% Spandex</li>-->
-<!--                        <li>Print Placement Will Vary</li>-->
-<!--                        <li>Made In USA</li>-->
+                        <!--                        <li>Ruffle Shoulder</li>-->
+                        <!--                        <li>Floral Print</li>-->
+                        <!--                        <li>Mini</li>-->
+                        <!--                        <li>94% Polyester; 6% Spandex</li>-->
+                        <!--                        <li>Print Placement Will Vary</li>-->
+                        <!--                        <li>Made In USA</li>-->
                       </ul>
                     </div>
                   </div>
@@ -146,24 +146,24 @@
                 <%= f.hidden_field :product_id, value: @product.id if @product.present? %>
                 <%= f.hidden_field :quantity, value: 1 , id: "product_quantity_in_cart"%>
                 <%= f.collection_select(:size, @product.sizes.all,
-                                        :id, :name,
+                                        :name, :name,
                                         {:prompt => 'Please select size'}, {class: "form-control"}) if @product.present? %>
-<!--              <select class="form-control">-->
-<!--                <option value="" selected="" disabled="disabled">Size</option>-->
-<!--                <option value="XS">XS</option>-->
-<!--                <option value="S">S</option>-->
-<!--                <option value="M">M</option>-->
-<!--                <option value="L">L</option>-->
-<!--                <option value="XL">XL</option>-->
-<!--              </select>-->
-              <br>
+                <!--              <select class="form-control">-->
+                <!--                <option value="" selected="" disabled="disabled">Size</option>-->
+                <!--                <option value="XS">XS</option>-->
+                <!--                <option value="S">S</option>-->
+                <!--                <option value="M">M</option>-->
+                <!--                <option value="L">L</option>-->
+                <!--                <option value="XL">XL</option>-->
+                <!--              </select>-->
+                <br>
                 <%= f.collection_select(:color, @product.colors.all,
-                                        :id, :name,
+                                        :name, :name,
                                         {:prompt => 'Please select color'}, {class: "form-control"}) if @product.present? %>
                 <br>
-                <%= f.select(:shipping, ['5-10 Business Days Free', '2-5 Business Days $25', '5-10 Business Days $10', '5-7 Business Days $6', '5-7 Business Days Free'], {include_blank: "Select shipping"}, {class: "form-control"}) %>
+                <%= f.select(:shipping, [ ['5-10 Business Days Free', 0], ['2-5 Business Days $25',25], ['5-10 Business Days $10', 10], ['5-7 Business Days $6', 6], ['5-10 Business Days $10', 10] ], {include_blank: "Select shipping"}, {class: "form-control"}) %>
 
-            <% end %>
+              <% end %>
 
               <button type="submit" class="button contact_submit_button" id="adding_products_in_cart_modal">Add to bag</button>
               <img src="/assets/newpdp.gif" class="img-responsive cart-img" alt="">

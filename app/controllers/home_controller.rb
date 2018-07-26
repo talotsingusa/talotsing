@@ -68,6 +68,9 @@ class HomeController < ApplicationController
   end
 
   def checkout
+    if params[:value].present?
+      @value = params[:value]
+    end
     if current_user.present? && current_user.orders.present?
       @order_items = current_user.orders.last.order_items
     end
@@ -89,7 +92,7 @@ class HomeController < ApplicationController
     else
       shipping  = Shipping.create(shipping_params)
     end
-    redirect_to checkout_path
+    redirect_to checkout_path(value: "review_order")
   end
 
   def product_detail_modal
@@ -100,6 +103,64 @@ class HomeController < ApplicationController
     end
   end
 
+  def add_card
+    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+    @order = current_user.orders
+    total_price = 0
+    if @order.present?
+      @order = current_user.orders.last
+      @order_items = @order.order_items
+      @order_items.each do |o|
+        product = Product.find(o.product_id)
+        total_price += product.price.to_f*o.quantity.to_i+o.shipping.to_i
+      end
+    end
+    $card = params[:card_info]
+    begin
+      customer = Stripe::Customer.retrieve(current_user.customer_id)
+      id = customer.sources.create(source: generate_token).id
+      user = current_user
+      user.default_source = customer.default_source
+      user.save
+    rescue Stripe::CardError => e
+      # CardError; display an error message.
+      flash[:notice] = 'That card is presently on fire!'
+    rescue => e
+      # Some other error; display an error message.
+      flash[:notice] = 'Some error occurred.'
+    end
+    begin
+      charge = Stripe::Charge.create({
+                                         amount: total_price.to_i*100,
+                                         currency: 'usd',
+                                         description: "Order no #{current_user.orders.last.id}",
+                                         customer: current_user.customer_id,
+                                     })
+    rescue Stripe::CardError => e
+      # CardError; display an error message.
+      flash[:notice] = 'That card is presently on fire!'
+    rescue => e
+      # Some other error; display an error message.
+      flash[:notice] = 'Some error occurred.'
+    end
+    order = current_user.orders.last
+    order.status = "Paid"
+    order.total_amount = total_price
+    order.save
+    session.delete(:shop_cart)
+    redirect_to checkout_path(value: "done")
+  end
+
+  def generate_token
+    Stripe::Token.create(
+        card: {
+            number: $card[:card],
+            exp_month: $card[:month],
+            exp_year: $card[:year],
+            cvc: $card[:cvc]
+        }
+    ).id
+  end
   def contact
     render layout: "contact_application"
   end
@@ -165,14 +226,14 @@ class HomeController < ApplicationController
 
   def add_to_cart
     if current_user.present?
-      order = Order.where(user_id: current_user.id)
+      order = Order.where(user_id: current_user.id, status: "pending")
       if order.present?
         order_id = order.last.id
       else
         order = Order.create(user_id: current_user.id)
         order_id = order.id
       end
-      order_item = OrderItem.create(product_id: params[:add_product_to_cart][:product_id], quantity: params[:add_product_to_cart][:quantity], order_id: order_id)
+      order_item = OrderItem.create(product_id: params[:add_product_to_cart][:product_id], quantity: params[:add_product_to_cart][:quantity], order_id: order_id, size: params[:add_product_to_cart][:size], color: params[:add_product_to_cart][:color], shipping: params[:add_product_to_cart][:shipping])
     else
       # session.delete(:favorites)
       product_array = [params[:add_product_to_cart][:product_id], params[:add_product_to_cart][:quantity]]

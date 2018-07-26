@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'home/add_to_cart' => "home#add_to_cart", as: :add_to_cart
   post 'home/create_shipping' => "home#create_shipping", as: :create_shipping
   get 'home/product_detail_modal' => "home#product_detail_modal", as: :product_detail_modal
+  post 'home/add_card' => "home#add_card", as: :add_card
+
 
   resources :dashboards
   get 'brands_list' => "dashboards#brands_list", as: :brands_list

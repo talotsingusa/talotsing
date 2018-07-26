@@ -118,12 +118,17 @@
                   <% if !session[:shop_cart].nil? %>
                   <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= session[:shop_cart].count if !session[:shop_cart].nil? %></span></div>
                       <% elsif current_user.present? %>
-                      <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.last.order_items.count if current_user.orders.present? %></span></div>
+                      <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.where(status: "pending").last.order_items.count if current_user.orders.where(status: "pending").present? %></span></div>
                   <% end %>
                 </div>
                 <div class="cart_content">
+                  <% if current_user.orders.where(status: "pending").present? %>
                   <div class="cart_text"><a href="<%= cart_path %>" style="    color: #ffffff;">Cart</a></div>
                   <div class="cart_price" style="color: #ffffff;">$<%= cart_total %></div>
+                    <% else %>
+                    <div class="cart_text"><a  style="    color: #ffffff;">Cart</a></div>
+                    <div class="cart_price" style="color: #ffffff;">$0</div>
+                  <% end %>
                 </div>
               </div>
             </div>
