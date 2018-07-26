@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/_product_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_product_modal.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/cart.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/cart.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/checkout.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/checkout.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/purchase_application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/purchase_application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -42,8 +35,8 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+            <state relative-caret-position="3660">
+              <caret line="244" column="37" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -51,8 +44,11 @@
       <file leaf-file-name="_header_web.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="128" column="85" selection-start-line="128" selection-start-column="85" selection-end-line="128" selection-end-column="85" />
+            <state relative-caret-position="486">
+              <caret line="124" column="49" selection-start-line="124" selection-start-column="49" selection-end-line="124" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,8 +56,8 @@
       <file leaf-file-name="cart.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/cart.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="658">
-              <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="70" />
+            <state relative-caret-position="268">
+              <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -71,15 +67,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="168" column="75" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="purchase_application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/purchase_application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -148,8 +135,8 @@
       <find>create_shipping</find>
       <find>checkout_path</find>
       <find>ship</find>
-      <find>binding.pry</find>
       <find>pending</find>
+      <find>binding.pry</find>
       <find>def cart</find>
     </findStrings>
     <replaceStrings>
@@ -294,26 +281,6 @@
             <path>
               <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
               <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Assets" type="f36ffe3d:AssetsTopLevelFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Config" type="9a8f28a7:ConfigFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Layouts" type="8e5d065:LayoutsFolder" />
             </path>
           </expand>
           <select />
@@ -463,12 +430,12 @@
       <workItem from="1528585463857" duration="4639000" />
       <workItem from="1529267231695" duration="12365000" />
       <workItem from="1529535008361" duration="82281000" />
-      <workItem from="1531942383116" duration="31450000" />
+      <workItem from="1531942383116" duration="31926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143921000" />
+    <option name="totallyTimeSpent" value="144397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="833" extended-state="0" />
@@ -764,19 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_product_modal.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2715">
-          <caret line="181" column="74" selection-start-line="181" selection-start-column="74" selection-end-line="181" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#212#219#1#HTML" expanded="true" />
-            <element signature="e#5450#5455#0#HTML" expanded="true" />
-            <element signature="e#5664#5669#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-434">
@@ -819,20 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/checkout.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="168" column="75" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/purchase_application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -854,24 +794,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/cart.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        <state relative-caret-position="268">
+          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/cart.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/purchase_application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="70" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/checkout.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="168" column="75" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_product_modal.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2715">
+          <caret line="181" column="74" selection-start-line="181" selection-start-column="74" selection-end-line="181" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#212#219#1#HTML" expanded="true" />
+            <element signature="e#5450#5455#0#HTML" expanded="true" />
+            <element signature="e#5664#5669#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3660">
+          <caret line="244" column="37" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="128" column="85" selection-start-line="128" selection-start-column="85" selection-end-line="128" selection-end-column="85" />
+        <state relative-caret-position="486">
+          <caret line="124" column="49" selection-start-line="124" selection-start-column="49" selection-end-line="124" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
