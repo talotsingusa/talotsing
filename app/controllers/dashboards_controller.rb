@@ -128,6 +128,25 @@ class DashboardsController < ApplicationController
     render layout: "dashboard_application"
   end
 
+  def shipping_prices
+    @shipping_prices = ShippingPrice.all
+    render layout: "dashboard_application"
+  end
+
+  def add_shipping_prices
+    @shipping_price = ShippingPrice.new
+    render layout: "dashboard_application"
+  end
+
+  def create_shipping_price
+    shipping_price = ShippingPrice.new(shipping_price_params)
+    if shipping_price.save
+      redirect_to shipping_prices_path
+    else
+      redirect_to add_shipping_prices_path
+    end
+  end
+
   def create_store
     @store = Store.where(user_id: current_user.id)
     if @store.present?
@@ -249,7 +268,7 @@ class DashboardsController < ApplicationController
   private
 
   def brand_params
-    params.require(:brand).permit(:name, :logo)
+    params.require(:brand).permit(:name, :vendor_name, :vendor_email, :vendor_number, :logo)
   end
 
   def category_params
@@ -278,5 +297,9 @@ class DashboardsController < ApplicationController
 
   def product_params
     params.require(:product).permit( :name, :description, :sku, :price, :additional_information, :article_number, :vendor_store_product_number, :weight, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy])
+  end
+
+  def shipping_price_params
+    params.require(:shipping_price).permit(:name, :price)
   end
 end

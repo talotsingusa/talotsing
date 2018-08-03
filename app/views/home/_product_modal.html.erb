@@ -161,7 +161,10 @@
                                         :name, :name,
                                         {:prompt => 'Please select color'}, {class: "form-control"}) if @product.present? %>
                 <br>
-                <%= f.select(:shipping, [ ['5-10 Business Days Free', 0], ['2-5 Business Days $25',25], ['5-10 Business Days $10', 10], ['5-7 Business Days $6', 6], ['5-10 Business Days $10', 10] ], {include_blank: "Select shipping"}, {class: "form-control"}) %>
+                <%= f.collection_select(:shipping, ShippingPrice.all,
+                                        :price, :name,
+                                        {:prompt => 'Please select shipping'}, {class: "form-control"}) if @product.present? %>
+
 
               <% end %>
 

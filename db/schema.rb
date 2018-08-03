@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180725224704) do
+ActiveRecord::Schema.define(version: 20180803222219) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20180725224704) do
     t.string "logo_content_type"
     t.integer "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string "vendor_name"
+    t.string "vendor_email"
+    t.string "vendor_number"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -149,6 +152,13 @@ ActiveRecord::Schema.define(version: 20180725224704) do
   create_table "recent_views", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shipping_prices", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
