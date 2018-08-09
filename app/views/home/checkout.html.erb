@@ -88,32 +88,38 @@
                 <%= f.input :name, class: "form-control", label: false, required: true %>
               </div>
             </div>
-            <div class="form-group row">
-              <label class="form-label col-md-3">Country/Region:</label>
-              <div class="col-md-9">
-                <%= f.input :cntry_name, class: "form-control", label: false, required: true %>
-<!--                <select class="form-control">-->
-<!--                  <option value="example">example</option>-->
-<!--                  <option value="example">example</option>-->
-<!--                  <option value="example">example</option>-->
-<!--                </select>-->
-              </div>
-            </div>
+
 
             <div class="form-group row">
               <label class="form-label col-md-3">Street Address:</label>
               <div class="col-md-9">
-                <%= f.input :street_address_one, class: "form-control", label: false, required: true, prompt: "Street address" %>
-                <%= f.input :street_address_two, class: "form-control", label: false, required: true, prompt: "Apartment, suite, unit etc. (optional)" %>
+                <div id="locationField">
+                  <%= f.input :street_address_one, class: "form-control", label: false, required: true, prompt: "Street address", :input_html => { :onFocus => "geolocate()", :id => "autocomplete"} %>
+
+                </div>
+
+                <%= f.input :street_address_two, class: "form-control", label: false, required: true, placeholder: "Apartment, suite, unit etc." %>
 <!--                <input type="text" placeholder="Street address" class="form-control">-->
 <!--                <input type="text" placeholder="Apartment, suite, unit etc. (optional)" class="form-control">-->
+              </div>
+            </div>
+              <div id="address">
+            <div class="form-group row">
+              <label class="form-label col-md-3">Country/Region:</label>
+              <div class="col-md-9">
+                <%= f.input :cntry_name, class: "form-control", label: false, required: true, :input_html => { :id => "country"} %>
+                <!--                <select class="form-control">-->
+                <!--                  <option value="example">example</option>-->
+                <!--                  <option value="example">example</option>-->
+                <!--                  <option value="example">example</option>-->
+                <!--                </select>-->
               </div>
             </div>
 
             <div class="form-group row">
               <label class="form-label col-md-3">State/Province:</label>
               <div class="col-md-9">
-                <%= f.input :state, class: "form-control", label: false, required: true %>
+                <%= f.input :state, class: "form-control", label: false, required: true , :input_html => { :id => "administrative_area_level_1"}%>
 <!--                <select class="form-control">-->
 <!--                  <option value="example">example</option>-->
 <!--                  <option value="example">example</option>-->
@@ -124,16 +130,17 @@
             <div class="form-group row">
               <label class="form-label col-md-3">City:</label>
               <div class="col-md-9">
-                <%= f.input :city, class: "form-control", label: false, required: true %>
+                <%= f.input :city, class: "form-control", label: false, required: true, :input_html => { :id => "locality"} %>
               </div>
             </div>
             <div class="form-group row">
               <label class="form-label col-md-3">Zip/Postal Code:</label>
               <div class="col-md-9">
-                <%= f.input :postal_code, class: "form-control", label: false, required: true %>
+                <%= f.input :postal_code, class: "form-control", label: false, required: true , :input_html => { :id => "postal_code"}%>
 <!--                <input type="text" class="form-control">-->
               </div>
             </div>
+              </div>
             <div class="form-group row">
               <label class="form-label col-md-3">Mobile:</label>
               <div class="col-md-9">
@@ -173,7 +180,7 @@
                 <div class="form-group">
                   <label class="card-label form-label">Card number:</label>
 <!--                  <input type="text" class="cc form-control" />-->
-                  <%= f.input :card, label: false, placeholder: "Add card number", class: "cc form-control" %>
+                  <%= f.input :card, label: false, placeholder: "Add card number", class: "cc form-control", input_html: { maxlength: 16 } %>
                 </div>
               </div>
             </div>
@@ -183,14 +190,19 @@
                   <label class="form-label">Expiry Date:</label>
                   <div class="row">
                     <div class="col-md-5">
-                      <%= f.input :month, label: false, placeholder: "MM", class: "form-control" %>
+                      <%= f.hidden_field :month, value: "", class: "form-control", id: "month_input" %>
+                      <%= select_month(Date.today,
+                                       {:add_month_numbers => false},
+                                       :class => 'form-control'
+                          ) %>
 <!--                      <input type="text" placeholder="MM" class="form-control" />-->
                     </div>
                     <div class="col-md-1">
                       <p class="divider">/</p>
                     </div>
                     <div class="col-md-5">
-                      <%= f.input :year, label: false, placeholder: "YY", class: "form-control" %>
+                      <%= f.hidden_field :year, value: "", class: "form-control", id: "year_input" %>
+                      <%= select_year(Date.today.year, {:field_name => "year", :start_year => Date.today.year, :end_year => Date.today.year+10}, {:class => "form-control"}) %>
 <!--                      <input type="text" placeholder="YY" class="form-control" />-->
                     </div>
                   </div>
@@ -202,7 +214,7 @@
                 <div class="form-group">
                   <label class="card-label form-label">CVC:</label>
                   <!--                  <input type="text" class="cc form-control" />-->
-                  <%= f.input :cvc, label: false, placeholder: "Add cvc number", class: "form-control" %>
+                  <%= f.input :cvc, label: false, placeholder: "Add cvc number", class: "form-control", input_html: { maxlength: 4 } %>
                 </div>
               </div>
             </div>
@@ -379,94 +391,165 @@
   </style>
 <% end %>
 <script>
-    $(".progress-bar").css("flex-direction","row");
-    $('.show-inputs-group').click(function () {
-        $('#address-group-penal').hide('slow');
-        $('#form-inputs-group').show('slow');
-        $('#shipping_form_button').show('slow');
-        $('#continue_to_payment').hide('slow');
-    });
-    $(document).ready(function () {
-        var pro = document.getElementsByClassName('progress-bar');
-        var liarray = pro[0].getElementsByTagName('li');
-        for (var i = 0; i < liarray.length; i++) {
-            if (i === 0 && liarray[i].className === 'progress-bar__steps current') {
-                $('#review-order-panel').show();
-                $('#payment-panel').hide();
-                $('#payment-done-panel').hide();
-            } else if (i === 1 && liarray[i].className === 'progress-bar__steps current') {
-                $('#review-order-panel').hide();
-                $('#payment-panel').show();
-                $('#payment-done-panel').hide();
-            } else if (i === 2 && liarray[i].className === 'progress-bar__steps current') {
-                $('#review-order-panel').hide();
-                $('#payment-panel').hide();
-                $('#payment-done-panel').show();
+    $( document ).ready(function() {
+        $(".progress-bar").css("flex-direction", "row");
+        $('.show-inputs-group').click(function () {
+            $('#address-group-penal').hide('slow');
+            $('#form-inputs-group').show('slow');
+            $('#shipping_form_button').show('slow');
+            $('#continue_to_payment').hide('slow');
+        });
+        $(document).ready(function () {
+            var pro = document.getElementsByClassName('progress-bar');
+            var liarray = pro[0].getElementsByTagName('li');
+            for (var i = 0; i < liarray.length; i++) {
+                if (i === 0 && liarray[i].className === 'progress-bar__steps current') {
+                    $('#review-order-panel').show();
+                    $('#payment-panel').hide();
+                    $('#payment-done-panel').hide();
+                } else if (i === 1 && liarray[i].className === 'progress-bar__steps current') {
+                    $('#review-order-panel').hide();
+                    $('#payment-panel').show();
+                    $('#payment-done-panel').hide();
+                } else if (i === 2 && liarray[i].className === 'progress-bar__steps current') {
+                    $('#review-order-panel').hide();
+                    $('#payment-panel').hide();
+                    $('#payment-done-panel').show();
+                }
             }
-        }
-    });
+        });
 
-    function checkLuhn(input) {
-        var sum = 0;
-        var numdigits = input.length;
-        var parity = numdigits % 2;
-        for (var i = 0; i < numdigits; i++) {
-            var digit = parseInt(input.charAt(i))
-            if (i % 2 == parity) digit *= 2;
-            if (digit > 9) digit -= 9;
-            sum += digit;
+        function checkLuhn(input) {
+            var sum = 0;
+            var numdigits = input.length;
+            var parity = numdigits % 2;
+            for (var i = 0; i < numdigits; i++) {
+                var digit = parseInt(input.charAt(i))
+                if (i % 2 == parity) digit *= 2;
+                if (digit > 9) digit -= 9;
+                sum += digit;
+            }
+            return (sum % 10) == 0;
+        };
+
+        function detectCard(input) {
+            var typeTest = 'undefined',
+                ltest1 = 16,
+                ltest2 = 16;
+            if (/^4/.test(input)) {
+                typeTest = 'visa';
+                ltest1 = 13;
+            } else if (/^5[1-5]/.test(input)) {
+                typeTest = 'mastercard';
+            } else if (/^3[4-7]/.test(input)) {
+                typeTest = 'amex';
+                ltest1 = 15;
+                ltest2 = 15;
+            } else if (/^6(011|4[4-9]|5)/.test(input)) {
+                typeTest = 'discover';
+            }
+            return [typeTest, ltest1, ltest2];
         }
-        return (sum % 10) == 0;
+
+
+        $('input.cc').keyup(function () {
+            var val = this.value,
+                val = val.replace(/[^0-9]/g, ''),
+                detected = detectCard(val),
+                errorClass = '',
+                luhnCheck = checkLuhn(val),
+                valueCheck = (val.length == detected[1] || val.length == detected[2]);
+            if (luhnCheck && valueCheck) {
+                errorClass = 'verified';
+            } else if (valueCheck || val.length > detected[2]) {
+                errorClass = 'error';
+            }
+
+            $(this).attr('class', 'cc ' + detected[0] + ' ' + errorClass);
+        });
+        $("#shipping_mobile").intlTelInput({
+            allowExtensions: true,
+            autoFormat: true,
+            autoHideDialCode: true,
+            autoPlaceholder: true,
+            preferredCountries: ['us', 'gb'],
+            defaultCountry: 'auto',
+            ipinfoToken: 'yolo',
+            nationalMode: false,
+            numberType: 'MOBILE',
+            preventInvalidNumbers: true
+        });
+        var imageUrl = "/assets/flags@2x.png";
+        $('.iti-flag').css('background-image', 'url(' + imageUrl + ')');
+        $("#card_info_card").addClass("cc");
+        $('#date_month').on('change', function() {
+            $('#month_input').val( this.value );
+        });
+        $('#date_year').on('change', function() {
+            $('#year_input').val( this.value );
+        });
+    });
+</script>
+<script>
+    var placeSearch, autocomplete;
+    var componentForm = {
+        // street_number: 'short_name',
+        // route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
     };
 
-    function detectCard(input) {
-        var typeTest = 'undefined',
-            ltest1 = 16,
-            ltest2 = 16;
-        if (/^4/.test(input)) {
-            typeTest = 'visa';
-            ltest1 = 13;
-        } else if (/^5[1-5]/.test(input)) {
-            typeTest = 'mastercard';
-        } else if (/^3[4-7]/.test(input)) {
-            typeTest = 'amex';
-            ltest1 = 15;
-            ltest2 = 15;
-        } else if (/^6(011|4[4-9]|5)/.test(input)) {
-            typeTest = 'discover';
-        }
-        return [typeTest, ltest1, ltest2];
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
     }
 
+    function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
 
-    $('input.cc').keyup(function () {
-        var val = this.value,
-            val = val.replace(/[^0-9]/g, ''),
-            detected = detectCard(val),
-            errorClass = '',
-            luhnCheck = checkLuhn(val),
-            valueCheck = (val.length == detected[1] || val.length == detected[2]);
-        if (luhnCheck && valueCheck) {
-            errorClass = 'verified';
-        } else if (valueCheck || val.length > detected[2]) {
-            errorClass = 'error';
+        for (var component in componentForm) {
+            document.getElementById(component).value = '';
+            document.getElementById(component).disabled = false;
         }
 
-        $(this).attr('class', 'cc ' + detected[0] + ' ' + errorClass);
-    });
-    $("#shipping_mobile").intlTelInput({
-        allowExtensions: true,
-        autoFormat: true,
-        autoHideDialCode: true,
-        autoPlaceholder: true,
-        preferredCountries: ['us', 'gb'],
-        defaultCountry: 'auto',
-        ipinfoToken: 'yolo',
-        nationalMode: false,
-        numberType: 'MOBILE',
-        preventInvalidNumbers: true
-    });
-    var imageUrl = "/assets/flags@2x.png";
-    $('.iti-flag').css('background-image', 'url(' + imageUrl + ')');
-    $("#card_info_card").addClass("cc");
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+            var addressType = place.address_components[i].types[0];
+            if (componentForm[addressType]) {
+                var val = place.address_components[i][componentForm[addressType]];
+                document.getElementById(addressType).value = val;
+            }
+        }
+    }
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4c-wNONsOUCrHcva6LSl6Yznh1ZKPA-s&libraries=places&callback=initAutocomplete"
+        async defer></script>

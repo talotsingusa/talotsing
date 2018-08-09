@@ -29,6 +29,6 @@
 //= require toastr
 //= require intlTelInput
 //= require cart_custom.js
-
+//= require geocomplete
 
 $('body').css({'overflow' : ''});

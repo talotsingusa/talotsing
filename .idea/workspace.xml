@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845ec4f2-d916-45a7-abfe-074a483deb35" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Talotsing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Talotsing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dashboards/brands_list.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dashboards/brands_list.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/_product_modal.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_product_modal.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/partials/_dashboard_sidenav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/partials/_dashboard_sidenav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/purchase_application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/purchase_application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/checkout.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/checkout.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -43,32 +37,37 @@
     <session id="1264656666">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="erb" value="13" />
+          <entry key="Gemfile" value="1" />
+          <entry key="erb" value="14" />
+          <entry key="js" value="1" />
           <entry key="rb" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="RHTML" value="13" />
-          <entry key="Ruby" value="11" />
+          <entry key="JavaScript" value="1" />
+          <entry key="RHTML" value="14" />
+          <entry key="Ruby" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="erb" value="268" />
-          <entry key="rb" value="175" />
+          <entry key="erb" value="440" />
+          <entry key="rb" value="176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="RHTML" value="268" />
-          <entry key="Ruby" value="175" />
+          <entry key="RHTML" value="440" />
+          <entry key="Ruby" value="176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -77,11 +76,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2072">
-              <caret line="244" column="37" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
+            <state relative-caret-position="449">
+              <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/purchase_application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/checkout.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7275">
+              <caret line="485" column="27" selection-start-line="485" selection-start-column="27" selection-end-line="485" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -89,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/shop.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="86" column="27" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="27" />
+            <state relative-caret-position="930">
+              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -98,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="277" column="25" lean-forward="true" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
+            <state relative-caret-position="4050">
+              <caret line="270" column="86" selection-start-line="270" selection-start-column="86" selection-end-line="270" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -107,8 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/dashboards/brands_list.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+            <state relative-caret-position="510">
+              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="36" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -116,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="178">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -144,15 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>transform: none</find>
-      <find>session_</find>
-      <find>simple_fo</find>
-      <find>simple_form</find>
-      <find>hidden</find>
-      <find>respond_to</find>
-      <find>looking_for(@conversation.id).property_types.first.name</find>
-      <find>images</find>
-      <find>image</find>
       <find>product</find>
       <find>button</find>
       <find>filter_price</find>
@@ -174,6 +194,15 @@
       <find>def cart</find>
       <find>shipping_prices_path</find>
       <find>fas fa-chart-bar</find>
+      <find>admin@</find>
+      <find>add_product_to_cart</find>
+      <find>AIzaSyDlHLvlU_OOgAjkXpdf2euU</find>
+      <find>googleapis</find>
+      <find>geolocate</find>
+      <find>locationField</find>
+      <find>hidden_f</find>
+      <find>def chec</find>
+      <find>street_number</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -214,7 +243,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_footer_web.html.erb" />
         <option value="$PROJECT_DIR$/app/models/shipping.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/purchase_application.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/purchase_application.css.scss" />
         <option value="$PROJECT_DIR$/db/migrate/20180724012719_create_shippings.rb" />
         <option value="$PROJECT_DIR$/app/views/home/create_shipping.js.erb" />
@@ -223,16 +251,13 @@
         <option value="$PROJECT_DIR$/app/views/home/shop.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/new_shop.css" />
         <option value="$PROJECT_DIR$/app/views/home/product_detail_modal.js.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/views/home/_shop_content.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20180725213417_add_columns_to_order_items.rb" />
         <option value="$PROJECT_DIR$/app/views/home/cart.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20180725222604_add_column_to_user.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180725224704_add_column_to_order.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/checkout.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/purchase_application.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/partials/_header_web.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/add_shipping_prices.html.erb" />
@@ -243,6 +268,10 @@
         <option value="$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dashboards/brands_list.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dashboards_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/home/checkout.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/purchase_application.js" />
       </list>
     </option>
   </component>
@@ -264,7 +293,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="y" value="22" />
     <option name="width" value="1440" />
     <option name="height" value="833" />
   </component>
@@ -273,6 +302,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
+              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
+            </path>
+            <path>
+              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
+              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
+              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
+            </path>
+            <path>
+              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
+              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
+              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,34 +365,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Controllers" type="28580ddf:ControllersFolderNode" />
-            </path>
-            <path>
-              <item name="Talotsing" type="52f3b0f7:RailsProjectNode" />
-              <item name="Talotsing" type="ca5d24b0:RailsModuleNode" />
-              <item name="Models" type="4bd37eb5:ModelsFolderNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
-    <property name="SearchEverywhereHistoryKey" value="product_modal&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/_product_modal.html.erb&#10;route&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;regis&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/users/registrations_controller.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;chec&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/checkout.html.erb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;shop_content&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/_shop_content.html.erb&#10;ne&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;new&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css&#10;ro&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_application.css.scss&#10;shop_app&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/shop_application.html.erb&#10;pur&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/purchase_application.css.scss&#10;purchase_application&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/purchase_application.js&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;application_helper&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/helpers/application_helper.rb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;sho&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/_shop_content.html.erb&#10;pro&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;.env&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/.env&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;simpl&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/simple_form.rb&#10;news&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_newsletter_web.html.erb&#10;foo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;appl&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/index.html.erb&#10;custo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/custom.js&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb" />
+    <property name="SearchEverywhereHistoryKey" value="purchase_application&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/purchase_application.js&#10;gem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/Gemfile&#10;chec&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/checkout.html.erb&#10;product_modal&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/_product_modal.html.erb&#10;route&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;head&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;regis&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/controllers/users/registrations_controller.rb&#10;user&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/models/user.rb&#10;rout&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;shop_content&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/_shop_content.html.erb&#10;ne&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css&#10;new&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css&#10;ro&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;shop&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_application.css.scss&#10;shop_app&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/shop_application.html.erb&#10;pur&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/purchase_application.css.scss&#10;asset&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;application_helper&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/helpers/application_helper.rb&#10;rou&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;sho&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/_shop_content.html.erb&#10;pro&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;.env&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/.env&#10;header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;hea&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;simpl&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/simple_form.rb&#10;news&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_newsletter_web.html.erb&#10;foo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_footer_web.html.erb&#10;devel&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;prod&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;appl&#9;null&#9;null&#10;inde&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/home/index.html.erb&#10;custo&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/custom.js&#10;main&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;pap&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/paperclip.rb&#10;ass&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/assets.rb&#10;seed&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/seeds.rb&#10;das&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss&#10;dash&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/dashboard_application.js&#10;ma&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/assets/javascripts/main.js&#10;schem&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;side&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_dashboard_sidenav.html.erb&#10;sc&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;schema&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/db/schema.rb&#10;dev&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/development.rb&#10;routes&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/routes.rb&#10;_sign_in_header&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_sign_in_header.html.erb&#10;devi&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/initializers/devise.rb&#10;production&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/config/environments/production.rb&#10;header_web&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb&#10;heade&#9;FILE&#9;file:///Users/usamakhan/work/talotsing/Talotsing/app/views/layouts/partials/_header_web.html.erb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -486,18 +515,19 @@
       <workItem from="1529267231695" duration="12365000" />
       <workItem from="1529535008361" duration="82281000" />
       <workItem from="1531942383116" duration="32855000" />
-      <workItem from="1532992858341" duration="4537000" />
+      <workItem from="1532992858341" duration="5670000" />
+      <workItem from="1533525520493" duration="7748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149863000" />
+    <option name="totallyTimeSpent" value="158744000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="833" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -540,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/purchase_application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/create_shipping.js.erb" />
     <entry file="file://$PROJECT_DIR$/db/migrate/20180724012719_create_shippings.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -585,13 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
@@ -700,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/checkout.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="168" column="75" selection-start-line="168" selection-start-column="71" selection-end-line="168" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users/registrations_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -797,20 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/shop.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="86" column="27" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180725213417_add_columns_to_order_items.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboards/shipping_prices.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -835,17 +830,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/shop.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="43" />
+        <state relative-caret-position="930">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboards/brands_list.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="510">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="36" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -856,17 +851,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180725213417_add_columns_to_order_items.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboards/add_brand.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dashboards_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="277" column="25" lean-forward="true" selection-start-line="277" selection-start-column="25" selection-end-line="277" selection-end-column="25" />
+        <state relative-caret-position="4050">
+          <caret line="270" column="86" selection-start-line="270" selection-start-column="86" selection-end-line="270" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2072">
-          <caret line="244" column="37" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
+        <state relative-caret-position="449">
+          <caret line="213" lean-forward="true" selection-start-line="213" selection-end-line="213" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/purchase_application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/checkout.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7275">
+          <caret line="485" column="27" selection-start-line="485" selection-start-column="27" selection-end-line="485" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
         </state>
       </provider>
     </entry>

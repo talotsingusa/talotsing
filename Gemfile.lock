@@ -105,6 +105,8 @@ GEM
       railties (>= 3.2, < 6.0)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
+    geocomplete_rails (1.7.0)
+      railties (>= 3.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     greensock-rails (1.20.4.0)
@@ -291,6 +293,7 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-rails
   font-awesome-sass (~> 5.0.13)
+  geocomplete_rails
   greensock-rails
   intl-tel-input-rails
   isotope-rails
