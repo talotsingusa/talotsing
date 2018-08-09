@@ -124,7 +124,7 @@ class HomeController < ApplicationController
       user.save
     rescue Stripe::CardError => e
       # CardError; display an error message.
-      flash[:notice] = 'That card is presently on fire!'
+      flash[:notice] = e
     rescue => e
       # Some other error; display an error message.
       flash[:notice] = 'Some error occurred.'
