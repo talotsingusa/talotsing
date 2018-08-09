@@ -25,11 +25,11 @@
                       </div>
                       <div class="cart_item_price cart_info_col">
                         <div class="cart_item_title">Price</div>
-                        <div class="cart_item_text">$<%= product_details(product[0].to_i).price %></div>
+                        <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price) %></div>
                       </div>
                       <div class="cart_item_total cart_info_col">
                         <div class="cart_item_title">Total</div>
-                        <div class="cart_item_text">$<%= product_details(product[0].to_i).price*product[1].to_i %></div>
+                        <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price*product[1].to_i) %></div>
                       </div>
                     </div>
                   </li>
@@ -54,11 +54,11 @@
                           </div>
                           <div class="cart_item_price cart_info_col">
                             <div class="cart_item_title">Price</div>
-                            <div class="cart_item_text">$<%= product_details(product.product_id).price %></div>
+                            <div class="cart_item_text"><%= number_to_currency(product_details(product.product_id).price) %></div>
                           </div>
                           <div class="cart_item_total cart_info_col">
                             <div class="cart_item_title">Total</div>
-                            <div class="cart_item_text">$<%= product_details(product.product_id).price*product.quantity %></div>
+                            <div class="cart_item_text"><%= number_to_currency(product_details(product.product_id).price*product.quantity) %></div>
                           </div>
                         </div>
                       </li>
@@ -72,7 +72,7 @@
           <div class="order_total">
             <div class="order_total_content text-md-right">
               <div class="order_total_title">Order Total:</div>
-              <div class="order_total_amount">$<%= cart_total %></div>
+              <div class="order_total_amount"><%= number_to_currency(cart_total) %></div>
             </div>
           </div>
 

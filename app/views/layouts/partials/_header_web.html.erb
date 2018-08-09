@@ -124,7 +124,7 @@
                 <div class="cart_content">
                   <% if current_user.present? && current_user.orders.where(status: "pending").present? %>
                   <div class="cart_text"><a href="<%= cart_path %>" style="    color: #ffffff;">Cart</a></div>
-                  <div class="cart_price" style="color: #ffffff;">$<%= cart_total %></div>
+                  <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) %></div>
                     <% else %>
                     <div class="cart_text"><a  style="    color: #ffffff;">Cart</a></div>
                     <div class="cart_price" style="color: #ffffff;">$0</div>
