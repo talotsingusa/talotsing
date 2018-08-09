@@ -390,6 +390,7 @@
     }
   </style>
 <% end %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/13.0.2/js/intlTelInput.js"></script>
 <script>
     $( document ).ready(function() {
         $(".progress-bar").css("flex-direction", "row");
@@ -467,6 +468,13 @@
 
             $(this).attr('class', 'cc ' + detected[0] + ' ' + errorClass);
         });
+        $('#date_month').on('change', function() {
+            $('#month_input').val( this.value );
+        });
+        $('#date_year').on('change', function() {
+            $('#year_input').val( this.value );
+        });
+        $("#card_info_card").addClass("cc");
         $("#shipping_mobile").intlTelInput({
             allowExtensions: true,
             autoFormat: true,
@@ -481,13 +489,6 @@
         });
         var imageUrl = "/assets/flags@2x.png";
         $('.iti-flag').css('background-image', 'url(' + imageUrl + ')');
-        $("#card_info_card").addClass("cc");
-        $('#date_month').on('change', function() {
-            $('#month_input').val( this.value );
-        });
-        $('#date_year').on('change', function() {
-            $('#year_input').val( this.value );
-        });
     });
 </script>
 <script>
