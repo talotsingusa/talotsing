@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180803222219) do
+ActiveRecord::Schema.define(version: 20180823082811) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -114,6 +114,14 @@ ActiveRecord::Schema.define(version: 20180803222219) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "product_specifications", force: :cascade do |t|
+    t.string "spec_key"
+    t.string "spec_value"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "product_sub_categories", force: :cascade do |t|
     t.integer "product_id"
     t.integer "sub_category_id"
@@ -147,6 +155,8 @@ ActiveRecord::Schema.define(version: 20180803222219) do
     t.string "article_number"
     t.string "vendor_store_product_number"
     t.float "weight"
+    t.string "supplier_url"
+    t.integer "sale_off_percent"
   end
 
   create_table "recent_views", force: :cascade do |t|

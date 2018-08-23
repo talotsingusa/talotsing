@@ -49,6 +49,14 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Supplier URL</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :supplier_url, class: "form-control", id: "text-input", label: false %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
               <label for="text-input" class=" form-control-label">Vendor store product number</label>
             </div>
             <div class="col-12 col-md-9">
@@ -137,6 +145,16 @@
               </div>
             </div>
             <br>
+          <div id="specifications">
+            <%= f.simple_fields_for :product_specifications do |shipment| %>
+
+              <%= render 'product_specification_fields', f: shipment %>
+            <% end %>
+            <div class="links">
+              <%= link_to_add_association 'add specification', f, :product_specifications %>
+            </div>
+          </div>
+          <br>
             <div class="row form-group">
               <div class="col col-md-3">
                 <label for="select" class=" form-control-label">Sale</label>
@@ -146,6 +164,14 @@
 
               </div>
             </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Percentage on Sale</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :sale_off_percent, class: "form-control", id: "text-input", label: false %>
+            </div>
+          </div>
             <div class="row form-group">
               <div class="col col-md-3">
                 <label for="select" class=" form-control-label">Active</label>

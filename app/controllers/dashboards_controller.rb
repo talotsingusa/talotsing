@@ -169,12 +169,14 @@ class DashboardsController < ApplicationController
   def add_product
     @product = Product.new
     @product.product_shipments.build
+    @product.product_specifications.build
     render layout: "dashboard_application"
   end
 
   def edit_product
     @product = Product.find(params[:product_id])
     @product.product_shipments.build
+    @product.product_specifications.build
     render layout: "dashboard_application"
   end
 
@@ -223,6 +225,13 @@ class DashboardsController < ApplicationController
     else
       redirect_to edit_product_path
     end
+  end
+
+  def delete_product
+      @product = Product.find(params[:id])
+     if @product.destroy
+       redirect_to product_list_path
+     end
   end
 
   def create_product
@@ -296,7 +305,7 @@ class DashboardsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit( :name, :description, :sku, :price, :additional_information, :article_number, :vendor_store_product_number, :weight, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy])
+    params.require(:product).permit( :name, :description, :sku, :supplier_url, :sale_off_percent, :price, :additional_information, :article_number, :vendor_store_product_number, :weight, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy], product_specifications_attributes: [:id, :spec_key, :spec_value, :_destroy])
   end
 
   def shipping_price_params

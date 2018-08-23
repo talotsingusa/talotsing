@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close" data-dismiss="modal" style="font-size: 60px;">X</button>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -45,6 +45,9 @@
             <div class="product-info">
               <h3><%= @product.name if @product.present? %></h3>
               <h3>$<%= @product.price if @product.present? %> USD</h3>
+              <br>
+              <a href="<%= @product.supplier_url if @product.present? %>" target="_blank">Supplier URL</a>
+              <br>
               <div class="rating">
                 <span title="five stars">&#9734;</span>
                 <span title="four stars">&#9734;</span>
@@ -140,6 +143,26 @@
                     </div>
                   </div>
                 </div>
+                <% if @product.present? %>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        PRODUCT SPECIFICATIONS
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse in collapse show" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                      <ul>
+                        <% @product.product_specifications.each do |specs| %>
+                          <li><%= "#{specs.spec_key}: #{specs.spec_value}" if @product.product_specifications.present? %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <% end %>
               </div>
               <br>
               <%= form_for :add_product_to_cart, url: add_to_cart_path, :html => {:id => "cart_form_for"}, class: "header_search_form clearfix", method: :get do |f| %>

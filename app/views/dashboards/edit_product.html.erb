@@ -49,6 +49,14 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Supplier URL</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :supplier_url, class: "form-control", id: "text-input", label: false %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
               <label for="text-input" class=" form-control-label">Vendor store product number</label>
             </div>
             <div class="col-12 col-md-9">
@@ -136,6 +144,16 @@
               <%= link_to_add_association 'add shipment', f, :product_shipments %>
             </div>
           </div>
+          <div id="specifications">
+            <%= f.simple_fields_for :product_specifications do |shipment| %>
+
+              <%= render 'product_specification_fields', f: shipment %>
+            <% end %>
+            <div class="links">
+              <%= link_to_add_association 'add specification', f, :product_specifications %>
+            </div>
+          </div>
+          <br>
           <br>
           <div class="row form-group">
             <div class="col col-md-3">
@@ -144,6 +162,14 @@
             <div class="col-12 col-md-9">
               <%= f.input :sale, as: :radio_buttons, label: false, required: true %>
 
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Percentage on Sale</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :sale_off_percent, class: "form-control", id: "text-input", label: false %>
             </div>
           </div>
           <div class="row form-group">
@@ -166,12 +192,27 @@
         <% end %>
       </div>
     </div>
-
+    <div class="Row">
+      <% @product.product_images.each do |image| %>
+        <div class="Column"><img src="<%= image.image.url(:medium) if image.image.present?%>" alt=""></div>
+      <% end %>
+    </div>
   </div>
 </div>
 <style>
   #brand_error, #category_error, #sub_category_error, #product_type_error{
     display: none;
+  }
+  .Row
+  {
+    /*display: table;*/
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+  }
+  .Column
+  {
+    display: table-cell;
   }
 </style>
 <script>

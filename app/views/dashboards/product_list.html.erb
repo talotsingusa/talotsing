@@ -42,7 +42,7 @@
               <% @product.each do |product| %>
                   <tr>
                     <td><%= product.id %></td>
-                    <td><%= link_to "edit", edit_product_path(product_id: product.id) %></td>
+                    <td><%= link_to "edit", edit_product_path(product_id: product.id) %> <%= link_to "Delete", delete_product_path(id: product.id) %></td>
                     <td><%= product.name %></td>
                     <td><pre><%= product.description %></pre></td>
                     <td class="text-right"><%= product.sku %></td>
@@ -70,7 +70,5 @@
   </div>
 </div>
 <script>
-    $( document ).on('turbolinks:load', function() {
-        $("#product_list").dataTable();
-    });
+    $("#product_list").dataTable();
 </script>
