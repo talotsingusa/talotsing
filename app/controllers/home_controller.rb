@@ -62,7 +62,7 @@ class HomeController < ApplicationController
 
   def cart
     if current_user.present? && current_user.orders.present?
-      @order_items = current_user.orders.last.order_items
+      @order_items = current_user.orders.where(status: "pending").last.order_items
     end
     render layout: "cart_application"
   end
@@ -72,7 +72,10 @@ class HomeController < ApplicationController
       @value = params[:value]
     end
     if current_user.present? && current_user.orders.present?
-      @order_items = current_user.orders.last.order_items
+      @order_items = current_user.orders.where(status: "pending")
+      if @order_items.present?
+        @order_items = current_user.orders.where(status: "pending").last.order_items
+      end
     end
     if current_user.present?
       if current_user.shipping.present?
@@ -108,7 +111,7 @@ class HomeController < ApplicationController
     @order = current_user.orders
     total_price = 0
     if @order.present?
-      @order = current_user.orders.last
+      @order = current_user.orders.where(status: "pending").last
       @order_items = @order.order_items
       @order_items.each do |o|
         product = Product.find(o.product_id)
@@ -143,7 +146,7 @@ class HomeController < ApplicationController
       # Some other error; display an error message.
       flash[:notice] = 'Some error occurred.'
     end
-    order = current_user.orders.last
+    order = current_user.orders.where(status: "pending").last
     order.status = "Paid"
     order.total_amount = total_price
     order.save
@@ -215,10 +218,10 @@ class HomeController < ApplicationController
   def my_favorites
     if current_user.present?
       favorites_ids = current_user.user_favorites.pluck(:product_id)
-      @products = Product.where("id IN (?)", favorites_ids)
+      @products = Product.where("id IN (?)", favorites_ids).paginate(:page => params[:page], :per_page => 10)
     else
       if !session[:favorites].nil?
-        @products = Product.where("id IN (?)", session[:favorites])
+        @products = Product.where("id IN (?)", session[:favorites]).paginate(:page => params[:page], :per_page => 10)
       end
     end
     render layout: "shop_application"
@@ -236,7 +239,7 @@ class HomeController < ApplicationController
       order_item = OrderItem.create(product_id: params[:add_product_to_cart][:product_id], quantity: params[:add_product_to_cart][:quantity], order_id: order_id, size: params[:add_product_to_cart][:size], color: params[:add_product_to_cart][:color], shipping: params[:add_product_to_cart][:shipping])
     else
       # session.delete(:favorites)
-      product_array = [params[:add_product_to_cart][:product_id], params[:add_product_to_cart][:quantity]]
+      product_array = [params[:add_product_to_cart][:product_id], params[:add_product_to_cart][:quantity], params[:add_product_to_cart][:size], params[:add_product_to_cart][:color], params[:add_product_to_cart][:shipping]]
       session[:shop_cart] ||= []
       if session[:shop_cart].nil?
         session[:shop_cart] << ""

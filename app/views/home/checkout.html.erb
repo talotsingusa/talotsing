@@ -292,6 +292,11 @@
                         <div class="cart_item_title">Quantity</div>
                         <div class="cart_item_text"><%= product[1] %></div>
                       </div>
+
+                      <div class="cart_item_quantity cart_info_col">
+                        <div class="cart_item_title">Shipping Fee</div>
+                        <div class="cart_item_text"><%= number_to_currency(product[4].to_i) %></div>
+                      </div>
                       <div class="cart_item_price cart_info_col">
                         <div class="cart_item_title">Price</div>
                         <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price) %></div>
@@ -320,6 +325,10 @@
                         <div class="cart_item_quantity cart_info_col">
                           <div class="cart_item_title">Quantity</div>
                           <div class="cart_item_text"><%= product.quantity %></div>
+                        </div>
+                        <div class="cart_item_quantity cart_info_col">
+                          <div class="cart_item_title">Shipping Fee</div>
+                          <div class="cart_item_text"><%= number_to_currency(product.shipping.to_i) %></div>
                         </div>
                         <div class="cart_item_price cart_info_col">
                           <div class="cart_item_title">Price</div>
@@ -394,6 +403,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/13.0.2/img/flags@2x.png"></script>
 <script>
     $( document ).ready(function() {
+        $('#month_input').val($('#date_month').val());
+        $('#year_input').val($('#date_year').val());
+        $('#date_month').on('change', function() {
+            $('#month_input').val( this.value );
+        });
+        $('#date_year').on('change', function() {
+            $('#year_input').val( this.value );
+        });
         $(".progress-bar").css("flex-direction", "row");
         $('.show-inputs-group').click(function () {
             $('#address-group-penal').hide('slow');
@@ -469,12 +486,7 @@
 
             $(this).attr('class', 'cc ' + detected[0] + ' ' + errorClass);
         });
-        $('#date_month').on('change', function() {
-            $('#month_input').val( this.value );
-        });
-        $('#date_year').on('change', function() {
-            $('#year_input').val( this.value );
-        });
+
         $("#card_info_card").addClass("cc");
         $("#shipping_mobile").intlTelInput({
             allowExtensions: true,

@@ -274,6 +274,12 @@ class DashboardsController < ApplicationController
     end
   end
 
+
+  def orders_list
+    @orders = Order.where(user_id: current_user.id)
+    render layout: "dashboard_application"
+  end
+
   private
 
   def brand_params

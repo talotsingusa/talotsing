@@ -57,6 +57,7 @@ Rails.application.routes.draw do
   get 'add_shipping_prices' => "dashboards#add_shipping_prices", as: :add_shipping_prices
   post 'create_shipping_price' => "dashboards#create_shipping_price", as: :create_shipping_price
 
+  get 'orders_list' => "dashboards#orders_list", as: :orders_list
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -45,9 +45,6 @@
             <div class="product-info">
               <h3><%= @product.name if @product.present? %></h3>
               <h3>$<%= @product.price if @product.present? %> USD</h3>
-              <br>
-              <a href="<%= @product.supplier_url if @product.present? %>" target="_blank">Supplier URL</a>
-              <br>
               <div class="rating">
                 <span title="five stars">&#9734;</span>
                 <span title="four stars">&#9734;</span>

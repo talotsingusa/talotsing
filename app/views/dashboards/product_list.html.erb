@@ -20,6 +20,7 @@
               <tr>
                 <th>ID</th>
                 <th>Actions</th>
+                <th>Supplier URL</th>
                 <th>name</th>
                 <th class="text-right">Description</th>
                 <th class="text-right">Sku</th>
@@ -43,6 +44,7 @@
                   <tr>
                     <td><%= product.id %></td>
                     <td><%= link_to "edit", edit_product_path(product_id: product.id) %> <%= link_to "Delete", delete_product_path(id: product.id) %></td>
+                    <td><a href="<%= product.supplier_url if product.present? %>" target="_blank">Supplier URL</a></td>
                     <td><%= product.name %></td>
                     <td><pre><%= product.description %></pre></td>
                     <td class="text-right"><%= product.sku %></td>
