@@ -280,6 +280,24 @@ class DashboardsController < ApplicationController
     render layout: "dashboard_application"
   end
 
+  def pending_orders
+    @orders = Order.where(shipping_status: "pending")
+    render layout: "dashboard_application"
+  end
+
+  def completed_orders
+    @orders = Order.where(shipping_status: "completed")
+    render layout: "dashboard_application"
+  end
+
+  def order_details
+
+  end
+
+  def my_order_details
+
+  end
+
   private
 
   def brand_params

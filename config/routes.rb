@@ -58,6 +58,10 @@ Rails.application.routes.draw do
   post 'create_shipping_price' => "dashboards#create_shipping_price", as: :create_shipping_price
 
   get 'orders_list' => "dashboards#orders_list", as: :orders_list
+  get 'pending_orders' => "dashboards#pending_orders", as: :pending_orders
+  get 'completed_orders' => "dashboards#completed_orders", as: :completed_orders
+  get 'order_details' => "dashboards#order_details", as: :order_details
+  get 'my_order_details' => "dashboards#my_order_details", as: :my_order_details
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

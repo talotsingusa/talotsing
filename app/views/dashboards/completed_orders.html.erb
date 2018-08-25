@@ -16,11 +16,12 @@
               <thead>
               <tr>
                 <th>ID</th>
-                <th class="text-right">Action</th>
                 <th>name</th>
                 <th class="text-right">No. of Items</th>
+                <th class="text-right">Action</th>
                 <th class="text-right">Total Amount</th>
                 <th class="text-right">Status</th>
+                <th class="text-right">Shipping Status</th>
                 <th class="text-right">Created at</th>
               </tr>
               </thead>
@@ -28,11 +29,12 @@
               <% @orders.each do |order| %>
                 <tr>
                   <td><%= order.id %></td>
-                  <td><%= link_to "View details", my_order_details_path(id: order.id) %></td>
+                  <td><%= link_to "View details", order_details_path(id: order.id) %></td>
                   <td><%= "Order no #{order.id}" %></td>
                   <td><%= order.order_items.count %></td>
                   <td><%= order.total_amount %></td>
                   <td><%= order.status %></td>
+                  <td><%= order.shipping_status %></td>
                   <td class="text-right"><%= order.created_at %></td>
                 </tr>
               <% end %>
