@@ -16,12 +16,13 @@
               <thead>
               <tr>
                 <th>ID</th>
-                <th>name</th>
-                <th class="text-right">No. of Items</th>
                 <th class="text-right">Action</th>
+                <th>Name</th>
+                <th class="text-right">No. of Items</th>
                 <th class="text-right">Total Amount</th>
                 <th class="text-right">Status</th>
                 <th class="text-right">Shipping Status</th>
+                <th>Change Status to</th>
                 <th class="text-right">Created at</th>
               </tr>
               </thead>
@@ -35,6 +36,10 @@
                   <td><%= order.total_amount %></td>
                   <td><%= order.status %></td>
                   <td><%= order.shipping_status %></td>
+                  <td><%= link_to "Order received", change_order_status_path(id: order.id, status: "Order received") %><br>
+                    <%= link_to "Waiting from supplier", change_order_status_path(id: order.id, status: "Waiting from supplier") %><br>
+                    <%= link_to "Ready to be shipped", change_order_status_path(id: order.id, status: "Ready to be shipped") %><br>
+                    <%= link_to "Order dispatched", change_order_status_path(id: order.id, status: "Order dispatched") %></td>
                   <td class="text-right"><%= order.created_at %></td>
                 </tr>
               <% end %>

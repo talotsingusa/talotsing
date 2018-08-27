@@ -1,0 +1,50 @@
+<div class="main-content">
+  <div class="section__content section__content--p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Order items</h2>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="table-responsive table--no-card m-b-30">
+            <table class="table table-borderless table-striped table-earning" id="orders_list">
+              <thead>
+              <tr>
+                <th>Name</th>
+                <th class="text-right">Picture</th>
+                <th>Status</th>
+                <th>Change Status to</th>
+                <th>Price</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @order.order_items.each do |item| %>
+                <tr>
+                  <td><%= item.product.name %></td>
+                  <td><img style="max-width: 50%" src="<%= item.product.product_images.first.image.url(:original) if item.product.product_images.present? && item.product.product_images.first.present? %>" alt=""></td>
+                  <td><%= item.status %></td>
+                  <td><%= link_to "Order received", change_product_status_path(id: item.id, status: "Order received") %><br>
+                    <%= link_to "Waiting from supplier", change_product_status_path(id: item.id, status: "Waiting from supplier") %><br>
+                    <%= link_to "Ready to be shipped", change_product_status_path(id: item.id, status: "Ready to be shipped") %><br>
+                    <%= link_to "Order dispatched", change_product_status_path(id: item.id, status: "Order dispatched") %></td>
+                  <td><%= item.product.price %></td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $( document ).ready(function() {
+        $("#orders_list").dataTable();
+    });
+</script>

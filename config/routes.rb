@@ -62,6 +62,8 @@ Rails.application.routes.draw do
   get 'completed_orders' => "dashboards#completed_orders", as: :completed_orders
   get 'order_details' => "dashboards#order_details", as: :order_details
   get 'my_order_details' => "dashboards#my_order_details", as: :my_order_details
+  get 'change_product_status' => "dashboards#change_product_status", as: :change_product_status
+  get 'change_order_status' => "dashboards#change_order_status", as: :change_order_status
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

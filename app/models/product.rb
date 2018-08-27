@@ -32,4 +32,6 @@ class Product < ApplicationRecord
 
   has_many :product_specifications, dependent: :destroy
   accepts_nested_attributes_for :product_specifications,:reject_if => lambda { |a| a[:spec_key].blank? }, :allow_destroy => true
+
+  has_many :order_items
 end

@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="overview-wrap">
-                <h2 class="title-1">My Orders</h2>
+                <h2 class="title-1">Order items</h2>
               </div>
             </div>
           </div>
@@ -15,27 +15,19 @@
             <table class="table table-borderless table-striped table-earning" id="orders_list">
               <thead>
               <tr>
-                <th>ID</th>
-                <th class="text-right">Action</th>
                 <th>Name</th>
-                <th class="text-right">No. of Items</th>
-                <th class="text-right">Total Amount</th>
-                <th class="text-right">Status</th>
-                <th class="text-right">Shipping Status</th>
-                <th class="text-right">Created at</th>
+                <th class="text-right">Picture</th>
+                <th>Status</th>
+                <th>Price</th>
               </tr>
               </thead>
               <tbody>
-              <% @orders.each do |order| %>
+              <% @order.order_items.each do |item| %>
                 <tr>
-                  <td><%= order.id %></td>
-                  <td><%= link_to "View details", order_details_path(id: order.id) %></td>
-                  <td><%= "Order no #{order.id}" %></td>
-                  <td><%= order.order_items.count %></td>
-                  <td><%= order.total_amount %></td>
-                  <td><%= order.status %></td>
-                  <td><%= order.shipping_status %></td>
-                  <td class="text-right"><%= order.created_at %></td>
+                  <td><%= item.product.name %></td>
+                  <td><img style="max-width: 50%" src="<%= item.product.product_images.first.image.url(:original) if item.product.product_images.present? && item.product.product_images.first.present? %>" alt=""></td>
+                  <td><%= item.status %></td>
+                  <td><%= item.product.price %></td>
                 </tr>
               <% end %>
               </tbody>

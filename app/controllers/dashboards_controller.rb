@@ -281,21 +281,37 @@ class DashboardsController < ApplicationController
   end
 
   def pending_orders
-    @orders = Order.where(shipping_status: "pending")
+    @orders = Order.where.not(shipping_status: "Order dispatched")
     render layout: "dashboard_application"
   end
 
   def completed_orders
-    @orders = Order.where(shipping_status: "completed")
+    @orders = Order.where(shipping_status: "Order dispatched")
     render layout: "dashboard_application"
   end
 
   def order_details
-
+    @order = Order.find(params[:id])
+    render layout: "dashboard_application"
   end
 
   def my_order_details
+    @order = Order.find(params[:id])
+    render layout: "dashboard_application"
+  end
 
+  def change_product_status
+    @order_item = OrderItem.find(params[:id])
+    @order_item.status = params[:status]
+    @order_item.save
+    redirect_to order_details_path(id: @order_item.order_id)
+  end
+
+  def change_order_status
+    @order = Order.find(params[:id])
+    @order.shipping_status = params[:status]
+    @order.save
+    redirect_to pending_orders_path
   end
 
   private
