@@ -323,6 +323,7 @@ $(document).ready(function()
 
 		$('.product_grid').isotope({
 			itemSelector: '.product_item',
+            layoutMode: 'fitRows',
             getSortData: {
             	price: function(itemElement)
             	{

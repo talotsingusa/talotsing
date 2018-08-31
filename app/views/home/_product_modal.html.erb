@@ -187,7 +187,21 @@
 
 
               <% end %>
+              <br>
+              <div class="row">
 
+                <div class="col-lg-12">
+                  <!-- Product Quantity -->
+                  <div class="form-control product_quantity clearfix">
+                    <span>Quantity: </span>
+                    <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                    <div class="quantity_buttons">
+                      <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+                      <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <button type="submit" class="button contact_submit_button" id="adding_products_in_cart_modal">Add to bag</button>
               <img src="/assets/newpdp.gif" class="img-responsive cart-img" alt="">
             </div>
@@ -200,9 +214,25 @@
 </div>
 
 <script>
+    $(document).ready(function () {
+        initQuantity();
+    });
+    function initQuantity() { // Handle product quantity input
+        if($('.product_quantity').length) { var input = $('#quantity_input');
+            var incButton = $('#quantity_inc_button'); var decButton = $('#quantity_dec_button'); var originalVal; var endVal; incButton.on('click',
+                function() { originalVal = input.val(); endVal = parseFloat(originalVal) + 1; input.val(endVal); }); decButton.on('click',
+                function() { originalVal = input.val(); if(originalVal > 0) { endVal = parseFloat(originalVal) - 1; input.val(endVal); }
+                }); } }
     $(document).on("click", "#adding_products_in_cart_modal", function(e) {
         e.preventDefault();
         // $("#product_quantity_in_cart").val($("#quantity_input").val());
         $("#cart_form_for").submit();
     });
+    $(document).on("click", "#quantity_inc_button", function(e) {
+        $("#product_quantity_in_cart").val($("#quantity_input").val());
+    });
+    $(document).on("click", "#quantity_dec_button", function(e) {
+        $("#product_quantity_in_cart").val($("#quantity_input").val());
+    });
+
 </script>

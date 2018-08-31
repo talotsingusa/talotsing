@@ -1,113 +1,266 @@
-
 <div class="single_product">
   <div class="container">
     <div class="row">
+      <div class="col-lg-6">
+        <div id="myCarousel" class="carousel slide" data-interval="false">
 
-      <!-- Images -->
-      <div class="col-lg-2 order-lg-1 order-2">
-        <ul class="image_list">
-          <% @product.product_images.each do |image| %>
-              <li id="image_slider_new" data-image="<%= image.image.url(:medium) if image.image.present? %>"><img src="<%= image.image.url(:medium) if image.image.present?%>" alt=""></li>
-          <% end %>
-          <!--<li data-image="/assets/single_2.jpg"><img src="/assets/single_2.jpg" alt=""></li>-->
-          <!--<li data-image="/assets/single_3.jpg"><img src="/assets/single_3.jpg" alt=""></li>-->
-        </ul>
-      </div>
-
-      <!-- Selected Image -->
-      <div class="col-lg-5 order-lg-2 order-1">
-        <div class="image_selected"><img id="main_image_show" src="<%= @product.product_images.first.image.url(:medium) if @product.product_images.present? %>" alt=""></div>
-      </div>
-
-      <!-- Description -->
-      <div class="col-lg-5 order-3">
-        <div class="product_description">
-          <div class="product_category"><%= @product.sub_category.name if @product.sub_category.present? %></div>
-          <div class="product_name"><%= @product.name if @product.name.present? %></div>
-          <div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="product_text"><p><%= @product.description if @product.description.present? %></p></div>
-          <div class="order_info d-flex flex-row">
-            <form action="#">
-              <div class="clearfix" style="z-index: 1000;">
-
-                <!-- Product Quantity -->
-                <div class="product_quantity clearfix">
-                  <span>Quantity: </span>
-                  <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-                  <div class="quantity_buttons">
-                    <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-                    <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
-                  </div>
+          <div class="carousel-inner" role="listbox">
+            <% if @product.present? %>
+              <% @product.product_images.each_with_index do |image, index| %>
+                <div class="item carousel-item" id="<%= "product_large_#{index}" %>">
+                  <img src="<%= image.image.url(:original) if image.present? %>">
                 </div>
+              <% end %>
+            <% end %>
 
-                <!-- Product Color -->
-                <ul class="product_color">
-                  <li>
-                    <span>Color: </span>
-                    <div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>
-                    <div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
 
-                    <ul class="color_list">
-                      <li><div class="color_mark" style="background: #999999;"></div></li>
-                      <li><div class="color_mark" style="background: #b19c83;"></div></li>
-                      <li><div class="color_mark" style="background: #000000;"></div></li>
-                    </ul>
-                  </li>
-                </ul>
-
-                <!-- Product Shipment -->
-                <% if @product.product_shipments.present? %>
-                <ul class="product_color">
-                  <li>
-                    <span>Shipments: </span>
-                    <div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>
-                    <div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
-
-                    <ul class="color_list" style="width: 190px; ">
-                      <% @product.product_shipments.each do |shipment| %>
-                          <li><%= "#{shipment.name} - $#{shipment.price}" %></li>
-                      <% end %>
-                      <!--<li><div class="color_mark" style="background: #b19c83;"></div></li>-->
-                      <!--<li><div class="color_mark" style="background: #000000;"></div></li>-->
-                    </ul>
-                  </li>
-                </ul>
-                <% end %>
-              </div>
-
-              <div class="product_price">$<%= @product.price if @product.price.present? %></div>
-              <div class="button_container">
-                <button type="button" class="button cart_button" id="adding_products_in_cart">Add to Cart</button>
-                <% if check_favorite(@product.id) == true %>
-                    <%= link_to remove_favorite_path(product_id: @product.id), remote: true do %>
-                        <div class="product_fav active"><i class="fas fa-heart"></i></div>
-                    <% end %>
-                <% else %>
-                    <%= link_to add_favorite_path(product_id: @product.id), remote: true do %>
-                        <div class="product_fav"><i class="fas fa-heart"></i></div>
-                    <% end %>
-                <% end %>
-              </div>
-
-            </form>
-            <%= form_for :add_product_to_cart, url: add_to_cart_path, :html => {:id => "cart_form_for"}, class: "header_search_form clearfix", method: :get do |f| %>
-                <%= f.hidden_field :product_id, value: @product.id %>
-                <%= f.hidden_field :quantity, value: "" , id: "product_quantity_in_cart"%>
+          <div id="thumbCarousel">
+            <% if @product.present? %>
+              <% @product.product_images.each_with_index do |image, index| %>
+                <div data-target="#myCarousel" data-slide-to="<%= index %>" class="thumb" id="<%= "product_small_#{index}" %>">
+                  <img src="<%= image.image.url(:original) if image.present? %>">
+                </div>
+              <% end %>
             <% end %>
           </div>
+
         </div>
       </div>
+      <div class="col-lg-6">
+        <div class="product-info">
+          <h3><%= @product.name if @product.present? %></h3>
+          <h3>$<%= @product.price if @product.present? %> USD</h3>
+          <div class="rating">
+            <span title="five stars">&#9734;</span>
+            <span title="four stars">&#9734;</span>
+            <span title="three stars">&#9734;</span>
+            <span title="two stars">&#9734;</span>
+            <span title="one star">&#9734;</span>
+          </div>
+          <p>3 Reviews</p>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    PRODUCT DETAILS
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse in collapse show" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <ul>
+                    <li><%= @product.description if @product.present? %></li>
+                    <li><%= @product.additional_information if @product.present? %></li>
+<!--                    <li>Ruffle Shoulder</li>-->
+<!--                    <li>Floral Print</li>-->
+<!--                    <li>Mini</li>-->
+<!--                    <li>94% Polyester; 6% Spandex</li>-->
+<!--                    <li>Print Placement Will Vary</li>-->
+<!--                    <li>Made In USA</li>-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
+                     aria-controls="collapseTwo">
+                    SHIPPING INFORMATION
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  <table border="1px">
+                    <tbody>
+                    <tr>
+                      <td width="50%"> METHOD </td>
+                      <td width="20%"> COST </td>
+                      <td width="30%"> TIME </td>
+                    </tr>
+                    <tr>
+                      <td>Overnight + Saturday Delivery</td>
+                      <td>$20</td>
+                      <td>1 Business Day</td>
+                    </tr>
+                    <tr>
+                      <td>Standard</td>
+                      <td>$6</td>
+                      <td>2-3 Business Days</td>
+                    </tr>
+                    <tr>
+                      <td>Over $75</td>
+                      <td>FREE</td>
+                      <td>2-3 Business Days</td>
+                    </tr>
+                    <tr>
+                      <td>Canada &amp; U.K. Over $75</td>
+                      <td>FREE</td>
+                      <td>5-7 Business Days</td>
+                    </tr>
+                    <tr>
+                      <td>Canada &amp; UK</td>
+                      <td>$6</td>
+                      <td>5-7 Business Days</td>
+                    </tr>
+                    <tr>
+                      <td>International</td>
+                      <td>$10</td>
+                      <td>5-10 Business Days</td>
+                    </tr>
+                    <tr>
+                      <td>International Express</td>
+                      <td>$25</td>
+                      <td>2-5 Business Days</td>
+                    </tr>
+                    <tr>
+                      <td>International Over $150</td>
+                      <td>FREE</td>
+                      <td>5-10 Business Days</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <% if @product.present? %>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      PRODUCT SPECIFICATIONS
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse in collapse show" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <ul>
+                      <% @product.product_specifications.each do |specs| %>
+                        <li><%= "#{specs.spec_key}: #{specs.spec_value}" if @product.product_specifications.present? %></li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <br>
+          <%= form_for :add_product_to_cart, url: add_to_cart_path, :html => {:id => "cart_form_for"}, class: "header_search_form clearfix", method: :get do |f| %>
+            <%= f.hidden_field :product_id, value: @product.id if @product.present? %>
+            <%= f.hidden_field :quantity, value: 1 , id: "product_quantity_in_cart"%>
+            <%= f.collection_select(:size, @product.sizes.all,
+                                    :name, :name,
+                                    {:prompt => 'Please select size'}, {class: "form-control"}) if @product.present? %>
+            <!--              <select class="form-control">-->
+            <!--                <option value="" selected="" disabled="disabled">Size</option>-->
+            <!--                <option value="XS">XS</option>-->
+            <!--                <option value="S">S</option>-->
+            <!--                <option value="M">M</option>-->
+            <!--                <option value="L">L</option>-->
+            <!--                <option value="XL">XL</option>-->
+            <!--              </select>-->
+            <br>
+            <%= f.collection_select(:color, @product.colors.all,
+                                    :name, :name,
+                                    {:prompt => 'Please select color'}, {class: "form-control"}) if @product.present? %>
+            <br>
+            <%= f.collection_select(:shipping, ShippingPrice.all,
+                                    :price, :name,
+                                    {:prompt => 'Please select shipping'}, {class: "form-control"}) if @product.present? %>
 
+
+          <% end %>
+          <br>
+          <div class="row">
+<!--            <div class="col-lg-4">-->
+<!--              <select class="fc-custom form-control">-->
+<!--                <option value="" selected="" disabled="disabled">Size</option>-->
+<!--                <option value="XS">XS</option>-->
+<!--                <option value="S">S</option>-->
+<!--                <option value="M">M</option>-->
+<!--                <option value="L">L</option>-->
+<!--                <option value="XL">XL</option>-->
+<!--              </select>-->
+<!--            </div>-->
+            <div class="col-lg-6">
+              <!-- Product Quantity -->
+              <div class="product_quantity clearfix">
+                <span>Quantity: </span>
+                <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                <div class="quantity_buttons">
+                  <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+                  <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+                </div>
+              </div>
+            </div>
+<!--            <div class="col-lg-4">-->
+<!--              <!-- Product Color -->
+<!--              <ul class="product_color">-->
+<!--                <li>-->
+<!--                  <span>Color: </span>-->
+<!--                  <div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>-->
+<!--                  <div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>-->
+<!--                  <ul class="color_list">-->
+<!--                    <li><div class="color_mark" style="background: #999999;"></div></li>-->
+<!--                    <li><div class="color_mark" style="background: #b19c83;"></div></li>-->
+<!--                    <li><div class="color_mark" style="background: #000000;"></div></li>-->
+<!--                  </ul>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+          </div>
+          <div class="button_container">
+            <button type="button" class="button cart_button" id="adding_products_in_cart">Add to Cart</button>
+            <% if check_favorite(@product.id) == true %>
+              <%= link_to remove_favorite_path(product_id: @product.id), remote: true do %>
+                <div class="product_fav active"><i class="fas fa-heart"></i></div>
+              <% end %>
+            <% else %>
+              <%= link_to add_favorite_path(product_id: @product.id), remote: true do %>
+                <div class="product_fav"><i class="fas fa-heart"></i></div>
+              <% end %>
+            <% end %>
+          </div>
+          <!-- <img src="images/newpdp.gif" class="img-responsive cart-img" alt=""> -->
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+
 <script>
+    $('#product_large_0').addClass('active');
+    $('#product_small_0').addClass('active');
     $(document).on("click", "#image_slider_new", function() {
         $(".main_image_show").attr("src", $(this).data("image"));
     });
     $(document).on("click", "#adding_products_in_cart", function(e) {
         e.preventDefault();
         $("#product_quantity_in_cart").val($("#quantity_input").val());
+        $("#cart_form_for").submit();
+    });
+    $(document).on("click", "#quantity_inc_button", function(e) {
+        $("#product_quantity_in_cart").val($("#quantity_input").val());
+    });
+    $(document).on("click", "#quantity_dec_button", function(e) {
+        $("#product_quantity_in_cart").val($("#quantity_input").val());
+    });
+    $(document).on("click", "#adding_products_in_cart", function(e) {
+        e.preventDefault();
+        // $("#product_quantity_in_cart").val($("#quantity_input").val());
         $("#cart_form_for").submit();
     });
 </script>

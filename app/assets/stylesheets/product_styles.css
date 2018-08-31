@@ -1578,6 +1578,7 @@ select option
 	display: inline-block;
 	width: 36px;
 	height: 36px;
+    top: auto !important;
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
 	border-radius: 50%;
@@ -2113,4 +2114,15 @@ select option
 .logos_list li:last-child
 {
 	margin-right: 0px;
+}
+
+.fc-custom {
+    height: 50px !important;
+    border: 1px solid #e5e5e5;
+    color: rgb(149, 152, 153) !important;
+    font-weight: 300;
+    font-size: 16px !important;
+}
+.carousel-inner > .item > img {
+    width: 100% !important;
 }
