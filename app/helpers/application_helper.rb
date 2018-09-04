@@ -36,17 +36,26 @@ module ApplicationHelper
     total_price = []
     if !session[:shop_cart].nil? && session[:shop_cart].count > 0
       session[:shop_cart].each do |product|
-        @price = Product.find(product[0].to_i).price*product[1].to_i+product[4].to_i
-        total_price << @price
+        get_product = Product.find_by_id(product[0].to_i)
+        if get_product.present?
+          @price = Product.find(product[0].to_i).price*product[1].to_i+product[4].to_i
+          total_price << @price
+        end
       end
     elsif current_user.present? && current_user.orders.where(status: "pending").present?
       if current_user.orders.present?
         @order_items = current_user.orders.where(status: "pending").last.order_items
         @order_items.each do |product|
           if product.quantity.nil?
-            @price = Product.find(product.product_id).price*1
+            get_product = Product.find_by_id(product.product_id)
+            if get_product.present?
+              @price = Product.find(product.product_id).price*1
+            end
           else
-            @price = Product.find(product.product_id).price*product.quantity+product.shipping.to_i
+            get_product = Product.find_by_id(product.product_id)
+            if get_product.present?
+              @price = Product.find(product.product_id).price*product.quantity+product.shipping.to_i
+            end
           end
           total_price << @price
         end
