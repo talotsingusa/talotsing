@@ -1,7 +1,7 @@
 <div class="contact_form">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 offset-lg-1">
+      <div class="col-lg-4">
         <div class="contact_form_container">
           <div class="contact_form_title">Sign Up</div>
           <%= form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
@@ -9,8 +9,8 @@
 
               <%= f.hidden_field :profile_type, :value => "customer", id: "custome_vendor" %>
               <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-              <%= f.text_field :first_name, autofocus: true, class: "contact_form_name input_field", placeholder: "First Name", required: true %>
-            </div>
+                <%= f.text_field :first_name, autofocus: true, class: "contact_form_name input_field", placeholder: "First Name", required: true %>
+              </div>
             <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
               <%= f.text_field :last_name, autofocus: true, class: "contact_form_name input_field", placeholder: "Last Name", required: true %>
             </div>
@@ -40,7 +40,6 @@
       </div>
     </div>
   </div>
-  <div class="panel"></div>
 </div>
 <script>
     $('#user_profile_type').click(function() {
