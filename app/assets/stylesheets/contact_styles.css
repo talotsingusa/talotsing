@@ -1257,9 +1257,10 @@ select option
 .contact_form
 {
 	padding-top: 85px;
-    background-image: url("../assets/signin-bg.jpg");
+    /* background-image: url("../assets/signin-bg.jpg");
     background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
+	background: #b3895e;
 	padding-bottom: 85px;
 }
 .contact_form_title
@@ -1351,14 +1352,15 @@ select option
 }
 .contact_submit_button
 {
-	padding-left: 35px;
-	padding-right: 35px;
+	/* padding-left: 35px; */
+	/* padding-right: 35px; */
 	color: #FFFFFF;
 	font-size: 18px;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	margin-top: 24px;
+	margin-top: 15px;
+	width: 100%;
 }
 .panel
 {
@@ -1681,7 +1683,10 @@ select option
 }
 
 .contact_form_container {
-	padding: 15px;
-    background: rgba(35, 47, 62, 0.2);
+	padding: 45px;
+    background:#FFFFFF;
     border-radius: 5px;
+}
+.disclaimer {
+	margin-top: 15px;
 }

@@ -3,7 +3,7 @@
 <div class="contact_form">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-5">
         <div class="contact_form_container">
           <div class="contact_form_title">Sign In</div>
 
@@ -20,15 +20,25 @@
                   <%= f.check_box :remember_me %>
                   <label for="user_remember_me" class="mt20">
                     <i></i>
-                    <span><%= t('login_page.remember_me') %></span>
+                    <span><%= t('login_page.remember_me') %> </span>
                   </label>
               <% end %>
             <div class="contact_form_button">
               <%= f.submit "Sign In", class: 'button contact_submit_button' %>
             </div>
+
+            <div class="mt-4">
+              <p>By continuing you agree to our <a target="_blank" href="#">Terms and Conditions</a> and the <a target="_blank" href="#">My Talotsing<span class="super">®</span> Program Terms.</a></p>
+            </div>
+            <div class="mt-5">
+              <p>Forgot your password? <a href="#" aria-label="Reset Password">Reset it</a></p>
+            </div>
           <% end %>
 
         </div>
+      </div>
+      <div class="col-lg-4 offset-lg-2">
+        <img src="/assets/logoo 3.png" class="mt-7" width="100%">
       </div>
     </div>
   </div>
