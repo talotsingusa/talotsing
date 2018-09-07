@@ -5,36 +5,54 @@
     <div class="row">
       <div class="col-lg-5">
         <div class="contact_form_container">
-          <div class="contact_form_title">Sign In</div>
+          <div class="form-top">
+              <div class="contact_form_title">Sign In</div>
+              <%= form_for resource, as: resource_name, url: session_path(resource_name), id: "contact_form"   do |f| %>
+                <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                  <%= f.email_field :email, autofocus: true, class: "contact_form_name input_field", placeholder: "Your Email", required: true %>
+                </div>
+                <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                  <%= f.text_field :password, autofocus: true, class: "contact_form_name input_field", placeholder: "Password", required: true %>
+                </div>
 
+                  <% if devise_mapping.rememberable? %>
+                      <%= f.check_box :remember_me %>
+                      <label for="user_remember_me" class="mt20">
+                        <i></i>
+                        <span><%= t('login_page.remember_me') %> </span>
+                      </label>
+                  <% end %>
+                <div class="contact_form_button">
+                  <%= f.submit "Sign In", class: 'button contact_submit_button' %>
+                </div>
 
-            <%= form_for resource, as: resource_name, url: session_path(resource_name), id: "contact_form"   do |f| %>
-            <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-              <%= f.email_field :email, autofocus: true, class: "contact_form_name input_field", placeholder: "Your Email", required: true %>
-            </div>
-            <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-              <%= f.text_field :password, autofocus: true, class: "contact_form_name input_field", placeholder: "Password", required: true %>
-            </div>
+                <div class="mt-4">
+                  <p>By continuing you agree to our <a target="_blank" href="#">Terms and Conditions</a> and the <a target="_blank" href="#">My Talotsing<span class="super">®</span> Program Terms.</a></p>
+                </div>
+                <div class="mt-5">
+                  <p>Forgot your password? <a href="#" aria-label="Reset Password">Reset it</a></p>
+                </div>
+                <div class="line-full"></div>
+                <div class="mt-5 social-section">
+                  <h4>Sign In with Your Social Account</h4>
+                  <p>We'll never post anything without your permission.</p>
+                  <button class="__social-button">
+                      <i class="fab fa-facebook-square"></i>
+                      <span class="btn-text">Facebook</span>
+                  </button>
 
-              <% if devise_mapping.rememberable? %>
-                  <%= f.check_box :remember_me %>
-                  <label for="user_remember_me" class="mt20">
-                    <i></i>
-                    <span><%= t('login_page.remember_me') %> </span>
-                  </label>
-              <% end %>
-            <div class="contact_form_button">
-              <%= f.submit "Sign In", class: 'button contact_submit_button' %>
-            </div>
-
-            <div class="mt-4">
-              <p>By continuing you agree to our <a target="_blank" href="#">Terms and Conditions</a> and the <a target="_blank" href="#">My Talotsing<span class="super">®</span> Program Terms.</a></p>
-            </div>
-            <div class="mt-5">
-              <p>Forgot your password? <a href="#" aria-label="Reset Password">Reset it</a></p>
-            </div>
-          <% end %>
-
+                  <button class="__social-button">
+                      <i class="icon-google"></i>
+                      <span class="btn-text">Google</span>
+                  </button>
+                </div>
+            <% end %>
+          </div>
+          <div class="form-bottom">
+              <div class="bottom-content">
+                Don't have an account? <a href="<%= new_user_registration_path%>" aria-label="Create Account">Create one</a>
+              </div>
+          </div>
         </div>
       </div>
       <div class="col-lg-4 offset-lg-2">

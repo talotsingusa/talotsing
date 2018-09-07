@@ -1,0 +1,27 @@
+.mini-footer__links {
+    float: left;
+    width: 80%;
+}
+.logos {
+	float: right;
+	width: 20%;
+}
+.copyright_content {
+	width: 100%;
+}
+.mini-footer__nav ul li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.mini-footer__nav ul li a {
+    padding: 0 5px 0 8px;
+    margin: 0;
+    font-size: 11px;
+    border-left: 1px solid #c5cbd5;
+}
+
+.mini-footer__nav ul li:first-child a {
+    border-left: none;
+    padding-left: 0;
+}
