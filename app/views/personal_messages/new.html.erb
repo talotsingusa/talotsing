@@ -3,8 +3,21 @@
 <%= form_for @personal_message do |f| %>
   <%= hidden_field_tag 'receiver_id', @receiver.id %>
 
-  <%= f.label :body %>
-  <%= f.text_area :body %>
-
-  <%= f.submit %>
+  <h3>Message</h3>
+  <%= f.text_area :body, label: false, placeholder: "Type your message here", size: "100x5" %>
+  <br>
+  <%= f.submit "Send", class: "btn btn-primary", id: "send_mess" %>
 <% end %>
+
+<style>
+  #new_personal_message{
+    margin-left: 20px;
+  }
+</style>
+<script>
+    $('#personal_message_body').keypress(function (e) {
+        if (e.which == 13) {
+            $('#send_mess').click();
+        }
+    });
+</script>

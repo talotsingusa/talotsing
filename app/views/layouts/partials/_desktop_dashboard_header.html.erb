@@ -21,29 +21,23 @@
                 <div class="mess__title">
                   <p>You have 2 news message</p>
                 </div>
-                <div class="mess__item">
-                  <div class="image img-cir img-40">
-                    <img src="/assets/icon/avatar-06.jpg" alt="Michelle Moreno" />
-                  </div>
-                  <div class="content">
-                    <h6>Michelle Moreno</h6>
-                    <p>Have sent a photo</p>
-                    <span class="time">3 min ago</span>
-                  </div>
-                </div>
-                <div class="mess__item">
-                  <div class="image img-cir img-40">
-                    <img src="/assets/icon/avatar-04.jpg" alt="Diane Myers" />
-                  </div>
-                  <div class="content">
-                    <h6>Diane Myers</h6>
-                    <p>You are now connected on message</p>
-                    <span class="time">Yesterday</span>
-                  </div>
-                </div>
-                <div class="mess__footer">
-                  <a href="#">View all messages</a>
-                </div>
+                <% Conversation.participating(current_user).order('updated_at DESC').each do |convo| %>
+                  <a href="<%= conversation_path(convo) %>">
+                    <div class="mess__item">
+                      <div class="image img-cir img-40">
+                        <img src="/assets/icon/avatar-06.jpg" alt="Michelle Moreno" />
+                      </div>
+                      <div class="content">
+                        <h6><%= convo.receiver.full_name %></h6>
+                        <p><%= convo.personal_messages.last.body %></p>
+                        <span class="time"><%= time_ago_in_words(convo.personal_messages.last.created_at) %></span>
+                      </div>
+                    </div>
+                  </a>
+                <% end %>
+<!--                <div class="mess__footer">-->
+<!--                  <a href="#">View all messages</a>-->
+<!--                </div>-->
               </div>
             </div>
             <div class="noti__item js-item-menu">
