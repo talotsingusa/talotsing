@@ -29658,3 +29658,59 @@ section {
 .vue-lists ul, .vue-lists ol {
   padding-left: 30px;
 }
+
+/* line 14, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+#conversation-body {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 2em;
+}
+
+/* line 19, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+#notification {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+/* line 27, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+#notification .close {
+  cursor: pointer;
+}
+
+/* line 29, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+.online_status {
+  color: red;
+  transition: color 1s ease;
+}
+/* line 32, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+.online_status.online {
+  color: green;
+}
+
+/* line 36, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+#send-message {
+  background: #4272d7;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 25px;
+  max-width: 390px;
+  margin-bottom: 2px;
+  text-align: left;
+  float: right;
+}
+
+/* line 48, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+#receiver-message {
+  background: #f2f2f2;
+  /* -webkit-border-radius: 8px; */
+  border-radius: 8px;
+  padding: 12px 25px;
+  max-width: 390px;
+  margin-bottom: 2px;
+  text-align: left;
+  float: left;
+}

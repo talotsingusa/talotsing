@@ -65398,7 +65398,7 @@ jQuery(document).ready(function($){
 ******************************/
 
 
-$( document ).on('turbolinks:load', function() {
+$( document ).ready(function() {
 	"use strict";
 
 	/* 
