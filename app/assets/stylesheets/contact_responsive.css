@@ -54,7 +54,9 @@
 
 @media only screen and (max-width: 1280px)
 {
-	
+	.social-section .__social-button {
+		width: 40%;
+	}
 }
 
 /************
@@ -286,6 +288,16 @@
 	.input_field:last-child
 	{
 		margin-bottom: 0px;
+	}
+	.social-section .__social-button {
+		width: 70%;
+		margin-top: 10px;	
+	}
+	.content-items .col-lg-3 {
+		width: 25%;
+	}
+	.content-items .col-lg-9 {
+		width: 75%;
 	}
 }
 
