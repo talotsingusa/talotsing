@@ -11,6 +11,14 @@ class User < ApplicationRecord
   has_many :recent_views, dependent: :destroy
   has_many :products ,through: :recent_views
   has_many :orders
+  has_many :authored_conversations, class_name: 'Conversation', foreign_key: 'author_id'
+  has_many :received_conversations, class_name: 'Conversation', foreign_key: 'received_id'
+  has_many :personal_messages, dependent: :destroy
+
+  def online?
+    !Redis.new.get("user_#{self.id}_online").nil?
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end

@@ -249,8 +249,8 @@ $( document ).on('turbolinks:load', function() {
             }
 
             // Recent Report
-            const brandProduct = 'rgba(0,181,233,0.8)'
-            const brandService = 'rgba(0,173,95,0.8)'
+            var brandProduct = 'rgba(0,181,233,0.8)'
+            var brandService = 'rgba(0,173,95,0.8)'
 
             var elements = 10
             var data1 = [52, 60, 55, 50, 65, 80, 57, 70, 105, 115]
@@ -395,10 +395,10 @@ $( document ).on('turbolinks:load', function() {
         try {
 
             // Recent Report 2
-            const bd_brandProduct2 = 'rgba(0,181,233,0.9)'
-            const bd_brandService2 = 'rgba(0,173,95,0.9)'
-            const brandProduct2 = 'rgba(0,181,233,0.2)'
-            const brandService2 = 'rgba(0,173,95,0.2)'
+            var bd_brandProduct2 = 'rgba(0,181,233,0.9)'
+            var bd_brandService2 = 'rgba(0,173,95,0.9)'
+            var brandProduct2 = 'rgba(0,181,233,0.2)'
+            var brandService2 = 'rgba(0,173,95,0.2)'
 
             var data3 = [52, 60, 55, 50, 65, 80, 57, 70, 105, 115]
             var data4 = [102, 70, 80, 100, 56, 53, 80, 75, 65, 90]
@@ -489,10 +489,10 @@ $( document ).on('turbolinks:load', function() {
         try {
 
             // Recent Report 3
-            const bd_brandProduct3 = 'rgba(0,181,233,0.9)';
-            const bd_brandService3 = 'rgba(0,173,95,0.9)';
-            const brandProduct3 = 'transparent';
-            const brandService3 = 'transparent';
+            var bd_brandProduct3 = 'rgba(0,181,233,0.9)';
+            var bd_brandService3 = 'rgba(0,173,95,0.9)';
+            var brandProduct3 = 'transparent';
+            var brandService3 = 'transparent';
 
             var data5 = [52, 60, 55, 50, 65, 80, 57, 115];
             var data6 = [102, 70, 80, 100, 56, 53, 80, 90];
@@ -1457,12 +1457,12 @@ $( document ).on('turbolinks:load', function() {
         try {
             var jscr1 = $('.js-scrollbar1');
             if(jscr1[0]) {
-                const ps1 = new PerfectScrollbar('.js-scrollbar1');
+                var ps1 = new PerfectScrollbar('.js-scrollbar1');
             }
 
             var jscr2 = $('.js-scrollbar2');
             if (jscr2[0]) {
-                const ps2 = new PerfectScrollbar('.js-scrollbar2');
+                var ps2 = new PerfectScrollbar('.js-scrollbar2');
 
             }
 

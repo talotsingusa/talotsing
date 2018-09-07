@@ -85,4 +85,10 @@ module ApplicationHelper
   def product_details(id)
     return Product.find(id)
   end
+
+  def online_status(user)
+    content_tag :span, user.first_name,
+                class: "user-#{user.id} online_status #{'online' if user.online?}"
+  end
+
 end

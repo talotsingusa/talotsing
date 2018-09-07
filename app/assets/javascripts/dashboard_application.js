@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
+//= require jquery
 //= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
@@ -24,6 +24,9 @@
 //= require selectize
 //= require cocoon
 //= require main.js
+//= require conversations
+//= require cable
+
 
 
 // $('body').css({'overflow' : ''});
