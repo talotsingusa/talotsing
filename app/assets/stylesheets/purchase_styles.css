@@ -544,6 +544,9 @@ section
 	font-weight: 500;
 	color: #24303e;
 }
+.logo a img {
+	width: 100%;
+}
 .header_search
 {
 	height: 175px;

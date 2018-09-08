@@ -343,6 +343,9 @@
 	{
 		font-size: 24px;
 	}
+	.logo a img {
+		width: 100%;
+	}
 	.cat_menu_container
 	{
 		width: auto;
