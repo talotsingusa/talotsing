@@ -65,5 +65,11 @@ Rails.application.routes.draw do
   get 'change_product_status' => "dashboards#change_product_status", as: :change_product_status
   get 'change_order_status' => "dashboards#change_order_status", as: :change_order_status
 
+  resources :conversations
+  resources :personal_messages
+  resources :users
+  mount ActionCable.server => '/cable'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -68,6 +68,7 @@ gem 'stripe'
 gem 'intl-tel-input-rails'
 gem 'will_paginate-bootstrap4'
 gem 'geocomplete_rails'
+gem 'redis'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

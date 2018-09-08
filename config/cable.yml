@@ -1,10 +1,12 @@
 development:
-  adapter: async
-
-test:
-  adapter: async
-
-production:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: Talotsing_production
+test:
+  adapter: redis
+  url: <%= ENV["REDIS_URL"] %>
+staging:
+  adapter: redis
+  url: <%= ENV["REDIS_URL"] %>
+production:
+  adapter: redis
+  url: <%= ENV["REDIS_URL"] %>

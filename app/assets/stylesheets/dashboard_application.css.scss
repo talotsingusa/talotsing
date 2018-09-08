@@ -11,3 +11,49 @@
 @import 'selectize.bootstrap3';
 @import "theme";
 @import "common_style.css";
+
+#conversation-body {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 2em;
+}
+#notification {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #fff;
+  .close {cursor: pointer}
+}
+.online_status {
+  color: red;
+  transition: color 1s ease;
+  &.online {
+    color: green;
+  }
+}
+#send-message{
+  background: #4272d7;
+  color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 12px 25px;
+  max-width: 390px;
+  margin-bottom: 2px;
+  text-align: left;
+  float: right;
+}
+#receiver-message{
+  background: #f2f2f2;
+  /* -webkit-border-radius: 8px; */
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 12px 25px;
+  max-width: 390px;
+  margin-bottom: 2px;
+  text-align: left;
+  float: left;
+}
