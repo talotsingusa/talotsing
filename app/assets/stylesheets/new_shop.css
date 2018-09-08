@@ -323,7 +323,7 @@ a:focus {
     color: #ffffff;
     background: #24303e;
     padding: 8px;
-    z-index: 99;
+    z-index: 9;
 }
 
 button.close {
