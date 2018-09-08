@@ -129,11 +129,7 @@
 ************/
 
 @media only screen and (max-width: 991px)
-{	
-	.logo_header_trans {
-        width: 193px !important;
-	    margin-top: 0px !important;
-    }
+{
 	.top_bar
 	{
 		/*display: none;*/
@@ -398,6 +394,9 @@
 	.logo a
 	{
 		font-size: 24px;
+	}
+	.logo a img {
+		width: 100%;
 	}
 	.cat_menu_container
 	{

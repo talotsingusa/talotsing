@@ -209,10 +209,6 @@
     {
         margin-top: 60px;
     }
-    .product_item
-    {
-        width: 25%;
-    }
     .newsletter_title_container
     {
         width: 100%;
@@ -302,10 +298,6 @@
     {
         padding-left: 36px;
     }
-    .product_item
-    {
-        width: 33.33333333%;
-    }
     .shop_sidebar {
         width: 100%;
     }
@@ -333,6 +325,9 @@
     .logo a
     {
         font-size: 24px;
+    }
+    .logo a img {
+        width: 100%;
     }
     .cat_menu_container
     {
@@ -631,10 +626,6 @@
 
 @media only screen and (max-width: 480px)
 {
-    .product_item
-    {
-        width: 50%;
-    }
     .shop_sidebar {
         width: 100%;
     }
