@@ -4,10 +4,11 @@
 }
 .logos {
 	float: right;
-	width: 20%;
 }
 .copyright_content {
-	width: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 .mini-footer__nav ul li {
     display: inline-block;
@@ -25,3 +26,18 @@
     border-left: none;
     padding-left: 0;
 }
+
+.copyright_container {
+    width: 100%;
+    height: 56px;
+    display: table;
+    position: relative;
+}
+
+@media only screen and (max-width: 575px)
+{
+    .logos {
+        float: left;
+    }
+}
+
