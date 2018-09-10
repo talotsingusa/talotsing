@@ -5,6 +5,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url(common_style.css);
 /* line 1, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.1.1/assets/stylesheets/bootstrap/_root.scss */
 :root {
   --blue: #007bff;
@@ -29659,14 +29660,14 @@ section {
   padding-left: 30px;
 }
 
-/* line 14, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+/* line 15, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
 #conversation-body {
   max-height: 400px;
   overflow-y: auto;
   margin-bottom: 2em;
 }
 
-/* line 19, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+/* line 20, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
 #notification {
   position: fixed;
   right: 10px;
@@ -29676,22 +29677,22 @@ section {
   border: 1px solid black;
   background-color: #fff;
 }
-/* line 27, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+/* line 28, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
 #notification .close {
   cursor: pointer;
 }
 
-/* line 29, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+/* line 30, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
 .online_status {
   color: red;
   transition: color 1s ease;
 }
-/* line 32, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+/* line 33, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
 .online_status.online {
   color: green;
 }
 
-/* line 36, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+/* line 37, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
 #send-message {
   background: #4272d7;
   color: #fff;
@@ -29703,7 +29704,7 @@ section {
   float: right;
 }
 
-/* line 48, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
+/* line 49, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/dashboard_application.css.scss */
 #receiver-message {
   background: #f2f2f2;
   /* -webkit-border-radius: 8px; */

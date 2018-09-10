@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900");
+@import url(common_style.css);
 /* line 1, /Users/usamakhan/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-4.1.1/assets/stylesheets/bootstrap/_root.scss */
 :root {
   --blue: #007bff;
@@ -11356,15 +11357,9 @@ Main Components
 	3.2 Header Main
 	3.3 Main Navigation
 	3.4 Page Menu
-4. Home
-5. Shop
-	5.1 Shop Products
-	5.2 Shop Page Navigation
-6. Shop Sidebar
-7. Recently Viewed
-8. Brands
-9. Newsletter
-10. Footer
+4. Cart
+5. Newsletter
+6. Footer
 
 
 ******************************/
@@ -11374,7 +11369,7 @@ Main Components
 /*********************************
 2. Body and some general stuff
 *********************************/
-/* line 38, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 32, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 * {
   margin: 0;
   padding: 0;
@@ -11383,7 +11378,7 @@ Main Components
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-/* line 46, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 40, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 body {
   font-family: 'Rubik', sans-serif;
   font-size: 14px;
@@ -11392,20 +11387,20 @@ body {
   color: #000000;
 }
 
-/* line 54, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 48, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 div {
   display: block;
   position: relative;
   box-sizing: border-box;
 }
 
-/* line 62, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 56, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 ul {
   list-style: none;
   margin-bottom: 0px;
 }
 
-/* line 67, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 61, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 p {
   font-family: 'Rubik', sans-serif;
   font-size: 14px;
@@ -11417,7 +11412,7 @@ p {
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-/* line 78, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 72, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 p a {
   display: inline;
   position: relative;
@@ -11426,7 +11421,7 @@ p a {
   transition: all 200ms ease;
 }
 
-/* line 90, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 84, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 a, a:hover, a:visited, a:active, a:link {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -11434,49 +11429,49 @@ a, a:hover, a:visited, a:active, a:link {
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-/* line 97, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 91, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 p a:active {
   position: relative;
   color: #FF6347;
 }
 
-/* line 102, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 96, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 p a:hover {
   color: #FFFFFF;
   background: #ffa07f;
 }
 
-/* line 107, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 101, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 p a:hover::after {
   opacity: 0.2;
 }
 
-/* line 119, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 113, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 h1 {
   font-size: 48px;
 }
 
-/* line 120, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 114, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 h2 {
   font-size: 36px;
 }
 
-/* line 121, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 115, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 h3 {
   font-size: 24px;
 }
 
-/* line 122, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 116, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 h4 {
   font-size: 18px;
 }
 
-/* line 123, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 117, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 h5 {
   font-size: 14px;
 }
 
-/* line 124, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 118, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
@@ -11485,96 +11480,96 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-/* line 141, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 135, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .form-control {
   color: #db5246;
 }
 
-/* line 145, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 139, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 section {
   display: block;
   position: relative;
   box-sizing: border-box;
 }
 
-/* line 151, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 145, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .clear {
   clear: both;
 }
 
-/* line 155, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 149, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .clearfix::before, .clearfix::after {
   content: "";
   display: table;
 }
 
-/* line 160, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 154, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .clearfix::after {
   clear: both;
 }
 
-/* line 164, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 158, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .clearfix {
   zoom: 1;
 }
 
-/* line 168, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 162, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .float_left {
   float: left;
 }
 
-/* line 172, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 166, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .float_right {
   float: right;
 }
 
-/* line 176, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 170, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .trans_200 {
   transition: all 200ms ease;
 }
 
-/* line 184, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 178, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .trans_300 {
   transition: all 300ms ease;
 }
 
-/* line 192, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 186, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .trans_400 {
   transition: all 400ms ease;
 }
 
-/* line 200, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 194, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .trans_500 {
   transition: all 500ms ease;
 }
 
-/* line 208, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 202, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .fill_height {
   height: 100%;
 }
 
-/* line 212, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 206, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .super_container {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 217, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 211, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .prlx_parent {
   overflow: hidden;
 }
 
-/* line 221, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 215, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .prlx {
   height: 130% !important;
 }
 
-/* line 225, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 219, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .nopadding {
   padding: 0px !important;
 }
 
-/* line 229, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 223, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .button {
   display: inline-block;
   background: #0e8ce4;
@@ -11583,7 +11578,7 @@ section {
   transition: all 200ms ease;
 }
 
-/* line 241, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 235, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .button a {
   display: block;
   font-size: 18px;
@@ -11594,18 +11589,18 @@ section {
   padding-right: 35px;
 }
 
-/* line 251, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 245, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .button:hover {
   opacity: 0.8;
 }
 
-/* line 255, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 249, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .parallax-window {
   min-height: 400px;
   background: transparent;
 }
 
-/* line 260, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 254, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r i::before {
   font-family: 'FontAwesome';
   content: "\f006";
@@ -11615,77 +11610,77 @@ section {
   color: #f5e211;
 }
 
-/* line 269, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 263, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_1 i:first-child::before {
   content: "\f005";
 }
 
-/* line 270, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 264, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_2 i:first-child::before {
   content: "\f005";
 }
 
-/* line 271, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 265, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_2 i:nth-child(2)::before {
   content: "\f005";
 }
 
-/* line 272, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 266, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_3 i:first-child::before {
   content: "\f005";
 }
 
-/* line 273, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 267, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_3 i:nth-child(2)::before {
   content: "\f005";
 }
 
-/* line 274, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 268, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_3 i:nth-child(3)::before {
   content: "\f005";
 }
 
-/* line 275, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 269, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_4 i:first-child::before {
   content: "\f005";
 }
 
-/* line 276, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 270, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_4 i:nth-child(2)::before {
   content: "\f005";
 }
 
-/* line 277, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 271, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_4 i:nth-child(3)::before {
   content: "\f005";
 }
 
-/* line 278, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 272, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_4 i:nth-child(4)::before {
   content: "\f005";
 }
 
-/* line 279, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 273, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_5 i:first-child::before {
   content: "\f005";
 }
 
-/* line 280, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 274, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_5 i:nth-child(2)::before {
   content: "\f005";
 }
 
-/* line 281, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 275, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_5 i:nth-child(3)::before {
   content: "\f005";
 }
 
-/* line 282, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 276, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_5 i:nth-child(4)::before {
   content: "\f005";
 }
 
-/* line 283, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 277, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .rating_r_5 i:nth-child(5)::before {
   content: "\f005";
 }
@@ -11693,7 +11688,7 @@ section {
 /*********************************
 3. Header
 *********************************/
-/* line 289, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 283, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header {
   position: relative;
   width: 100%;
@@ -11703,7 +11698,7 @@ section {
 /*********************************
 3.1 Top Bar
 *********************************/
-/* line 300, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 294, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar {
   width: 100%;
   height: 56px;
@@ -11712,17 +11707,17 @@ section {
   z-index: 2;
 }
 
-/* line 308, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 302, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header.scrolled .top_bar {
   display: none;
 }
 
-/* line 312, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 306, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_contact {
   display: inline-block;
 }
 
-/* line 316, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 310, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_contact_item {
   font-size: 16px;
   font-weight: 300;
@@ -11730,12 +11725,12 @@ section {
   margin-right: 40px;
 }
 
-/* line 323, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 317, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_contact_item:not(:first-child) {
   margin-right: 0px;
 }
 
-/* line 327, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 321, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_contact_item a {
   font-size: 16px;
   font-weight: 300;
@@ -11744,17 +11739,17 @@ section {
   transition: all 200ms ease;
 }
 
-/* line 339, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 333, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_contact_item a:hover {
   color: #8a8a8a;
 }
 
-/* line 343, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 337, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_contact_item:last-child {
   margin-right: 0px;
 }
 
-/* line 347, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 341, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_icon {
   display: inline-block;
   margin-right: 14px;
@@ -11762,31 +11757,31 @@ section {
   transform: translateY(-2px);
 }
 
-/* line 357, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 351, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_menu {
   display: inline-block;
 }
 
-/* line 362, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 356, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_dropdown li {
   padding-left: 13px;
   padding-right: 13px;
 }
 
-/* line 367, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 361, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li {
   display: inline-block;
   position: relative;
   height: 56px;
 }
 
-/* line 373, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 367, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li li {
   display: block;
   width: 100%;
 }
 
-/* line 378, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 372, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li li a {
   display: block;
   width: 100%;
@@ -11794,18 +11789,18 @@ section {
   font-size: 16px;
 }
 
-/* line 385, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 379, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li:last-child a {
   border-bottom: none;
 }
 
-/* line 389, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 383, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li.hassubs > a i {
   display: inline-block;
   margin-left: 5px;
 }
 
-/* line 394, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 388, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li a {
   display: block;
   position: relative;
@@ -11817,12 +11812,12 @@ section {
   transition: all 200ms ease;
 }
 
-/* line 409, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 403, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li a:hover {
   color: #0e8ce4;
 }
 
-/* line 413, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 407, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li a i {
   display: none;
   -webkit-transform: translateY(-1px);
@@ -11830,7 +11825,7 @@ section {
   font-size: 12px;
 }
 
-/* line 423, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 417, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li ul {
   display: block;
   position: absolute;
@@ -11845,26 +11840,26 @@ section {
   z-index: 1;
 }
 
-/* line 441, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 435, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown li:hover > ul {
   top: 100%;
   visibility: visible;
   opacity: 1;
 }
 
-/* line 447, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 441, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .standard_dropdown ul ul {
   left: 100%;
   top: 0 !important;
 }
 
-/* line 452, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 446, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_user {
   display: inline-block;
   margin-left: 35px;
 }
 
-/* line 457, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 451, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .user_icon {
   display: inline-block;
   margin-right: 7px;
@@ -11873,22 +11868,22 @@ section {
   width: 15px;
 }
 
-/* line 468, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 462, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .user_icon img {
   width: 100%;
 }
 
-/* line 472, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 466, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_user div {
   display: inline-block;
 }
 
-/* line 476, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 470, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_user div:nth-child(2) {
   margin-right: 21px;
 }
 
-/* line 480, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 474, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_user div:nth-child(2)::after {
   display: block;
   position: absolute;
@@ -11902,7 +11897,7 @@ section {
   content: '';
 }
 
-/* line 496, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 490, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_user a {
   font-size: 16px;
   font-weight: 300;
@@ -11911,7 +11906,7 @@ section {
   transition: all 200ms ease;
 }
 
-/* line 508, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 502, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .top_bar_user a:hover {
   color: #8a8a8a;
 }
@@ -11919,60 +11914,60 @@ section {
 /*********************************
 3.2 Header Main
 *********************************/
-/* line 517, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 511, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_main {
   z-index: 1;
 }
 
-/* line 521, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 515, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header.scrolled .header_main {
   display: none;
 }
 
-/* line 525, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 519, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_main_item {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-/* line 534, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 528, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .logo_container {
   height: 175px;
 }
 
-/* line 538, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 532, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .logo {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-/* line 547, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 541, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .logo a {
   font-size: 36px;
   font-weight: 500;
   color: #0e8ce4;
 }
 
-/* line 553, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 547, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .logo a img {
   width: 100%;
 }
 
-/* line 556, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 550, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search {
   height: 175px;
 }
 
-/* line 560, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 554, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_content {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
-/* line 569, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 563, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_form_container {
   width: 100%;
   height: 50px;
@@ -11980,13 +11975,13 @@ section {
   border-radius: 5px;
 }
 
-/* line 576, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 570, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_form {
   width: 100%;
   height: 100%;
 }
 
-/* line 581, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 575, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_input {
   display: block;
   position: relative;
@@ -12000,7 +11995,7 @@ section {
   float: left;
 }
 
-/* line 594, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 588, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_input::-webkit-input-placeholder {
   font-size: 16px !important;
   font-weight: 300;
@@ -12008,7 +12003,7 @@ section {
   color: #a3a3a3 !important;
 }
 
-/* line 601, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 595, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_input:-moz-placeholder {
   font-size: 16px !important;
   font-weight: 300;
@@ -12016,7 +12011,7 @@ section {
   color: #a3a3a3 !important;
 }
 
-/* line 608, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 602, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_input::-moz-placeholder {
   font-size: 16px !important;
   font-weight: 300;
@@ -12024,7 +12019,7 @@ section {
   color: #a3a3a3 !important;
 }
 
-/* line 615, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 609, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_input:-ms-input-placeholder {
   font-size: 16px !important;
   font-weight: 300;
@@ -12032,7 +12027,7 @@ section {
   color: #a3a3a3 !important;
 }
 
-/* line 622, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 616, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_input::input-placeholder {
   font-size: 16px !important;
   font-weight: 300;
@@ -12040,7 +12035,7 @@ section {
   color: #a3a3a3 !important;
 }
 
-/* line 629, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 623, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_dropdown {
   width: calc((100% - 50px) * 0.399);
   height: 50px;
@@ -12048,7 +12043,7 @@ section {
   padding-left: 26px;
 }
 
-/* line 636, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 630, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_dropdown::before {
   display: block;
   position: absolute;
@@ -12062,7 +12057,7 @@ section {
   content: '';
 }
 
-/* line 652, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 646, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_dropdown_list i {
   display: inline-block;
   color: #a3a3a3;
@@ -12072,7 +12067,7 @@ section {
   transform: translateY(-1px);
 }
 
-/* line 664, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 658, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_dropdown_placeholder {
   display: inline-block;
   font-size: 16px;
@@ -12082,7 +12077,7 @@ section {
   cursor: pointer;
 }
 
-/* line 677, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 671, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_list {
   text-align: left;
   position: absolute;
@@ -12095,7 +12090,7 @@ section {
   transition: all 0.2s ease;
 }
 
-/* line 693, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 687, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_list.active {
   visibility: visible;
   opacity: 1;
@@ -12104,7 +12099,7 @@ section {
   transition: all 0.3s ease;
 }
 
-/* line 705, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 699, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_list li {
   height: 35px;
   padding-left: 15px;
@@ -12112,7 +12107,7 @@ section {
   background: #FFFFFF;
 }
 
-/* line 712, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 706, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_list li a {
   display: block;
   color: #a3a3a3;
@@ -12121,12 +12116,12 @@ section {
   transition: all 200ms ease;
 }
 
-/* line 724, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 718, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .custom_list li a:hover {
   color: #0e8ce4;
 }
 
-/* line 728, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 722, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 select {
   display: inline;
   border: 0;
@@ -12140,12 +12135,12 @@ select {
   transition: all .4s ease-in-out;
 }
 
-/* line 742, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 736, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 select:hover {
   cursor: pointer;
 }
 
-/* line 746, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 740, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 select option {
   border: 0;
   border-bottom: 1px solid #555;
@@ -12154,7 +12149,7 @@ select option {
   -moz-appearance: none;
 }
 
-/* line 754, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 748, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header_search_button {
   position: absolute;
   top: 0;
@@ -12169,27 +12164,27 @@ select option {
   border-bottom-right-radius: 5px;
 }
 
-/* line 768, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 762, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .wishlist_cart {
   height: 175px;
 }
 
-/* line 772, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 766, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .wishlist {
   margin-right: 50px;
 }
 
-/* line 776, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 770, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .wishlist_icon img {
   width: 100%;
 }
 
-/* line 780, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 774, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .wishlist_content {
   margin-left: 14px;
 }
 
-/* line 784, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 778, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .wishlist_text a {
   font-size: 18px;
   font-weight: 400;
@@ -12197,19 +12192,19 @@ select option {
   transition: all 200ms ease;
 }
 
-/* line 795, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 789, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .wishlist_text a:hover {
   color: #0e8ce4;
 }
 
-/* line 799, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 793, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .wishlist_count {
   margin-top: -2px;
   color: #a3a3a3;
   font-size: 14px;
 }
 
-/* line 805, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 799, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cart_count {
   position: absolute;
   bottom: -1px;
@@ -12221,7 +12216,7 @@ select option {
   text-align: center;
 }
 
-/* line 816, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 810, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cart_count span {
   display: block;
   line-height: 23px;
@@ -12231,17 +12226,17 @@ select option {
   transform: translateY(1px);
 }
 
-/* line 828, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 822, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cart_icon img {
   width: 100%;
 }
 
-/* line 832, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 826, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cart_content {
   margin-left: 28px;
 }
 
-/* line 836, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 830, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cart_text a {
   font-size: 18px;
   font-weight: 400;
@@ -12249,12 +12244,12 @@ select option {
   transition: all 200ms ease;
 }
 
-/* line 847, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 841, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cart_text a:hover {
   color: #0e8ce4;
 }
 
-/* line 851, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 845, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cart_price {
   font-size: 14px;
   color: #a3a3a3;
@@ -12264,7 +12259,7 @@ select option {
 /*********************************
 3.3 Main Navigation
 *********************************/
-/* line 862, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 856, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .main_nav {
   width: 100%;
   border-top: solid 1px #f2f2f2;
@@ -12272,7 +12267,7 @@ select option {
   background: #FFFFFF;
 }
 
-/* line 869, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 863, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .header.scrolled .main_nav {
   position: fixed;
   top: 0;
@@ -12280,13 +12275,13 @@ select option {
   transition: all 200ms ease;
 }
 
-/* line 880, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 874, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .main_nav_content {
   width: 100%;
   height: 60px;
 }
 
-/* line 885, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 879, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu_container {
   width: 293px;
   height: 100%;
@@ -12296,18 +12291,18 @@ select option {
   z-index: 1;
 }
 
-/* line 894, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 888, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu_title {
   height: 100%;
 }
 
-/* line 898, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 892, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_burger {
   width: 18px;
   height: 14px;
 }
 
-/* line 903, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 897, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_burger span {
   display: block;
   position: absolute;
@@ -12317,17 +12312,17 @@ select option {
   background: #FFFFFF;
 }
 
-/* line 912, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 906, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_burger span:nth-child(2) {
   top: 6px;
 }
 
-/* line 916, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 910, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_burger span:nth-child(3) {
   top: 12px;
 }
 
-/* line 920, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 914, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu_text {
   font-size: 18px;
   font-weight: 400;
@@ -12336,7 +12331,7 @@ select option {
   margin-left: 20px;
 }
 
-/* line 928, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 922, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu_container ul {
   display: block;
   position: absolute;
@@ -12350,18 +12345,18 @@ select option {
   transition: all 0.3s ease;
 }
 
-/* line 945, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 939, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu_container > ul {
   padding-top: 13px;
 }
 
-/* line 949, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 943, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu_container:hover .cat_menu {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 954, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 948, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu li {
   display: block;
   position: relative;
@@ -12373,12 +12368,12 @@ select option {
   white-space: nowrap;
 }
 
-/* line 965, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 959, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu li.hassubs > a i {
   display: block;
 }
 
-/* line 969, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 963, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu li a {
   display: block;
   position: relative;
@@ -12389,12 +12384,12 @@ select option {
   transition: all 200ms ease;
 }
 
-/* line 983, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 977, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu li a:hover {
   color: #0e8ce4;
 }
 
-/* line 987, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 981, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu li a i {
   display: none;
   position: absolute;
@@ -12405,7 +12400,7 @@ select option {
   font-size: 12px;
 }
 
-/* line 1000, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 994, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu li ul {
   display: block;
   position: absolute;
@@ -12418,24 +12413,24 @@ select option {
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* line 1012, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1006, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .cat_menu li:hover > ul {
   top: 0;
   visibility: visible;
   opacity: 1;
 }
 
-/* line 1018, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1012, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .main_nav_dropdown li {
   margin-right: 35px;
 }
 
-/* line 1022, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1016, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .main_nav_dropdown li:last-child {
   margin-right: 0px;
 }
 
-/* line 1026, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1020, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .main_nav_dropdown li a {
   font-size: 18px;
   font-weight: 400;
@@ -12443,14 +12438,14 @@ select option {
   line-height: 60px;
 }
 
-/* line 1033, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1027, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .main_nav_dropdown li li {
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 0px;
 }
 
-/* line 1039, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1033, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_trigger_container {
   display: none;
   width: auto;
@@ -12460,17 +12455,17 @@ select option {
   cursor: pointer;
 }
 
-/* line 1048, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1042, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_trigger {
   height: 100%;
 }
 
-/* line 1052, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1046, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_burger_inner {
   display: inline-block;
 }
 
-/* line 1056, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1050, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_trigger_text {
   display: inline-block;
   font-size: 18px;
@@ -12483,12 +12478,12 @@ select option {
 /*********************************
 3.4 Page Menu
 *********************************/
-/* line 1070, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1064, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu {
   transition: all 500ms ease;
 }
 
-/* line 1078, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1072, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_content {
   height: 0px;
   background: #0e8ce4;
@@ -12497,7 +12492,7 @@ select option {
   overflow: hidden;
 }
 
-/* line 1086, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1080, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_search {
   display: none;
   width: 100%;
@@ -12505,7 +12500,7 @@ select option {
   margin-bottom: 30px;
 }
 
-/* line 1093, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1087, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_search_input {
   width: 100%;
   height: 40px;
@@ -12515,12 +12510,12 @@ select option {
   padding-left: 25px;
 }
 
-/* line 1102, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1096, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_nav {
   padding-top: 15px;
 }
 
-/* line 1106, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1100, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_item {
   display: block;
   position: relative;
@@ -12528,7 +12523,7 @@ select option {
   vertical-align: middle;
 }
 
-/* line 1113, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1107, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_item > a {
   display: block;
   color: #FFFFFF;
@@ -12540,23 +12535,23 @@ select option {
   transition: all 200ms ease;
 }
 
-/* line 1128, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1122, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_item > a:hover {
   color: #b5aec4;
 }
 
-/* line 1132, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1126, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_item a i {
   display: none;
   margin-left: 8px;
 }
 
-/* line 1137, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1131, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_item.has-children > a > i {
   display: inline-block;
 }
 
-/* line 1141, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1135, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_selection {
   margin: 0;
   width: 100%;
@@ -12565,14 +12560,14 @@ select option {
   z-index: 1;
 }
 
-/* line 1149, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1143, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_selection li {
   padding-left: 10px;
   padding-right: 10px;
   line-height: 50px;
 }
 
-/* line 1155, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1149, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_selection li a {
   display: block;
   color: #FFFFFF;
@@ -12582,17 +12577,17 @@ select option {
   transition: all 0.3s ease;
 }
 
-/* line 1168, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1162, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_selection li a:hover {
   color: #b5aec4;
 }
 
-/* line 1172, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1166, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .page_menu_selection li:last-child a {
   border-bottom: none;
 }
 
-/* line 1176, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1170, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_contact_item {
   display: inline-block;
   font-size: 12px;
@@ -12602,12 +12597,12 @@ select option {
   color: #FFFFFF;
 }
 
-/* line 1185, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1179, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_contact_item:not(:first-child) {
   margin-right: 0px;
 }
 
-/* line 1189, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1183, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_contact_item a {
   font-size: 12px;
   font-weight: 300;
@@ -12616,17 +12611,17 @@ select option {
   transition: all 200ms ease;
 }
 
-/* line 1201, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1195, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_contact_item a:hover {
   color: #8a8a8a;
 }
 
-/* line 1205, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1199, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_contact_item:last-child {
   margin-right: 0px;
 }
 
-/* line 1209, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1203, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .menu_contact_icon {
   display: inline-block;
   margin-right: 14px;
@@ -12635,818 +12630,173 @@ select option {
 }
 
 /*********************************
-4. Home
+4. Cart
 *********************************/
-/* line 1224, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.home {
+/* line 1218, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_section {
   width: 100%;
-  height: 260px;
-  background: transparent;
+  padding-top: 93px;
+  padding-bottom: 111px;
 }
 
-/* line 1230, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.home_background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/* line 1241, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.home_overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #cde4f1;
-  background: linear-gradient(#FFFFFF, #cde4f1);
-  opacity: 0.9;
-}
-
-/* line 1252, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.home_content {
-  width: 100%;
-  height: 100%;
-}
-
-/*********************************
-5. Shop
-*********************************/
-/* line 1262, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop {
-  background: #FFFFFF;
-  padding-top: 80px;
-  padding-bottom: 139px;
-}
-
-/* line 1268, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_content {
-  width: 100%;
-}
-
-/* line 1272, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_bar {
-  border-bottom: solid 1px #dadada;
-  padding-bottom: 14px;
-  z-index: 1;
-}
-
-/* line 1278, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_product_count {
-  font-size: 14px;
+/* line 1224, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_title {
+  font-size: 30px;
   font-weight: 500;
+}
+
+/* line 1229, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_items {
+  margin-top: 67px;
+}
+
+/* line 1233, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_list {
+  border: solid 1px #e8e8e8;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* line 1238, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item {
+  width: 100%;
+  padding: 15px;
+  padding-right: 46px;
+}
+
+/* line 1244, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_image {
+  width: 133px;
+  height: 133px;
   float: left;
 }
 
-/* line 1284, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_product_count span {
-  color: #0e8ce4;
-}
-
-/* line 1288, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting {
-  float: right;
-}
-
-/* line 1292, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting span {
-  display: inline-block;
-  font-weight: 500;
-}
-
-/* line 1297, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting > ul {
-  display: inline-block;
-  position: relative;
-  margin-left: 6px;
-}
-
-/* line 1303, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting ul li {
-  color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-/* line 1308, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting ul li:hover {
-  color: rgba(0, 0, 0, 0.8);
-}
-
-/* line 1312, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting ul li i {
-  display: inline-block;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.5);
-  margin-left: 4px;
-  vertical-align: middle;
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
-}
-
-/* line 1325, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting ul li ul {
-  display: block;
-  position: absolute;
-  top: calc(100% + 15px);
-  right: 0;
-  text-align: right;
-  background: #FFFFFF;
-  width: auto;
-  padding-top: 15px;
-  visibility: hidden;
-  opacity: 0;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-  transition: all 200ms ease;
-}
-
-/* line 1344, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting ul li:hover ul {
-  top: 100%;
-  visibility: visible;
-  opacity: 1;
-}
-
-/* line 1350, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting ul li ul li {
-  white-space: nowrap;
-  padding-right: 13px;
-  padding-left: 20px;
-  margin-bottom: 5px;
-  border-bottom: solid 1px #f2f2f2;
-  padding-top: 5px;
-  padding-bottom: 9px;
-}
-
-/* line 1360, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sorting ul li ul li:last-child {
-  border-bottom: none;
-}
-
-/*********************************
-5.1 Shop Products
-*********************************/
-/* line 1369, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_grid {
-  -webkit-transform: translateX(-20px);
-  transform: translateX(-20px);
-  width: calc(100% + 40px);
-}
-
-/* line 1378, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_grid_border {
-  display: block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 3px;
-  height: 100%;
-  background: #FFFFFF;
-  z-index: 1;
-}
-
-/* line 1389, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 20%;
-  background: #FFFFFF;
-  cursor: pointer;
-  padding-top: 40px;
-  padding-bottom: 24px;
-  text-align: center;
-}
-
-/* line 1407, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_border {
-  display: block;
-  position: absolute;
-  top: 52px;
-  right: 1px;
-  width: 1px;
-  height: calc(100% - 71px);
-  background: #e5e5e5;
-}
-
-/* line 1417, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_image {
-  width: 100%;
-  height: 115px;
-}
-
-/* line 1422, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_image img {
-  display: block;
-  position: relative;
+/* line 1250, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_image img {
   max-width: 100%;
 }
 
-/* line 1428, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_content {
-  width: 100%;
+/* line 1254, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_info {
+  width: calc(100% - 133px);
+  float: left;
+  padding-top: 18px;
 }
 
-/* line 1432, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_price {
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 25px;
+/* line 1260, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_name {
+  margin-left: 7.53%;
 }
 
-/* line 1438, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_item.discount {
-  color: #df3b3b;
-}
-
-/* line 1442, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_price span {
-  position: relative;
-  font-size: 12px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.6);
-  margin-left: 10px;
-}
-
-/* line 1450, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_price span::after {
-  display: block;
-  position: absolute;
-  top: 6px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: 1px;
-  background: #8d8d8d;
-  content: '';
-}
-
-/* line 1461, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_name {
-  margin-top: 4px;
-  overflow: hidden;
-}
-
-/* line 1466, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_name div {
-  width: 100%;
-}
-
-/* line 1471, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_name div a {
+/* line 1264, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_title {
   font-size: 14px;
   font-weight: 400;
-  color: #000000;
-  /*white-space: nowrap;*/
-  transition: all 200ms ease;
+  color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 1483, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_name div a:hover {
-  color: #0e8ce4;
-}
-
-/* line 1487, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_fav {
-  position: absolute;
-  top: 33px;
-  right: 12px;
-  width: 36px;
-  height: 36px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 200ms ease;
-}
-
-/* line 1505, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_fav:hover {
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* line 1509, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_fav i {
-  display: block;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  color: #cccccc;
-  line-height: 36px;
-  pointer-events: none;
-  z-index: 0;
-  transition: all 200ms ease;
-}
-
-/* line 1529, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_fav.active i {
-  color: red;
-}
-
-/* line 1533, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_item:hover .product_fav {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* line 1538, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_marks {
-  display: block;
-  position: absolute;
-  top: 33px;
-  left: 24px;
-  transition: all 200ms ease;
-}
-
-/* line 1550, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_mark {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: #FFFFFF;
-  text-align: center;
-  line-height: 36px;
-  font-size: 12px;
-}
-
-/* line 1561, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_new {
-  display: none;
-  background: #0e8ce4;
-  visibility: hidden;
-  opacity: 0;
-}
-
-/* line 1568, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_discount {
-  display: none;
-  background: #df3b3b;
-  visibility: hidden;
-  opacity: 0;
-}
-
-/* line 1575, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.product_item.is_new .product_new,
-.product_item.discount .product_discount {
-  display: inline-block;
-  visibility: visible;
-  opacity: 1;
-}
-
-/*********************************
-5.2 Shop Page Navigation
-*********************************/
-/* line 1587, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_page_nav {
-  width: 100%;
-  height: 50px;
-  margin-top: 80px;
-}
-
-/* line 1593, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_prev,
-.page_next {
-  width: 50px;
-  height: 100%;
-  border: solid 1px #e5e5e5;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* line 1602, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_prev i,
-.page_next i {
-  font-size: 12px;
-  color: #e5e5e5;
-  transition: all 200ms ease;
-}
-
-/* line 1613, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_prev:hover i,
-.page_next:hover i {
-  color: #636363;
-}
-
-/* line 1618, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_nav {
-  border: solid 1px #e5e5e5;
-  border-radius: 5px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-/* line 1625, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_nav li {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-right: solid 1px #e5e5e5;
-  cursor: pointer;
-}
-
-/* line 1640, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_nav li a {
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.7);
-  transition: all 200ms ease;
-}
-
-/* line 1650, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_nav li:hover a {
-  color: #0e8ce4;
-}
-
-/* line 1654, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.page_nav li:last-child {
-  border-right: none;
-}
-
-/*********************************
-6. Shop Sidebar
-*********************************/
-/* line 1663, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.shop_sidebar {
-  width: 100%;
-  -webkit-transform: translateX(-37px);
-  transform: translateX(-37px);
-}
-
-/* line 1672, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.sidebar_title {
+/* line 1270, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_text {
   font-size: 18px;
-  font-weight: 500;
+  margin-top: 35px;
 }
 
-/* line 1677, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.sidebar_categories {
-  margin-top: 37px;
-}
-
-/* line 1681, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.sidebar_categories li {
-  margin-bottom: 7px;
-}
-
-/* line 1685, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.sidebar_categories li a {
-  color: rgba(0, 0, 0, 0.5);
-  transition: all 200ms ease;
-}
-
-/* line 1694, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.sidebar_categories li a:hover {
-  color: #0e8ce4;
-}
-
-/* line 1698, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.filter_by_section {
-  margin-top: 45px;
-}
-
-/* line 1702, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.filter_price {
-  margin-top: 28px;
-}
-
-/* line 1706, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.slider_range {
-  max-width: 195px;
-}
-
-/* line 1710, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.filter_price p {
+/* line 1275, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_text span {
   display: inline-block;
-  font-size: 12px;
-  font-weight: 500 !important;
-  color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 0px;
-}
-
-/* line 1718, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.sidebar_subtitle {
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 25px;
-}
-
-/* line 1724, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.filter_price p input {
-  font-size: 12px;
-  font-weight: 500 !important;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-/* line 1730, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.amount {
-  margin-top: 18px;
-}
-
-/* line 1734, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.color_subtitle {
-  margin-top: 27px;
-}
-
-/* line 1738, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.colors_list {
-  margin-top: 14px;
-}
-
-/* line 1742, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.color {
-  display: inline-block;
-  margin-right: 6px;
-}
-
-/* line 1747, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.color a {
-  display: block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  margin-right: 11px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
 }
 
-/* line 1754, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_subtitle {
-  margin-top: 27px;
+/* line 1288, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_price {
+  text-align: right;
 }
 
-/* line 1758, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_list {
-  margin-top: 12px;
+/* line 1292, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_item_total {
+  text-align: right;
 }
 
-/* line 1762, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brand {
-  margin-bottom: 7px;
-}
-
-/* line 1766, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brand a {
-  color: rgba(0, 0, 0, 0.5);
-  transition: all 200ms ease;
-}
-
-/* line 1775, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brand a:hover {
-  color: #0e8ce4;
-}
-
-/*********************************
-7. Recently Viewed
-*********************************/
-/* line 1784, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed {
-  padding-top: 51px;
-  padding-bottom: 60px;
-  background: #eff6fa;
-}
-
-/* line 1790, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_title_container {
-  border-bottom: solid 1px #dadada;
-}
-
-/* line 1794, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_title {
-  margin-bottom: 14px;
-}
-
-/* line 1798, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_nav_container {
-  position: absolute;
-  right: -5px;
-  bottom: 14px;
-}
-
-/* line 1804, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_nav {
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* line 1809, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_nav i {
-  color: #dadada;
-  font-size: 18px;
-  padding: 5px;
-  transition: all 200ms ease;
-}
-
-/* line 1820, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_nav:hover i {
-  color: #606264;
-}
-
-/* line 1824, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_prev {
-  margin-right: 15px;
-}
-
-/* line 1828, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_slider_container {
-  padding-top: 50px;
-}
-
-/* line 1832, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_item {
+/* line 1296, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.order_total {
   width: 100%;
-  background: #FFFFFF;
-  border-radius: 8px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* line 1842, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_image {
-  width: 115px;
-  height: 115px;
-}
-
-/* line 1847, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_image img {
-  display: block;
-  max-width: 100%;
-}
-
-/* line 1852, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_content {
-  width: 100%;
-  margin-top: 25px;
-}
-
-/* line 1857, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_price {
-  font-size: 16px;
-  color: #000000;
-  font-weight: 500;
-}
-
-/* line 1863, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_item.discount .viewed_price {
-  color: #df3b3b;
-}
-
-/* line 1867, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_price span {
-  position: relative;
-  font-size: 12px;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.6);
-  margin-left: 8px;
-}
-
-/* line 1875, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_price span::after {
-  display: block;
-  position: absolute;
-  top: 6px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: 1px;
-  background: #8d8d8d;
-  content: '';
-}
-
-/* line 1886, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_name {
-  margin-top: 3px;
-}
-
-/* line 1890, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_name a {
-  font-size: 14px;
-  color: #000000;
-  transition: all 200ms ease;
-}
-
-/* line 1900, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_name a:hover {
-  color: #0e8ce4;
-}
-
-/* line 1904, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.item_marks {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-}
-
-/* line 1910, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.item_mark {
-  display: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: #FFFFFF;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 36px;
-  text-align: center;
-}
-
-/* line 1922, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.item_discount {
-  background: #df3b3b;
-  margin-right: 5px;
-}
-
-/* line 1927, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.item_new {
-  background: #0e8ce4;
-}
-
-/* line 1931, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_item.discount .item_discount {
-  display: inline-block;
-}
-
-/* line 1935, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.viewed_item.is_new .item_new {
-  display: inline-block;
-}
-
-/*********************************
-8. Brands
-*********************************/
-/* line 1944, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands {
-  width: 100%;
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-/* line 1950, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_slider_container {
-  height: 130px;
+  height: 60px;
+  margin-top: 30px;
   border: solid 1px #e8e8e8;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-  padding-left: 97px;
-  padding-right: 97px;
+  padding-right: 46px;
+  padding-left: 15px;
 }
 
-/* line 1958, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_slider {
-  height: 100%;
+/* line 1306, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.order_total_title {
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 60px;
 }
 
-/* line 1962, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_item {
-  height: 100%;
+/* line 1313, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.order_total_amount {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 26px;
+  line-height: 60px;
 }
 
-/* line 1966, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_item img {
-  max-width: 100%;
+/* line 1321, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_buttons {
+  margin-top: 60px;
+  text-align: right;
 }
 
-/* line 1970, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_nav {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding: 5px;
+/* line 1326, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_button_clear {
+  display: inline-block;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 48px;
+  color: rgba(0, 0, 0, 0.5);
+  background: #FFFFFF;
+  border: solid 1px #b2b2b2;
+  padding-left: 35px;
+  padding-right: 35px;
+  outline: none;
   cursor: pointer;
+  margin-right: 26px;
 }
 
-/* line 1982, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_nav i {
-  color: #e5e5e5;
-  transition: all 200ms ease;
+/* line 1342, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_button_clear:hover {
+  border-color: #0e8ce4;
+  color: #0e8ce4;
 }
 
-/* line 1991, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_nav:hover i {
-  color: #676767;
-}
-
-/* line 1995, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_prev {
-  left: 40px;
-}
-
-/* line 1999, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
-.brands_next {
-  right: 40px;
+/* line 1347, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
+.cart_button_checkout {
+  display: inline-block;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #FFFFFF;
+  padding-left: 35px;
+  padding-right: 35px;
+  outline: none;
+  cursor: pointer;
+  vertical-align: top;
 }
 
 /*********************************
-9. Newsletter
+5. Newsletter
 *********************************/
-/* line 2008, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1366, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter {
   width: 100%;
   background: #fafafa;
@@ -13455,18 +12805,18 @@ select option {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* line 2016, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1374, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_container {
   width: 100%;
 }
 
-/* line 2020, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1378, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_title_container {
   width: 40%;
   padding-left: 95px;
 }
 
-/* line 2025, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1383, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_icon {
   position: absolute;
   top: 50%;
@@ -13475,35 +12825,35 @@ select option {
   left: 0;
 }
 
-/* line 2036, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1394, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_title {
   font-size: 18px;
   color: #000000;
 }
 
-/* line 2041, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1399, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_text p:last-child {
   margin-bottom: 0;
 }
 
-/* line 2045, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1403, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_icon img {
   max-width: 100%;
 }
 
-/* line 2049, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1407, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_content {
   width: 60%;
 }
 
-/* line 2053, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1411, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_form {
   position: relative;
   width: 569px;
   float: left;
 }
 
-/* line 2059, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1417, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_input {
   width: 100%;
   height: 50px;
@@ -13516,43 +12866,43 @@ select option {
   color: #0e8ce4;
 }
 
-/* line 2071, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1429, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_input:focus {
   border: solid 1px rgba(14, 140, 228, 0.3);
   box-shadow: 0px 1px 5px rgba(14, 140, 228, 0.3);
 }
 
-/* line 2076, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1434, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_input::-webkit-input-placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 2081, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1439, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_input:-moz-placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 2086, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1444, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_input::-moz-placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 2091, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1449, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_input:-ms-input-placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 2096, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1454, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_input::input-placeholder {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 2101, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1459, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_button {
   position: absolute;
   top: 0;
@@ -13570,19 +12920,19 @@ select option {
   cursor: pointer;
 }
 
-/* line 2118, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1476, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_button:hover {
   opacity: 0.8;
 }
 
-/* line 2122, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1480, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_unsubscribe_link {
   float: right;
   text-align: right;
   height: 50px;
 }
 
-/* line 2128, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1486, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_unsubscribe_link a {
   font-size: 10px;
   color: #0e8ce4;
@@ -13592,28 +12942,28 @@ select option {
   line-height: 50px;
 }
 
-/* line 2137, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1495, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .newsletter_unsubscribe_link a:hover {
   color: #0d82d3;
 }
 
 /*********************************
-10. Footer
+6. Footer
 *********************************/
-/* line 2146, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1504, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer {
   padding-top: 52px;
   padding-bottom: 40px;
 }
 
-/* line 2151, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1509, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer .logo_container {
   height: auto;
   margin-bottom: 18px;
   margin-top: -10px;
 }
 
-/* line 2157, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1515, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer .logo {
   top: auto;
   /*-webkit-transform: transform: none;*/
@@ -13624,19 +12974,19 @@ select option {
           transform: none;
 }
 
-/* line 2166, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1524, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer .logo a {
   color: #000000;
 }
 
-/* line 2170, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1528, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_title {
   font-size: 14px;
   font-weight: 500;
   color: #000000;
 }
 
-/* line 2176, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1534, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_phone {
   font-size: 18px;
   font-weight: 500;
@@ -13644,22 +12994,22 @@ select option {
   margin-top: 13px;
 }
 
-/* line 2183, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1541, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_contact_text {
   margin-top: 10px;
 }
 
-/* line 2187, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1545, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_contact_text p {
   margin-bottom: 0px;
 }
 
-/* line 2191, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1549, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_social {
   margin-top: 27px;
 }
 
-/* line 2195, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1553, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_social ul li {
   display: inline-block;
   width: 30px;
@@ -13672,40 +13022,40 @@ select option {
   text-align: center;
 }
 
-/* line 2207, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1565, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_social ul li i {
   color: #000000;
   line-height: 30px;
   transition: all 200ms ease;
 }
 
-/* line 2217, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1575, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_social ul li:hover i {
   color: #0e8ce4;
 }
 
-/* line 2221, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1579, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_subtitle {
   font-size: 12px;
   color: #000000;
 }
 
-/* line 2226, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1584, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_column ul:first-of-type {
   margin-top: 21px;
 }
 
-/* line 2230, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1588, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_column ul {
   margin-top: 7px;
 }
 
-/* line 2234, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1592, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_list li {
   margin-bottom: 6px;
 }
 
-/* line 2238, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1596, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_list li a {
   font-size: 12px;
   font-weight: 500;
@@ -13713,575 +13063,50 @@ select option {
   transition: all 200ms ease;
 }
 
-/* line 2249, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1607, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_list li a:hover {
   color: #0e8ce4;
 }
 
-/* line 2253, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1611, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .footer_list_2 {
   margin-top: 42px !important;
 }
 
-/* line 2258, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1616, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .copyright {
   width: 100%;
   background: #fafafa;
 }
 
-/* line 2263, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1621, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .copyright_container {
   width: 100%;
   height: 56px;
 }
 
-/* line 2268, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1626, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .copyright_content {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 2273, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1631, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .copyright_content span {
   font-weight: 500;
 }
 
-/* line 2281, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1639, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .logos_list li {
   display: inline-block;
   margin-right: 16px;
 }
 
-/* line 2286, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_styles.css */
+/* line 1644, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_styles.css */
 .logos_list li:last-child {
   margin-right: 0px;
 }
 
-/* line 1, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_item {
-  width: 100%;
-  padding-right: 15px;
-}
-
-/* line 6, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_item .material-icons {
-  line-height: 14px;
-}
-
-/* line 10, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_image {
-  height: auto;
-}
-
-/* line 14, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_image > img + img {
-  position: absolute;
-  display: none;
-}
-
-/* line 19, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_image > img + img + a {
-  position: absolute;
-  display: none;
-  bottom: 20px;
-  padding-right: 28px;
-  color: #fff;
-  background-color: #25313e;
-  border-color: #25313e;
-  opacity: .7;
-}
-
-/* line 30, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_image > img + img + a:hover {
-  opacity: 1;
-  background-color: #25313e;
-  border-color: #25313e;
-}
-
-/* line 36, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_item:hover .product_image > img + img,
-.product_item:hover .product_image > img + img + a {
-  display: block;
-}
-
-/* line 41, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_marks {
-  left: 6px;
-  top: 52px;
-}
-
-/* line 46, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_fav {
-  top: 52px;
-  right: 21px;
-}
-
-/* line 51, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.material-icons {
-  position: absolute;
-}
-
-/* line 54, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.modal-content {
-  border: none;
-  background-color: transparent;
-}
-
-/* line 58, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.modal-body {
-  background-color: #fff;
-}
-
-/* line 61, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.close {
-  font-weight: 400;
-  color: #fff;
-}
-
-/* line 65, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-a:focus {
-  outline: none;
-}
-
-/* line 69, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.carousel-inner {
-  width: 80%;
-  float: left;
-}
-
-/* line 74, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.carousel-inner > .item > img {
-  width: 300px;
-}
-
-/* line 78, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  margin: auto;
-}
-
-/* line 83, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-#myCarousel {
-  margin: 0 auto;
-  background: #fff;
-  height: 450px;
-  overflow: hidden;
-}
-
-/* line 90, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-#thumbCarousel {
-  max-width: 650px;
-  margin: 0 auto;
-  overflow-y: scroll;
-  background: transparent;
-  padding-left: 10px;
-  height: 450px;
-}
-
-/* line 98, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-#thumbCarousel > div > img {
-  width: 60px;
-  height: 90px;
-  border: 1px solid #ccc;
-}
-
-/* line 105, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-#thumbCarousel .thumb {
-  float: left;
-  margin-right: 10px;
-  background: #fff;
-  margin-top: 4px;
-}
-
-/* line 112, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-#thumbCarousel .thumb:last-child {
-  margin-right: 0;
-}
-
-/* line 116, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.thumb:hover {
-  cursor: pointer;
-}
-
-/* line 120, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.thumb img {
-  opacity: 0.5;
-}
-
-/* line 124, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.thumb img:hover {
-  opacity: 1;
-}
-
-/* line 128, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.thumb.active img {
-  opacity: 1;
-  border: 1px solid #1d62b7;
-}
-
-/* line 133, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product-info h3 {
-  font-weight: 200;
-  font-size: 30px;
-}
-
-/* line 137, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product-info h3 + h3 {
-  font-weight: 600;
-}
-
-/* line 143, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-default > .panel-heading a[aria-expanded="true"] {
-  background-color: transparent !important;
-}
-
-/* line 147, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-default > .panel-heading {
-  color: #333;
-  padding: 0;
-  border-top: 1px solid #e4e5e7;
-  /* border-bottom: 1px solid #e4e5e7; */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* line 158, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-default > .panel-heading .panel-title {
-  margin: 0;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-/* line 164, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-default > .panel-heading a {
-  display: block;
-  /* border-bottom: 1px solid #e4e5e7; */
-  color: #6a6c6f;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-/* line 172, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-default > .panel-heading a:after {
-  content: "";
-  position: relative;
-  top: 10px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: -webkit-transform .25s linear;
-  transition: transform .25s linear;
-  transition: transform .25s linear, -webkit-transform .25s linear;
-  -webkit-transition: -webkit-transform .25s linear;
-  position: absolute;
-  right: 0;
-}
-
-/* line 189, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-body ul {
-  list-style: disc;
-  color: #6a6c6f;
-  margin-left: 30px;
-}
-
-/* line 195, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-body table {
-  border-color: #6a6c6f;
-  color: #6a6c6f;
-}
-
-/* line 199, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.panel-body table, th, td {
-  border: 1px solid #6a6c6f;
-  padding: 3px;
-}
-
-/* line 203, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.accordion-option {
-  width: 100%;
-  float: left;
-  clear: both;
-  margin: 15px 0;
-}
-
-/* line 210, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.accordion-option .title {
-  font-size: 20px;
-  font-weight: bold;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
-/* line 218, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.accordion-option .toggle-accordion {
-  float: right;
-  font-size: 16px;
-  color: #6a6c6f;
-}
-
-/* line 224, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.accordion-option .toggle-accordion:before {
-  content: "Expand All";
-}
-
-/* line 228, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.accordion-option .toggle-accordion.active:before {
-  content: "Collapse All";
-}
-
-/* line 234, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  width: 34%;
-  position: relative;
-  float: left;
-}
-
-/* line 241, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.rating + p {
-  margin-top: 13px;
-}
-
-/* line 244, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.rating > span {
-  display: inline-block;
-  position: relative;
-  color: #fec603;
-  font-size: 20px;
-  width: 20px;
-}
-
-/* line 251, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-  content: "\2605";
-  position: absolute;
-  cursor: pointer;
-  color: #fec603;
-  -webkit-animation: mymove 2s;
-  animation: mymove 2s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  /* IE 9 */
-  -webkit-transform: scale(1.2);
-  /* Safari 3-8 */
-  transform: scale(1.2);
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-  from {
-    color: #fec603;
-  }
-  to {
-    color: #fec603;
-  }
-}
-/* line 271, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.form-control {
-  color: #929496;
-  margin: 0;
-  width: 100% !important;
-}
-
-/* line 277, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.contact_submit_button {
-  width: 100%;
-  color: #fff;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-top: 15px;
-}
-
-/* line 285, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.cart-img {
-  width: 100%;
-  margin-top: 40px;
-}
-
-/* line 289, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.shop_sidebar {
-  position: fixed;
-  width: 30%;
-  height: 100%;
-  left: 0;
-  display: none;
-  z-index: 999;
-  background: #ffffff;
-  border-right: 1px solid #ddd;
-  top: 0;
-  overflow-y: scroll;
-}
-
-/* line 302, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.sidebar_section {
-  padding-top: 1%;
-  padding-left: 60px;
-}
-
-/* line 307, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.shop_sidebar::-webkit-scrollbar {
-  width: 0 !important;
-}
-
-/* line 311, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.shop_sidebar {
-  -ms-overflow-style: none;
-}
-
-/* line 315, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.shop_sidebar {
-  overflow: -moz-scrollbars-none;
-}
-
-/* line 319, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.toggle-link {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  color: #ffffff;
-  background: #24303e;
-  padding: 8px;
-  z-index: 9;
-}
-
-/* line 329, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-button.close {
-  font-size: 30px;
-  color: black;
-  position: absolute;
-  right: 10px;
-  top: 0px;
-}
-
-/* line 336, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_quantity {
-  overflow: hidden;
-}
-
-/* line 341, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_quantity span {
-  display: block;
-  font-size: 16px;
-  color: #959899;
-  float: left;
-}
-
-/* line 348, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.product_quantity input {
-  display: block;
-  width: 30px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #959899;
-  text-align: left;
-  padding-left: 9px;
-  float: left;
-}
-
-/* line 360, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.quantity_buttons {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 29px;
-  border-left: solid 1px #e5e5e5;
-}
-
-/* line 369, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.quantity_inc,
-.quantity_dec {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 50%;
-  cursor: pointer;
-}
-
-/* line 383, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.quantity_control i {
-  font-size: 11px;
-  color: rgba(0, 0, 0, 0.3);
-  pointer-events: none;
-}
-
-/* line 389, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.quantity_control:active {
-  border: solid 1px rgba(14, 140, 228, 0.2);
-}
-
-/* line 393, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.quantity_inc {
-  padding-bottom: 2px;
-  justify-content: flex-end;
-  border-top-right-radius: 5px;
-}
-
-/* line 399, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.quantity_dec {
-  padding-top: 2px;
-  justify-content: flex-start;
-  border-bottom-right-radius: 5px;
-}
-
-/* line 406, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.col-2dot4,
-.col-sm-2dot4,
-.col-md-2dot4,
-.col-lg-2dot4,
-.col-xl-2dot4 {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-/* line 417, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-.col-2dot4 {
-  flex: 0 0 20%;
-  max-width: 20%;
-}
-
-@media (min-width: 540px) {
-  /* line 424, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-  .col-sm-2dot4 {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-}
-@media (min-width: 720px) {
-  /* line 432, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-  .col-md-2dot4 {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-}
-@media (min-width: 960px) {
-  /* line 440, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-  .col-lg-2dot4 {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-}
-@media (min-width: 1140px) {
-  /* line 448, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/new_shop.css */
-  .col-xl-2dot4 {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-}
 /* CSS Document */
 /******************************
 
@@ -14318,28 +13143,28 @@ button.close {
 4. 1199px
 ************/
 @media only screen and (max-width: 1199px) {
-  /* line 66, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 66, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu_container {
     width: 211px;
     padding-left: 25px;
   }
 
-  /* line 71, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 71, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav_dropdown li {
     margin-right: 30px;
   }
 
-  /* line 75, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 75, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav_dropdown li a {
     font-size: 16px;
   }
 
-  /* line 79, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 79, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .char_item {
     padding-left: 25px;
   }
 
-  /* line 83, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 83, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_form {
     width: 456px;
   }
@@ -14354,137 +13179,147 @@ button.close {
 6. 991px
 ************/
 @media only screen and (max-width: 991px) {
-  /* line 113, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 113, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar {
     /*display: none;*/
   }
 
-  /* line 117, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 117, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .header_search {
     height: 50px;
   }
 
-  /* line 121, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 121, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .custom_dropdown {
     text-align: left;
   }
 
-  /* line 125, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 125, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav {
     margin-top: 56px;
   }
 
-  /* line 129, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 129, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav_menu {
     display: none;
   }
 
-  /* line 133, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 133, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .logo_container,
   .wishlist_cart {
     height: 125px;
   }
 
-  /* line 138, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 138, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav_content {
-    background: #24303e;
+    background: #0e8ce4;
   }
 
-  /* line 142, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 142, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .menu_trigger_container {
     display: block;
   }
 
-  /* line 146, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 146, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar {
     height: 40px;
   }
 
-  /* line 150, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 150, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar_contact_item {
     font-size: 12px;
     margin-right: 20px;
     line-height: 40px;
   }
 
-  /* line 156, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 156, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar_contact_item a {
     font-size: 12px;
     line-height: 40px;
   }
 
-  /* line 161, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 161, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar_icon {
     margin-right: 4px;
   }
 
-  /* line 165, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 165, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar_icon img {
     width: 70%;
   }
 
-  /* line 169, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 169, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar_menu {
     display: none;
   }
 
-  /* line 173, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 173, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar_user a {
     font-size: 12px;
     line-height: 40px;
   }
 
-  /* line 178, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 178, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .user_icon {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
     width: 12px;
   }
 
-  /* line 187, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 187, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu_container ul {
     visibility: hidden;
     opacity: 0;
   }
 
-  /* line 192, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 192, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .char_col:not(:last-child):not(:nth-child(3)) {
     margin-bottom: 30px;
   }
 
-  /* line 196, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 196, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .char_item {
     padding-left: 36px;
   }
 
-  /* line 200, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sidebar {
-    -webkit-transform: none;
-    transform: none;
+  /* line 200, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_image {
+    float: none;
   }
 
-  /* line 208, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_content {
-    margin-top: 60px;
+  /* line 204, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_info {
+    float: none;
+    width: 100%;
   }
 
-  /* line 212, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 209, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_name {
+    margin-left: 31px;
+  }
+
+  /* line 213, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_text {
+    margin-top: 17px;
+  }
+
+  /* line 217, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_title_container {
     width: 100%;
   }
 
-  /* line 216, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 221, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_content {
     width: 100%;
     margin-top: 30px;
   }
 
-  /* line 221, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 226, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_form {
     width: calc(100% - 114px);
   }
 
-  /* line 225, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 230, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .footer_col:not(:last-child) {
     margin-bottom: 40px;
   }
@@ -14498,202 +13333,215 @@ button.close {
 /************
 9. 768px
 ************/
-@media only screen and (max-width: 768px) {
-  /* line 255, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .sidebar_section {
-    padding-left: 10px;
-  }
-}
 /************
 10. 767px
 ************/
 @media only screen and (max-width: 767px) {
-  /* line 266, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 269, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .header_search {
     display: none;
   }
 
-  /* line 270, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 273, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .page_menu_search {
     display: block;
   }
 
-  /* line 274, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 277, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav {
     margin-top: 0px;
   }
 
-  /* line 278, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .banner_product_image {
-    opacity: 0.5;
-    width: 60vw;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  /* line 289, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .banner_product_image img {
-    width: 100%;
-  }
-
-  /* line 293, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 281, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .char_col:nth-child(3) {
     margin-bottom: 30px;
   }
 
-  /* line 297, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 285, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .char_item {
     padding-left: 36px;
   }
 
-  /* line 301, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sidebar {
-    width: 100%;
+  /* line 289, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item {
+    padding-bottom: 30px;
   }
 
-  /* line 304, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .sidebar_section {
-    padding-left: 10px;
+  /* line 293, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_title {
+    display: inline-block;
+  }
+
+  /* line 297, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_text {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  /* line 303, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_price,
+  .cart_item_total {
+    text-align: left;
+  }
+
+  /* line 308, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_item_name {
+    margin-left: 0;
+  }
+
+  /* line 312, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_info_col {
+    margin-bottom: 7px;
+  }
+
+  /* line 316, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_info_col:last-child {
+    margin-bottom: 0;
+  }
+
+  /* line 320, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_buttons {
+    text-align: left;
   }
 }
 /************
 11. 575px
 ************/
 @media only screen and (max-width: 575px) {
-  /* line 315, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 332, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   h2 {
     font-size: 24px;
   }
 
-  /* line 316, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 333, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   p {
     font-size: 13px;
   }
 
-  /* line 317, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 334, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar {
     display: none;
   }
 
-  /* line 321, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 338, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .logo_container, .wishlist_cart {
     height: 72px;
   }
 
-  /* line 325, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 342, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .logo a {
     font-size: 24px;
   }
 
-  /* line 329, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 346, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .logo a img {
     width: 130px;
   }
 
-  /* line 332, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 349, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu_container {
     width: auto;
     padding-right: 15px;
   }
 
-  /* line 337, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 354, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu_text {
     font-size: 13px;
     margin-left: 12px;
   }
 
-  /* line 342, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 359, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_burger {
     width: 16px;
     height: 12px;
   }
 
-  /* line 347, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 364, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_burger span:nth-child(2) {
     top: 5px;
   }
 
-  /* line 351, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 368, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_burger span:nth-child(3) {
     top: 10px;
   }
 
-  /* line 355, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 372, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .menu_trigger_text {
     font-size: 13px;
     margin-right: 10px;
   }
 
-  /* line 360, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 377, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .wishlist {
     margin-right: 23px;
   }
 
-  /* line 364, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 381, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .wishlist_content {
     margin-left: 6px;
   }
 
-  /* line 368, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 385, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .wishlist_text {
     display: none;
   }
 
-  /* line 372, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 389, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cart_text {
     display: none;
   }
 
-  /* line 376, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 393, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .wishlist_text a,
   .cart_text a {
     font-size: 14px;
   }
 
-  /* line 381, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 398, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .wishlist_count,
   .cart_price {
     font-size: 12px;
   }
 
-  /* line 386, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 403, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .wishlist_icon {
     width: 20px;
   }
 
-  /* line 390, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 407, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cart_content {
     margin-left: 18px;
   }
 
-  /* line 394, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 411, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cart_icon {
     width: 17px;
   }
 
-  /* line 398, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 415, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cart_count {
     width: 21px;
     height: 21px;
   }
 
-  /* line 403, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 420, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cart_count span {
     line-height: 21px;
   }
 
-  /* line 407, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 424, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .top_bar_user {
     margin-left: 0px;
   }
 
-  /* line 411, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 428, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .header_search {
     display: none;
   }
 
-  /* line 415, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 432, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav {
     width: calc(100% + 30px);
     margin-left: -15px;
@@ -14701,61 +13549,61 @@ button.close {
     margin-top: 0px;
   }
 
-  /* line 422, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 439, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .main_nav_content {
     height: 35px;
   }
 
-  /* line 426, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 443, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu_container {
     padding-left: 15px;
   }
 
-  /* line 430, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 447, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .menu_trigger_container {
     padding-right: 15px;
   }
 
-  /* line 434, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 451, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu li {
     height: 36px;
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  /* line 440, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 457, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu li a {
     font-size: 13px;
     line-height: 36px;
   }
 
-  /* line 445, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 462, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .cat_menu li ul {
     left: 50%;
     z-index: 10;
   }
 
-  /* line 450, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 467, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .page_menu_item > a {
     font-size: 12px;
   }
 
-  /* line 454, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 471, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .page_menu_selection li a {
     font-size: 12px;
   }
 
-  /* line 458, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 475, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .banner_product_image {
     right: 15px;
   }
 
-  /* line 462, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 479, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .button {
     height: 32px;
   }
 
-  /* line 466, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 483, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .button a {
     font-size: 12px;
     line-height: 32px;
@@ -14763,51 +13611,41 @@ button.close {
     padding-right: 25px;
   }
 
-  /* line 473, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 490, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .rating_r i::before {
     font-size: 14px;
   }
 
-  /* line 477, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_product_count,
-  .shop_sorting {
-    float: none;
+  /* line 494, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_button_clear {
+    font-size: 13px;
+    line-height: 34px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 11px;
   }
 
-  /* line 482, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sorting {
-    margin-top: 7px;
+  /* line 502, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .cart_button_checkout {
+    font-size: 13px;
+    line-height: 36px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
-  /* line 486, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_page_nav {
-    height: 40px;
-  }
-
-  /* line 490, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .page_prev, .page_next {
-    width: 30px;
-  }
-
-  /* line 494, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .page_nav li {
-    width: 30px;
-    height: 40px;
-  }
-
-  /* line 499, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 509, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_form {
     float: none;
     width: 100%;
   }
 
-  /* line 504, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 514, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_title_container {
     padding-left: 0px;
     text-align: center;
   }
 
-  /* line 509, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 519, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_unsubscribe_link {
     float: none;
     text-align: center;
@@ -14815,17 +13653,17 @@ button.close {
     height: auto;
   }
 
-  /* line 516, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 526, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_unsubscribe_link a {
     line-height: 1;
   }
 
-  /* line 520, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 530, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_title {
     font-size: 16px;
   }
 
-  /* line 524, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 534, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_icon {
     position: relative;
     width: 40px;
@@ -14836,7 +13674,7 @@ button.close {
     margin-bottom: 20px;
   }
 
-  /* line 537, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 547, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_button {
     position: relative;
     top: auto;
@@ -14846,7 +13684,7 @@ button.close {
     transform: translateX(-50%);
     width: 113px;
     height: 40px;
-    background: #24303e;
+    background: #0e8ce4;
     color: #FFFFFF;
     line-height: 40px;
     font-size: 12px;
@@ -14860,7 +13698,7 @@ button.close {
     margin-top: 20px;
   }
 
-  /* line 563, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 573, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_input {
     font-size: 13px;
     padding-left: 15px;
@@ -14868,106 +13706,63 @@ button.close {
     line-height: 40px;
   }
 
-  /* line 570, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 580, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_input::-webkit-input-placeholder {
     font-size: 13px;
   }
 
-  /* line 574, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 584, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_input:-moz-placeholder {
     font-size: 13px;
   }
 
-  /* line 578, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 588, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_input::-moz-placeholder {
     font-size: 13px;
   }
 
-  /* line 582, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 592, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_input:-ms-input-placeholder {
     font-size: 13px;
   }
 
-  /* line 586, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 596, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .newsletter_input::input-placeholder {
     font-size: 13px;
   }
 
-  /* line 590, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 600, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .copyright_container {
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  /* line 596, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
+  /* line 606, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
   .logos {
     margin-top: 30px;
-  }
-
-  /* line 601, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sidebar {
-    width: 100%;
-  }
-
-  /* line 604, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .sidebar_section {
-    padding-left: 10px;
   }
 }
 /************
 11. 539px
 ************/
-@media only screen and (max-width: 539px) {
-  /* line 615, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sidebar {
-    width: 100%;
-  }
-
-  /* line 618, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .sidebar_section {
-    padding-left: 10px;
-  }
-}
 /************
 12. 480px
 ************/
 @media only screen and (max-width: 480px) {
-  /* line 629, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sidebar {
-    width: 100%;
+  /* line 627, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .single_post_title {
+    font-size: 24px;
   }
 
-  /* line 633, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .sidebar_section {
-    padding-left: 10px;
+  /* line 631, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/cart_responsive.css */
+  .single_post_text p {
+    font-size: 14px;
   }
 }
 /************
 13. 479px
 ************/
-@media only screen and (max-width: 479px) {
-  /* line 644, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sidebar {
-    width: 100%;
-  }
-
-  /* line 647, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .sidebar_section {
-    padding-left: 10px;
-  }
-}
 /************
 14. 400px
 ************/
-@media only screen and (max-width: 400px) {
-  /* line 658, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .shop_sidebar {
-    width: 100%;
-  }
-
-  /* line 661, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/shop_responsive.css */
-  .sidebar_section {
-    padding-left: 10px;
-  }
-}
