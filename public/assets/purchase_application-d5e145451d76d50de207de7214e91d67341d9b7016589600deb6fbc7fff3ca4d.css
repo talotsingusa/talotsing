@@ -14700,3 +14700,29 @@ select option {
     font-size: 63%;
   }
 }
+/* line 10, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/purchase_application.css.scss */
+.notice {
+  padding: 10px 15px 15px 15px;
+  background: #febd69;
+  margin-top: 66px;
+  color: #000000 !important;
+  border-radius: 3px;
+  width: 300px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  border: none !important;
+}
+/* line 12, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/purchase_application.css.scss */
+.notice .cross-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+/* line 14, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/purchase_application.css.scss */
+.notice.color-white * {
+  color: white;
+}
