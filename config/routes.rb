@@ -67,7 +67,7 @@ Rails.application.routes.draw do
 
   resources :conversations
   resources :personal_messages
-  resources :users
+  resources :users, only: [:index]
   mount ActionCable.server => '/cable'
 
 

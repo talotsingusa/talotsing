@@ -16,6 +16,9 @@
 </head>
 
 <body data-turbolinks="false">
+<% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}" %>
+<% end %>
 <div class="super_container">
   <%= render 'layouts/partials/header_web' %>
   <%= yield %>

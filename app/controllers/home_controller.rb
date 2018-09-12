@@ -125,12 +125,11 @@ class HomeController < ApplicationController
       user = current_user
       user.default_source = customer.default_source
       user.save
-    rescue Stripe::CardError => e
-      # CardError; display an error message.
-      flash[:notice] = 'That card is presently on fire!'
     rescue => e
       # Some other error; display an error message.
-      flash[:notice] = 'Some error occurred.'
+      flash[:notice] = e.message
+      redirect_to checkout_path(value: "payment")
+      return
     end
     begin
       charge = Stripe::Charge.create({
@@ -139,19 +138,20 @@ class HomeController < ApplicationController
                                          description: "Order no #{current_user.orders.last.id}",
                                          customer: current_user.customer_id,
                                      })
-    rescue Stripe::CardError => e
-      # CardError; display an error message.
-      flash[:notice] = 'That card is presently on fire!'
+      order = current_user.orders.where(status: "pending").last
+      order.status = "Paid"
+      order.total_amount = total_price
+      order.save
+      session.delete(:shop_cart)
+      flash[:notice] = 'Card charged successfully.'
+      redirect_to checkout_path(value: "done")
+      return
     rescue => e
       # Some other error; display an error message.
-      flash[:notice] = 'Some error occurred.'
+      flash[:notice] = e.message
+      redirect_to checkout_path(value: "payment")
+      return
     end
-    order = current_user.orders.where(status: "pending").last
-    order.status = "Paid"
-    order.total_amount = total_price
-    order.save
-    session.delete(:shop_cart)
-    redirect_to checkout_path(value: "done")
   end
 
   def generate_token
