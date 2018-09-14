@@ -1,0 +1,33 @@
+<div class="main-content">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Add</strong> Category
+      </div>
+      <div class="card-body card-block">
+        <%= form_for(@category, url: update_category_path, method: :put, multipart: true, class: "form-horizontal") do |f| %>
+          <%= f.hidden_field :id, value: @category.id, class: "form-control", id: "text-input" %>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Category Name</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.text_field :name, class: "form-control", id: "text-input", required: true %>
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="file-input" class=" form-control-label">File input</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.file_field :image, id: "file-input", class: "form-control-file" %>
+            </div>
+          </div>
+          <%= f.submit 'Submit', class: "btn btn-primary btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

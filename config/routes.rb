@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get 'catergory_list' => "dashboards#catergory_list", as: :catergory_list
   get 'add_catergory' => "dashboards#add_catergory", as: :add_catergory
   post 'create_catergory' => "dashboards#create_catergory", as: :create_catergory
+  get 'edit_category' => "dashboards#edit_category", as: :edit_category
+  put 'update_category' => "dashboards#update_category", as: :update_category
 
   get 'sub_category_list' => "dashboards#sub_category_list", as: :sub_category_list
   get 'add_sub_category' => "dashboards#add_sub_category", as: :add_sub_category

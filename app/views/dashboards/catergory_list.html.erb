@@ -19,6 +19,7 @@
               <thead>
               <tr>
                 <th>ID</th>
+                <th>Action</th>
                 <th>name</th>
                 <th class="text-right">Image</th>
                 <th class="text-right">Created at</th>
@@ -28,6 +29,7 @@
               <% @categories.all.each do |category| %>
                   <tr>
                     <td><%= category.id %></td>
+                    <td><%= link_to "edit", edit_category_path(id: category.id) %></td>
                     <td><%= category.name %></td>
                     <td><%= image_tag category.image.url(:medium) %></td>
                     <td class="text-right"><%= category.created_at %></td>

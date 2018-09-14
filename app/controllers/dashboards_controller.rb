@@ -42,6 +42,20 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def edit_category
+    @category = Category.find(params[:id])
+    render layout: "dashboard_application"
+  end
+
+  def update_category
+    category = Category.find(params[:category][:id])
+    if category.update(category_params)
+      redirect_to catergory_list_path
+    else
+      redirect_to update_category_path
+    end
+  end
+
   def sub_category_list
     @sub_categories = SubCategory.all
     render layout: "dashboard_application"
