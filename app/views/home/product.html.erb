@@ -162,6 +162,7 @@
             <%= f.collection_select(:size, @product.sizes.all,
                                     :name, :name,
                                     {:prompt => 'Please select size'}, {class: "form-control"}) if @product.present? %>
+            <h5 class="size_error" style="color: red;    margin-top: 5px;">Please select size from the list</h5>
             <!--              <select class="form-control">-->
             <!--                <option value="" selected="" disabled="disabled">Size</option>-->
             <!--                <option value="XS">XS</option>-->
@@ -174,11 +175,12 @@
             <%= f.collection_select(:color, @product.colors.all,
                                     :name, :name,
                                     {:prompt => 'Please select color'}, {class: "form-control"}) if @product.present? %>
+            <h5 class="color_error" style="color: red;    margin-top: 5px;">Please select color from the list</h5>
             <br>
             <%= f.collection_select(:shipping, ShippingPrice.all,
                                     :price, :name,
                                     {:prompt => 'Please select shipping'}, {class: "form-control"}) if @product.present? %>
-
+            <h5 class="shipping_error" style="color: red;    margin-top: 5px;">Please select shipping from the list</h5>
 
           <% end %>
           <br>
@@ -240,18 +242,22 @@
 </div>
 
 
-
+<style>
+  .size_error, .color_error, .shipping_error{
+    display: none;
+  }
+</style>
 <script>
     $('#product_large_0').addClass('active');
     $('#product_small_0').addClass('active');
     $(document).on("click", "#image_slider_new", function() {
         $(".main_image_show").attr("src", $(this).data("image"));
     });
-    $(document).on("click", "#adding_products_in_cart", function(e) {
-        e.preventDefault();
-        $("#product_quantity_in_cart").val($("#quantity_input").val());
-        $("#cart_form_for").submit();
-    });
+    // $(document).on("click", "#adding_products_in_cart", function(e) {
+    //     e.preventDefault();
+    //     $("#product_quantity_in_cart").val($("#quantity_input").val());
+    //     $("#cart_form_for").submit();
+    // });
     $(document).on("click", "#quantity_inc_button", function(e) {
         $("#product_quantity_in_cart").val($("#quantity_input").val());
     });
@@ -259,8 +265,31 @@
         $("#product_quantity_in_cart").val($("#quantity_input").val());
     });
     $(document).on("click", "#adding_products_in_cart", function(e) {
-        e.preventDefault();
-        // $("#product_quantity_in_cart").val($("#quantity_input").val());
-        $("#cart_form_for").submit();
+        if(($("#add_product_to_cart_size").val()!="") && ($("#add_product_to_cart_color").val()!="") && ($("#add_product_to_cart_shipping").val()!="")){
+            e.preventDefault();
+            console.log("xyz");
+            $("#product_quantity_in_cart").val($("#quantity_input").val());
+            $("#cart_form_for").submit();
+        } else {
+            e.preventDefault();
+            console.log("asda");
+            if($("#add_product_to_cart_size").val()===""){
+                $(".size_error").show();
+            } else {
+                $(".size_error").hide();
+            }
+
+            if($("#add_product_to_cart_color").val()===""){
+                $(".color_error").show();
+            } else {
+                $(".color_error").hide();
+            }
+
+            if($("#add_product_to_cart_shipping").val()===""){
+                $(".shipping_error").show();
+            } else {
+                $(".shipping_error").hide();
+            }
+        }
     });
 </script>

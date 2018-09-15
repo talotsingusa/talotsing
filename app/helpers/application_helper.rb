@@ -21,7 +21,7 @@ module ApplicationHelper
 
   def recently_viewed_products
     if current_user.present?
-      recently_viewed = RecentView.where(user_id: current_user.id).pluck(:product_id)
+      recently_viewed = RecentView.where(user_id: current_user.id).pluck(:product_id).uniq
       if recently_viewed.present?
         return Product.where("id IN (?)", recently_viewed)
       end
