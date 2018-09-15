@@ -267,8 +267,8 @@
     $(document).on("click", "#adding_products_in_cart", function(e) {
         if(($("#add_product_to_cart_size").val()!="") && ($("#add_product_to_cart_color").val()!="") && ($("#add_product_to_cart_shipping").val()!="")){
             e.preventDefault();
-            $("#add_product_to_cart_size").html('Adding to cart...');
-            $("#add_product_to_cart_size").prop('disabled', true);
+            $("#adding_products_in_cart").html('Adding to cart...');
+            $("#adding_products_in_cart").prop('disabled', true);
             $(".size_error").hide();
             $(".color_error").hide();
             $(".shipping_error").hide();
