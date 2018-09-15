@@ -44,3 +44,6 @@ var resetForms = function () {
 document.addEventListener("turbolinks:before-cache", function() {
     resetForms();
 });
+$( document ).ready(function() {
+    $(".notice" ).fadeOut(5000);
+});

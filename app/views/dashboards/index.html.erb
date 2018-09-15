@@ -21,8 +21,8 @@
                       <i class="zmdi zmdi-account-o"></i>
                     </div>
                     <div class="text">
-                      <h2>10368</h2>
-                      <span>members online</span>
+                      <h2><%= User.all.count  %></h2>
+                      <span>Total users on Talotsing</span>
                     </div>
                   </div>
                   <div class="overview-chart">
@@ -39,8 +39,8 @@
                       <i class="zmdi zmdi-shopping-cart"></i>
                     </div>
                     <div class="text">
-                      <h2>388,688</h2>
-                      <span>items solid</span>
+                      <h2><%= Product.all.count %></h2>
+                      <span>Total items on Talotsing</span>
                     </div>
                   </div>
                   <div class="overview-chart">
@@ -57,8 +57,8 @@
                       <i class="zmdi zmdi-calendar-note"></i>
                     </div>
                     <div class="text">
-                      <h2>1,086</h2>
-                      <span>this week</span>
+                      <h2><%= Order.where.not(shipping_status: "Order dispatched").count %></h2>
+                      <span>Total Pending Orders on Talotsing</span>
                     </div>
                   </div>
                   <div class="overview-chart">
@@ -75,8 +75,8 @@
                       <i class="zmdi zmdi-money"></i>
                     </div>
                     <div class="text">
-                      <h2>$1,060,386</h2>
-                      <span>total earnings</span>
+                      <h2>$<%= Order.all.pluck(:total_amount).compact.sum %></h2>
+                      <span>Total earnings on Talotsing</span>
                     </div>
                   </div>
                   <div class="overview-chart">

@@ -31,3 +31,6 @@
 
 
 $('body').css({'overflow' : ''});
+$( document ).ready(function() {
+    $(".notice" ).fadeOut(5000);
+});

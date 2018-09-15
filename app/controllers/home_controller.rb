@@ -248,6 +248,7 @@ class HomeController < ApplicationController
         session[:shop_cart] << product_array
       end
     end
+    flash[:notice] = 'Product added to cart successfully!'
     redirect_to shop_path
   end
 

@@ -267,12 +267,13 @@
     $(document).on("click", "#adding_products_in_cart", function(e) {
         if(($("#add_product_to_cart_size").val()!="") && ($("#add_product_to_cart_color").val()!="") && ($("#add_product_to_cart_shipping").val()!="")){
             e.preventDefault();
-            console.log("xyz");
+            $(".size_error").hide();
+            $(".color_error").hide();
+            $(".shipping_error").hide();
             $("#product_quantity_in_cart").val($("#quantity_input").val());
             $("#cart_form_for").submit();
         } else {
             e.preventDefault();
-            console.log("asda");
             if($("#add_product_to_cart_size").val()===""){
                 $(".size_error").show();
             } else {
