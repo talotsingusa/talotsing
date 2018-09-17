@@ -39,6 +39,10 @@ class HomeController < ApplicationController
     render layout: "shop_application"
   end
 
+  def categories
+    render layout: "shop_application"
+  end
+
   def product
     @product = Product.find(params[:id])
     if current_user.present?

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => "users/registrations", confirmations: 'users/confirmations', sessions: "users/sessions"}
   root to: 'home#index'
   get 'home/shop' => "home#shop", as: :shop
+  get 'home/categories' => "home#categories", as: :categories
   get 'home/product' => "home#product", as: :product
   get 'home/cart' => "home#cart", as: :cart
   get 'home/contact' => "home#contact", as: :contact
