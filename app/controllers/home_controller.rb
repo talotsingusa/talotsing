@@ -41,7 +41,7 @@ class HomeController < ApplicationController
 
   def sub_categories
     if params[:category].present?
-      @sub_categories = SubCategory.where(category_id: params[:category])
+      @sub_categories = SubCategory.where(category_id: params[:category]).limit(5)
     else
       redirect_to root_path
     end
@@ -50,7 +50,7 @@ class HomeController < ApplicationController
 
   def product_types
     if params[:sub_category].present?
-      @product_types = ProductType.where(sub_category_id: params[:sub_category])
+      @product_types = ProductType.where(sub_category_id: params[:sub_category]).limit(5)
     else
       redirect_to root_path
     end
