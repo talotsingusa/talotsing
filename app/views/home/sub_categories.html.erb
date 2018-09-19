@@ -14,7 +14,10 @@
             <div class="col-lg-2dot4">
               <div class="category-item">
                 <a href="<%= shop_path(product_type: product_type.id)%>">
-                  <img src="<%= sub_category_image(product_type) %>" class="img-responsive"> <%= product_type.name %>
+                  <div class="category-img">
+                    <img src="<%= sub_category_image(product_type) %>" class="img-responsive">
+                  </div>
+                  <p><%= product_type.name %></p>
                 </a>
               </div>
             </div>

@@ -142,10 +142,21 @@
 }
 
 .category-item a img {
-    border: 1px solid #ccc;
     margin-bottom: 5px;
     width: 100%;
-    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.category-item  .category-img {
+    border: 1px solid #ccc;
+    height: 295px;
+    position: relative;
+    overflow: hidden;
 }
 
 
