@@ -107,6 +107,7 @@ GEM
       sassc (>= 1.11)
     geocomplete_rails (1.7.0)
       railties (>= 3.1)
+    get_process_mem (0.2.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     greensock-rails (1.20.4.0)
@@ -177,6 +178,9 @@ GEM
       method_source (~> 0.9.0)
     public_suffix (3.0.2)
     puma (3.11.4)
+    puma_worker_killer (0.1.0)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 4)
     rack (2.0.5)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
@@ -315,6 +319,7 @@ DEPENDENCIES
   popper_js
   pry
   puma (~> 3.7)
+  puma_worker_killer
   rails (~> 5.1.5)
   redis
   sass-rails (~> 5.0)
