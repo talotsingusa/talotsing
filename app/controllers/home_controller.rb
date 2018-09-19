@@ -39,7 +39,21 @@ class HomeController < ApplicationController
     render layout: "shop_application"
   end
 
-  def categories
+  def sub_categories
+    if params[:category].present?
+      @sub_categories = SubCategory.where(category_id: params[:category])
+    else
+      redirect_to root_path
+    end
+    render layout: "shop_application"
+  end
+
+  def product_types
+    if params[:sub_category].present?
+      @product_types = ProductType.where(sub_category_id: params[:sub_category])
+    else
+      redirect_to root_path
+    end
     render layout: "shop_application"
   end
 

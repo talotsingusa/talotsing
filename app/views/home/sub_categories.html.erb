@@ -1,0 +1,27 @@
+
+<div class="shop">
+  <div class="container">
+    <div class="row">
+    <% if @sub_categories.present? %>
+      <% @sub_categories.each do |sub_category| %>
+        <% if sub_category.product_types.present? %>
+            <div class="shop_content" id="shop_products_section">
+              <div class="shop_bar clearfix">
+                <div class="shop_product_count"><span></span> <%= sub_category.name %></div>
+              </div>
+            </div>
+          <% sub_category.product_types.each do |product_type| %>
+            <div class="col-lg-2dot4">
+              <div class="category-item">
+                <a href="<%= shop_path(product_type: product_type.id)%>">
+                  <img src="<%= sub_category_image(product_type) %>" class="img-responsive"> <%= product_type.name %>
+                </a>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+</div>

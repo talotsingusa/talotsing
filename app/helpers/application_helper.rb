@@ -91,4 +91,29 @@ module ApplicationHelper
                 class: "user-#{user.id} online_status #{'online' if user.online?}"
   end
 
+  def sub_category_image(product_type)
+    no_image = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png"
+    if product_type.present?
+      product_groups = ProductGroup.where(product_type_id: product_type.id)
+      if product_groups.present?
+        product = Product.find(product_groups.last.product_id)
+        return product.product_images.first.image.url(:original)
+      else
+        return no_image
+      end
+    else
+      return no_image
+    end
+
+  end
+
+  def get_products(id)
+    product_ids = ProductGroup.where(product_type_id: id).pluck(:product_id).uniq
+    if product_ids.present?
+      return Product.where("id IN (?)", product_ids).limit(5)
+    else
+      return nil
+    end
+  end
+
 end

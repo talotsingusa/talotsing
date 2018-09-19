@@ -161,13 +161,13 @@
                 <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
                 <% Category.all.each do |category| %>
                     <li class="hassubs">
-                      <a href="<%= shop_path(category: category.id)%>">
+                      <a href="<%= sub_categories_path(category: category.id)%>">
                       <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
                       <%= category.name %><i class="fas fa-chevron-right"></i></a>
                         <ul>
                           <% category.sub_categories.each do |sub_category| %>
                           <li class="hassubs">
-                            <a href="<%= shop_path(sub_category: sub_category.id)%>"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
+                            <a href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
                               <ul>
                                 <% sub_category.product_types.each do |product_type| %>
                                 <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
@@ -235,7 +235,7 @@
                 <li class="hassubs">
                   <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <li><a href="<%= categories_path %>">Shop<i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
                     <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
