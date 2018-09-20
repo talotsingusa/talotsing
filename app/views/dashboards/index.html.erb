@@ -7,8 +7,9 @@
             <div class="col-md-12">
               <div class="overview-wrap">
                 <h2 class="title-1">overview</h2>
-                <button class="au-btn au-btn-icon au-btn--blue">
-                  <i class="zmdi zmdi-plus"></i>add item</button>
+                <%= link_to add_product_path, class: "au-btn au-btn-icon au-btn--blue", target: 'blank' do  %>
+                  <i class="zmdi zmdi-plus"></i>Add Product
+                <% end %>
               </div>
             </div>
           </div>

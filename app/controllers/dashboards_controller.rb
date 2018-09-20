@@ -235,6 +235,7 @@ class DashboardsController < ApplicationController
           ProductImage.create(image: image, product_id: @product.id)
         }
       end
+      flash[:notice] = 'product update successfully'
       redirect_to dashboards_path
     else
       redirect_to edit_product_path(product_id: @product.id)
@@ -282,8 +283,10 @@ class DashboardsController < ApplicationController
           ProductImage.create(image: image, product_id: @product.id)
         }
       end
+      flash[:notice] = 'Product added successfully.'
       redirect_to add_product_path
     else
+      flash[:notice] = 'product has failed to upload'
       redirect_to add_product_path
     end
   end
