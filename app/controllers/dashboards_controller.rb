@@ -235,9 +235,9 @@ class DashboardsController < ApplicationController
           ProductImage.create(image: image, product_id: @product.id)
         }
       end
-      redirect_to product_list_path
+      redirect_to dashboard_path
     else
-      redirect_to edit_product_path
+      redirect_to edit_product_path(product_id: @product.id)
     end
   end
 
@@ -282,7 +282,7 @@ class DashboardsController < ApplicationController
           ProductImage.create(image: image, product_id: @product.id)
         }
       end
-      redirect_to product_list_path
+      redirect_to add_product_path
     else
       redirect_to add_product_path
     end
