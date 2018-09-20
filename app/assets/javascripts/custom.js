@@ -430,8 +430,8 @@ $( document ).ready(function() {
 		.slick(
 		{
 			rows:2,
-			slidesToShow:4,
-			slidesToScroll:4,
+			slidesToShow:3,
+			slidesToScroll:3,
 			infinite:false,
 			arrows:false,
 			dots:true,
@@ -640,8 +640,8 @@ $( document ).ready(function() {
 		.slick(
 		{
 			rows:2,
-			slidesToShow:5,
-			slidesToScroll:5,
+			slidesToShow:4,
+			slidesToScroll:4,
 			infinite:false,
 			arrows:false,
 			dots:true,
