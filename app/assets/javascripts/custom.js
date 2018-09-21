@@ -730,7 +730,7 @@ $( document ).ready(function() {
 
 		bestsellersSlider.slick(
 		{
-			rows:2,
+			rows:1,
 			infinite:true,
 			slidesToShow:3,
 			slidesToScroll:3,
@@ -743,7 +743,7 @@ $( document ).ready(function() {
 				{
 					breakpoint:1199, settings:
 					{
-						rows:2,
+						rows:1,
 						slidesToShow:2,
 						slidesToScroll:2,
 						dots:true
@@ -752,7 +752,7 @@ $( document ).ready(function() {
 				{
 					breakpoint:991, settings:
 					{
-						rows:2,
+						rows:1,
 						slidesToShow:1,
 						slidesToScroll:1,
 						dots:true
