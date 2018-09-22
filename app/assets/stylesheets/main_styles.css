@@ -2887,8 +2887,9 @@ select option
 .trends_item
 {
 	background: #FFFFFF;
-	border-radius: 8px;
-	padding: 25px;
+    border-radius: 8px;
+	padding-bottom: 15px;
+	overflow: hidden;
 }
 .trends_image
 {
@@ -2911,7 +2912,9 @@ select option
 }
 .trends_content
 {
-	margin-top: 24px;
+	margin-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 .trends_name
 {
@@ -3670,3 +3673,23 @@ select option
 	height: auto;
 }
 
+.trends_image > img + a {
+	display: none;
+}
+.trends_image > img + a {
+    position: absolute;
+    display: none;
+    bottom: 20px;
+    padding-right: 28px;
+    color: #fff;
+    background-color: #25313e;
+    border-color: #25313e;
+    opacity: .7;
+}
+.trends_image .material-icons {
+    line-height: 14px;
+}
+
+.trends_item:hover .trends_image > img + a {
+	display: block;
+}
