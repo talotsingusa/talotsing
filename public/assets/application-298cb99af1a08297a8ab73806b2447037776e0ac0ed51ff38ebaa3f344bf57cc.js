@@ -65800,8 +65800,8 @@ $( document ).ready(function() {
 		.slick(
 		{
 			rows:2,
-			slidesToShow:4,
-			slidesToScroll:4,
+			slidesToShow:3,
+			slidesToScroll:3,
 			infinite:false,
 			arrows:false,
 			dots:true,
@@ -66010,8 +66010,8 @@ $( document ).ready(function() {
 		.slick(
 		{
 			rows:2,
-			slidesToShow:5,
-			slidesToScroll:5,
+			slidesToShow:4,
+			slidesToScroll:4,
 			infinite:false,
 			arrows:false,
 			dots:true,
@@ -66100,7 +66100,7 @@ $( document ).ready(function() {
 
 		bestsellersSlider.slick(
 		{
-			rows:2,
+			rows:1,
 			infinite:true,
 			slidesToShow:3,
 			slidesToScroll:3,
@@ -66113,7 +66113,7 @@ $( document ).ready(function() {
 				{
 					breakpoint:1199, settings:
 					{
-						rows:2,
+						rows:1,
 						slidesToShow:2,
 						slidesToScroll:2,
 						dots:true
@@ -66122,7 +66122,7 @@ $( document ).ready(function() {
 				{
 					breakpoint:991, settings:
 					{
-						rows:2,
+						rows:1,
 						slidesToShow:1,
 						slidesToScroll:1,
 						dots:true
