@@ -1,8 +1,8 @@
 class SubCategory < ApplicationRecord
   has_many :product_types, dependent: :destroy
   belongs_to :category
-  has_one :product_sub_category, dependent: :destroy
-  has_one :product , through: :product_sub_category
+  has_many :product_sub_categories, dependent: :destroy
+  has_many :products , through: :product_sub_categories
 
   has_attached_file :image, styles: {
       thumb: '100x100>',

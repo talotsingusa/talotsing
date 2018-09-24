@@ -1,7 +1,7 @@
 class Category < ApplicationRecord
   has_many :sub_categories, dependent: :destroy
-  has_one :product_category, dependent: :destroy
-  has_one :product , through: :product_category
+  has_many :product_categories, dependent: :destroy
+  has_many :products , through: :product_categories
 
   has_attached_file :image, styles: {
       thumb: '100x100>',
