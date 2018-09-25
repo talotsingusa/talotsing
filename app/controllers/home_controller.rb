@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   skip_before_action :authenticate_user!
+  require 'will_paginate/array'
+
   def index
 
   end
@@ -24,9 +26,26 @@ class HomeController < ApplicationController
     elsif params[:search_product].present? && params[:search_product][:keyword].present? && params[:search_product][:category].present?
       ids = ProductCategory.where(category_id: params[:search_product][:category]).pluck(:product_id)
       products = Product.where("id IN (?)", ids)
-      @products = products.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%").order(:price).paginate(:page => params[:page], :per_page => 15)
+      @products = products.where("name ILIKE ?", "%" + params[:search_product][:keyword] + "%").order(:price).paginate(:page => params[:page], :per_page => 15)
     elsif params[:search_product].present? && params[:search_product][:keyword].present?
-      @products = Product.where("name LIKE ?", "%" + params[:search_product][:keyword] + "%").order(:price).paginate(:page => params[:page], :per_page => 15)
+      @products = []
+      categories = Category.where("name ILIKE ?", "%" + params[:search_product][:keyword] + "%")
+      categories.each do |category|
+        @products << category.products
+      end
+      sub_categories = SubCategory.where("name ILIKE ?", "%" + params[:search_product][:keyword] + "%")
+      sub_categories.each do |sub_category|
+        @products << sub_category.products
+      end
+      product_type = ProductType.where("name ILIKE ?", "%" + params[:search_product][:keyword] + "%")
+      product_type.each do |pro_type|
+        @products << pro_type.products
+      end
+      @products << Product.where("name ILIKE ? OR description ILIKE ?", "%" + params[:search_product][:keyword] + "%", "%" + params[:search_product][:keyword] + "%")
+      @products = @products.flatten.uniq
+      @products = @products.sort_by { |product| [product.price] }
+      @products = @products.paginate(:page => params[:page], :per_page => 15)
+
     elsif params[:search_product].present? && params[:search_product][:category].present?
       ids = ProductCategory.where(category_id: params[:search_product][:category]).pluck(:product_id)
       @products = Product.where("id IN (?)", ids).order(:price).paginate(:page => params[:page], :per_page => 15)
