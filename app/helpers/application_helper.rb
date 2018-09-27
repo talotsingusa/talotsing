@@ -116,4 +116,9 @@ module ApplicationHelper
     end
   end
 
+  def product_image_check(product)
+    if product.present?
+      return product.product_images.first.image.url
+    end
+  end
 end

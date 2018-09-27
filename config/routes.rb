@@ -17,7 +17,13 @@ Rails.application.routes.draw do
   post 'home/create_shipping' => "home#create_shipping", as: :create_shipping
   get 'home/product_detail_modal' => "home#product_detail_modal", as: :product_detail_modal
   post 'home/add_card' => "home#add_card", as: :add_card
-
+  get 'home/about_us' => "home#about_us", as: :about_us
+  get 'home/contact_us' => "home#contact_us", as: :contact_us
+  get 'home/terms_of_use' => "home#terms_of_use", as: :terms_of_use
+  get 'home/discount_policy' => "home#discount_policy", as: :discount_policy
+  get 'home/return' => "home#return", as: :return
+  get 'home/privacy_policy' => "home#privacy_policy", as: :privacy_policy
+  get 'home/shipping_help' => "home#shipping_help", as: :shipping_help
 
   resources :dashboards
   get 'brands_list' => "dashboards#brands_list", as: :brands_list

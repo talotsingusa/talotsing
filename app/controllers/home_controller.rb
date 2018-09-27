@@ -289,6 +289,33 @@ class HomeController < ApplicationController
     redirect_to shop_path
   end
 
+  def about_us
+    render layout: "blog_single_application"
+  end
+
+  def contact_us
+    render layout: "blog_single_application"
+  end
+
+  def terms_of_use
+    render layout: "blog_single_application"
+  end
+
+  def discount_policy
+    render layout: "blog_single_application"
+  end
+
+  def return
+    render layout: "blog_single_application"
+  end
+
+  def privacy_policy
+    render layout: "blog_single_application"
+  end
+
+  def shipping_help
+    render layout: "blog_single_application"
+  end
   private
 
   def shipping_params
