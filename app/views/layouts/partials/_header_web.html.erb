@@ -167,10 +167,10 @@
                         <ul>
                           <% category.sub_categories.each do |sub_category| %>
                           <li class="hassubs">
-                            <a href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
+                            <a href="<%= product_types_path(sub_category: sub_category.id)%>"><%= "#{sub_category.name}(#{sub_category.products.count})" %><i class="fas fa-chevron-right"></i></a>
                               <ul>
                                 <% sub_category.product_types.each do |product_type| %>
-                                <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= "#{product_type.name}(#{product_type.products.count})" %><i class="fas fa-chevron-right"></i></a></li>
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
