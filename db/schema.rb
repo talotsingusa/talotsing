@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180906111747) do
+ActiveRecord::Schema.define(version: 20181001060928) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -35,6 +38,18 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.datetime "image_updated_at"
   end
 
+  create_table "closure_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "collars", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "colors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -49,6 +64,24 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.index ["author_id", "receiver_id"], name: "index_conversations_on_author_id_and_receiver_id", unique: true
     t.index ["author_id"], name: "index_conversations_on_author_id"
     t.index ["receiver_id"], name: "index_conversations_on_receiver_id"
+  end
+
+  create_table "crafts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "design_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "designs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "order_items", force: :cascade do |t|
@@ -73,10 +106,16 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.string "shipping_status", default: "pending"
   end
 
+  create_table "pattern_styles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "personal_messages", force: :cascade do |t|
     t.text "body"
-    t.integer "conversation_id"
-    t.integer "user_id"
+    t.bigint "conversation_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["conversation_id"], name: "index_personal_messages_on_conversation_id"
@@ -97,9 +136,44 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "product_closure_types", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "closure_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_collars", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "collar_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "product_colors", force: :cascade do |t|
     t.integer "product_id"
     t.integer "color_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_crafts", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "craft_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_design_types", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "design_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_designs", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "design_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -121,6 +195,13 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.datetime "image_updated_at"
   end
 
+  create_table "product_pattern_styles", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "pattern_style_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "product_shipments", force: :cascade do |t|
     t.string "name"
     t.integer "price"
@@ -136,10 +217,24 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "product_sleeve_types", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "sleeve_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "product_specifications", force: :cascade do |t|
     t.string "spec_key"
     t.string "spec_value"
     t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_styles", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "style_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -215,10 +310,22 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "sleeve_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stores", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -264,4 +371,6 @@ ActiveRecord::Schema.define(version: 20180906111747) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "personal_messages", "conversations"
+  add_foreign_key "personal_messages", "users"
 end

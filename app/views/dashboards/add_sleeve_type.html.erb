@@ -1,0 +1,23 @@
+<div class="main-content">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <strong>Add</strong> Sleeve Type
+      </div>
+      <div class="card-body card-block">
+        <%= form_for(SleeveType.new, url: create_sleeve_type_path, class: "form-horizontal") do |f| %>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Sleeve Type</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.text_field :name, class: "form-control", id: "text-input", required: true %>
+            </div>
+          </div>
+          <%= f.submit 'Submit', class: "btn btn-primary btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

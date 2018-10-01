@@ -135,6 +135,86 @@
               </div>
             </div>
 
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Closure Type</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :closure_type_ids, as: :check_boxes, collection: ClosureType.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Collar</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :collar_ids, as: :check_boxes, collection: Collar.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Craft</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :craft_ids, as: :check_boxes, collection: Craft.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Design</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :design_ids, as: :check_boxes, collection: Design.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Design Type</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :design_type_ids, as: :check_boxes, collection: DesignType.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Pattern Style</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :pattern_style_ids, as: :check_boxes, collection: PatternStyle.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Sleeve Type</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :sleeve_type_ids, as: :check_boxes, collection: SleeveType.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Style</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.input :style_ids, as: :check_boxes, collection: Style.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+
+            </div>
+          </div>
+
             <div id="shipments">
               <%= f.simple_fields_for :product_shipments do |shipment| %>
 

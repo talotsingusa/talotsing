@@ -7,6 +7,30 @@ class Product < ApplicationRecord
   has_many :product_sizes, dependent: :destroy
   has_many :sizes ,through: :product_sizes
 
+  has_many :product_collars, dependent: :destroy
+  has_many :collars ,through: :product_collars
+
+  has_many :product_closure_types, dependent: :destroy
+  has_many :closure_types ,through: :product_closure_types
+
+  has_many :product_crafts, dependent: :destroy
+  has_many :crafts ,through: :product_crafts
+
+  has_many :product_designs, dependent: :destroy
+  has_many :designs ,through: :product_designs
+
+  has_many :product_design_types, dependent: :destroy
+  has_many :design_types ,through: :product_design_types
+
+  has_many :product_pattern_styles, dependent: :destroy
+  has_many :pattern_styles ,through: :product_pattern_styles
+
+  has_many :product_sleeve_types, dependent: :destroy
+  has_many :sleeve_types ,through: :product_sleeve_types
+
+  has_many :product_styles, dependent: :destroy
+  has_many :styles ,through: :product_styles
+
   has_one :product_brand, dependent: :destroy
   has_one :brand ,through: :product_brand
 

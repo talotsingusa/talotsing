@@ -63,6 +63,42 @@ Rails.application.routes.draw do
   get 'add_product_size' => "dashboards#add_product_size", as: :add_product_size
   post 'create_product_size' => "dashboards#create_product_size", as: :create_product_size
 
+  get 'closure_type_list' => "dashboards#closure_type_list", as: :closure_type_list
+  get 'add_closure_type' => "dashboards#add_closure_type", as: :add_closure_type
+  post 'create_closure_type' => "dashboards#create_closure_type", as: :create_closure_type
+
+
+  get 'collar_list' => "dashboards#collar_list", as: :collar_list
+  get 'add_collar_type' => "dashboards#add_collar_type", as: :add_collar_type
+  post 'create_collar_type' => "dashboards#create_collar_type", as: :create_collar_type
+
+  get 'craft_list' => "dashboards#craft_list", as: :craft_list
+  get 'add_craft_type' => "dashboards#add_craft_type", as: :add_craft_type
+  post 'create_craft_type' => "dashboards#create_craft_type", as: :create_craft_type
+
+
+  get 'design_list' => "dashboards#design_list", as: :design_list
+  get 'add_design' => "dashboards#add_design", as: :add_design
+  post 'create_design' => "dashboards#create_design", as: :create_design
+
+  get 'design_type_list' => "dashboards#design_type_list", as: :design_type_list
+  get 'add_design_type' => "dashboards#add_design_type", as: :add_design_type
+  post 'create_design_type' => "dashboards#create_design_type", as: :create_design_type
+
+  get 'pattern_style_list' => "dashboards#pattern_style_list", as: :pattern_style_list
+  get 'add_pattern_style' => "dashboards#add_pattern_style", as: :add_pattern_style
+  post 'create_pattern_style' => "dashboards#create_pattern_style", as: :create_pattern_style
+
+
+  get 'sleeve_type_list' => "dashboards#sleeve_type_list", as: :sleeve_type_list
+  get 'add_sleeve_type' => "dashboards#add_sleeve_type", as: :add_sleeve_type
+  post 'create_sleeve_type' => "dashboards#create_sleeve_type", as: :create_sleeve_type
+
+
+  get 'styles_list' => "dashboards#styles_list", as: :styles_list
+  get 'add_style' => "dashboards#add_style", as: :add_style
+  post 'create_style' => "dashboards#create_style", as: :create_style
+
   get 'shipping_prices' => "dashboards#shipping_prices", as: :shipping_prices
   get 'add_shipping_prices' => "dashboards#add_shipping_prices", as: :add_shipping_prices
   post 'create_shipping_price' => "dashboards#create_shipping_price", as: :create_shipping_price
