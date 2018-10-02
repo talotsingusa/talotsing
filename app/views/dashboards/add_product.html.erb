@@ -122,7 +122,7 @@
                 <label for="select" class=" form-control-label">Select Color</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :color_ids, as: :check_boxes, collection: Color.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+                <%= f.input :color_ids, collection: Color.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
               </div>
             </div>
             <div class="row form-group">
@@ -130,8 +130,7 @@
                 <label for="select" class=" form-control-label">Select Size</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :size_ids, as: :check_boxes, collection: Size.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
-
+                <%= f.input :size_ids, collection: Size.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
               </div>
             </div>
 
@@ -140,7 +139,7 @@
               <label for="select" class=" form-control-label">Select Closure Type</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :closure_type_ids, as: :check_boxes, collection: ClosureType.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+              <%= f.input :closure_type_ids, collection: ClosureType.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
 
             </div>
           </div>
@@ -150,7 +149,7 @@
               <label for="select" class=" form-control-label">Select Collar</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :collar_ids, as: :check_boxes, collection: Collar.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+              <%= f.input :collar_ids, collection: Collar.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
 
             </div>
           </div>
@@ -160,7 +159,7 @@
               <label for="select" class=" form-control-label">Select Craft</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :craft_ids, as: :check_boxes, collection: Craft.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+              <%= f.input :craft_ids, collection: Craft.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
 
             </div>
           </div>
@@ -170,7 +169,7 @@
               <label for="select" class=" form-control-label">Select Design</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :design_ids, as: :check_boxes, collection: Design.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+              <%= f.input :design_ids, collection: Design.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
 
             </div>
           </div>
@@ -180,7 +179,7 @@
               <label for="select" class=" form-control-label">Select Design Type</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :design_type_ids, as: :check_boxes, collection: DesignType.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+              <%= f.input :design_type_ids, collection: DesignType.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
 
             </div>
           </div>
@@ -190,7 +189,7 @@
               <label for="select" class=" form-control-label">Select Pattern Style</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :pattern_style_ids, as: :check_boxes, collection: PatternStyle.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+              <%= f.input :pattern_style_ids, collection: PatternStyle.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
 
             </div>
           </div>
@@ -200,7 +199,7 @@
               <label for="select" class=" form-control-label">Select Sleeve Type</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :sleeve_type_ids, as: :check_boxes, collection: SleeveType.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
+              <%= f.input :sleeve_type_ids, collection: SleeveType.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
 
             </div>
           </div>
@@ -210,8 +209,7 @@
               <label for="select" class=" form-control-label">Select Style</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.input :style_ids, as: :check_boxes, collection: Style.all.map { |c| [c.name, c.id] }, wrapper: :vertical_collection_inline, label: false %>
-
+              <%= f.input :style_ids, collection: Style.all.map { |s| [s.name, s.id] }, class: "form-control", label: false , input_html: { multiple: true } %>
             </div>
           </div>
 
@@ -301,6 +299,57 @@
         no_results_text: 'No results matched',
         width: '200px'
     });
+    $('#product_color_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_size_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_closure_type_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_collar_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_craft_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_design_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_design_type_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_pattern_style_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_sleeve_type_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+    $('#product_style_ids').chosen({
+        allow_single_deselect: true,
+        no_results_text: 'No results matched',
+        width: '200px'
+    });
+
     $("#submit_product").click(function(e){
         if($('#product_product_brand').val() == 0){
             $("#brand_error").show();
