@@ -239,9 +239,9 @@
             <div class="tabbed_container">
               <div class="tabs">
                 <ul class="clearfix">
-                  <li class="active">Mini Dresses</li>
-                  <li>Maxi Dresses</li>
-                  <li>Midi Dresses</li>
+                  <li class="active">Corsets</li>
+                  <li>Panties</li>
+                  <li>Bustiers</li>
                 </ul>
                 <div class="tabs_line"><span></span></div>
               </div>
@@ -251,8 +251,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(1).products.present? %>
-                    <% ProductType.find(1).products.sample(12).each do |product| %>
+                  <% if ProductType.find(981).products.present? %>
+                    <% ProductType.find(981).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <div class="product_image d-flex flex-column align-items-center justify-content-center">
@@ -303,8 +303,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(3).products.present? %>
-                    <% ProductType.find(3).products.sample(12).each do |product| %>
+                  <% if ProductType.find(982).products.present? %>
+                    <% ProductType.find(982).products.sample(10).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <div class="product_image d-flex flex-column align-items-center justify-content-center">
@@ -355,8 +355,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(2).products.present? %>
-                    <% ProductType.find(2).products.sample(12).each do |product| %>
+                  <% if ProductType.find(983).products.present? %>
+                    <% ProductType.find(983).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <div class="product_image d-flex flex-column align-items-center justify-content-center">
