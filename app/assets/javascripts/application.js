@@ -29,7 +29,7 @@
 //= require jquery.slick
 //= require jquery.sliders
 //= require toastr
-//= require custom.js
+
 
 
 $('body').css({'overflow' : ''});
