@@ -121,4 +121,8 @@ module ApplicationHelper
       return product.product_images.first.image.url
     end
   end
+
+  def mobile? # has to be in here because it has access to "request"
+    request.user_agent =~ /\b(Android|iPhone|iPad|Windows Phone|Opera Mobi|Kindle|BackBerry|PlayBook)\b/i
+  end
 end

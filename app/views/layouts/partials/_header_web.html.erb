@@ -155,42 +155,80 @@
                 <div class="cat_burger"><span></span><span></span><span></span></div>
                 <div class="cat_menu_text">departments</div>
               </div>
-
-              <ul class="cat_menu">
-                <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
-                <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
-                <% Category.all.order(:created_at).each do |category| %>
+              <% if mobile? %>
+                <ul class="cat_menu">
+                  <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
+                  <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
+                  <% Category.all.order(:created_at).each do |category| %>
                     <li class="hassubs">
-                      <a href="<%= sub_categories_path(category: category.id)%>">
-                      <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
-                      <%= category.name %><i class="fas fa-chevron-right"></i></a>
-                        <ul>
-                          <% category.sub_categories.each do |sub_category| %>
+                      <a href="#">
+                        <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
+                        <%= category.name %><i class="fas fa-chevron-right"></i></a>
+                      <ul>
+                        <% category.sub_categories.each do |sub_category| %>
                           <li class="hassubs">
-                            <a href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
-                              <ul>
-                                <% sub_category.product_types.each do |product_type| %>
+                            <a href="#"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
+                            <ul>
+                              <% sub_category.product_types.each do |product_type| %>
                                 <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                                 <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                <% end %>
-                              </ul>
+                              <% end %>
+                            </ul>
                           </li>
                           <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                           <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
                           <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                          <% end %>
-                        </ul>
+                        <% end %>
+                      </ul>
                     </li>
+                  <% end %>
+                  <!--<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>-->
+                </ul>
+                <% else %>
+                <ul class="cat_menu">
+                  <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
+                  <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
+                  <% Category.all.order(:created_at).each do |category| %>
+                    <li class="hassubs">
+                      <a href="<%= sub_categories_path(category: category.id)%>">
+                        <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
+                        <%= category.name %><i class="fas fa-chevron-right"></i></a>
+                      <ul>
+                        <% category.sub_categories.each do |sub_category| %>
+                          <li class="hassubs">
+                            <a href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
+                            <ul>
+                              <% sub_category.product_types.each do |product_type| %>
+                                <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
+                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
+                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
+                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
+                              <% end %>
+                            </ul>
+                          </li>
+                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
+                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
+                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
+                        <% end %>
+                      </ul>
+                    </li>
+                  <% end %>
+                  <!--<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>-->
+                  <!--<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>-->
+                </ul>
                 <% end %>
-                <!--<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>-->
-                <!--<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>-->
-                <!--<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>-->
-                <!--<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>-->
-                <!--<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>-->
-                <!--<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>-->
-              </ul>
+
             </div>
 
             <!-- Main Nav Menu -->
