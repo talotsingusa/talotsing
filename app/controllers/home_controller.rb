@@ -286,7 +286,7 @@ class HomeController < ApplicationController
       end
     end
     flash[:notice] = 'Product added to cart successfully!'
-    redirect_to shop_path
+    redirect_to request.referer
   end
 
   def about_us

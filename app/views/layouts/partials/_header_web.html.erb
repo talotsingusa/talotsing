@@ -97,7 +97,7 @@
         <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
           <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
             <div class="wishlist d-flex flex-row align-items-center justify-content-end">
-              <div class="wishlist_icon"><img src="/assets/heart.png" alt=""></div>
+              <a href="<%= my_favorites_path %>"><div class="wishlist_icon"><img src="/assets/heart.png" alt=""></div></a>
               <div class="wishlist_content">
                 <div class="wishlist_text"><a href="<%= my_favorites_path %>" style="    color: #ffffff;">My Favorites</a></div>
                 <% if !session[:favorites].nil? %>
@@ -109,30 +109,32 @@
             </div>
 
             <!-- Cart -->
-            <div class="cart">
-              <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                <div class="cart_icon">
-                  <img src="/assets/cart.png" alt="">
-                  <% if !session[:shop_cart].nil? %>
-                  <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= session[:shop_cart].count if !session[:shop_cart].nil? %></span></div>
-                      <% elsif current_user.present? %>
+            <a href="<%= cart_path %>">
+              <div class="cart">
+                <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                  <div class="cart_icon">
+                    <img src="/assets/cart.png" alt="">
+                    <% if !session[:shop_cart].nil? %>
+                      <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= session[:shop_cart].count if !session[:shop_cart].nil? %></span></div>
+                    <% elsif current_user.present? %>
                       <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.where(status: "pending").last.order_items.count if current_user.orders.where(status: "pending").present? %></span></div>
-                  <% end %>
-                </div>
-                <div class="cart_content">
-                  <% if current_user.present? && current_user.orders.where(status: "pending").present? %>
-                  <div class="cart_text"><a href="<%= cart_path %>" style="    color: #ffffff;">Cart</a></div>
-                  <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) %></div>
+                    <% end %>
+                  </div>
+                  <div class="cart_content">
+                    <% if current_user.present? && current_user.orders.where(status: "pending").present? %>
+                      <div class="cart_text"><a href="<%= cart_path %>" style="    color: #ffffff;">Cart</a></div>
+                      <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) %></div>
                     <% elsif !session[:shop_cart].nil? %>
-                    <div class="cart_text"><a  href="<%= cart_path %>" style=" color: #ffffff;">Cart</a></div>
-                    <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) if !session[:shop_cart].nil? %></div>
+                      <div class="cart_text"><a  href="<%= cart_path %>" style=" color: #ffffff;">Cart</a></div>
+                      <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) if !session[:shop_cart].nil? %></div>
                     <% else %>
-                    <div class="cart_text"><a  style="    color: #ffffff;">Cart</a></div>
-                    <div class="cart_price" style="color: #ffffff;">$0</div>
-                  <% end %>
+                      <div class="cart_text"><a  style="    color: #ffffff;">Cart</a></div>
+                      <div class="cart_price" style="color: #ffffff;">$0</div>
+                    <% end %>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
