@@ -4,6 +4,9 @@
       <div class="card-header">
         <strong>Add</strong> Product
       </div>
+      <div class="card-header">
+        <%= link_to "Delete Product", delete_product_path(id: @product.id) %>
+      </div>
       <div class="card-body card-block">
         <%= simple_form_for @product, url: update_product_path(product_id: @product.id), :html => {:multipart => true }, method: :put do |f| %>
           <%= f.error_notification %>

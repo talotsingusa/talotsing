@@ -464,7 +464,8 @@ class DashboardsController < ApplicationController
   def delete_product
       @product = Product.find(params[:id])
      if @product.destroy
-       redirect_to product_list_path
+       flash[:notice] = 'product deleted successfully'
+       redirect_to dashboards_path
      end
   end
 
