@@ -262,17 +262,9 @@
                   </ul>
                 </li>
                 <li class="hassubs">
-                  <a href="#">Lingerie<i class="fas fa-chevron-down"></i></a>
+                  <a href="#">Lingerie & Intimate<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [11]).sample(10).each do |product_type| %>
-                      <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
-                    <% end %>
-                  </ul>
-                </li>
-                <li class="hassubs">
-                  <a href="#">Swimwear<i class="fas fa-chevron-down"></i></a>
-                  <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [12]).sample(10).each do |product_type| %>
+                    <% ProductType.where("sub_category_id IN (?)", [191]).sample(10).each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
