@@ -42,10 +42,26 @@ $(document).ready(function () {
 
     $('.sizecheckbox span').click(function() {
         var allspan = document.querySelectorAll('.sizecheckbox span');
-        for(let i = 0; i < allspan.length; i++) {
+        for(var i = 0; i < allspan.length; i++) {
             allspan[i].className = '';
         }
         $(this).addClass('hovers');
         $('#sizecheckboxvalue').val($(this).attr("data-title"));
+    });
+    $('.colorcheckbox span').click(function() {
+        var allspan = document.querySelectorAll('.colorcheckbox span');
+        for(var i = 0; i < allspan.length; i++) {
+            allspan[i].className = '';
+        }
+        $(this).addClass('hovers');
+        $('#colorcheckbox').val($(this).attr("data-title"));
+    });
+    $('.shippingcheckbox span').click(function() {
+        var allspan = document.querySelectorAll('.shippingcheckbox span');
+        for(var i = 0; i < allspan.length; i++) {
+            allspan[i].className = '';
+        }
+        $(this).addClass('hovers');
+        $('#shippingcheckbox').val($(this).attr("data-title"));
     });
 });

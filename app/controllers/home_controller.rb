@@ -78,6 +78,16 @@ class HomeController < ApplicationController
 
   def product
     @product = Product.find(params[:id])
+    @related_products = @product.product_type.products
+    if ShippingPrice.all.count > 0
+      @product_shipping = ShippingPrice.first.price
+    end
+    if @product.sizes.present?
+      @product_size = @product.sizes.first.name
+    end
+    if @product.colors.present?
+      @product_colors = @product.colors.first.name
+    end
     if current_user.present?
       recent_viewed = RecentView.where(user_id: current_user.id, product_id: params[:id])
       if recent_viewed.present?
