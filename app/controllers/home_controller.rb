@@ -245,6 +245,7 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.js
     end
+    render layout: "product_application"
   end
 
   def remove_favorite
