@@ -12,6 +12,8 @@
 @import "new_shop";
 @import "product_responsive";
 @import "common_style.css";
+@import "magnifier";
+@import "style";
 
 .notice{
   padding:10px 15px 15px 15px; background: #febd69;    margin-top: 66px; color: #000000 !important; border-radius:3px; width:300px; position:fixed; top:15px; right:15px; box-shadow:0 2px 10px rgba(black, .1); z-index:9999; border:none !important;

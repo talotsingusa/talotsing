@@ -1,298 +1,341 @@
-<div class="single_product">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div id="myCarousel" class="carousel slide" data-interval="false">
-
-          <div class="carousel-inner" role="listbox">
-            <% if @product.present? %>
-              <% @product.product_images.each_with_index do |image, index| %>
-                <div class="item carousel-item" id="<%= "product_large_#{index}" %>">
-                  <img src="<%= image.image.url(:original) if image.present? %>">
-                </div>
-              <% end %>
-            <% end %>
-
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-interval="false"
+           data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img class="d-block w-100 zoome" src="/assets/slider-img.jpg" alt="First slide">
           </div>
-
-          <div id="thumbCarousel">
-            <% if @product.present? %>
-              <% @product.product_images.each_with_index do |image, index| %>
-                <div data-target="#myCarousel" data-slide-to="<%= index %>" class="thumb" id="<%= "product_small_#{index}" %>">
-                  <img src="<%= image.image.url(:original) if image.present? %>">
-                </div>
-              <% end %>
-            <% end %>
+          <div class="carousel-item">
+            <img class="d-block w-100 zoome" src="/assets/slider-img.jpg" alt="Second slide">
           </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 zoome" src="/assets/slider-img.jpg" alt="Third slide">
+          </div>
+        </div>
+        <ol class="carousel-indicators" id="carousel-thumb-hover">
+          <li data-target="#carousel-thumb" data-slide-to="0" class="active">
+            <img class="d-block w-100" src="/assets/slider-img.jpg" class="img-fluid">
+          </li>
+          <li data-target="#carousel-thumb" data-slide-to="1">
+            <img class="d-block w-100" src="/assets/slider-img.jpg" class="img-fluid">
+          </li>
+          <li data-target="#carousel-thumb" data-slide-to="2">
+            <img class="d-block w-100" src="/assets/slider-img.jpg" class="img-fluid">
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="magnifier-preview" id="preview"></div>
+      <a href="#">
+        <p class="title">Artificial Fur Soft & Plus Size Women Coat mid-long style fuchsia Sold By PC</p>
+      </a>
+      <div class="des-text">
+        <ul id="proInfo" class="clearfix">
+          <li><span>Item No:</span><em class="c666">180922060334</em>
+          </li>
+          <li id="all_dispath" data24="Within 24 hours" data5d="Within 5 days"><span>Dispatch:</span><em>Within
+            5 days</em></li>
+          <li><span>Material :</span><em>Artificial Fur</em></li>
+          <li><span>Design:</span><em>Slim,contrast color,Plus Size</em></li>
+          <li><span>Craft:</span><em>patchwork</em></li>
+          <li><span>Type:</span><em>Women Coat</em></li>
+          <li><span>Pattern Style:</span><em>leopard</em></li>
+          <li><span>Style:</span><em>European and American style</em></li>
+          <li><span>Sleeve:</span><em>long sleeve</em></li>
+          <li><span>Collar:</span><em>lapel collar</em></li>
+          <li><strong class="red">In Stock - Available</strong></li>
+          <li class="undis" style="display: none;"><span>Packing:</span><em id="sonpropacking"></em></li>
+          <li class="undis" style="display: list-item;"><span>Weight:</span><em id="son_weight">510 gram</em></li>
+        </ul>
+      </div>
+      <div class="select_alls" id="sonProduce">
+        <ul>
+          <li data-size="Size" class="li_text">
+            <p>Size:</p>
+            <div class="w_100">
+              <span sonpiid="1" pkey="0" data-title="S">S</span>
+              <span sonpiid="2" pkey="0" data-title="M" class="hovers">M</span>
+              <span sonpiid="3" pkey="0" data-title="L">L</span>
+              <span sonpiid="4" pkey="0" data-title="XL">XL</span>
+              <span sonpiid="5" pkey="0" data-title="XXL">XXL</span>
+              <span sonpiid="6" pkey="0" data-title="XXXL">XXXL</span>
+            </div>
+            <div id="size-tips" class="tips-content undis" style="display: block;">
+              <p class="content" id="sizeContent">
+                <font class="fs12 fb">Bust</font>:96cm, <font class="fs12 fb">Shoulder</font>:38cm,
+                <font class="fs12 fb">Sleeve Length</font>:60cm, <font class="fs12 fb">Top Length</font>:82cm
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="sizechanginch undis" style="display: block;">
+        <p id="sizeShow" data-toggle="collapse" data-target="#demo" class="collapse-title collapsed" style="border-bottom: 0px solid;">
+          <!-- <span class="icon-add pull-right"> -->
+          <!-- <img width="20" height="20" src="/assets/minus.png"> -->
+          <!-- </span> -->
+          <i class="fa" aria-hidden="true"></i>Size Guide</p>
+        <div class="size undis collapse" id="demo">
 
+          <div class="btn-group">
+            <button id="size_table" type="button" data-flag="cm" class="btn btn-primary">Centimeters</button>
+            <button id="size_inch" type="button" data-flag="inch" class="btn btn-default">inch</button>
+            <button id="size_img" type="button" data-flag="img" class="btn btn-default">How To Measure</button>
+          </div>
+          <div class="fs16 ml15 pt15 fb indis">1(in)=2.5399(cm)</div>
+          <div class="table-container">
+            <div class="size_img" style="display: none;"><img src="https://gimg3.fbeads.us/produceSort/20170822/1503369203.jpg"></div>
+            <table class="size_inch" style="display: none;">
+              <tbody>
+              <tr>
+                <td>Our Size</td>
+
+                <td>Bust</td>
+
+                <td>Shoulder</td>
+
+                <td>Sleeve Length</td>
+
+                <td>Top Length</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td class="size_change" data-key="Bust" data-init="92">35.88</td>
+                <td class="size_change" data-key="Shoulder" data-init="37">14.43</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="59">23.01</td>
+                <td class="size_change" data-key="Top Length" data-init="81">31.59</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td class="size_change" data-key="Bust" data-init="96">37.44</td>
+                <td class="size_change" data-key="Shoulder" data-init="38">14.82</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="60">23.40</td>
+                <td class="size_change" data-key="Top Length" data-init="82">31.98</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td class="size_change" data-key="Bust" data-init="100">39.00</td>
+                <td class="size_change" data-key="Shoulder" data-init="39">15.21</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="61">23.79</td>
+                <td class="size_change" data-key="Top Length" data-init="83">32.37</td>
+              </tr>
+              <tr>
+                <td>XL</td>
+                <td class="size_change" data-key="Bust" data-init="104">40.56</td>
+                <td class="size_change" data-key="Shoulder" data-init="40">15.60</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="62">24.18</td>
+                <td class="size_change" data-key="Top Length" data-init="84">32.76</td>
+              </tr>
+              <tr>
+                <td>XXL</td>
+                <td class="size_change" data-key="Bust" data-init="108">42.12</td>
+                <td class="size_change" data-key="Shoulder" data-init="41">15.99</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="63">24.57</td>
+                <td class="size_change" data-key="Top Length" data-init="85">33.15</td>
+              </tr>
+              <tr>
+                <td>XXXL</td>
+                <td class="size_change" data-key="Bust" data-init="112">43.68</td>
+                <td class="size_change" data-key="Shoulder" data-init="42">16.38</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="64">24.96</td>
+                <td class="size_change" data-key="Top Length" data-init="86">33.54</td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="size_table" style="display: table;">
+              <tbody>
+              <tr>
+                <td>Our Size</td>
+
+                <td>Bust</td>
+
+                <td>Shoulder</td>
+
+                <td>Sleeve Length</td>
+
+                <td>Top Length</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td class="size_change" data-key="Bust" data-init="92">92</td>
+                <td class="size_change" data-key="Shoulder" data-init="37">37</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="59">59</td>
+                <td class="size_change" data-key="Top Length" data-init="81">81</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td class="size_change" data-key="Bust" data-init="96">96</td>
+                <td class="size_change" data-key="Shoulder" data-init="38">38</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="60">60</td>
+                <td class="size_change" data-key="Top Length" data-init="82">82</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td class="size_change" data-key="Bust" data-init="100">100</td>
+                <td class="size_change" data-key="Shoulder" data-init="39">39</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="61">61</td>
+                <td class="size_change" data-key="Top Length" data-init="83">83</td>
+              </tr>
+              <tr>
+                <td>XL</td>
+                <td class="size_change" data-key="Bust" data-init="104">104</td>
+                <td class="size_change" data-key="Shoulder" data-init="40">40</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="62">62</td>
+                <td class="size_change" data-key="Top Length" data-init="84">84</td>
+              </tr>
+              <tr>
+                <td>XXL</td>
+                <td class="size_change" data-key="Bust" data-init="108">108</td>
+                <td class="size_change" data-key="Shoulder" data-init="41">41</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="63">63</td>
+                <td class="size_change" data-key="Top Length" data-init="85">85</td>
+              </tr>
+              <tr>
+                <td>XXXL</td>
+                <td class="size_change" data-key="Bust" data-init="112">112</td>
+                <td class="size_change" data-key="Shoulder" data-init="42">42</td>
+                <td class="size_change" data-key="Sleeve Length" data-init="64">64</td>
+                <td class="size_change" data-key="Top Length" data-init="86">86</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="product-info">
-          <h3><%= @product.name if @product.present? %></h3>
-          <h3>$<%= @product.price if @product.present? %> USD</h3>
-          <div class="rating">
-            <span title="five stars">&#9734;</span>
-            <span title="four stars">&#9734;</span>
-            <span title="three stars">&#9734;</span>
-            <span title="two stars">&#9734;</span>
-            <span title="one star">&#9734;</span>
-          </div>
-          <p>3 Reviews</p>
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    PRODUCT DETAILS
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseOne" class="panel-collapse in collapse show" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                  <ul>
-                    <li><%= @product.description if @product.present? %></li>
-                    <li><%= @product.additional_information if @product.present? %></li>
-<!--                    <li>Ruffle Shoulder</li>-->
-<!--                    <li>Floral Print</li>-->
-<!--                    <li>Mini</li>-->
-<!--                    <li>94% Polyester; 6% Spandex</li>-->
-<!--                    <li>Print Placement Will Vary</li>-->
-<!--                    <li>Made In USA</li>-->
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
-                     aria-controls="collapseTwo">
-                    SHIPPING INFORMATION
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                  <table border="1px">
-                    <tbody>
-                    <tr>
-                      <td width="50%"> METHOD </td>
-                      <td width="20%"> COST </td>
-                      <td width="30%"> TIME </td>
-                    </tr>
-                    <tr>
-                      <td>Overnight + Saturday Delivery</td>
-                      <td>$20</td>
-                      <td>1 Business Day</td>
-                    </tr>
-                    <tr>
-                      <td>Standard</td>
-                      <td>$6</td>
-                      <td>2-3 Business Days</td>
-                    </tr>
-                    <tr>
-                      <td>Over $75</td>
-                      <td>FREE</td>
-                      <td>2-3 Business Days</td>
-                    </tr>
-                    <tr>
-                      <td>Canada &amp; U.K. Over $75</td>
-                      <td>FREE</td>
-                      <td>5-7 Business Days</td>
-                    </tr>
-                    <tr>
-                      <td>Canada &amp; UK</td>
-                      <td>$6</td>
-                      <td>5-7 Business Days</td>
-                    </tr>
-                    <tr>
-                      <td>International</td>
-                      <td>$10</td>
-                      <td>5-10 Business Days</td>
-                    </tr>
-                    <tr>
-                      <td>International Express</td>
-                      <td>$25</td>
-                      <td>2-5 Business Days</td>
-                    </tr>
-                    <tr>
-                      <td>International Over $150</td>
-                      <td>FREE</td>
-                      <td>5-10 Business Days</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <% if @product.present? %>
-              <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                  <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                      PRODUCT SPECIFICATIONS
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse in collapse show" role="tabpanel" aria-labelledby="headingThree">
-                  <div class="panel-body">
-                    <ul>
-                      <% @product.product_specifications.each do |specs| %>
-                        <li><%= "#{specs.spec_key}: #{specs.spec_value}" if @product.product_specifications.present? %></li>
-                      <% end %>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          </div>
-          <br>
-          <%= form_for :add_product_to_cart, url: add_to_cart_path, :html => {:id => "cart_form_for"}, class: "header_search_form clearfix", method: :get do |f| %>
-            <%= f.hidden_field :product_id, value: @product.id if @product.present? %>
-            <%= f.hidden_field :quantity, value: 1 , id: "product_quantity_in_cart"%>
-            <%= f.collection_select(:size, @product.sizes.all,
-                                    :name, :name,
-                                    {:prompt => 'Please select size'}, {class: "form-control"}) if @product.present? %>
-            <h5 class="size_error" style="color: red;    margin-top: 5px;">Please select size from the list</h5>
-            <!--              <select class="form-control">-->
-            <!--                <option value="" selected="" disabled="disabled">Size</option>-->
-            <!--                <option value="XS">XS</option>-->
-            <!--                <option value="S">S</option>-->
-            <!--                <option value="M">M</option>-->
-            <!--                <option value="L">L</option>-->
-            <!--                <option value="XL">XL</option>-->
-            <!--              </select>-->
-            <br>
-            <%= f.collection_select(:color, @product.colors.all,
-                                    :name, :name,
-                                    {:prompt => 'Please select color'}, {class: "form-control"}) if @product.present? %>
-            <h5 class="color_error" style="color: red;    margin-top: 5px;">Please select color from the list</h5>
-            <br>
-            <%= f.collection_select(:shipping, ShippingPrice.all,
-                                    :price, :name,
-                                    {:prompt => 'Please select shipping'}, {class: "form-control"}) if @product.present? %>
-            <h5 class="shipping_error" style="color: red;    margin-top: 5px;">Please select shipping from the list</h5>
 
-          <% end %>
-          <br>
-          <div class="row">
-<!--            <div class="col-lg-4">-->
-<!--              <select class="fc-custom form-control">-->
-<!--                <option value="" selected="" disabled="disabled">Size</option>-->
-<!--                <option value="XS">XS</option>-->
-<!--                <option value="S">S</option>-->
-<!--                <option value="M">M</option>-->
-<!--                <option value="L">L</option>-->
-<!--                <option value="XL">XL</option>-->
-<!--              </select>-->
-<!--            </div>-->
-            <div class="col-lg-6">
-              <!-- Product Quantity -->
-              <div class="product_quantity clearfix">
-                <span>Quantity: </span>
-                <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-                <div class="quantity_buttons">
-                  <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-                  <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
-                </div>
-              </div>
+      <div class="proBtnbuy ow">
+        <p>
+          <span class="red">$ 11.00/PC</span>QTY: <input name="Count" type="text" value="1" class="txt w50 mt5 mr5">
+        </p>
+        <!-- <p class="mt5"> -->
+        <button type="button" class="btn btn-primary btn-sm">
+          <i class="fa fa-cart-plus" aria-hidden="true"></i> Shopping Cart
+        </button>
+        <div class="fav">
+          <a href="javascript:void(0);"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        </div>
+        <!-- </p> -->
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="pro-container">
+        <div class="pro-container-header">
+          <p>You May Also Like</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
             </div>
-<!--            <div class="col-lg-4">-->
-<!--              <!-- Product Color -->
-<!--              <ul class="product_color">-->
-<!--                <li>-->
-<!--                  <span>Color: </span>-->
-<!--                  <div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>-->
-<!--                  <div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>-->
-<!--                  <ul class="color_list">-->
-<!--                    <li><div class="color_mark" style="background: #999999;"></div></li>-->
-<!--                    <li><div class="color_mark" style="background: #b19c83;"></div></li>-->
-<!--                    <li><div class="color_mark" style="background: #000000;"></div></li>-->
-<!--                  </ul>-->
-<!--                </li>-->
-<!--              </ul>-->
-<!--            </div>-->
           </div>
-          <div class="button_container">
-            <button type="button" class="button cart_button" id="adding_products_in_cart">Add to Cart</button>
-            <% if check_favorite(@product.id) == true %>
-              <%= link_to remove_favorite_path(product_id: @product.id), remote: true do %>
-                <div class="product_fav active"><i class="fas fa-heart"></i></div>
-              <% end %>
-            <% else %>
-              <%= link_to add_favorite_path(product_id: @product.id), remote: true do %>
-                <div class="product_fav"><i class="fas fa-heart"></i></div>
-              <% end %>
-            <% end %>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
           </div>
-          <!-- <img src="images/newpdp.gif" class="img-responsive cart-img" alt=""> -->
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
+
+          <div class="col-lg-2dot4">
+            <div class="img-card">
+              <img class="w-100" src="/assets/slider-img.jpg" alt="">
+              <p class="red">US $19</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-<style>
-  .size_error, .color_error, .shipping_error{
-    display: none;
-  }
-</style>
-<script>
-    $('#product_large_0').addClass('active');
-    $('#product_small_0').addClass('active');
-    $(document).on("click", "#image_slider_new", function() {
-        $(".main_image_show").attr("src", $(this).data("image"));
-    });
-    // $(document).on("click", "#adding_products_in_cart", function(e) {
-    //     e.preventDefault();
-    //     $("#product_quantity_in_cart").val($("#quantity_input").val());
-    //     $("#cart_form_for").submit();
-    // });
-    $(document).on("click", "#quantity_inc_button", function(e) {
-        $("#product_quantity_in_cart").val($("#quantity_input").val());
-    });
-    $(document).on("click", "#quantity_dec_button", function(e) {
-        $("#product_quantity_in_cart").val($("#quantity_input").val());
-    });
-    $(document).on("click", "#adding_products_in_cart", function(e) {
-        if(($("#add_product_to_cart_size").val()!="") && ($("#add_product_to_cart_color").val()!="") && ($("#add_product_to_cart_shipping").val()!="")){
-            e.preventDefault();
-            $("#adding_products_in_cart").html('Adding to cart...');
-            $("#adding_products_in_cart").prop('disabled', true);
-            $(".size_error").hide();
-            $(".color_error").hide();
-            $(".shipping_error").hide();
-            $("#product_quantity_in_cart").val($("#quantity_input").val());
-            $("#cart_form_for").submit();
-        } else {
-            e.preventDefault();
-            if($("#add_product_to_cart_size").val()===""){
-                $(".size_error").show();
-            } else {
-                $(".size_error").hide();
-            }
-
-            if($("#add_product_to_cart_color").val()===""){
-                $(".color_error").show();
-            } else {
-                $(".color_error").hide();
-            }
-
-            if($("#add_product_to_cart_shipping").val()===""){
-                $(".shipping_error").show();
-            } else {
-                $(".shipping_error").hide();
-            }
-        }
-    });
-</script>

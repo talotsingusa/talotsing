@@ -27,7 +27,9 @@
 //= require jquery.slick
 //= require jquery.sliders
 //= require toastr
-//= require product_custom.js
+//= require Event.js
+//= require Magnifier.js
+//= require custom_product.js
 
 
 $('body').css({'overflow' : ''});
