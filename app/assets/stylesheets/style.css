@@ -10,7 +10,10 @@
 #carousel-thumb .carousel-item img {
     height: 510px;
 }
-
+#carousel-thumb .carousel-inner {
+    float: inherit;
+    width: 100%;
+}
 .carousel-thumbnails .carousel-indicators {
     bottom: -80px;
 }
@@ -46,7 +49,7 @@ a:hover {
     padding: 0 0 0 13px;
     height: 36px;
     line-height: 36px;
-    background: url(../images/addot.gif) 3px center no-repeat;
+    background: url(/assets/addot.gif) 3px center no-repeat;
     border-bottom: 1px solid #e5e5e5;
     color: #7c7b7b;
     font-weight: bold;
@@ -93,7 +96,7 @@ ul li {
 .select_alls li.li_text span.hovers {
     border: 2px #cc0000 solid;
     margin-top: -2px;
-    background: url(../images/sp_dui2.gif) no-repeat right bottom;
+    background: url(/assets/sp_dui2.gif) no-repeat right bottom;
     margin-right: 7px;
     margin: 1px 7px 1px 0;
 }
@@ -245,6 +248,10 @@ li ol {
     border-radius: 0;
     padding-left: 20px;
     padding-right: 20px;
+    font-size: 14px;
+}
+.proBtnbuy button .fa {
+    padding-right: 6px;
 }
 
 .fav {
@@ -255,7 +262,7 @@ li ol {
     border-radius: 50%;
     transition: all 200ms ease;
     text-align: center;
-    line-height: 2.4;
+    line-height: 2.7;
     position: absolute;
     left: 175px;
     bottom: 0;
@@ -297,7 +304,11 @@ li ol {
 
 
 
-
+@media (max-width: 990px) {
+    .carousel-thumbnails .carousel-indicators {
+        bottom: 0;
+    }
+}
 
 
 

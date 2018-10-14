@@ -3,5 +3,5 @@ development:
   encoding: unicode
   database: talotsing_local
   pool: 5
-  username: usamakhan
+  username: tiger...
   password: ""
