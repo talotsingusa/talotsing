@@ -279,7 +279,7 @@
           <% @related_products.each do |product| %>
             <div class="col-lg-2dot4">
               <div class="img-card">
-                <img class="w-100" src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+                <a href="<%= product_path(id: product.id) %>"><img class="w-100" src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt=""></a>
                 <a href="<%= product_path(id: product.id) %>"><p class="red"><%= product.name %></p></a>
               </div>
             </div>
