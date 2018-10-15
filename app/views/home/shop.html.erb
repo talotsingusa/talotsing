@@ -21,6 +21,26 @@
             <% end %>
           </ul>
         </div>
+        <div class="sidebar_section">
+          <div class="sidebar_title">Sub Categories</div>
+          <ul class="sidebar_categories">
+            <% if @sub_categories.present? %>
+              <% @sub_categories.each do |sub_category| %>
+                <li><a href="<%= shop_path(sub_category: sub_category.id)%>"><%= sub_category.name %></a></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+        <div class="sidebar_section">
+          <div class="sidebar_title">Product Types</div>
+          <ul class="sidebar_categories">
+            <% if @product_types.present? %>
+              <% @product_types.each do |product_type| %>
+                <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %></a></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
         <div class="sidebar_section filter_by_section">
           <div class="sidebar_title">Filter By</div>
           <div class="sidebar_subtitle">Price</div>
