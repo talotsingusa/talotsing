@@ -14964,28 +14964,35 @@ button.close {
 /* line 10, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 #carousel-thumb .carousel-item img {
   height: 510px;
+  text-align: center;
+  margin: auto;
+  width: auto !important;
+  max-width: 100%;
 }
 
-/* line 13, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 17, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 #carousel-thumb .carousel-inner {
   float: inherit;
   width: 100%;
 }
 
-/* line 17, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 21, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .carousel-thumbnails .carousel-indicators {
   bottom: -80px;
-}
-
-/* line 21, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
-.carousel-thumbnails .carousel-indicators img {
-  max-width: 100px;
-  height: 50px;
-  overflow: hidden;
-  display: block;
+  overflow-x: scroll;
+  width: 90%;
+  margin: auto;
 }
 
 /* line 28, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+.carousel-thumbnails .carousel-indicators img {
+  height: 55px;
+  overflow: hidden;
+  width: auto !important;
+  margin: auto;
+}
+
+/* line 36, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .carousel-thumbnails .carousel-indicators li {
   height: auto;
   max-width: 60px;
@@ -14996,17 +15003,17 @@ button.close {
   /* box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75); */
 }
 
-/* line 38, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 46, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 #carousel-thumb .carousel-thumbnails .carousel-indicators li.active {
   border-bottom: 4px solid #fff;
 }
 
-/* line 42, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 50, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 a:hover {
   text-decoration: none;
 }
 
-/* line 46, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 54, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .des-text ul li {
   width: 50%;
   float: left;
@@ -15022,28 +15029,28 @@ a:hover {
   font-size: 12px;
 }
 
-/* line 61, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 69, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .des-text ul li span {
   padding-right: 10px;
 }
 
-/* line 65, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 73, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .des-text ul li em {
   font-style: normal;
   font-weight: 600;
 }
 
-/* line 70, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 78, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .red {
   color: red;
 }
 
-/* line 74, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 82, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 ul li {
   list-style: none;
 }
 
-/* line 78, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 86, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .select_alls li.li_text span {
   float: left;
   color: #333;
@@ -15062,7 +15069,7 @@ ul li {
   border: 1px solid #666666;
 }
 
-/* line 96, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 104, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .select_alls li.li_text span.hovers {
   border: 2px #cc0000 solid;
   margin-top: -2px;
@@ -15071,7 +15078,7 @@ ul li {
   margin: 1px 7px 1px 0;
 }
 
-/* line 104, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 112, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .select_alls {
   background: #fffcf5;
   border: 1px #edd28b solid;
@@ -15079,14 +15086,14 @@ ul li {
   overflow: hidden;
 }
 
-/* line 111, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 119, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .select_alls li {
   width: 100%;
   overflow: auto;
   padding: 4px 0 0 10px;
 }
 
-/* line 117, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 125, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .select_alls li div {
   float: left;
   position: relative;
@@ -15094,13 +15101,13 @@ ul li {
   font-size: 13px;
 }
 
-/* line 124, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 132, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .select_alls ul li p {
   margin-bottom: 0;
   font-size: 12px;
 }
 
-/* line 129, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 137, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .tips-content {
   position: relative;
   background: #f4f5f7;
@@ -15110,29 +15117,29 @@ ul li {
   line-height: 20px;
 }
 
-/* line 138, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 146, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 p.content {
   margin-bottom: 0;
 }
 
-/* line 142, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 150, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .fb {
   font-weight: bold;
   display: inline;
 }
 
-/* line 147, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 155, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 ul,
 li ol {
   margin-bottom: 0;
 }
 
-/* line 152, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 160, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .size {
   border: 1px solid #ddd;
 }
 
-/* line 156, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 164, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -15143,14 +15150,14 @@ li ol {
   margin-left: 10px;
 }
 
-/* line 166, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 174, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .table-container {
   overflow-x: scroll;
   margin-bottom: 10px;
   margin-left: 10px;
 }
 
-/* line 172, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 180, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .table-container table {
   border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
@@ -15158,12 +15165,12 @@ li ol {
   width: 96%;
 }
 
-/* line 180, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 188, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .table-container table tr:nth-child(2n+1) {
   background-color: #f9f9f9;
 }
 
-/* line 184, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 192, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .table-container table td,
 #size-guide table th {
   border-right: 1px solid #ddd;
@@ -15174,7 +15181,7 @@ li ol {
   font-size: 14px;
 }
 
-/* line 194, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 202, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .btn-group,
 .btn-group-vertical {
   position: relative;
@@ -15182,27 +15189,27 @@ li ol {
   vertical-align: middle;
 }
 
-/* line 201, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 209, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 [data-toggle="collapse"] .fa:before {
   content: "\f068";
 }
 
-/* line 205, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 213, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 [data-toggle="collapse"].collapsed .fa:before {
   content: "\f067";
 }
 
-/* line 209, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 217, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .collapse-title .fa {
   margin-right: 5px;
 }
 
-/* line 213, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 221, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .size #size_img:hover .size-img {
   display: block;
 }
 
-/* line 217, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 225, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .magnifier-preview {
   width: 100% !important;
   height: 510px !important;
@@ -15210,33 +15217,34 @@ li ol {
   display: none;
 }
 
-/* line 224, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 232, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .magnifier-lens {
   background: transparent !important;
   border: 1px solid #000;
   height: 90px !important;
   width: 90px !important;
+  margin-left: 80px;
 }
 
-/* line 231, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 240, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .proBtnbuy p {
   margin-bottom: 4px;
   font-size: 13px;
 }
 
-/* line 236, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 245, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .proBtnbuy p input {
   width: 50px;
   padding-left: 4px;
   padding-right: 4px;
 }
 
-/* line 242, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 251, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .proBtnbuy p span {
   margin-right: 4px;
 }
 
-/* line 246, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 255, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .proBtnbuy button {
   height: 40px;
   border-radius: 0;
@@ -15245,12 +15253,12 @@ li ol {
   font-size: 14px;
 }
 
-/* line 253, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 262, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .proBtnbuy button .fa {
   padding-right: 6px;
 }
 
-/* line 257, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 266, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .fav {
   width: 36px;
   height: 36px;
@@ -15266,7 +15274,7 @@ li ol {
   color: #fff;
 }
 
-/* line 272, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 281, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .pro-container-header {
   background: rgba(177, 170, 177, 0.2);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(177, 170, 177, 0.2)), color-stop(32%, rgba(255, 255, 255, 0.2)), color-stop(69%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(177, 170, 177, 0.2)));
@@ -15274,12 +15282,12 @@ li ol {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b1aab1', endColorstr='#b1aab1', GradientType=0);
 }
 
-/* line 283, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 292, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .pro-container-header p {
   padding: 8px;
 }
 
-/* line 287, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 296, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .pro-container {
   border: 1px solid #d7d6d7;
   margin-top: 88px;
@@ -15287,26 +15295,54 @@ li ol {
   padding: 10px;
 }
 
-/* line 293, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 302, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .img-card {
   text-align: center;
   width: 100%;
 }
 
-/* line 298, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 307, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .img-card img {
   border: 1px solid #DBDBDB;
   padding: 3px;
   background-color: #F3F3F3;
 }
 
+/* line 313, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+.go-left {
+  float: left;
+  margin-top: 40px;
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* line 320, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+.go-right {
+  float: right;
+  margin-top: 40px;
+  width: 15px;
+  height: 40px;
+  cursor: pointer;
+}
+
 @media (max-width: 990px) {
-  /* line 308, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+  /* line 329, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
   .carousel-thumbnails .carousel-indicators {
     bottom: 0;
   }
+
+  /* line 332, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+  .go-left {
+    display: none;
+  }
+
+  /* line 335, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+  .go-right {
+    display: none;
+  }
 }
-/* line 317, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 344, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .col-2dot4,
 .col-sm-2dot4,
 .col-md-2dot4,
@@ -15319,35 +15355,35 @@ li ol {
   padding-left: 15px;
 }
 
-/* line 329, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+/* line 356, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
 .col-2dot4 {
   flex: 0 0 20%;
   max-width: 20%;
 }
 
 @media (min-width: 540px) {
-  /* line 337, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+  /* line 364, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
   .col-sm-2dot4 {
     flex: 0 0 20%;
     max-width: 20%;
   }
 }
 @media (min-width: 720px) {
-  /* line 346, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+  /* line 373, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
   .col-md-2dot4 {
     flex: 0 0 20%;
     max-width: 20%;
   }
 }
 @media (min-width: 960px) {
-  /* line 355, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+  /* line 382, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
   .col-lg-2dot4 {
     flex: 0 0 20%;
     max-width: 20%;
   }
 }
 @media (min-width: 1140px) {
-  /* line 364, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
+  /* line 391, /Users/usamakhan/work/talotsing/Talotsing/app/assets/stylesheets/style.css */
   .col-xl-2dot4 {
     flex: 0 0 20%;
     max-width: 20%;
