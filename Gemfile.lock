@@ -96,6 +96,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
+    elevatezoom-rails (1.0.0)
     erubi (1.7.1)
     execjs (2.7.0)
     faraday (0.13.1)
@@ -296,6 +297,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  elevatezoom-rails (~> 1.0)
   font-awesome-rails
   font-awesome-sass (~> 5.0.13)
   geocomplete_rails

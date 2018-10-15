@@ -27,8 +27,8 @@
 //= require jquery.slick
 //= require jquery.sliders
 //= require toastr
+//= require jquery.elevatezoom
 //= require Event.js
-//= require Magnifier.js
 //= require custom_product.js
 
 

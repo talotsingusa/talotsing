@@ -30,15 +30,7 @@ $(document).ready(function () {
 
 
     $('.zoome').mouseover(function () {
-        $('.magnifier-preview').show();
-        var evt = new Event(),
-            m = new Magnifier(evt);
-        m.attach({
-            thumb: '#' + this.id,
-            large: this.src,
-            largeWrapper: 'preview',
-            zoom: 3
-        });
+        $('#' + this.id).elevateZoom();
     });
 
     $('a.go-right').click(function () {

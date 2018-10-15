@@ -70,6 +70,7 @@ gem 'will_paginate-bootstrap4'
 gem 'geocomplete_rails'
 gem 'redis'
 gem 'puma_worker_killer'
+gem 'elevatezoom-rails', '~> 1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
