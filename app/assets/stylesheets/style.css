@@ -9,6 +9,10 @@
 
 #carousel-thumb .carousel-item img {
     height: 510px;
+    text-align: center;
+    margin: auto;
+    width: auto !important;
+    max-width: 100%;
 }
 #carousel-thumb .carousel-inner {
     float: inherit;
@@ -16,13 +20,17 @@
 }
 .carousel-thumbnails .carousel-indicators {
     bottom: -80px;
+    overflow-x: scroll;
+    width: 90%;
+    margin: auto;
 }
 
 .carousel-thumbnails .carousel-indicators img {
-    max-width: 100px;
-    height: 50px;
+    height: 55px;
     overflow: hidden;
-    display: block;
+    width: auto !important;
+    margin: auto;
+
 }
 
 .carousel-thumbnails .carousel-indicators li {
@@ -226,6 +234,7 @@ li ol {
     border: 1px solid #000;
     height: 90px !important;
     width: 90px !important;
+    margin-left: 80px;
 }
 
 .proBtnbuy p {
@@ -301,12 +310,30 @@ li ol {
     background-color: #F3F3F3;
 }
 
-
-
+.go-left {
+    float: left;
+    margin-top: 40px;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+}
+.go-right {
+    float: right;
+    margin-top: 40px;
+    width: 15px;
+    height: 40px;
+    cursor: pointer;
+}
 
 @media (max-width: 990px) {
     .carousel-thumbnails .carousel-indicators {
         bottom: 0;
+    }
+    .go-left {
+        display: none;
+    }
+    .go-right {
+        display: none;
     }
 }
 
