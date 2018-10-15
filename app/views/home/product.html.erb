@@ -297,6 +297,146 @@
   <%= f.hidden_field :shipping, value: @product_shipping , id: "product_shipping_cart"%>
 <% end %>
 <script>
+    /**
+     * Unifies event handling across browsers
+     *
+     * - Allows registering and unregistering of event handlers
+     * - Injects event object and involved DOM element to listener
+     *
+     * @author Mark Rolich <mark.rolich@gmail.com>
+     */
+    var Event = function () {
+        "use strict";
+        this.attach = function (evtName, element, listener, capture) {
+            var evt         = '',
+                useCapture  = (capture === undefined) ? true : capture,
+                handler     = null;
+
+            if (window.addEventListener === undefined) {
+                evt = 'on' + evtName;
+                handler = function (evt, listener) {
+                    element.attachEvent(evt, listener);
+                    return listener;
+                };
+            } else {
+                evt = evtName;
+                handler = function (evt, listener, useCapture) {
+                    element.addEventListener(evt, listener, useCapture);
+                    return listener;
+                };
+            }
+
+            return handler.apply(element, [evt, function (ev) {
+                var e   = ev || event,
+                    src = e.srcElement || e.target;
+
+                listener(e, src);
+            }, useCapture]);
+        };
+
+        this.detach = function (evtName, element, listener, capture) {
+            var evt         = '',
+                useCapture  = (capture === undefined) ? true : capture;
+
+            if (window.removeEventListener === undefined) {
+                evt = 'on' + evtName;
+                element.detachEvent(evt, listener);
+            } else {
+                evt = evtName;
+                element.removeEventListener(evt, listener, useCapture);
+            }
+        };
+
+        this.stop = function (evt) {
+            evt.cancelBubble = true;
+
+            if (evt.stopPropagation) {
+                evt.stopPropagation();
+            }
+        };
+
+        this.prevent = function (evt) {
+            if (evt.preventDefault) {
+                evt.preventDefault();
+            } else {
+                evt.returnValue = false;
+            }
+        };
+    };
+    // document.documentElement.setAttribute("lang", "en");
+    // document.documentElement.removeAttribute("class");
+
+    // axe.run(function (err, results) {
+    //     console.log(results.violations);
+    // });
+    $(document).ready(function () {
+        $(".size button").mouseover(function () {
+            var allButtons = document.querySelectorAll('.size button');
+            for (var i = 0; i < allButtons.length; i++) {
+                if (allButtons[i].id === this.id) {
+                    allButtons[i].className = 'btn btn-primary';
+                    var showMe = document.getElementsByClassName(allButtons[i].id);
+                    showMe[0].style.display = 'block';
+                } else {
+                    var showMe = document.getElementsByClassName(allButtons[i].id);
+                    showMe[0].style.display = 'none';
+                    allButtons[i].className = 'btn btn-default';
+                }
+
+            }
+        });
+        $(document).ready(function () {
+            $('#carousel-thumb-hover li')[0].click();
+        });
+        $('#carousel-thumb-hover li').mouseover(function () {
+            this.click();
+        });
+
+
+
+        $('.zoome').mouseover(function () {
+            $('#' + this.id).elevateZoom();
+        });
+
+        $('a.go-right').click(function () {
+            var pos = $('#carousel-thumb-hover').scrollLeft() + 300;
+            $('#carousel-thumb-hover').animate({
+                scrollLeft: pos
+            }, 1000, 'easeOutQuad');
+        });
+
+        $('a.go-left').click(function () {
+            var pos = $('#carousel-thumb-hover').scrollLeft() - 300;
+            $('#carousel-thumb-hover').animate({
+                scrollLeft: pos
+            }, 1000, 'easeOutQuad');
+        });
+
+        $('.sizecheckbox span').click(function () {
+            var allspan = document.querySelectorAll('.sizecheckbox span');
+            for (var i = 0; i < allspan.length; i++) {
+                allspan[i].className = '';
+            }
+            $(this).addClass('hovers');
+            $('#sizecheckboxvalue').val($(this).attr("data-title"));
+        });
+        $('.colorcheckbox span').click(function () {
+            var allspan = document.querySelectorAll('.colorcheckbox span');
+            for (var i = 0; i < allspan.length; i++) {
+                allspan[i].className = '';
+            }
+            $(this).addClass('hovers');
+            $('#colorcheckbox').val($(this).attr("data-title"));
+        });
+        $('.shippingcheckbox span').click(function () {
+            var allspan = document.querySelectorAll('.shippingcheckbox span');
+            for (var i = 0; i < allspan.length; i++) {
+                allspan[i].className = '';
+            }
+            $(this).addClass('hovers');
+            $('#shippingcheckbox').val($(this).attr("data-title"));
+        });
+    });
     $( document ).ready(function() {
         $('#product_large_0').addClass('active');
         $('#product_small_0').addClass('active');
