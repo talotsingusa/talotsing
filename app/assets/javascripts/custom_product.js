@@ -27,38 +27,53 @@ $(document).ready(function () {
         this.click();
     });
 
-    var evt = new Event(),
-        m = new Magnifier(evt);
+
 
     $('.zoome').mouseover(function () {
         $('.magnifier-preview').show();
+        var evt = new Event(),
+            m = new Magnifier(evt);
         m.attach({
-            thumb: '.zoome',
+            thumb: '#' + this.id,
             large: this.src,
             largeWrapper: 'preview',
-            zoom: 5
+            zoom: 3
         });
     });
 
-    $('.sizecheckbox span').click(function() {
+    $('a.go-right').click(function () {
+        var pos = $('#carousel-thumb-hover').scrollLeft() + 300;
+        $('#carousel-thumb-hover').animate({
+            scrollLeft: pos
+        }, 1000, 'easeOutQuad');
+    });
+
+    $('a.go-left').click(function () {
+        var pos = $('#carousel-thumb-hover').scrollLeft() - 300;
+        $('#carousel-thumb-hover').animate({
+            scrollLeft: pos
+        }, 1000, 'easeOutQuad');
+    });
+
+    $('.sizecheckbox span').click(function () {
         var allspan = document.querySelectorAll('.sizecheckbox span');
-        for(var i = 0; i < allspan.length; i++) {
+        for (var i = 0; i < allspan.length; i++) {
             allspan[i].className = '';
         }
         $(this).addClass('hovers');
         $('#sizecheckboxvalue').val($(this).attr("data-title"));
     });
-    $('.colorcheckbox span').click(function() {
+    $('.colorcheckbox span').click(function () {
         var allspan = document.querySelectorAll('.colorcheckbox span');
-        for(var i = 0; i < allspan.length; i++) {
+        for (var i = 0; i < allspan.length; i++) {
             allspan[i].className = '';
         }
         $(this).addClass('hovers');
         $('#colorcheckbox').val($(this).attr("data-title"));
     });
-    $('.shippingcheckbox span').click(function() {
+    $('.shippingcheckbox span').click(function () {
         var allspan = document.querySelectorAll('.shippingcheckbox span');
-        for(var i = 0; i < allspan.length; i++) {
+        for (var i = 0; i < allspan.length; i++) {
             allspan[i].className = '';
         }
         $(this).addClass('hovers');

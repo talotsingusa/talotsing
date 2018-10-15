@@ -8,11 +8,12 @@
           <% if @product.present? %>
             <% @product.product_images.each_with_index do |image, index| %>
               <div class="carousel-item" id="<%= "product_large_#{index}" %>">
-                <img class="d-block w-100 zoome" src="<%= image.image.url(:original) if image.present? %>" alt="First slide">
+                <img class="d-block w-100 zoome" id="<%= "product_img_#{index}" %>" src="<%= image.image.url(:original) if image.present? %>" alt="First slide">
               </div>
             <% end %>
           <% end %>
         </div>
+        <a class="go-left"><</a>
         <ol class="carousel-indicators" id="carousel-thumb-hover">
           <% if @product.present? %>
             <% @product.product_images.each_with_index do |image, index| %>
@@ -21,7 +22,9 @@
               </li>
             <% end %>
           <% end %>
+       
         </ol>
+           <a class="go-right">></a>
       </div>
     </div>
     <div class="col-lg-6">
