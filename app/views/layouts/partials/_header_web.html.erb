@@ -9,26 +9,26 @@
           <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="/assets/phone.png" alt=""></div>+16266150262</div>
           <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="/assets/mail.png" alt=""></div><a href="mailto:talotsing@gmail.com">talotsing@gmail.com</a></div>
           <div class="top_bar_content ml-auto">
-            <div class="top_bar_menu">
-              <ul class="standard_dropdown top_bar_dropdown">
-                <li>
-                  <a href="#">English<i class="fas fa-chevron-down"></i></a>
-                  <ul>
-                    <li><a href="#">Italian</a></li>
-                    <li><a href="#">Spanish</a></li>
-                    <li><a href="#">Japanese</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-                  <ul>
-                    <li><a href="#">EUR Euro</a></li>
-                    <li><a href="#">GBP British Pound</a></li>
-                    <li><a href="#">JPY Japanese Yen</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+<!--            <div class="top_bar_menu">-->
+<!--              <ul class="standard_dropdown top_bar_dropdown">-->
+<!--                <li>-->
+<!--                  <a href="#">English<i class="fas fa-chevron-down"></i></a>-->
+<!--                  <ul>-->
+<!--                    <li><a href="#">Italian</a></li>-->
+<!--                    <li><a href="#">Spanish</a></li>-->
+<!--                    <li><a href="#">Japanese</a></li>-->
+<!--                  </ul>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>-->
+<!--                  <ul>-->
+<!--                    <li><a href="#">EUR Euro</a></li>-->
+<!--                    <li><a href="#">GBP British Pound</a></li>-->
+<!--                    <li><a href="#">JPY Japanese Yen</a></li>-->
+<!--                  </ul>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
             <div class="top_bar_user">
               <% if current_user.present? %>
                   <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
@@ -153,47 +153,17 @@
             <!-- Categories Menu -->
 
             <div class="cat_menu_container" style="background-color: #232f3e;">
-              <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
-                <div class="cat_burger"><span></span><span></span><span></span></div>
-                <div class="cat_menu_text">departments</div>
-              </div>
               <% if mobile? %>
-                <ul class="cat_menu">
-                  <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
-                  <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
-                  <% Category.all.order(:created_at).each do |category| %>
-                    <li class="hassubs">
-                      <a href="#">
-                        <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
-                        <%= category.name %><i class="fas fa-chevron-right"></i></a>
-                      <ul>
-                        <% category.sub_categories.each do |sub_category| %>
-                          <li class="hassubs">
-                            <a href="#"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
-                            <ul>
-                              <% sub_category.product_types.each do |product_type| %>
-                                <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
-                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                              <% end %>
-                            </ul>
-                          </li>
-                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                        <% end %>
-                      </ul>
-                    </li>
-                  <% end %>
-                  <!--<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>-->
-                </ul>
+                <!---- Mobile NAV Bar ----->
+                <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start" onclick="click_menu();">
+                  <div class="cat_burger"><span></span><span></span><span></span></div>
+                  <div class="cat_menu_text">Departments</div>
+                </div>
                 <% else %>
+                <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+                  <div class="cat_burger"><span></span><span></span><span></span></div>
+                  <div class="cat_menu_text">Departments</div>
+                </div>
                 <ul class="cat_menu">
                   <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
                   <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
@@ -202,32 +172,39 @@
                       <a href="<%= sub_categories_path(category: category.id)%>">
                         <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
                         <%= category.name %><i class="fas fa-chevron-right"></i></a>
-                      <ul>
-                        <% category.sub_categories.each do |sub_category| %>
-                          <li class="hassubs">
-                            <a href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><i class="fas fa-chevron-right"></i></a>
-                            <ul>
-                              <% sub_category.product_types.each do |product_type| %>
-                                <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-right"></i></a></li>
-                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                                <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                              <% end %>
-                            </ul>
-                          </li>
-                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                          <!--<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>-->
-                        <% end %>
-                      </ul>
+                      <div class="headerCate_contain">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="row">
+                                <% category.sub_categories.joins(:product_types).group('sub_categories.id').order('count(product_types.sub_category_id) DESC').each do |sub_category| %>
+                                  <% if sub_category.product_types.count > 0 %>
+                                <div class="col-md-4">
+                                  <div class="row">
+                                    <dl>
+                                      <dt>
+                                        <a class="headerCate_subTitle" href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %></a>
+                                      </dt>
+                                      <% sub_category.product_types.each do |product_type| %>
+                                        <dd>
+                                          <a class="headerCate_subList" href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %></a>
+                                        </dd>
+                                      <% end %>
+                                    </dl>
+                                  </div>
+                                </div>
+                                  <% end %>
+                                <% end %>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <a href=""><img src="<%= category.products.sample(1).first.product_images.first.image.url if category.products.present? && category.products.sample(1).first.product_images.present? %>" style="width: 100%"></a>
+                            </div>
+                            </div>
+                        </div>
+                      </div>
                     </li>
                   <% end %>
-                  <!--<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>-->
-                  <!--<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>-->
                 </ul>
                 <% end %>
 
@@ -240,14 +217,6 @@
                 <li class="hassubs">
                   <a href="#">Dress & Skirt<i class="fas fa-chevron-down"></i></a>
                   <ul>
-<!--                    <li>-->
-<!--                      <a href="#">Menu Item<i class="fas fa-chevron-down"></i></a>-->
-<!--                      <ul>-->
-<!--                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-<!--                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-<!--                        <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>-->
-<!--                      </ul>-->
-<!--                    </li>-->
                     <% ProductType.where("sub_category_id IN (?)", [1,113]).sample(10).each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
@@ -307,70 +276,46 @@
           <div class="page_menu_content" style="background-color: #232f3e;">
 
             <div class="page_menu_search">
-              <form action="#">
-                <input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
-              </form>
+              <%= form_for :search_product, url: shop_path,:html => {:id => "mobile_form"}, method: :get do |f| %>
+                <%= f.text_field :keyword, class: "page_menu_search_input", id: "mobile_search", required: false, placeholder: "Search for products..." %>
+              <% end %>
             </div>
             <ul class="page_menu_nav">
-              <li class="page_menu_item has-children">
-                <a href="#">Language<i class="fa fa-angle-down"></i></a>
-                <ul class="page_menu_selection">
-                  <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
-                </ul>
-              </li>
-              <li class="page_menu_item has-children">
-                <a href="#">Currency<i class="fa fa-angle-down"></i></a>
-                <ul class="page_menu_selection">
-                  <li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
-                </ul>
-              </li>
               <li class="page_menu_item">
-                <a href="#">Home<i class="fa fa-angle-down"></i></a>
+                <a href="<%= root_path %>">Home<i class="fa fa-angle-down"></i></a>
               </li>
-              <li class="page_menu_item has-children">
-                <a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
-                <ul class="page_menu_selection">
-                  <li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
-                  <li class="page_menu_item has-children">
-                    <a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
-                    <ul class="page_menu_selection">
-                      <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                      <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                      <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                      <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                </ul>
-              </li>
-              <li class="page_menu_item has-children">
-                <a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
-                <ul class="page_menu_selection">
-                  <li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                </ul>
-              </li>
-              <li class="page_menu_item has-children">
-                <a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
-                <ul class="page_menu_selection">
-                  <li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                  <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
-                </ul>
-              </li>
-              <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
-              <li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>
+              <% Category.all.order(:created_at).each do |category| %>
+                <li class="page_menu_item has-children">
+                  <a href="<%= sub_categories_path(category: category.id)%>" style="float:left; width: 75%"><%= category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
+                    font-size: 25px;
+                    margin-top: 17px;
+                    color: white;"></i>
+                  <ul class="page_menu_selection">
+                    <% category.sub_categories.each do |sub_category| %>
+                      <% if sub_category.product_types.count > 0 %>
+                      <li class="page_menu_item has-children">
+                        <a href="<%= product_types_path(sub_category: sub_category.id)%>" style="float:left; width: 75%"><%= sub_category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
+                          font-size: 25px;
+                          margin-top: 17px;
+                          color: white;"></i>
+                        <ul class="page_menu_selection">
+                          <% sub_category.product_types.each do |product_type| %>
+                            <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fa fa-angle-down" style="    float: right;
+                                font-size: 25px;
+                                margin-top: 17px;
+                                color: white;"></i></a></li>
+                          <%end %>
+                        </ul>
+                      </li>
+                      <% end %>
+                    <% end %>
+
+                  </ul>
+                </li>
+              <% end %>
+
+<!--              <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>-->
+<!--              <li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>-->
             </ul>
 
             <div class="menu_contact">
@@ -403,5 +348,34 @@
     $(document).on("click", "#category_search_params li a", function() {
         $("#search_category").val($(this).data("value"));
         console.log($("#search_category").val());
+    });
+    var acc = document.getElementsByClassName("mbl_cls_li");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var mbl_panel = $(this).next('ul.page_menu_selection');
+            if(mbl_panel.hasClass('active'))
+              {
+                  mbl_panel.toggleClass('active');
+                  TweenMax.to(mbl_panel, 0.3, {height:0});
+              }
+              else
+              {
+                  mbl_panel.toggleClass('active');
+                  TweenMax.set(mbl_panel, {height:"auto"});
+                  TweenMax.from(mbl_panel, 0.3, {height:0});
+              }
+        });
+    }
+    function click_menu() {
+        $(".menu_trigger").click();
+    }
+    $("#mobile_search").keypress(function(event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            $("#mobile_form").submit();
+        }
     });
 </script>

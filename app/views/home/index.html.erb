@@ -26,50 +26,58 @@
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-
-          <div class="char_item d-flex flex-row align-items-center justify-content-start">
-            <div class="char_icon"><img src="/assets/char_1.png" alt=""></div>
-            <div class="char_content">
-              <div class="char_title">Free Delivery</div>
-              <div class="char_subtitle">from $50</div>
+        <% @category_1 = Category.find(1) %>
+          <a href="<%= sub_categories_path(category: @category_1.id)%>">
+            <div class="char_item d-flex flex-row align-items-center justify-content-start">
+              <div class="char_icon"><img src="<%= @category_1.image %>" alt="" style="width: 30px;"></div>
+              <div class="char_content">
+                <div class="char_title"><%= @category_1.name %></div>
+                <div class="char_subtitle">Starting from $<%= @category_1.products.minimum('price').floor %></div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-
+          <% @category_2 = Category.find(27) %>
+          <a href="<%= sub_categories_path(category: @category_2.id)%>">
           <div class="char_item d-flex flex-row align-items-center justify-content-start">
-            <div class="char_icon"><img src="/assets/char_2.png" alt=""></div>
+            <div class="char_icon"><img src="<%= @category_2.image %>" alt="" style="width: 30px;"></div>
             <div class="char_content">
-              <div class="char_title">Free Delivery</div>
-              <div class="char_subtitle">from $50</div>
+              <div class="char_title"><%= @category_2.name %></div>
+              <div class="char_subtitle">Starting from $<%= @category_2.products.minimum('price').floor %></div>
             </div>
           </div>
+          </a>
         </div>
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-
-          <div class="char_item d-flex flex-row align-items-center justify-content-start">
-            <div class="char_icon"><img src="/assets/char_3.png" alt=""></div>
-            <div class="char_content">
-              <div class="char_title">Free Delivery</div>
-              <div class="char_subtitle">from $50</div>
+          <% @category_3 = Category.find(26) %>
+          <a href="<%= sub_categories_path(category: @category_3.id)%>">
+            <div class="char_item d-flex flex-row align-items-center justify-content-start">
+              <div class="char_icon"><img src="<%= @category_3.image %>" alt="" style="width: 30px;"></div>
+              <div class="char_content">
+                <div class="char_title"><%= @category_3.name %></div>
+                <div class="char_subtitle">Starting from $<%= @category_3.products.minimum('price').floor %></div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-
-          <div class="char_item d-flex flex-row align-items-center justify-content-start">
-            <div class="char_icon"><img src="/assets/char_4.png" alt=""></div>
-            <div class="char_content">
-              <div class="char_title">Free Delivery</div>
-              <div class="char_subtitle">from $50</div>
+          <% @category_4 = Category.find(30) %>
+          <a href="<%= sub_categories_path(category: @category_4.id)%>">
+            <div class="char_item d-flex flex-row align-items-center justify-content-start">
+              <div class="char_icon"><img src="<%= @category_4.image %>" alt="" style="width: 30px;"></div>
+              <div class="char_content">
+                <div class="char_title"><%= @category_4.name %></div>
+                <div class="char_subtitle">Starting from $<%= @category_4.products.minimum('price').floor %></div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -94,14 +102,14 @@
                 <!-- Deals Item -->
                 <% Product.all.shuffle.last(5).each do |product| %>
                 <div class="owl-item deals_item">
-                  <div class="deals_image"><img src="<%= product.product_images.first.image.url(:medium) %>" alt=""></div>
+                  <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %><div class="deals_image"><img src="<%= product.product_images.first.image.url(:medium) %>" alt=""></div><% end %>
                   <div class="deals_content">
                     <div class="deals_info_line d-flex flex-row justify-content-start">
                       <div class="deals_item_category"><a href="#"><%= product.sub_category.name %></a></div>
                       <div class="deals_item_price_a ml-auto">$<%= product.price %></div>
                     </div>
                     <div class="deals_info_line d-flex flex-row justify-content-start">
-                      <div class="deals_item_name"><%= product.name %></div>
+                      <div class="deals_item_name"><a href="<%= product_path(id: product.id) %>"><%= product.name.truncate(45) %></a></div>
                       <div class="deals_item_price ml-auto">$<%= product.price %></div>
                     </div>
                     <div class="available">
@@ -255,15 +263,12 @@
                     <% ProductType.find(981).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
+                          <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                           <div class="product_image d-flex flex-column align-items-center justify-content-center">
                             <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                             <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-
-                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                              QUICK VIEW
-                              <i class="material-icons">arrow_right_alt</i>
-                            <% end %>
                           </div>
+                          <% end %>
                           <div class="product_content">
                             <div class="product_price">$<%= product.price %></div>
                             <div class="product_name">
@@ -307,15 +312,12 @@
                     <% ProductType.find(982).products.sample(10).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
+                          <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                           <div class="product_image d-flex flex-column align-items-center justify-content-center">
                             <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                             <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-
-                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                              QUICK VIEW
-                              <i class="material-icons">arrow_right_alt</i>
-                            <% end %>
                           </div>
+                          <% end %>
                           <div class="product_content">
                             <div class="product_price">$<%= product.price %></div>
                             <div class="product_name">
@@ -359,15 +361,12 @@
                     <% ProductType.find(983).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
+                          <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                           <div class="product_image d-flex flex-column align-items-center justify-content-center">
                             <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                             <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-
-                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                              QUICK VIEW
-                              <i class="material-icons">arrow_right_alt</i>
-                            <% end %>
                           </div>
+                          <% end %>
                           <div class="product_content">
                             <div class="product_price">$<%= product.price %></div>
                             <div class="product_name">
@@ -595,15 +594,13 @@
                       <% SubCategory.find(16).products.sample(12).each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
+                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                             <div class="product_image d-flex flex-column align-items-center justify-content-center">
                               <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                               <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
 
-                              <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                                QUICK VIEW
-                                <i class="material-icons">arrow_right_alt</i>
-                              <% end %>
                             </div>
+                            <% end %>
                             <div class="product_content">
                               <div class="product_price">$<%= product.price %></div>
                               <div class="product_name">
@@ -646,15 +643,13 @@
                       <% SubCategory.find(118).products.sample(12).each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
+                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                             <div class="product_image d-flex flex-column align-items-center justify-content-center">
                               <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                               <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
 
-                              <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                                QUICK VIEW
-                                <i class="material-icons">arrow_right_alt</i>
-                              <% end %>
                             </div>
+                            <% end %>
                             <div class="product_content">
                               <div class="product_price">$<%= product.price %></div>
                               <div class="product_name">
@@ -697,15 +692,13 @@
                       <% SubCategory.find(127).products.sample(12).each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
+                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                             <div class="product_image d-flex flex-column align-items-center justify-content-center">
                               <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                               <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
 
-                              <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                                QUICK VIEW
-                                <i class="material-icons">arrow_right_alt</i>
-                              <% end %>
                             </div>
+                            <% end %>
                             <div class="product_content">
                               <div class="product_price">$<%= product.price %></div>
                               <div class="product_name">
@@ -778,15 +771,12 @@
                   <% SubCategory.find(124).products.sample(6).each do |product| %>
                     <div class="bestsellers_item">
                       <div class="product_item is_new" id="product_<%= product.id %>">
+                        <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                         <div class="product_image d-flex flex-column align-items-center justify-content-center">
                           <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                           <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-
-                          <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                            QUICK VIEW
-                            <i class="material-icons">arrow_right_alt</i>
-                          <% end %>
                         </div>
+                        <% end %>
                         <div class="product_content">
                           <div class="product_price">$<%= product.price %></div>
                           <div class="product_name">
@@ -832,15 +822,12 @@
                   <% SubCategory.find(150).products.sample(6).each do |product| %>
                     <div class="bestsellers_item">
                       <div class="product_item is_new" id="product_<%= product.id %>">
+                        <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                         <div class="product_image d-flex flex-column align-items-center justify-content-center">
                           <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                           <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-
-                          <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                            QUICK VIEW
-                            <i class="material-icons">arrow_right_alt</i>
-                          <% end %>
                         </div>
+                        <% end %>
                         <div class="product_content">
                           <div class="product_price">$<%= product.price %></div>
                           <div class="product_name">
@@ -884,15 +871,13 @@
                   <% SubCategory.find(151).products.sample(6).each do |product| %>
                     <div class="bestsellers_item">
                       <div class="product_item is_new" id="product_<%= product.id %>">
+                        <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                         <div class="product_image d-flex flex-column align-items-center justify-content-center">
                           <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
                           <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
 
-                          <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                            QUICK VIEW
-                            <i class="material-icons">arrow_right_alt</i>
-                          <% end %>
                         </div>
+                        <% end %>
                         <div class="product_content">
                           <div class="product_price">$<%= product.price %></div>
                           <div class="product_name">
@@ -1015,13 +1000,11 @@
                 <% ProductType.find(51).products.sample(10).each do |product| %>
               <div class="owl-item">
                 <div class="trends_item is_new">
+                  <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
                   <div class="trends_image d-flex flex-column align-items-center justify-content-center">
                     <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
-                    <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
-                      QUICK VIEW
-                      <i class="material-icons">arrow_right_alt</i>
-                    <% end %>
                   </div>
+                  <% end %>
                   <div class="trends_content">
                     <div class="trends_category"><a href="#"><%= product.product_type.name %></a></div>
                     <div class="trends_info clearfix">
@@ -1396,34 +1379,34 @@
                 });
 
                 //Handle page menu
-                if($('.page_menu_item').length)
-                {
-                    var items = $('.page_menu_item');
-                    items.each(function()
-                    {
-                        var item = $(this);
-                        if(item.hasClass("has-children"))
-                        {
-                            item.on('click', function(evt)
-                            {
-                                evt.preventDefault();
-                                evt.stopPropagation();
-                                var subItem = item.find('> ul');
-                                if(subItem.hasClass('active'))
-                                {
-                                    subItem.toggleClass('active');
-                                    TweenMax.to(subItem, 0.3, {height:0});
-                                }
-                                else
-                                {
-                                    subItem.toggleClass('active');
-                                    TweenMax.set(subItem, {height:"auto"});
-                                    TweenMax.from(subItem, 0.3, {height:0});
-                                }
-                            });
-                        }
-                    });
-                }
+                // if($('.page_menu_item').length)
+                // {
+                //     var items = $('.page_menu_item');
+                //     items.each(function()
+                //     {
+                //         var item = $(this);
+                //         if(item.hasClass("has-children"))
+                //         {
+                //             item.on('click', function(evt)
+                //             {
+                //                 // evt.preventDefault();
+                //                 // evt.stopPropagation();
+                //                 var subItem = item.find('> ul');
+                //                 if(subItem.hasClass('active'))
+                //                 {
+                //                     subItem.toggleClass('active');
+                //                     TweenMax.to(subItem, 0.3, {height:0});
+                //                 }
+                //                 else
+                //                 {
+                //                     subItem.toggleClass('active');
+                //                     TweenMax.set(subItem, {height:"auto"});
+                //                     //TweenMax.from(subItem, 0.3, {height:0});
+                //                 }
+                //             });
+                //         }
+                //     });
+                // }
             }
         }
 

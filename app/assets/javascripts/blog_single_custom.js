@@ -159,34 +159,34 @@ $(document).ready(function()
 			});
 
 			//Handle page menu
-			if($('.page_menu_item').length)
-			{
-				var items = $('.page_menu_item');
-				items.each(function()
-				{
-					var item = $(this);
-					if(item.hasClass("has-children"))
-					{
-						item.on('click', function(evt)
-						{
-							evt.preventDefault();
-							evt.stopPropagation();
-							var subItem = item.find('> ul');
-						    if(subItem.hasClass('active'))
-						    {
-						    	subItem.toggleClass('active');
-								TweenMax.to(subItem, 0.3, {height:0});
-						    }
-						    else
-						    {
-						    	subItem.toggleClass('active');
-						    	TweenMax.set(subItem, {height:"auto"});
-								TweenMax.from(subItem, 0.3, {height:0});
-						    }
-						});
-					}
-				});
-			}
+			// if($('.page_menu_item').length)
+			// {
+			// 	var items = $('.page_menu_item');
+			// 	items.each(function()
+			// 	{
+			// 		var item = $(this);
+			// 		if(item.hasClass("has-children"))
+			// 		{
+			// 			item.on('click', function(evt)
+			// 			{
+			// 				evt.preventDefault();
+			// 				evt.stopPropagation();
+			// 				var subItem = item.find('> ul');
+			// 			    if(subItem.hasClass('active'))
+			// 			    {
+			// 			    	subItem.toggleClass('active');
+			// 					TweenMax.to(subItem, 0.3, {height:0});
+			// 			    }
+			// 			    else
+			// 			    {
+			// 			    	subItem.toggleClass('active');
+			// 			    	TweenMax.set(subItem, {height:"auto"});
+			// 					TweenMax.from(subItem, 0.3, {height:0});
+			// 			    }
+			// 			});
+			// 		}
+			// 	});
+			// }
 		}
 	}
 
