@@ -1,22 +1,43 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Banner -->
-  <div class="banner">
-    <div class="banner_background" style="background-image:url(/assets/banner_background.jpg)"></div>
-    <div class="container fill_height">
-      <div class="row fill_height">
-        <div class="banner_product_image"><img src="/assets/banner_product.png" alt=""></div>
-        <div class="col-lg-5 offset-lg-4 fill_height">
-          <div class="banner_content">
-            <h1 class="banner_text">new era of smartphones</h1>
-            <div class="banner_price"><span>$530</span>$460</div>
-            <div class="banner_product_name">Apple Iphone 6s</div>
-            <div class="button banner_button"><a href="<%= shop_path %>">Shop Now</a></div>
-          </div>
-        </div>
+<div class="grid" id="homepage_slider" style="
+    margin-top: 0px;">
+  <div class="slider-box">
+    <div class="slider" id="slider">
+      <div class="slider__item">
+        <a href="<%= sub_categories_path(category: 1)%>"><img src="/assets/university-of-tennessee-womens-apparel-tigers-a-textbooks-tn-clothing.jpg" alt=""></a>
+<!--        <h2 class="slider__item__title">Shop Women Dresses</h2>-->
+      </div>
+      <div class="slider__item">
+        <a href="<%= sub_categories_path(category: 30)%>"><img src="/assets/image.jpg" alt=""></a>
+        <!--        <h2 class="slider__item__title">Shop Lingerie</h2>-->
+      </div>
+      <div class="slider__item">
+        <a href="<%= product_types_path(sub_category: 117)%>"><img src="/assets/449a754f50cd8e20427f94e5e3143250.jpg" alt=""></a>
+        <!--        <h2 class="slider__item__title">Shop Winter Wear</h2>-->
+      </div>
+      <div class="slider__item">
+        <a href="<%= sub_categories_path(category: 27)%>"><img src="/assets/25-Awesome-Clothing-Tips-No-Woman-Should-Ever-Miss.jpg" alt=""></a>
+        <!--        <h2 class="slider__item__title">Shop Shoes</h2>-->
+      </div>
+      <div class="slider__item">
+        <a href="<%= shop_path(product_type: 737)%>"><img src="/assets/best_jeans_men_women.jpg" alt=""></a>
+        <!--        <h2 class="slider__item__title">Shop Jeans</h2>-->
+      </div>
+      <div class="slider__item">
+        <a href="<%= shop_path(product_type: 1104)%>"><img src="/assets/Abaya@stylesgap.com-8.jpg" alt=""></a>
+<!--        <h2 class="slider__item__title">Shop Muslim Dresses</h2>-->
       </div>
     </div>
+
+    <div class="slider-nav">
+<!--      <div class="slider-nav__prev" id="prev"><i class="fa fa-angle-left"></i></div>-->
+<!--      <div class="slider-nav__next" id="next"><i class="fa fa-angle-right"></i></div>-->
+      <div class="slider-nav__dots" id="dots"></div>
+    </div>
   </div>
+</div>
 
   <!-- Characteristics -->
 
@@ -54,7 +75,7 @@
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-          <% @category_3 = Category.find(32) %>
+          <% @category_3 = Category.find(1) %>
           <a href="<%= sub_categories_path(category: @category_3.id)%>">
             <div class="char_item d-flex flex-row align-items-center justify-content-start">
               <div class="char_icon"><img src="<%= @category_3.image %>" alt="" style="width: 30px;"></div>
@@ -477,94 +498,6 @@
     </div>
   </div>
 
-  <!-- Banner -->
-
-  <div class="banner_2">
-    <div class="banner_2_background" style="background-image:url(/assets/banner_2_background.jpg)"></div>
-    <div class="banner_2_container">
-      <div class="banner_2_dots"></div>
-      <!-- Banner 2 Slider -->
-
-      <div class="owl-carousel owl-theme banner_2_slider">
-
-        <!-- Banner 2 Slider Item -->
-        <div class="owl-item">
-          <div class="banner_2_item">
-            <div class="container fill_height">
-              <div class="row fill_height">
-                <div class="col-lg-4 col-md-6 fill_height">
-                  <div class="banner_2_content">
-                    <div class="banner_2_category">Laptops</div>
-                    <div class="banner_2_title">MacBook Air 13</div>
-                    <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</div>
-                    <div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                    <div class="button banner_2_button"><a href="#">Explore</a></div>
-                  </div>
-
-                </div>
-                <div class="col-lg-8 col-md-6 fill_height">
-                  <div class="banner_2_image_container">
-                    <div class="banner_2_image"><img src="/assets/banner_2_product.png" alt=""></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Banner 2 Slider Item -->
-        <div class="owl-item">
-          <div class="banner_2_item">
-            <div class="container fill_height">
-              <div class="row fill_height">
-                <div class="col-lg-4 col-md-6 fill_height">
-                  <div class="banner_2_content">
-                    <div class="banner_2_category">Laptops</div>
-                    <div class="banner_2_title">MacBook Air 13</div>
-                    <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</div>
-                    <div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                    <div class="button banner_2_button"><a href="#">Explore</a></div>
-                  </div>
-
-                </div>
-                <div class="col-lg-8 col-md-6 fill_height">
-                  <div class="banner_2_image_container">
-                    <div class="banner_2_image"><img src="/assets/banner_2_product.png" alt=""></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Banner 2 Slider Item -->
-        <div class="owl-item">
-          <div class="banner_2_item">
-            <div class="container fill_height">
-              <div class="row fill_height">
-                <div class="col-lg-4 col-md-6 fill_height">
-                  <div class="banner_2_content">
-                    <div class="banner_2_category">Laptops</div>
-                    <div class="banner_2_title">MacBook Air 13</div>
-                    <div class="banner_2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</div>
-                    <div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-                    <div class="button banner_2_button"><a href="#">Explore</a></div>
-                  </div>
-
-                </div>
-                <div class="col-lg-8 col-md-6 fill_height">
-                  <div class="banner_2_image_container">
-                    <div class="banner_2_image"><img src="/assets/banner_2_product.png" alt=""></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 
   <!-- Hot New Arrivals -->
 
@@ -1183,8 +1116,305 @@
   .bestsellers_slider .slick-dots li.slick-active {
     background-color: #232f3e!important;
   }
+
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /*
+  3.0 - Grid
+  */
+
+  .grid {
+    max-width: 960px;
+    margin: auto;
+  }
+
+
+  /*
+  4.0 - Slider
+  */
+
+  .slider-box,
+  .slider__item {
+    position: relative;
+  }
+
+  .slider {
+    overflow: hidden;
+  }
+
+  .slider__canvas {
+    transition: transform 0.5s;
+  }
+
+  .slider__item {
+    float: left;
+  }
+
+  .slider__item__title {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    margin: 0;
+    color: #468;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translate3d(-50%, -60%, 0);
+  }
+
+  .active .slider__item__title {
+    opacity: 1;
+    transition-delay: 0.5s;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  @media(min-width: 48rem) {
+    .slider__item__title {
+      font-size: 5rem;
+    }
+  }
+
+
+  /*
+  4.1 - Slider Nav
+  */
+
+  .slider-nav {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .slider-nav__dots {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .slider-nav__prev,
+  .slider-nav__next,
+  .slider__dot {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .slider-nav__prev,
+  .slider-nav__next {
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-top: -1.5rem;
+    line-height: 3rem;
+  }
+
+  .slider-nav__prev {
+    left: 7%;
+  }
+
+  .slider-nav__next {
+    right: 7%;
+  }
+
+  .slider__dot {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 1rem;
+  }
+
+  .slider-nav__prev:hover,
+  .slider-nav__next:hover,
+  .slider__dot.active,
+  .slider__dot:hover {
+    transform: scale3d(1.5, 1.5, 1);
+  }
+
 </style>
 <script>
+    (function($) {
+
+        'use strict';
+
+        var pluginName = 'slider',
+            defaults = {
+                next: '.slider-nav__next',
+                prev: '.slider-nav__prev',
+                item: '.slider__item',
+                dots: false,
+                dotClass: 'slider__dot',
+                autoplay: false,
+                autoplayTime: 3000,
+            };
+
+        function slider(element, options) {
+            this.$document = $(document);
+            this.$window = $(window);
+            this.$element = $(element);
+            this.options = $.extend({}, defaults, options);
+            this.init();
+        };
+
+        slider.prototype.init = function() {
+            this.setup();
+            this.attachEventHandlers();
+            this.update();
+        };
+
+        slider.prototype.setup = function(argument) {
+            this.$slides = this.$element.find(this.options.item);
+            this.count = this.$slides.length;
+            this.index = 0;
+
+            this.$next = $(this.options.next);
+            this.$prev = $(this.options.prev);
+
+            this.$canvas = $(document.createElement('div'));
+            this.$canvas.addClass('slider__canvas').appendTo(this.$element);
+            this.$slides.appendTo(this.$canvas);
+
+            this.$dots = $(this.options.dots);
+            this.$dots.length && this.createDots();
+        };
+
+        slider.prototype.createDots = function() {
+            var dots = [];
+            for (var i = 0; i < this.count; i += 1) {
+                dots[i] = '<span data-index="' + i + '" class="' + this.options.dotClass + '"></span>';
+            }
+            this.$dots.append(dots);
+        }
+
+        slider.prototype.attachEventHandlers = function() {
+            this.$element.on('prev.slider', this.prev.bind(this));
+            this.$document.on('click', this.options.prev, (function(e) {
+                this.$element.trigger('prev.slider');
+            }).bind(this));
+
+            this.$element.on('next.slider', this.next.bind(this));
+            this.$document.on('click', this.options.next, (function(e) {
+                this.$element.trigger('next.slider');
+            }).bind(this));
+
+            this.$element.on('update.slider', this.update.bind(this));
+            this.$window.on('resize load', (function(e) {
+                this.$element.trigger('update.slider');
+            }).bind(this));
+
+            this.$element.on('jump.slider', this.jump.bind(this));
+            this.$document.on('click', ('.' + this.options.dotClass), (function(e) {
+                var index = parseInt($(e.target).attr('data-index'));
+                this.$element.trigger('jump.slider', index);
+            }).bind(this));
+
+            this.$element.on('autoplay.slider', this.autoplay.bind(this));
+            this.$element.on('autoplayOn.slider', this.autoplayOn.bind(this));
+            this.$element.on('autoplayOff.slider', this.autoplayOff.bind(this));
+            this.$element.bind('prev.slider next.slider jump.slider', this.autoplay.bind(this));
+            this.options.autoplay && this.$element.trigger('autoplayOn.slider');
+        };
+
+        slider.prototype.next = function(e) {
+            this.index = (this.index + 1) % this.count;
+            this.slide();
+        };
+
+        slider.prototype.prev = function(e) {
+            this.index = Math.abs(this.index - 1 + this.count) % this.count;
+            this.slide();
+        };
+
+        slider.prototype.jump = function(e, index) {
+            this.index = index % this.count;
+            this.slide();
+        }
+
+        slider.prototype.autoplayOn = function(argument) {
+            this.options.autoplay = true;
+            this.$element.trigger('autoplay.slider');
+        };
+
+        slider.prototype.autoplayOff = function() {
+            this.autoplayClear();
+            this.options.autoplay = false;
+        }
+
+        slider.prototype.autoplay = function(argument) {
+            this.autoplayClear();
+            if (this.options.autoplay) {
+                this.autoplayId = setTimeout((function() {
+                    this.$element.trigger('next.slider');
+                    this.$element.trigger('autoplay.slider');
+                }).bind(this), this.options.autoplayTime);
+            }
+        };
+
+        slider.prototype.autoplayClear = function() {
+            this.autoplayId && clearTimeout(this.autoplayId);
+        }
+
+        slider.prototype.slide = function(index) {
+            undefined == index && (index = this.index);
+            var position = index * this.width * -1;
+            this.$canvas.css({
+                'transform': 'translate3d(' + position + 'px, 0, 0)',
+            });
+            this.updateCssClass();
+        };
+
+        slider.prototype.update = function() {
+            this.width = this.$element.width();
+            this.$canvas.width(this.width * this.count);
+            this.$slides.width(this.width);
+            this.slide();
+        };
+
+        slider.prototype.updateCssClass = function() {
+            this.$slides
+                .removeClass('active')
+                .eq(this.index)
+                .addClass('active');
+
+            this.$dots
+                .find('.' + this.options.dotClass)
+                .removeClass('active')
+                .eq(this.index)
+                .addClass('active');
+        }
+
+        $.fn[pluginName] = function(options) {
+            return this.each(function() {
+                !$.data(this, pluginName) && $.data(this, pluginName, new slider(this, options));
+            });
+        };
+
+    })(window.jQuery);
+
+    $('#slider').slider({
+        prev: '#prev',
+        next: '#next',
+        dots: '#dots',
+        autoplay: true,
+    });
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $("#homepage_slider").css( { marginTop : "-17px", marginRight : "0px" } );
+    } else {
+        $("#homepage_slider").css( { marginRight : "11px" } );
+    }
     /* JS Document */
 
     /******************************
