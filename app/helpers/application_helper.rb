@@ -38,7 +38,7 @@ module ApplicationHelper
       session[:shop_cart].each do |product|
         get_product = Product.find_by_id(product[0].to_i)
         if get_product.present?
-          @price = Product.find(product[0].to_i).price*product[1].to_i+product[4].to_i
+          @price = (Product.find(product[0].to_i).price+product[4].to_i)*product[1].to_i
           total_price << @price
         end
       end
@@ -49,12 +49,12 @@ module ApplicationHelper
           if product.quantity.nil?
             get_product = Product.find_by_id(product.product_id)
             if get_product.present?
-              @price = Product.find(product.product_id).price*1
+              @price = (Product.find(product.product_id).price+product.shipping)*1
             end
           else
             get_product = Product.find_by_id(product.product_id)
             if get_product.present?
-              @price = Product.find(product.product_id).price*product.quantity+product.shipping.to_i
+              @price = (Product.find(product.product_id).price+product.shipping.to_i)*product.quantity
             end
           end
           total_price << @price
@@ -69,6 +69,46 @@ module ApplicationHelper
       return 0
     end
 
+  end
+
+  def cart_total_mailer(id)
+    total_price = []
+    order = Order.find(id)
+    if order.present?
+      @order_items = order.order_items
+      @order_items.each do |product|
+        if product.quantity.nil?
+          get_product = Product.find_by_id(product.product_id)
+          if get_product.present?
+            @price = (Product.find(product.product_id).price+product.shipping)*1
+          end
+        else
+          get_product = Product.find_by_id(product.product_id)
+          if get_product.present?
+            @price = (Product.find(product.product_id).price+product.shipping.to_i)*product.quantity
+          end
+        end
+        total_price << @price
+      end
+    end
+    sum = 0
+    price = total_price.each { |a| sum+=a }
+    if !sum.nil?
+      return sum
+    else
+      return 0
+    end
+
+  end
+
+  def shipping_cost(id)
+    order = Order.find(id)
+    total_price = []
+    @order_items = order.order_items
+    @order_items.each do |item|
+      total_price << item.shipping.to_i*item.quantity.to_i
+    end
+    return total_price.sum
   end
 
   def cart_products

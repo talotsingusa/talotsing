@@ -166,7 +166,7 @@ class HomeController < ApplicationController
       @order_items = @order.order_items
       @order_items.each do |o|
         product = Product.find(o.product_id)
-        total_price += product.price.to_f*o.quantity.to_i+o.shipping.to_i
+        total_price += (product.price.to_f+o.shipping.to_i)*o.quantity.to_i
       end
     end
     $card = params[:card_info]
@@ -193,6 +193,8 @@ class HomeController < ApplicationController
       order.status = "Paid"
       order.total_amount = total_price
       order.save
+      url = "#{request.base_url}/my_order_details?id=#{order.id}"
+      MessageMailer.order_email(user.email, user.full_name, user, url ,order).deliver_now
       session.delete(:shop_cart)
       flash[:notice] = 'Card charged successfully.'
       redirect_to checkout_path(value: "done")

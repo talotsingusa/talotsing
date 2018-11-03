@@ -25,15 +25,15 @@
                       </div>
                       <div class="cart_item_quantity cart_info_col">
                         <div class="cart_item_title">Shipping Fee</div>
-                        <div class="cart_item_text"><%= number_to_currency(product[4].to_i) %></div>
+                        <div class="cart_item_text"><%= number_to_currency(product[4].to_i*product[1].to_i) %></div>
                       </div>
                       <div class="cart_item_price cart_info_col">
                         <div class="cart_item_title">Price</div>
-                        <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price) %></div>
+                        <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price*product[1].to_i) %></div>
                       </div>
                       <div class="cart_item_total cart_info_col">
                         <div class="cart_item_title">Total</div>
-                        <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price*product[1].to_i) %></div>
+                        <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price*product[1].to_i+product[4].to_i*product[1].to_i) %></div>
                       </div>
                     </div>
                   </li>
@@ -59,15 +59,15 @@
 
                           <div class="cart_item_quantity cart_info_col">
                             <div class="cart_item_title">Shipping Fee</div>
-                            <div class="cart_item_text"><%= number_to_currency(product.shipping.to_i) %></div>
+                            <div class="cart_item_text"><%= number_to_currency(product.shipping.to_i*product.quantity) %></div>
                           </div>
                           <div class="cart_item_price cart_info_col">
                             <div class="cart_item_title">Price</div>
-                            <div class="cart_item_text"><%= number_to_currency(product_details(product.product_id).price) %></div>
+                            <div class="cart_item_text"><%= number_to_currency(product_details(product.product_id).price*product.quantity.to_i) %></div>
                           </div>
                           <div class="cart_item_total cart_info_col">
                             <div class="cart_item_title">Total</div>
-                            <div class="cart_item_text"><%= number_to_currency(product_details(product.product_id).price*product.quantity) %></div>
+                            <div class="cart_item_text"><%= number_to_currency((product_details(product.product_id).price+product.shipping.to_i)*product.quantity) %></div>
                           </div>
                         </div>
                       </li>
