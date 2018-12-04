@@ -276,6 +276,8 @@ class HomeController < ApplicationController
     else
       if !session[:favorites].nil?
         @products = Product.where("id IN (?)", session[:favorites]).paginate(:page => params[:page], :per_page => 10)
+      else
+        @products = Product.where("id IN (?)", []).paginate(:page => params[:page], :per_page => 10)
       end
     end
     render layout: "shop_application"
