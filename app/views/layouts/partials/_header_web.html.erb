@@ -217,7 +217,7 @@
                 <li class="hassubs">
                   <a href="#">Dress & Skirt<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [1,113]).sample(10).each do |product_type| %>
+                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
@@ -225,7 +225,7 @@
                 <li class="hassubs">
                   <a href="#">Tops & Tees<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [4,111]).sample(10).each do |product_type| %>
+                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
@@ -233,7 +233,7 @@
                 <li class="hassubs">
                   <a href="#">Lingerie & Intimate<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [191]).sample(10).each do |product_type| %>
+                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
@@ -241,7 +241,7 @@
                 <li class="hassubs">
                   <a href="#">Women's Bags<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [159]).sample(10).each do |product_type| %>
+                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
