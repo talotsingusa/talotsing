@@ -169,7 +169,7 @@
                   <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
                   <% Category.all.order(:created_at).each do |category| %>
                     <li class="hassubs">
-                      <a href="<%= sub_categories_path(category: category.id)%>">
+                      <a href="<%= sub_categories_path(category: category.id)%>" style="font-size: 17px!important;">
                         <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
                         <%= category.name %></a>
                       <div class="headerCate_contain">
