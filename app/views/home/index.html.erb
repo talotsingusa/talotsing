@@ -53,7 +53,7 @@
               <div class="char_icon"><img src="<%= @category_1.image %>" alt="" style="width: 30px;"></div>
               <div class="char_content">
                 <div class="char_title"><%= @category_1.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_1.products.minimum('price').floor %></div>
+                <div class="char_subtitle">Starting from $<%= @category_1.products.minimum('price').floor if @category_1.products.present? %></div>
               </div>
             </div>
           </a>
@@ -67,7 +67,7 @@
             <div class="char_icon"><img src="<%= @category_2.image %>" alt="" style="width: 30px;"></div>
             <div class="char_content">
               <div class="char_title"><%= @category_2.name %></div>
-              <div class="char_subtitle">Starting from $<%= @category_2.products.minimum('price').floor %></div>
+              <div class="char_subtitle">Starting from $<%= @category_2.products.minimum('price').floor if @category_2.products.present? %></div>
             </div>
           </div>
           </a>
@@ -81,7 +81,7 @@
               <div class="char_icon"><img src="<%= @category_3.image %>" alt="" style="width: 30px;"></div>
               <div class="char_content">
                 <div class="char_title"><%= @category_3.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_3.products.minimum('price').floor %></div>
+                <div class="char_subtitle">Starting from $<%= @category_3.products.minimum('price').floor if @category_3.products.present? %></div>
               </div>
             </div>
           </a>
@@ -95,7 +95,7 @@
               <div class="char_icon"><img src="<%= @category_4.image %>" alt="" style="width: 30px;"></div>
               <div class="char_content">
                 <div class="char_title"><%= @category_4.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_4.products.minimum('price').floor %></div>
+                <div class="char_subtitle">Starting from $<%= @category_4.products.minimum('price').floor if @category_4.products.present? %></div>
               </div>
             </div>
           </a>
