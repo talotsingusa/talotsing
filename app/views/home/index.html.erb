@@ -280,8 +280,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(981).products.present? %>
-                    <% ProductType.find(981).products.sample(12).each do |product| %>
+                  <% if ProductType.find(1237).products.present? %>
+                    <% ProductType.find(1237).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -329,8 +329,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(982).products.present? %>
-                    <% ProductType.find(982).products.sample(10).each do |product| %>
+                  <% if ProductType.find(1237).products.present? %>
+                    <% ProductType.find(1237).products.sample(10).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -378,8 +378,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(983).products.present? %>
-                    <% ProductType.find(983).products.sample(12).each do |product| %>
+                  <% if ProductType.find(1237).products.present? %>
+                    <% ProductType.find(1237).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -929,8 +929,8 @@
             <div class="owl-carousel owl-theme trends_slider">
 
               <!-- Trends Slider Item -->
-              <% if ProductType.find(51).products.present? %>
-                <% ProductType.find(51).products.sample(10).each do |product| %>
+              <% if ProductType.find(1237).products.present? %>
+                <% ProductType.find(1237).products.sample(10).each do |product| %>
               <div class="owl-item">
                 <div class="trends_item is_new">
                   <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
