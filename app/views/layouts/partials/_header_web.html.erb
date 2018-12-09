@@ -183,7 +183,7 @@
                                   <div class="row">
                                     <dl>
                                       <dt>
-                                        <a class="headerCate_subTitle" href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %></a>
+                                        <a class="headerCate_subTitle" href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><hr id="break_line"></a>
                                       </dt>
                                       <% sub_category.product_types.each do |product_type| %>
                                         <dd>
@@ -334,6 +334,17 @@
 <style>
   .header_search_input{
     height: 50px;
+  }
+  #break_line{
+    display: block;
+    color: black;
+    margin-top: 0.5em;
+    border-top: 1px solid #090909;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
   }
   .main_nav_dropdown li a {
     color: #000000;
