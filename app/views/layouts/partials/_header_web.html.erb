@@ -198,7 +198,7 @@
                               </div>
                             </div>
                             <div class="col-md-4">
-                              <a href=""><img src="<%= category.products.sample(1).first.product_images.first.image.url if category.products.present? && category.products.sample(1).first.product_images.present? %>" style="width: 100%"></a>
+                              <a href=""><% if category.products.sample(1).first.product_images.first.present? %><img src="<%= category.products.sample(1).first.product_images.first.image.url if category.products.present? && category.products.sample(1).first.product_images.present? %>" style="width: 100%"><% end %></a>
                             </div>
                             </div>
                         </div>
