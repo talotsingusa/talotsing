@@ -21,7 +21,7 @@
       <% @products.each do |product| %>
       <div class="col-lg-3">
         <div class="product_item is_new" id="product_<%= product.id %>">
-          <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
+          <%= link_to product_path(id: product.id) do %>
           <div class="product_image d-flex flex-column align-items-center justify-content-center">
             <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
             <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
