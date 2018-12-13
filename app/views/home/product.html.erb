@@ -269,6 +269,8 @@
 
     </div>
   </div>
+  <hr style="width: 10px; color: #232f3e">
+  <%= @product.additional_information.html_safe if @product.additional_information.present? %>
   <div class="row">
     <div class="col-lg-12">
       <div class="pro-container">
@@ -297,7 +299,63 @@
   <%= f.hidden_field :shipping, value: @product_shipping , id: "product_shipping_cart"%>
 <% end %>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.js"></script>
+<style>
+  .pnl-packaging-main{
+    display: none;
+  }
+    .transaction-feedback-main{
+      display: none;
+    }
+    .ui-box-body{
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+  .product-property-list {
+    padding: 10px 0;
+  }
+  .util-clearfix {
+    zoom: 1;
+  }
+  ul {
+    list-style: disc;
+  }
+  .product-property-list li {
+    position: relative;
+    width: 50%;
+    float: left;
+    line-height: 16px;
+    padding: 5px 0;
+    list-style: none;
+    margin-left: 0;
+  }
+  .product-property-list li .propery-title {
+    float: left;
+    color: #999;
+    margin-right: 3px;
+  }
+  .product-property-list li .propery-des {
+    float: left;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+    .ui-switchable-content{
+      overflow-x: auto;
+    }
+  #origin-part > table:first-of-type {
+    display: none;
+  }
+    .shipping-payment-main{
+      display: none;
+    }
+</style>
 <script>
+    $('.origin-part table').css("display","none");
     /* JS Document */
 
     /******************************
