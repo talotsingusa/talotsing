@@ -233,6 +233,16 @@
             </div>
           </div>
           <br>
+          <div id="color_images">
+            <%= f.simple_fields_for :product_color_images do |image| %>
+
+              <%= render 'product_color_image_fields', f: image %>
+            <% end %>
+            <div class="links">
+              <%= link_to_add_association 'add color', f, :product_color_images %>
+            </div>
+          </div>
+          <br>
             <div class="row form-group">
               <div class="col col-md-3">
                 <label for="select" class=" form-control-label">Sale</label>

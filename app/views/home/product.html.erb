@@ -32,6 +32,11 @@
       <a href="#">
         <p class="title"><%= @product.name if @product.present? %></p>
       </a>
+      <% if current_user.present? && current_user.email == "admin@gmail.com" %>
+        <a href="<%= @product.supplier_url %>" target="_blank">
+          <p class="title" style="color: black;">Product vendor url</p>
+        </a>
+      <% end %>
       <div class="des-text">
         <ul id="proInfo" class="clearfix">
           <% @product.product_specifications.each do |specs| %>
@@ -78,8 +83,8 @@
             <p>Color:</p>
             <div class="w_100 colorcheckbox">
               <input type="hidden" id="sizecheckboxvalue">
-              <% @product.colors.all.each_with_index do |color, index| %>
-                <span data-title="<%= color.name %>" data-value="<%= color.name %>" id="color_checkbox_<%= index %>"><%= color.name %></span>
+              <% @product.product_color_images.each_with_index do |color, index| %>
+                <span class="color_image" style="height: 115px!important;" data-title="<%= color.color %>" data-value="<%= color.color %>" id="color_checkbox_<%= index %>"  title="<%=color.color %>"><img title="<%=color.color %>" data-source="<%= color.image.url(:original) %>" src="<%= color.image.url(:thumb) %>"></span>
               <% end %>
             </div>
             <!--            <div id="size-tips" class="tips-content undis" style="display: block;">-->
@@ -270,7 +275,7 @@
     </div>
   </div>
 <!--  <hr style="width: 10px; color: #232f3e">-->
-  <%#= @product.additional_information.html_safe if @product.additional_information.present? %>
+  <%= @product.additional_information.html_safe if @product.additional_information.present? %>
   <div class="row">
     <div class="col-lg-12">
       <div class="pro-container">
@@ -350,11 +355,25 @@
   #origin-part > table:first-of-type {
     display: none;
   }
+  .origin-part > table:first-of-type {
+    display: none;
+  }
+  .origin-part > div:first-of-type {
+    display: none;
+  }
+  .seller-discount-description{
+    display: none;
+  }
     .shipping-payment-main{
       display: none;
     }
 </style>
 <script>
+    $(".color_image").click(function(e){
+        $(".carousel-item").find('img').attr('src',$(this).find('img').attr('data-source'));
+    });
+    $( ".origin-part div:first-child" ).css("display","none");
+    $('.origin-part table:first-child').css("display","none");
     $('.origin-part table').css("display","none");
     /* JS Document */
 

@@ -6,27 +6,27 @@
   <div class="slider-box">
     <div class="slider" id="slider">
       <div class="slider__item">
-        <a href="<%= sub_categories_path(category: 80)%>"><img src="/assets/university-of-tennessee-womens-apparel-tigers-a-textbooks-tn-clothing.jpg" alt=""></a>
+        <a href="<%= sub_categories_path(category: 1)%>"><img src="/assets/university-of-tennessee-womens-apparel-tigers-a-textbooks-tn-clothing.jpg" alt=""></a>
 <!--        <h2 class="slider__item__title">Shop Women Dresses</h2>-->
       </div>
       <div class="slider__item">
-        <a href="<%= sub_categories_path(category: 80)%>"><img src="/assets/image.jpg" alt=""></a>
+        <a href="<%= sub_categories_path(category: 30)%>"><img src="/assets/image.jpg" alt=""></a>
         <!--        <h2 class="slider__item__title">Shop Lingerie</h2>-->
       </div>
       <div class="slider__item">
-        <a href="<%= product_types_path(sub_category: 264)%>"><img src="/assets/449a754f50cd8e20427f94e5e3143250.jpg" alt=""></a>
+        <a href="<%= product_types_path(sub_category: 117)%>"><img src="/assets/449a754f50cd8e20427f94e5e3143250.jpg" alt=""></a>
         <!--        <h2 class="slider__item__title">Shop Winter Wear</h2>-->
       </div>
       <div class="slider__item">
-        <a href="<%= sub_categories_path(category: 80)%>"><img src="/assets/25-Awesome-Clothing-Tips-No-Woman-Should-Ever-Miss.jpg" alt=""></a>
+        <a href="<%= sub_categories_path(category: 27)%>"><img src="/assets/25-Awesome-Clothing-Tips-No-Woman-Should-Ever-Miss.jpg" alt=""></a>
         <!--        <h2 class="slider__item__title">Shop Shoes</h2>-->
       </div>
       <div class="slider__item">
-        <a href="<%= shop_path(product_type: 264)%>"><img src="/assets/best_jeans_men_women.jpg" alt=""></a>
+        <a href="<%= shop_path(product_type: 737)%>"><img src="/assets/best_jeans_men_women.jpg" alt=""></a>
         <!--        <h2 class="slider__item__title">Shop Jeans</h2>-->
       </div>
       <div class="slider__item">
-        <a href="<%= shop_path(product_type: 264)%>"><img src="/assets/Abaya@stylesgap.com-8.jpg" alt=""></a>
+        <a href="<%= shop_path(product_type: 1104)%>"><img src="/assets/Abaya@stylesgap.com-8.jpg" alt=""></a>
 <!--        <h2 class="slider__item__title">Shop Muslim Dresses</h2>-->
       </div>
     </div>
@@ -47,13 +47,13 @@
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-        <% @category_1 = Category.find(80) %>
+        <% @category_1 = Category.find(1) %>
           <a href="<%= sub_categories_path(category: @category_1.id)%>">
             <div class="char_item d-flex flex-row align-items-center justify-content-start">
               <div class="char_icon"><img src="<%= @category_1.image %>" alt="" style="width: 30px;"></div>
               <div class="char_content">
                 <div class="char_title"><%= @category_1.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_1.products.minimum('price').floor if @category_1.products.present? %></div>
+                <div class="char_subtitle">Starting from $<%= @category_1.products.minimum('price').floor %></div>
               </div>
             </div>
           </a>
@@ -61,13 +61,13 @@
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-          <% @category_2 = Category.find(80) %>
+          <% @category_2 = Category.find(27) %>
           <a href="<%= sub_categories_path(category: @category_2.id)%>">
           <div class="char_item d-flex flex-row align-items-center justify-content-start">
             <div class="char_icon"><img src="<%= @category_2.image %>" alt="" style="width: 30px;"></div>
             <div class="char_content">
               <div class="char_title"><%= @category_2.name %></div>
-              <div class="char_subtitle">Starting from $<%= @category_2.products.minimum('price').floor if @category_2.products.present? %></div>
+              <div class="char_subtitle">Starting from $<%= @category_2.products.minimum('price').floor %></div>
             </div>
           </div>
           </a>
@@ -75,13 +75,13 @@
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-          <% @category_3 = Category.find(80) %>
+          <% @category_3 = Category.find(2) %>
           <a href="<%= sub_categories_path(category: @category_3.id)%>">
             <div class="char_item d-flex flex-row align-items-center justify-content-start">
               <div class="char_icon"><img src="<%= @category_3.image %>" alt="" style="width: 30px;"></div>
               <div class="char_content">
                 <div class="char_title"><%= @category_3.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_3.products.minimum('price').floor if @category_3.products.present? %></div>
+                <div class="char_subtitle">Starting from $<%= @category_3.products.minimum('price').floor %></div>
               </div>
             </div>
           </a>
@@ -89,13 +89,13 @@
 
         <!-- Char. Item -->
         <div class="col-lg-3 col-md-6 char_col">
-          <% @category_4 = Category.find(80) %>
+          <% @category_4 = Category.find(3) %>
           <a href="<%= sub_categories_path(category: @category_4.id)%>">
             <div class="char_item d-flex flex-row align-items-center justify-content-start">
               <div class="char_icon"><img src="<%= @category_4.image %>" alt="" style="width: 30px;"></div>
               <div class="char_content">
                 <div class="char_title"><%= @category_4.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_4.products.minimum('price').floor if @category_4.products.present? %></div>
+                <div class="char_subtitle">Starting from $<%= @category_4.products.minimum('price').floor %></div>
               </div>
             </div>
           </a>
@@ -123,7 +123,7 @@
                 <!-- Deals Item -->
                 <% Product.all.shuffle.last(5).each do |product| %>
                 <div class="owl-item deals_item">
-                  <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %><div class="deals_image"><img src="<%= product.product_images.first.image.url(:medium) if product.product_images.present? %>" alt=""></div><% end %>
+                  <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %><div class="deals_image"><img src="<%= product.product_images.first.image.url(:medium) %>" alt=""></div><% end %>
                   <div class="deals_content">
                     <div class="deals_info_line d-flex flex-row justify-content-start">
                       <div class="deals_item_category"><a href="#"><%= product.sub_category.name %></a></div>
@@ -280,8 +280,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(1237).products.present? %>
-                    <% ProductType.find(1237).products.sample(12).each do |product| %>
+                  <% if ProductType.find(981).products.present? %>
+                    <% ProductType.find(981).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -329,8 +329,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(1237).products.present? %>
-                    <% ProductType.find(1237).products.sample(10).each do |product| %>
+                  <% if ProductType.find(982).products.present? %>
+                    <% ProductType.find(982).products.sample(10).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -378,8 +378,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(1237).products.present? %>
-                    <% ProductType.find(1237).products.sample(12).each do |product| %>
+                  <% if ProductType.find(983).products.present? %>
+                    <% ProductType.find(983).products.sample(12).each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -523,8 +523,8 @@
                   <div class="arrivals_slider slider">
 
                     <!-- Slider Item -->
-                    <% if SubCategory.find(264).products.present? %>
-                      <% SubCategory.find(264).products.sample(12).each do |product| %>
+                    <% if SubCategory.find(16).products.present? %>
+                      <% SubCategory.find(16).products.sample(12).each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
                             <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -572,8 +572,8 @@
                   <div class="arrivals_slider slider">
 
                     <!-- Slider Item -->
-                    <% if SubCategory.find(264).products.present? %>
-                      <% SubCategory.find(264).products.sample(12).each do |product| %>
+                    <% if SubCategory.find(118).products.present? %>
+                      <% SubCategory.find(118).products.sample(12).each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
                             <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -621,8 +621,8 @@
                   <div class="arrivals_slider slider">
 
                     <!-- Slider Item -->
-                    <% if SubCategory.find(264).products.present? %>
-                      <% SubCategory.find(264).products.sample(12).each do |product| %>
+                    <% if SubCategory.find(127).products.present? %>
+                      <% SubCategory.find(127).products.sample(12).each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
                             <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -700,8 +700,8 @@
               <div class="bestsellers_slider slider">
 
                 <!-- Best Sellers Item -->
-                <% if SubCategory.find(264).products.present? %>
-                  <% SubCategory.find(264).products.sample(6).each do |product| %>
+                <% if SubCategory.find(124).products.present? %>
+                  <% SubCategory.find(124).products.sample(6).each do |product| %>
                     <div class="bestsellers_item">
                       <div class="product_item is_new" id="product_<%= product.id %>">
                         <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -751,8 +751,8 @@
               <div class="bestsellers_slider slider">
 
                 <!-- Best Sellers Item -->
-                <% if SubCategory.find(264).products.present? %>
-                  <% SubCategory.find(264).products.sample(6).each do |product| %>
+                <% if SubCategory.find(150).products.present? %>
+                  <% SubCategory.find(150).products.sample(6).each do |product| %>
                     <div class="bestsellers_item">
                       <div class="product_item is_new" id="product_<%= product.id %>">
                         <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -800,8 +800,8 @@
               <div class="bestsellers_slider slider">
 
                 <!-- Best Sellers Item -->
-                <% if SubCategory.find(264).products.present? %>
-                  <% SubCategory.find(264).products.sample(6).each do |product| %>
+                <% if SubCategory.find(151).products.present? %>
+                  <% SubCategory.find(151).products.sample(6).each do |product| %>
                     <div class="bestsellers_item">
                       <div class="product_item is_new" id="product_<%= product.id %>">
                         <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -929,8 +929,8 @@
             <div class="owl-carousel owl-theme trends_slider">
 
               <!-- Trends Slider Item -->
-              <% if ProductType.find(1237).products.present? %>
-                <% ProductType.find(1237).products.sample(10).each do |product| %>
+              <% if ProductType.find(51).products.present? %>
+                <% ProductType.find(51).products.sample(10).each do |product| %>
               <div class="owl-item">
                 <div class="trends_item is_new">
                   <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>

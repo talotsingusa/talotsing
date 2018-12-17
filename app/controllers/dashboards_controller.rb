@@ -338,6 +338,7 @@ class DashboardsController < ApplicationController
     @product = Product.new
     @product.product_shipments.build
     @product.product_specifications.build
+    @product.product_color_images.build
     render layout: "dashboard_application"
   end
 
@@ -345,6 +346,7 @@ class DashboardsController < ApplicationController
     @product = Product.find(params[:product_id])
     @product.product_shipments.build
     @product.product_specifications.build
+    @product.product_color_images.build
     render layout: "dashboard_application"
   end
 
@@ -672,7 +674,7 @@ class DashboardsController < ApplicationController
 
 
   def product_params
-    params.require(:product).permit( :name, :description, :sku, :supplier_url, :sale_off_percent, :price, :additional_information, :article_number, :vendor_store_product_number, :weight, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy], product_specifications_attributes: [:id, :spec_key, :spec_value, :_destroy])
+    params.require(:product).permit( :name, :description, :sku, :supplier_url, :sale_off_percent, :price, :additional_information, :article_number, :vendor_store_product_number, :weight, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy], product_specifications_attributes: [:id, :spec_key, :spec_value, :_destroy], product_color_images_attributes: [:id, :color, :image, :_destroy])
   end
 
   def shipping_price_params

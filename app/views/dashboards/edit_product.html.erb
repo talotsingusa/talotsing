@@ -229,6 +229,7 @@
               <%= link_to_add_association 'add shipment', f, :product_shipments %>
             </div>
           </div>
+          <br>
           <div id="specifications">
             <%= f.simple_fields_for :product_specifications do |shipment| %>
 
@@ -236,6 +237,16 @@
             <% end %>
             <div class="links">
               <%= link_to_add_association 'add specification', f, :product_specifications %>
+            </div>
+          </div>
+          <br>
+          <div id="color_images">
+            <%= f.simple_fields_for :product_color_images do |image| %>
+
+              <%= render 'product_color_image_fields', f: image %>
+            <% end %>
+            <div class="links">
+              <%= link_to_add_association 'add color', f, :product_color_images %>
             </div>
           </div>
           <br>
