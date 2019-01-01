@@ -9,6 +9,9 @@
               <% if !session[:shop_cart].nil? && session[:shop_cart].count > 0 %>
               <% session[:shop_cart].each do |product| %>
                   <li class="cart_item clearfix">
+                    <%= link_to(action: 'remove_item_from_cart', product:product) do %>
+                      <i class="fa fa-times float-right" aria-hidden="true"></i>
+                    <% end %>
                     <div class="cart_item_image"><img src="<%= product_details(product[0].to_i).product_images.first.image.url(:thumb) if product_details(product[0].to_i).product_images.present? %>" alt=""></div>
                     <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
                       <div class="cart_item_name cart_info_col">

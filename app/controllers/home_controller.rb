@@ -335,6 +335,12 @@ class HomeController < ApplicationController
   def shipping_help
     render layout: "blog_single_application"
   end
+
+  def remove_item_from_cart
+    session[:shop_cart].delete_if {|product| product[0] == params[:product][0]}
+    redirect_to cart_path
+  end
+
   private
 
   def shipping_params
