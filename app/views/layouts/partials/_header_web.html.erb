@@ -186,7 +186,7 @@
                                       <dt>
                                         <a class="headerCate_subTitle" href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><hr id="break_line"></a>
                                       </dt>
-                                      <% sub_category.product_types.each do |product_type| %>
+                                      <% sub_category.product_types.order(:id).each do |product_type| %>
                                         <dd style="margin: 15px 0;">
                                           <a class="headerCate_subList" href="<%= shop_path(product_type: product_type.id)%>" style="font-size: 15px!important;"><%= product_type.name %></a>
                                         </dd>
