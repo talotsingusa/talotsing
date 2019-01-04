@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'brands_list' => "dashboards#brands_list", as: :brands_list
   get 'add_brand' => "dashboards#add_brand", as: :add_brand
   post 'create_brand' => "dashboards#create_brand", as: :create_brand
+  get 'delete_brand'=> 'dashboards#delete_brand'
 
   get 'catergory_list' => "dashboards#catergory_list", as: :catergory_list
   get 'add_catergory' => "dashboards#add_catergory", as: :add_catergory

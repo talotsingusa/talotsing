@@ -20,6 +20,7 @@
               <tr>
                 <th>ID</th>
                 <th>name</th>
+                <th>Delete</th>
                 <th>Vendor Name</th>
                 <th>Vendor Email</th>
                 <th>Vendor Number</th>
@@ -32,6 +33,7 @@
               <tr>
                 <td><%= brand.id %></td>
                 <td><%= brand.name %></td>
+                <td><%= link_to "Delete", delete_brand_path(id: brand.id) %></td>
                 <td><%= brand.vendor_name %></td>
                 <td><%= brand.vendor_email %></td>
                 <td><%= brand.vendor_number %></td>

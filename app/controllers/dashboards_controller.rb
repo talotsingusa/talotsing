@@ -23,6 +23,12 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def delete_brand
+    @brand = Brand.find(params[:id])
+    @brand.destroy
+    redirect_to brands_list_path
+  end
+
   def catergory_list
     @categories = Category.all
     render layout: "dashboard_application"
