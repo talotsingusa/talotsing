@@ -44,7 +44,9 @@
               <% @product.each do |product| %>
                   <tr>
                     <td><%= product.id %></td>
-                    <td><%= image_tag product.product_images.take.image.url(:medium) %></td>
+                    <% if product.product_images.present? %>
+                      <td><%= image_tag product.product_images.take.image.url(:medium) %></td>
+                    <% end %>
                     <td><%= link_to "edit", edit_product_path(product_id: product.id), target: 'blank' %> <%= link_to "Delete", delete_product_path(id: product.id) %></td>
                     <td><a href="<%= product.supplier_url if product.present? %>" target="_blank">Supplier URL</a></td>
                     <td><%= product.name %></td>
