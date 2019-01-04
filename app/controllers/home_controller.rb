@@ -337,7 +337,7 @@ class HomeController < ApplicationController
   end
 
   def remove_item_from_cart
-    session[:shop_cart].delete_if {|product| product[0] == params[:product][0]}
+    session[:shop_cart].delete_if {|product| product[0] == params[:product]}
     redirect_to cart_path
   end
 
