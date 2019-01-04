@@ -177,7 +177,7 @@
                           <div class="row">
                             <div class="col-md-8">
                               <div class="row">
-                                <% category.sub_categories.each do |sub_category| %>
+                                <% category.sub_categories.order(:ui_order).each do |sub_category| %>
 <!--                                  category.sub_categories.joins(:product_types).group('sub_categories.id').order('count(product_types.sub_category_id) DESC')-->
                                   <% if sub_category.product_types.count > 0 %>
                                 <div class="col-md-4 col-lg-4">
