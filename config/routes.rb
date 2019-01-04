@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'home/return' => "home#return", as: :return
   get 'home/privacy_policy' => "home#privacy_policy", as: :privacy_policy
   get 'home/shipping_help' => "home#shipping_help", as: :shipping_help
-
+  get 'home/remove_item_from_cart' => "home#remove_item_from_cart"
   resources :dashboards
   get 'brands_list' => "dashboards#brands_list", as: :brands_list
   get 'add_brand' => "dashboards#add_brand", as: :add_brand
