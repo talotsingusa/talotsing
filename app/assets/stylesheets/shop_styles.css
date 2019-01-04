@@ -2290,12 +2290,13 @@ select option
 /*
 new dropdown css
  */
-.hassubs:hover .headerCate_contain{
-    display: block;
+.hassubs:hover .headerCate_contain {
+  display: block;
+  min-height: 100%;
 }
-.sub_cat_anch{
-    line-height: 20px !important;
-    font-size: 14px !important;
+.sub_cat_anch {
+  line-height: 20px !important;
+  font-size: 14px !important;
 }
 .headerCate_contain {
     display: none;
