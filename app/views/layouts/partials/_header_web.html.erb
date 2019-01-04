@@ -180,7 +180,7 @@
                                 <% category.sub_categories.each do |sub_category| %>
 <!--                                  category.sub_categories.joins(:product_types).group('sub_categories.id').order('count(product_types.sub_category_id) DESC')-->
                                   <% if sub_category.product_types.count > 0 %>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-lg-4">
                                   <div class="row">
                                     <dl>
                                       <dt>
@@ -188,7 +188,7 @@
                                       </dt>
                                       <% sub_category.product_types.order(:id).each do |product_type| %>
                                         <dd style="margin: 15px 0;">
-                                          <a class="headerCate_subList" href="<%= shop_path(product_type: product_type.id)%>" style="font-size: 15px!important;"><%= product_type.name %></a>
+                                          <a class="headerCate_subList" href="<%= shop_path(product_type: product_type.id)%>" style="font-size: 13px!important;"><%= product_type.name %></a>
                                         </dd>
                                       <% end %>
                                     </dl>
