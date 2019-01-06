@@ -49,7 +49,7 @@
                     <% end %>
                     <td><%= link_to "edit", edit_product_path(product_id: product.id), target: 'blank' %> <%= link_to "Delete", delete_product_path(id: product.id) %></td>
                     <td><a href="<%= product.supplier_url if product.present? %>" target="_blank">Supplier URL</a></td>
-                      <td><%= product.name %></td>
+                      <td><%= product.name if product.present?%></td>
                       <td><pre><%= product.description %></pre></td>
                       <td class="text-right"><%= product.sku %></td>
                       <td><%= product.price %></td>
