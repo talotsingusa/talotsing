@@ -49,22 +49,24 @@
                     <% end %>
                     <td><%= link_to "edit", edit_product_path(product_id: product.id), target: 'blank' %> <%= link_to "Delete", delete_product_path(id: product.id) %></td>
                     <td><a href="<%= product.supplier_url if product.present? %>" target="_blank">Supplier URL</a></td>
-                    <td><%= product.name %></td>
-                    <td><pre><%= product.description %></pre></td>
-                    <td class="text-right"><%= product.sku %></td>
-                    <td><%= product.price %></td>
-                    <td><%= product.additional_information %></td>
-                    <td><%= product.store.name %></td>
-                    <td><%= product.brand.name %></td>
-                    <td><%= product.category.name %></td>
-                    <td class="text-right"><%= product.sub_category.name %></td>
-                    <td><%= product.product_type.name %></td>
-                    <td><%= product.colors.collect { |o| o.name }.join(", ") %></td>
-                    <td><%= product.sizes.collect { |o| o.name }.join(", ")%></td>
-                    <td class="text-right"><%= product.sale %></td>
-                    <td><%= product.active %></td>
-                    <td><%= product.approved %></td>
-                    <td class="text-right"><%= product.created_at %></td>
+                    <% if !product.nil? %>
+                      <td><%= product.name %></td>
+                      <td><pre><%= product.description %></pre></td>
+                      <td class="text-right"><%= product.sku %></td>
+                      <td><%= product.price %></td>
+                      <td><%= product.additional_information %></td>
+                      <td><%= product.store.name %></td>
+                      <td><%= product.brand.name %></td>
+                      <td><%= product.category.name %></td>
+                      <td class="text-right"><%= product.sub_category.name %></td>
+                      <td><%= product.product_type.name %></td>
+                      <td><%= product.colors.collect { |o| o.name }.join(", ") %></td>
+                      <td><%= product.sizes.collect { |o| o.name }.join(", ")%></td>
+                      <td class="text-right"><%= product.sale %></td>
+                      <td><%= product.active %></td>
+                      <td><%= product.approved %></td>
+                      <td class="text-right"><%= product.created_at %></td>
+                    <% end %>
                   </tr>
               <% end %>
               </tbody>
