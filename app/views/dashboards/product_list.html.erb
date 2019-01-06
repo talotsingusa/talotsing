@@ -54,9 +54,9 @@
                       <td class="text-right"><%= product.sku %></td>
                       <td><%= product.price %></td>
                       <td><%= product.additional_information %></td>
-                      <td><%= product.store.name if product.store.name.present? %></td>
-                      <td><%= product.brand.name if product.brand.name.present?%></td>
-                      <td><%= product.category.name if product.category.name.present? %></td>
+                      <td><%= product.store.name if product.store.present? %></td>
+                      <td><%= product.brand.name if product.brand.present?%></td>
+                      <td><%= product.category.name if product.category.present? %></td>
                       <td class="text-right"><%= product.sub_category.name %></td>
                       <td><%= product.product_type.name %></td>
                       <td><%= product.colors.collect { |o| o.name }.join(", ") %></td>
