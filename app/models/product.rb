@@ -61,4 +61,12 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :product_color_images,:reject_if => lambda { |a| a[:color].blank? }, :allow_destroy => true
 
   has_many :order_items
+
+  def self.search(params, current_user)
+    products = where(store_id: current_user.store.id)
+    puts products
+    products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
+    products
+  end
+
 end

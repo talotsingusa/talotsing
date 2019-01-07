@@ -5,7 +5,7 @@ class DashboardsController < ApplicationController
   end
 
   def brands_list
-    @brands = Brand.all
+    @brands = Brand.includes(:receiver).all
     render layout: "dashboard_application"
   end
 
@@ -337,7 +337,7 @@ class DashboardsController < ApplicationController
 
   def product_list
     @products = Product.includes([:product_images, :store, :brand, :colors, :category, :product_type,
-       :product_sizes, :sizes, :sub_category]).where(store_id: current_user.store.id).page params[:page]
+       :product_sizes, :sizes, :sub_category]).search(params, current_user).page params[:page]
     render layout: "dashboard_application"
   end
 
