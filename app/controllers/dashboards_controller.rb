@@ -5,7 +5,7 @@ class DashboardsController < ApplicationController
   end
 
   def brands_list
-    @brands = Brand.includes(:receiver).all
+    @brands = Brand.all
     render layout: "dashboard_application"
   end
 
