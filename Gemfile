@@ -50,6 +50,8 @@ gem 'owlcarousel2'
 gem 'parallax-rails'
 gem 'parallaximage-rails'
 gem 'modernizr-rails'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 # gem 'scrollmagicjs-rails'
 gem 'jquery-slick-rails'
 gem 'jquery-sliders-rails'
@@ -87,6 +89,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'bullet'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

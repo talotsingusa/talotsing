@@ -15,7 +15,7 @@
           </div>
           <br>
           <div class="table-responsive table--no-card m-b-30">
-            <table class="table table-borderless table-striped table-earning" id="product_list">
+            <table class="table table-borderless table-striped table-earning">
               <thead>
               <tr>
                 <th>ID</th>
@@ -67,6 +67,7 @@
               <% end %>
               </tbody>
             </table>
+            <%= paginate @products, theme: 'twitter-bootstrap-4' %>
           </div>
         </div>
       </div>
