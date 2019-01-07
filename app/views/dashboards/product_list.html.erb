@@ -44,12 +44,10 @@
               <% @products.each do |product| %>
                   <tr>
                     <td><%= product.id %></td>
-                    <% if product.product_images.present? %>
-                      <td><%= image_tag product.product_images.take.image.url(:medium) %></td>
-                    <% end %>
+                      <td><%= image_tag product.product_images.take.image.url(:medium) if product.product_images.present? %></td>
                     <td><%= link_to "edit", edit_product_path(product_id: product.id), target: 'blank' %> <%= link_to "Delete", delete_product_path(id: product.id) %></td>
                     <td><a href="<%= product.supplier_url if product.present? %>" target="_blank">Supplier URL</a></td>
-                      <td><%= product.name if product.present?%></td>
+                      <td><%= product.name %></td>
                       <td><pre><%= product.description %></pre></td>
                       <td class="text-right"><%= product.sku %></td>
                       <td><%= product.price %></td>
@@ -58,7 +56,7 @@
                       <td><%= product.brand.name if product.brand.present?%></td>
                       <td><%= product.category.name if product.category.present? %></td>
                       <td class="text-right"><%= product.sub_category.name %></td>
-                      <td><%= product.product_type.name if product.product_type.present? %></td>
+                      <td><%= product.product_type.name if product.product_type.present?%></td>
                       <td><%= product.colors.collect { |o| o.name }.join(", ") %></td>
                       <td><%= product.sizes.collect { |o| o.name }.join(", ")%></td>
                       <td class="text-right"><%= product.sale %></td>
