@@ -63,7 +63,7 @@ class DashboardsController < ApplicationController
   end
 
   def sub_category_list
-    @sub_categories = SubCategory.all
+    @sub_categories = SubCategory.includes(:category).all
     render layout: "dashboard_application"
   end
 
@@ -82,7 +82,7 @@ class DashboardsController < ApplicationController
   end
 
   def product_type_list
-    @product_types = ProductType.all
+    @product_types = ProductType.includes(:sub_category).all
     render layout: "dashboard_application"
   end
 
