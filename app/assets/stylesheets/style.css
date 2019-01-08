@@ -110,7 +110,7 @@ ul li {
 }
 
 .select_alls {
-    background: #fffcf5;
+    background: #fafafa;;
     border: 1px #edd28b solid;
     margin: 10px 0;
     overflow: hidden;
@@ -273,7 +273,7 @@ li ol {
     text-align: center;
     line-height: 2.7;
     position: absolute;
-    left: 175px;
+    left: 0px;
     bottom: 0;
     color: #fff;
 }

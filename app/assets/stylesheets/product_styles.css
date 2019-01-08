@@ -2190,3 +2190,9 @@ new dropdown css
     margin-bottom: 5px !important;
     white-space: initial;
 }
+.price {
+	font-size: 24px;
+  font-weight: 700;
+  font-family: arial;
+  color: #f60;
+}
