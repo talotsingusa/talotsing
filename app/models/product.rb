@@ -61,12 +61,29 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :product_color_images,:reject_if => lambda { |a| a[:color].blank? }, :allow_destroy => true
 
   has_many :order_items
+  before_create :multiply_price
 
   def self.search(params, current_user)
     products = where(store_id: current_user.store.id)
     puts products
     products = products.where("name like ?", "%#{params[:search]}%") if params[:search]
     products
+  end
+
+  def multiply_price
+    if self.price < 2
+      self.price *=4
+    elsif self.price >= 2 && self.price <3
+      self.price *= 3
+    elsif self.price >= 3 && self.price <10
+      self.price *= 3.2
+    elsif self.price >= 10 && self.price < 30
+      self.price *= 2.5
+    elsif self.price >=30 && self.price <60
+      self.price *= 2
+    else
+      self.price *= 1.6
+    end
   end
 
 end
