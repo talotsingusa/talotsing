@@ -57,7 +57,7 @@ class HomeController < ApplicationController
     end
     if @products.present?
       @sub_categories = @products.last.category.sub_categories
-      @product_types = @products.last.sub_category.product_types
+      @product_types = @products.last.sub_category.product_types if @products.last.sub_category.present?
     end
     render layout: "shop_application"
   end
