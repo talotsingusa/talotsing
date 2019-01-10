@@ -103,7 +103,7 @@
                 <label for="select" class=" form-control-label">Select Sub Category</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.grouped_collection_select :sub_category, Category.all, :sub_categories, :name, :id, :name,{}, class: "form-control", label: false %>
+                <%= f.grouped_collection_select :product_sub_category, Category.all, :sub_categories, :name, :id, :name,{}, class: "form-control", label: false %>
                 <p style="color: red" id="sub_category_error">Please select sub category to proceed</p>
               </div>
             </div>
