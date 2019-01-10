@@ -112,7 +112,7 @@
                 <label for="select" class=" form-control-label">Select Product Type</label>
               </div>
               <div class="col-12 col-md-9">
-                <%= f.input :product_group, collection: ProductType.all.map { |s| [("#{s.name}"), s.id] }, class: "form-control", label: false %>
+                <%= f.grouped_collection_select :product_group, SubCategory.all, :product_types, :name, :id, :name, {}, class: "form-control", label: false %>
                 <p style="color: red" id="product_type_error">Please select product type to proceed</p>
               </div>
             </div>
