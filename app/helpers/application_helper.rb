@@ -165,4 +165,21 @@ module ApplicationHelper
   def mobile? # has to be in here because it has access to "request"
     request.user_agent =~ /\b(Android|iPhone|iPad|Windows Phone|Opera Mobi|Kindle|BackBerry|PlayBook)\b/i
   end
+
+  def get_fine_jewlery_products
+    SubCategory.where(name:"Fine Jewelry").take.product_types
+  end
+
+  def get_toys_and_hobbies_products
+    SubCategory.where(name:"Toys & Hobbies").take.product_types
+  end
+
+  def get_mobile_phone_accessories_products
+    SubCategory.where(name:"Mobile Phone Accessories").take.product_types
+  end
+
+  def get_makeup_products
+    SubCategory.where(name:"Makeup").take.product_types
+  end
+
 end

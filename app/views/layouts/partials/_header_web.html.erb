@@ -163,6 +163,7 @@
                   <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
                     <div class="cat_burger"><span></span><span></span><span></span></div>
                     <div class="cat_menu_text">Departments</div>
+                    <div class="pl-5"style="font: 12px; color:white;">See All ></div>
                   </div>
                   <ul class="cat_menu">
                   <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
@@ -216,33 +217,33 @@
             <div class="main_nav_menu ml-auto">
               <ul class="standard_dropdown main_nav_dropdown">
                 <li class="hassubs">
-                  <a href="#">Dress & Skirt<i class="fas fa-chevron-down"></i></a>
+                  <a href="#">Fine Jewelry<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
+                   <% get_fine_jewlery_products.each do |jewelry| %>
+                      <li><a href="<%= shop_path(product_type: jewelry.id)%>"><%= jewelry.name %><i class="fas fa-chevron-down"></i></a></li>
+                   <% end %>
+                  </ul>
+                </li>
+                <li class="hassubs">
+                  <a href="#">Toys&Hobbies<i class="fas fa-chevron-down"></i></a>
+                  <ul>
+                    <% get_toys_and_hobbies_products.each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
                 </li>
                 <li class="hassubs">
-                  <a href="#">Tops & Tees<i class="fas fa-chevron-down"></i></a>
+                  <a href="#">Mobile Phone Accessories<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
+                    <% get_mobile_phone_accessories_products.each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
                 </li>
                 <li class="hassubs">
-                  <a href="#">Lingerie & Intimate<i class="fas fa-chevron-down"></i></a>
+                  <a href="#">Makeup<i class="fas fa-chevron-down"></i></a>
                   <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
-                      <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
-                    <% end %>
-                  </ul>
-                </li>
-                <li class="hassubs">
-                  <a href="#">Women's Bags<i class="fas fa-chevron-down"></i></a>
-                  <ul>
-                    <% ProductType.where("sub_category_id IN (?)", [259]).sample(10).each do |product_type| %>
+                    <% get_makeup_products.each do |product_type| %>
                       <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
@@ -286,7 +287,6 @@
                 <a href="<%= root_path %>">Home<i class="fa fa-angle-down"></i></a>
               </li>
               <% Category.all.order(:created_at).each do |category| %>
-                <li class="page_menu_item has-children">
                   <a href="<%= sub_categories_path(category: category.id)%>" style="float:left; width: 75%"><%= category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
                     font-size: 25px;
                     margin-top: 17px;
@@ -294,20 +294,21 @@
                   <ul class="page_menu_selection">
                     <% category.sub_categories.order(:ui_order).each do |sub_category| %>
                       <% if sub_category.product_types.count > 0 %>
-                      <li class="page_menu_item has-children">
-                        <a href="<%= product_types_path(sub_category: sub_category.id)%>" style="float:left; width: 75%"><%= sub_category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
-                          font-size: 25px;
-                          margin-top: 17px;
-                          color: white;"></i>
-                        <ul class="page_menu_selection">
-                          <% sub_category.product_types.order(:ui_id).each do |product_type| %>
-                            <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fa fa-angle-down" style="    float: right;
-                                font-size: 25px;
-                                margin-top: 17px;
-                                color: white;"></i></a></li>
-                          <%end %>
-                        </ul>
-                      </li>
+                      <div class = "col-lg-4">
+                        <li class="page_menu_item has-children">
+                          <a href="<%= product_types_path(sub_category: sub_category.id)%>" style="float:left; width: 75%"><%= sub_category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
+                            font-size: 25px;
+                            margin-top: 17px;
+                            color: white;"></i>
+                          <ul class="page_menu_selection">
+                            <% sub_category.product_types.order(:ui_id).each do |product_type| %>
+                              <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fa fa-angle-down" style="    float: right;
+                                  font-size: 25px;
+                                  margin-top: 17px;
+                                  color: white;"></i></a></li>
+                            <%end %>
+                          </ul>
+                      </div>
                       <% end %>
                     <% end %>
 
