@@ -39,71 +39,26 @@
   </div>
 </div>
 
+<div class = 
+<h1> Flash Deals </h1>
+
   <!-- Characteristics -->
-
-  <div class="characteristics">
-    <div class="container">
-      <div class="row">
-
-        <!-- Char. Item -->
-        <div class="col-lg-3 col-md-6 char_col">
-        <% @category_1 = Category.find(80) %>
-          <a href="<%= sub_categories_path(category: @category_1.id)%>">
-            <div class="char_item d-flex flex-row align-items-center justify-content-start">
-              <div class="char_icon"><img src="<%= @category_1.image %>" alt="" style="width: 30px;"></div>
-              <div class="char_content">
-                <div class="char_title"><%= @category_1.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_1.products.minimum('price').floor if @category_1.products.present? %></div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Char. Item -->
-        <div class="col-lg-3 col-md-6 char_col">
-          <% @category_2 = Category.find(80) %>
-          <a href="<%= sub_categories_path(category: @category_2.id)%>">
-          <div class="char_item d-flex flex-row align-items-center justify-content-start">
-            <div class="char_icon"><img src="<%= @category_2.image %>" alt="" style="width: 30px;"></div>
-            <div class="char_content">
-              <div class="char_title"><%= @category_2.name %></div>
-              <div class="char_subtitle">Starting from $<%= @category_2.products.minimum('price').floor if @category_2.products.present? %></div>
-            </div>
+<div class = "shop">
+  <div class  = "container">
+    <div class = "row">
+      <div class = "col-lg-12" >
+        <div class="shop_content id="shop_products_section" styl="display: block; position: relative; box-sizing: border-box;"" >
+          <div class="row">
+            <%= render @products %>
           </div>
-          </a>
-        </div>
-
-        <!-- Char. Item -->
-        <div class="col-lg-3 col-md-6 char_col">
-          <% @category_3 = Category.find(80) %>
-          <a href="<%= sub_categories_path(category: @category_3.id)%>">
-            <div class="char_item d-flex flex-row align-items-center justify-content-start">
-              <div class="char_icon"><img src="<%= @category_3.image %>" alt="" style="width: 30px;"></div>
-              <div class="char_content">
-                <div class="char_title"><%= @category_3.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_3.products.minimum('price').floor if @category_3.products.present? %></div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Char. Item -->
-        <div class="col-lg-3 col-md-6 char_col">
-          <% @category_4 = Category.find(80) %>
-          <a href="<%= sub_categories_path(category: @category_4.id)%>">
-            <div class="char_item d-flex flex-row align-items-center justify-content-start">
-              <div class="char_icon"><img src="<%= @category_4.image %>" alt="" style="width: 30px;"></div>
-              <div class="char_content">
-                <div class="char_title"><%= @category_4.name %></div>
-                <div class="char_subtitle">Starting from $<%= @category_4.products.minimum('price').floor if @category_4.products.present? %></div>
-              </div>
-            </div>
-          </a>
         </div>
       </div>
     </div>
+    <div id="products">
+      <%= will_paginate @products %>
+    </div>
   </div>
-
+</div>
   <!-- Deals of the week -->
 
   <div class="deals_featured">
@@ -2228,7 +2183,7 @@
                         trendsSlider.trigger('prev.owl.carousel');
                     });
                 }
-
+x
                 if($('.trends_next').length)
                 {
                     var next = $('.trends_next');

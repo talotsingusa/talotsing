@@ -1,0 +1,84 @@
+<div class="col-lg-3">
+  <div class="product_item is_new" id="product_<%= product.id %>">
+    <%= link_to product_path(id: product.id) do %>
+      <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
+        <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+        <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
+      </div>
+    <% end %>
+    <div class="product_content mt-5">
+      <div class="product_price">$<%= product.price %></div>
+      <div class="product_name">
+        <div>
+          <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+        </div>
+      </div>
+    </div>
+    <% if check_favorite(product.id) == true %>
+      <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+        <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+          <i class="fas fa-heart"></i>
+        </div>
+      <% end %>
+    <% else %>
+      <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+        <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+          <i class="fas fa-heart"></i>
+        </div>
+      <% end %>
+    <% end %>
+    <ul class="product_marks">
+      <li class="product_mark product_discount">-25%</li>
+      <li class="product_mark product_new">new</li>
+    </ul>
+  </div>
+</div>
+
+<style type="text/css">
+.product_item {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background: #FFFFFF;
+    cursor: pointer;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    text-align: center;
+    padding-right: 15px
+}
+.product_image img {
+    display: block;
+    position: relative;
+    max-width: 100%;
+}
+.product_image {
+    width: 100%;
+    height: auto;
+}
+.product_content {
+  width: 100%;
+}
+.product_price {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+.product_name {
+    margin-top: 4px;
+    overflow: hidden;
+}
+.product_name div 
+a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    white-space: nowrap; 
+    transition: all 200ms ease;
+}
+.product_name div {
+    width: 100%;
+}
+</style>
