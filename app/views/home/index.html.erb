@@ -219,9 +219,9 @@
             <div class="tabbed_container">
               <div class="tabs">
                 <ul class="clearfix">
-                  <li class="active">Corsets</li>
-                  <li>Panties</li>
-                  <li>Bustiers</li>
+                  <li class="active">T-Shirts</li>
+                  <li>Blazers</li>
+                  <li>Car Lights</li>
                 </ul>
                 <div class="tabs_line"><span></span></div>
               </div>
@@ -231,8 +231,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(1237).products.present? %>
-                    <% ProductType.find(1237).products.sample(12).each do |product| %>
+                  <% if get_t_shirts.present? %>
+                    <% get_t_shirts.each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -280,8 +280,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(1237).products.present? %>
-                    <% ProductType.find(1237).products.sample(10).each do |product| %>
+                  <% if get_blazers.present? %>
+                    <% get_blazers.each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -329,8 +329,8 @@
                 <div class="featured_slider slider">
 
                   <!-- Slider Item -->
-                  <% if ProductType.find(1237).products.present? %>
-                    <% ProductType.find(1237).products.sample(12).each do |product| %>
+                  <% if get_car_lights.present? %>
+                    <% get_car_lights.each do |product| %>
                       <div class="featured_slider_item">
                         <div class="product_item is_new" id="product_<%= product.id %>">
                           <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
