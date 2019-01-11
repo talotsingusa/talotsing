@@ -406,7 +406,7 @@
               <div class="owl-item">
                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                   <div class="popular_category_image"><img src="/assets/popular_1.png" alt=""></div>
-                  <div class="popular_category_text">Smartphones & Tablets</div>
+                  <div class="popular_category_text">Cellphones & Accessories</div>
                 </div>
               </div>
 
@@ -414,7 +414,7 @@
               <div class="owl-item">
                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                   <div class="popular_category_image"><img src="/assets/popular_2.png" alt=""></div>
-                  <div class="popular_category_text">Computers & Laptops</div>
+                  <div class="popular_category_text">Computer, Office, Security</div>
                 </div>
               </div>
 
@@ -422,7 +422,7 @@
               <div class="owl-item">
                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                   <div class="popular_category_image"><img src="/assets/popular_3.png" alt=""></div>
-                  <div class="popular_category_text">Gadgets</div>
+                  <div class="popular_category_text">Consumer Electronics</div>
                 </div>
               </div>
 
@@ -430,7 +430,7 @@
               <div class="owl-item">
                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                   <div class="popular_category_image"><img src="/assets/popular_4.png" alt=""></div>
-                  <div class="popular_category_text">Video Games & Consoles</div>
+                  <div class="popular_category_text">Sports & Outdoors</div>
                 </div>
               </div>
 
@@ -438,7 +438,7 @@
               <div class="owl-item">
                 <div class="popular_category d-flex flex-column align-items-center justify-content-center">
                   <div class="popular_category_image"><img src="/assets/popular_5.png" alt=""></div>
-                  <div class="popular_category_text">Accessories</div>
+                  <div class="popular_category_text">Beauty & Health, Hair</div>
                 </div>
               </div>
 
@@ -461,7 +461,7 @@
               <div class="new_arrivals_title">Hot New Arrivals</div>
               <ul class="clearfix">
                 <li class="active">Men Shirts</li>
-                <li>Men Active Wear</li>
+                <li>Men Jeans</li>
                 <li>Men Underwear and Intimates</li>
               </ul>
               <div class="tabs_line"><span></span></div>
@@ -474,8 +474,8 @@
                   <div class="arrivals_slider slider">
 
                     <!-- Slider Item -->
-                    <% if SubCategory.find(264).products.present? %>
-                      <% SubCategory.find(264).products.sample(12).each do |product| %>
+                 <% if get_men_shirts.present? %>
+-                   <% get_men_shirts.each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
                             <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -523,8 +523,8 @@
                   <div class="arrivals_slider slider">
 
                     <!-- Slider Item -->
-                    <% if SubCategory.find(264).products.present? %>
-                      <% SubCategory.find(264).products.sample(12).each do |product| %>
+                    <% if get_men_jeans.present? %>
+                      <% get_men_jeans.each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
                             <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
@@ -572,8 +572,8 @@
                   <div class="arrivals_slider slider">
 
                     <!-- Slider Item -->
-                    <% if SubCategory.find(264).products.present? %>
-                      <% SubCategory.find(264).products.sample(12).each do |product| %>
+                    <% if get_men_under_garments.present? %>
+                      <% get_men_under_garments.sample(12).each do |product| %>
                         <div class="featured_slider_item">
                           <div class="product_item is_new" id="product_<%= product.id %>">
                             <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
