@@ -16,7 +16,7 @@ module HomeHelper
   end
 
   def get_men_jeans
-    ProductType.where(name:"Jeans").take.products
+    Category.where(name:"Men’s Clothing").take.sub_categories.where(name:"Bottoms").take.product_types.where(name:"Jeans").take.products
   end
 
   def get_men_under_garments
