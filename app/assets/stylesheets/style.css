@@ -326,15 +326,20 @@ li ol {
 }
 
 @media (max-width: 990px) {
-    .carousel-thumbnails .carousel-indicators {
-        bottom: 0;
-    }
-    .go-left {
-        display: none;
-    }
-    .go-right {
-        display: none;
-    }
+  .go-left {
+    display: none;
+  }
+  .go-right {
+    display: none;
+  }
+  .item_name {
+    margin-top: 100px;
+  }
+  .fav {
+    margin-bottom: 50px;
+    margin-left: 100px;
+  }
+
 }
 
 

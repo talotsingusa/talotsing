@@ -2196,3 +2196,33 @@ new dropdown css
   font-family: arial;
   color: #f60;
 }
+
+.item_name{ 
+	font-size: 1em;
+  line-height: 22px;
+  padding: 10px 20px 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.add_to_cart_button {
+	background-color: #ff5400;
+  color: #fff;
+  padding: 0 30px;
+  margin: 0 5px 5px 0;
+  border: none;
+  line-height: 42px
+}
+.buy_now {
+	position: relative;
+  line-height: 42px;
+  border: 1px solid #fd9729;
+  color: #fff;
+  background-color: #fd9729;
+  padding: 0 35px;
+  margin: 0 10px 5px 0;
+  width: 150px;
+}
