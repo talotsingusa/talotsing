@@ -3,5 +3,5 @@ development:
   encoding: unicode
   database: talotsing_local
   pool: 5
-  username: usamakhan
-  password: ""
+  username: ENV['pg_user_name']
+  password: ENV['pg_password']
