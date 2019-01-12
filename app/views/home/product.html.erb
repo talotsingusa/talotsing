@@ -33,7 +33,7 @@
         <p class="title"><%= @product.name if @product.present? %></p>
       </a>
       <hr>
-      <p class="price">Price: <span class="p-symbol" itemprop="priceCurrency" content="USD">US $</span> <%= @product.price %> </p>
+      <span>Price:</span>US $<%= @product.price if @product.price.present? %>
       <% if current_user.present? && current_user.email == "admin@gmail.com" %>
         <a href="<%= @product.supplier_url %>" target="_blank">
           <p class="title" style="color: black;">Product vendor url</p>
