@@ -85,38 +85,34 @@ class HomeController < ApplicationController
   end
 
   def product
-    @product = Product.find(107000) rescue nil
-    unless @product.nil?
-      @related_products = @product.product_type.products
-        if ShippingPrice.all.count > 0
-          @product_shipping = ShippingPrice.first.price
-        end
-        if @product.sizes.present?
-          @product_size = @product.sizes.first.name
-        end
-        if @product.colors.present?
-          @product_colors = @product.colors.first.name
-        end
-        if current_user.present?
-          recent_viewed = RecentView.where(user_id: current_user.id, product_id: params[:id])
-          if recent_viewed.present?
-          else
-            RecentView.create(user_id: current_user.id, product_id: params[:id])
-          end
-        else
-          session[:recent_views] ||= []
-          if session[:recent_views].nil?
-            session[:recent_views] << ""
-            session[:recent_views] << params[:id].to_i
-          else
-            session[:recent_views] << params[:id].to_i
-          end
-          puts session[:recent_views]
-        end
-        render layout: "product_application"
-      else
-        session[:return_to] = request.referer
+    @product = Product.find(params[:id])
+    @related_products = @product.product_type.products
+    if ShippingPrice.all.count > 0
+      @product_shipping = ShippingPrice.first.price
     end
+    if @product.sizes.present?
+      @product_size = @product.sizes.first.name
+    end
+    if @product.colors.present?
+      @product_colors = @product.colors.first.name
+    end
+    if current_user.present?
+      recent_viewed = RecentView.where(user_id: current_user.id, product_id: params[:id])
+      if recent_viewed.present?
+      else
+        RecentView.create(user_id: current_user.id, product_id: params[:id])
+      end
+    else
+      session[:recent_views] ||= []
+      if session[:recent_views].nil?
+        session[:recent_views] << ""
+        session[:recent_views] << params[:id].to_i
+      else
+        session[:recent_views] << params[:id].to_i
+      end
+      puts session[:recent_views]
+    end
+    render layout: "product_application"
   end
 
   def cart
