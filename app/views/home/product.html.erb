@@ -35,13 +35,13 @@
       <hr>
       <span>Price:</span>US $<%= @product.price if @product.present? %>
       <% if current_user.present? && current_user.email == "admin@gmail.com" %>
-        <a href="<%= @product.supplier_url %>" target="_blank">
+        <a href="<%= @product.supplier_url if @product.present? %>" target="_blank">
           <p class="title" style="color: black;">Product vendor url</p>
         </a>
       <% end %>
       <div class="des-text">
         <ul id="proInfo" class="clearfix">
-          <% @product.product_specifications.each do |specs| %>
+          <% @product.product_specifications.each do |specs| if @product.present?%>
             <li><span><%= specs.spec_key %>:</span><em class="c666"><%= specs.spec_value %></em>
             </li>
           <% end %>
@@ -53,7 +53,7 @@
             <div class="mr-2"> Color: </div> 
             <div class="w_100 colorcheckbox">
               <input type="hidden" id="sizecheckboxvalue">
-              <% @product.product_color_images.each_with_index do |color, index| %>
+              <% @product.product_color_images.each_with_index do |color, index| if @product.present?%>
                 <span class="color_image" style="height: 40px!important;" data-title="<%= color.color %>" data-value="<%= color.color %>" id="color_checkbox_<%= index %>"  title="<%=color.color %>"><img title="<%=color.color %>" data-source="<%= color.image.url(:original) %>" src="<%= color.image.url(:thumb) %>" style="width: 30px; height: 30px;"></span>
               <% end %>
             </div>
@@ -64,7 +64,7 @@
             <div class="mr-2"> Size: </div>
             <div class="w_100 sizecheckbox">
               <input type="hidden" id="sizecheckboxvalue">
-              <% @product.sizes.all.each_with_index do |size, index| %>
+              <% @product.sizes.all.each_with_index do |size, index| if @product.present?%>
                 <span data-title="<%= size.name %>" data-value="<%= size.name %>" id="size_checkbox_<%= index %>"><%= size.name %></span>
               <% end %>
             </div>
@@ -78,7 +78,7 @@
             <p>Shipping:</p>
             <div class="w_100 shippingcheckbox">
               <input type="hidden" id="sizecheckboxvalue">
-              <% ShippingPrice.all.each_with_index do |shipping, index| %>
+              <% ShippingPrice.all.each_with_index do |shipping, index| if @product.present?%>
                 <span data-title="<%= shipping.name %>" data-value="<%= shipping.price %>" id="shipping_checkbox_<%= index %>"><%= shipping.name %></span>
               <% end %>
             </div>
