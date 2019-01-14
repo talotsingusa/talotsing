@@ -32,7 +32,7 @@
         <p class="item_name"><%= @product.name if @product.present? %></p>
       </a>
       <hr>
-      <span>Price:</span> US $<%= @product.price %>
+      <span>Price:</span> <span class="item_price"> US $<%= @product.price %> </span>
       <% if current_user.present? && current_user.email == "admin@gmail.com" %>
         <a href="<%= @product.supplier_url %>" target="_blank">
           <p class="title" style="color: black;">Product vendor url</p>
@@ -52,8 +52,8 @@
             <div class="mr-2"> Color: </div> 
             <div class="w_100 colorcheckbox">
               <input type="hidden" id="sizecheckboxvalue">
-              <% @product.product_color_images.each_with_index do |color, index| %>
-                <span class="color_image" style="height: 40px!important;" data-title="<%= color.color %>" data-value="<%= color.color %>" id="color_checkbox_<%= index %>"  title="<%=color.color %>"><img title="<%=color.color %>" data-source="<%= color.image.url(:original) %>" src="<%= color.image.url(:thumb) %>" style="width: 30px; height: 30px;"></span>
+              <%   @product.product_color_images.each_with_index do |color, index| %>
+                <span class="color_image" style="height: 40px!important; padding-bottom: 35px !important;" data-title="<%= color.color %>" data-value="<%= color.color %>" id="color_checkbox_<%= index %>"  title="<%=color.color %>"><img title="<%=color.color %>" data-source="<%= color.image.url(:original) %>" src="<%= color.image.url(:thumb) %>" style="width: 30px; height: 30px;"></span>
               <% end %>
             </div>
           </li>
@@ -73,10 +73,18 @@
             <div class="col-sm-4 col-sm-offset-4">
               <div class="input-group mb-3">
                 <span class="input-group-prepend">
-                  <span> Qantity: </span> &nbsp
+                  <span> Quantity: </span> &nbsp
                   <button class="btn btn-dark btn-sm" id="minus-btn"><i class="fa fa-minus"></i></button>
                   <input type="number" id="qty_input" name="Count" class="form-control form-control-sm" value="1" min="1" id="quantity_input">
                   <button class="btn btn-dark btn-sm" id="plus-btn"><i class="fa fa-plus"></i></button>
+                </span>
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-offset-4">
+              <div class="input-group mb-3">
+                <span class="input-group-prepend">
+                  <span> Total Price: </span> &nbsp <span id="total_price"> <%= @product.price %> </span>
                 </span>
               </div>
             </div>
@@ -235,11 +243,11 @@
       </div>
       <% if check_favorite(@product.id) == true %>
           <%= link_to remove_favorite_path(product_id: @product.id), remote: true do %>
-            <span class="fav product_fav active" id="in_product_<%=@product.id %>" style="margin-bottom: 150px;"><i class="fas fa-heart"></i></div>
+            <span class="fav product_fav active" id="in_product_<%=@product.id %>" style="margin-bottom: 0px;"><i class="fas fa-heart"></i></div>
           <% end %>
         <% else %>
           <%= link_to add_favorite_path(product_id: @product.id), remote: true do %>
-            <span class="fav product_fav" id="in_product_<%=@product.id %>" style="margin-bottom: 120px;"><i class="fas fa-heart"></i></div>
+            <span class="fav product_fav" id="in_product_<%=@product.id %>" style="margin-bottom: 0px;"><i class="fas fa-heart"></i></div>
           <% end %>
         <% end %>
     <%= @product.additional_information.html_safe if @product.additional_information.present? %>
@@ -344,13 +352,17 @@
   $(document).ready(function(){
     $('#qty_input').prop('disabled', true);
     $('#plus-btn').click(function(){
-      $('#qty_input').val(parseInt($('#qty_input').val()) + 1 );
+    $('#qty_input').val(parseInt($('#qty_input').val()) + 1 );
+    var quantity = parseInt($('#qty_input').val());
+    $("#total_price").text(quantity* <%= @product.price %>);
     });
     $('#minus-btn').click(function(){
       $('#qty_input').val(parseInt($('#qty_input').val()) - 1 );
       if ($('#qty_input').val() == 0) {
         $('#qty_input').val(1);
       }
+      var quantity = parseInt($('#qty_input').val());
+      $("#total_price").text(quantity* <%= @product.price %>);
     });
   });
     $( ".origin-part div:first-child" ).css("display","none");
@@ -1557,4 +1569,12 @@
             $("#cart_form_for").submit();
         });
     });
+
+  $( document ).ready(function() {
+    console.log("In itttttts")
+    $("#qty_input" ).on('change', function() {
+      alert( "Handler for .change() called." );
+      console.log("Faratattaatat")
+    });
+  })
 </script>

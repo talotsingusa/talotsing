@@ -3719,6 +3719,7 @@ new dropdown css
     overflow: hidden;
     background-image: url("../images/700x590_2.jpg");
     background-color: #fff;
+    min-height: 100%;
 }
 .headerCate_column {
     width: 208px;

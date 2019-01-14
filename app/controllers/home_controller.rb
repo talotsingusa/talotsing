@@ -85,7 +85,7 @@ class HomeController < ApplicationController
   end
 
   def product
-    @product = Product.find(params[:id])
+    @product = Product.includes(:product_images).find(params[:id])
     @related_products = @product.product_type.products
     if ShippingPrice.all.count > 0
       @product_shipping = ShippingPrice.first.price

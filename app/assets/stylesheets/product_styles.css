@@ -1581,7 +1581,6 @@ select option
 	display: inline-block;
 	width: 36px;
 	height: 36px;
-    top: auto !important;
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
 	border-radius: 50%;
@@ -2155,6 +2154,7 @@ new dropdown css
     overflow: hidden;
     background-image: url("../images/700x590_2.jpg");
     background-color: #fff;
+    min-height: 100%;
 }
 .headerCate_column {
     width: 208px;
@@ -2225,4 +2225,16 @@ new dropdown css
   padding: 0 35px;
   margin: 0 10px 5px 0;
   width: 150px;
+}
+.item_price {
+  font-size: 2em;
+  font-weight: 700;
+  font-family: arial;
+  color: #f60;
+}
+#qty_input {
+  text-align: center;
+  color:black;
+  font-size: 1.2em;
+  background-color: white;
 }
