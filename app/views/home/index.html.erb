@@ -77,7 +77,7 @@
                   <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %><div class="deals_image"><img src="<%= product.product_images.first.image.url(:medium) if product.product_images.present? %>" alt=""></div><% end %>
                   <div class="deals_content">
                     <div class="deals_info_line d-flex flex-row justify-content-start">
-                      <div class="deals_item_category"><a href="#"><%= product.sub_category.name %></a></div>
+                      <div class="deals_item_category"><a href="#"><%= product.sub_category.name if product.sub_category.present? %></a></div>
                       <div class="deals_item_price_a ml-auto">$<%= product.price %></div>
                     </div>
                     <div class="deals_info_line d-flex flex-row justify-content-start">
