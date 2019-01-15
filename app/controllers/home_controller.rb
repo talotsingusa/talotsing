@@ -85,7 +85,7 @@ class HomeController < ApplicationController
   end
 
   def product
-    @product = Product.includes(:product_images).find(params[:id])
+    @product = Product.includes([:product_images, :sub_category, :category]).find(params[:id])
     @related_products = @product.product_type.products
     if ShippingPrice.all.count > 0
       @product_shipping = ShippingPrice.first.price
@@ -188,7 +188,7 @@ class HomeController < ApplicationController
     end
     begin
       charge = Stripe::Charge.create({
-                                         amount: total_price.to_i*100,
+                                         amount: total_price.ceil.to_i*100,
                                          currency: 'usd',
                                          description: "Order no #{current_user.orders.last.id}",
                                          customer: current_user.customer_id,
