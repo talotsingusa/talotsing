@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {:registrations => "users/registrations", confirmations: 'users/confirmations', sessions: "users/sessions"}
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   root to: 'home#index'
   get 'home/shop' => "home#shop", as: :shop
   get 'home/sub_categories' => "home#sub_categories", as: :sub_categories

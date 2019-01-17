@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   def shop
     if params[:category].present?
       ids = ProductCategory.where(category_id: params[:category]).pluck(:product_id)
-      @products = Product.where("id IN (?)", ids).order(:price).paginate(:page => params[:page], :per_page => 15)
+      @products = Product.includes([:category, :sub_category, :product_images]).where("id IN (?)", ids).order(:price).paginate(:page => params[:page], :per_page => 15)
       @category = Category.where(id: params[:category]).first.name
     elsif params[:sub_category].present?
       ids = ProductSubCategory.where(sub_category_id: params[:sub_category]).pluck(:product_id)
@@ -60,8 +60,8 @@ class HomeController < ApplicationController
       end
     end
     if @products.present?
-      @sub_categories = @products.last.category.sub_categories
-      @product_types = @products.last.sub_category.product_types if @products.last.sub_category.present?
+      @sub_categories = @products.includes(:category).last.category.sub_categories
+      @product_types = @products.includes([:sub_category, :product_images]).last.sub_category.product_types if @products.last.sub_category.present?
     end
     render layout: "shop_application"
   end

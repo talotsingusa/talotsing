@@ -7,7 +7,7 @@
         <div class="contact_form_container">
           <div class="form-top">
               <div class="contact_form_title">Sign In</div>
-              <%= form_for resource, as: resource_name, url: session_path(resource_name), id: "contact_form"   do |f| %>
+              <%= form_for resource, as: resource_name, url: new_user_session_path, id: "contact_form"   do |f| %>
                 <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
                   <%= f.email_field :email, autofocus: true, class: "contact_form_name input_field", placeholder: "Your Email", required: true %>
                 </div>
@@ -38,12 +38,12 @@
                   <p>We'll never post anything without your permission.</p>
                   <button class="__social-button">
                       <i class="fab fa-facebook-square"></i>
-                      <span class="btn-text">Facebook</span>
+                      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class:"btn-text"%>
                   </button>
 
                   <button class="__social-button">
                       <i class="icon-google"></i>
-                      <span class="btn-text">Google</span>
+                      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, class:"btn-text"%>
                   </button>
                 </div>
             <% end %>
