@@ -16,6 +16,7 @@
               <thead>
               <tr>
                 <th>Name</th>
+                <th> Supplier Url </th>
                 <th class="text-right">Picture</th>
                 <th>Status</th>
                 <th>Change Status to</th>
@@ -25,14 +26,15 @@
               <tbody>
               <% @order.order_items.each do |item| %>
                 <tr>
-                  <td><%= item.product.name %></td>
-                  <td><img style="max-width: 50%" src="<%= item.product.product_images.first.image.url(:original) if item.product.product_images.present? && item.product.product_images.first.present? %>" alt=""></td>
+                  <td><%= item.product.name if item.product.present? %></td>
+                  <td><%= item.product.supplier_url if item.product.present? %></td>
+                  <td><img style="max-width: 50%" src="<%= item.product.product_images.first.image.url(:thumb) if item.product.present?  %>" alt=""></td>
                   <td><%= item.status %></td>
                   <td><%= link_to "Order received", change_product_status_path(id: item.id, status: "Order received") %><br>
                     <%= link_to "Waiting from supplier", change_product_status_path(id: item.id, status: "Waiting from supplier") %><br>
                     <%= link_to "Ready to be shipped", change_product_status_path(id: item.id, status: "Ready to be shipped") %><br>
                     <%= link_to "Order dispatched", change_product_status_path(id: item.id, status: "Order dispatched") %></td>
-                  <td><%= item.product.price %></td>
+                  <td><%= item.product.price if item.product.present? %></td>
                 </tr>
               <% end %>
               </tbody>
