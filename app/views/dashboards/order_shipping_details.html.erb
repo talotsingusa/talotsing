@@ -1,0 +1,44 @@
+<div class="main-content">
+  <div class="section__content section__content--p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Shipment Details</h2>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="table-responsive table--no-card m-b-30">
+            <table class="table table-borderless table-striped table-earning" id="orders_list">
+              <thead>
+              <tr>
+                <th>Name</th>
+                <th> Country </th>
+                <th>Street1</th>
+                <th>Street2</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Phone Number</th>
+                <th>Postal Code</th>
+              </tr>
+              </thead>
+              <tbody>
+                <td> <%= @shipping.name %> </td>
+                <td> <%= @shipping.cntry_name %> </td>
+                <td> <%= @shipping.street_address_one %> </td>
+                <td> <%= @shipping.street_address_two %> </td>
+                <td> <%= @shipping.state %> </td>
+                <td> <%= @shipping.city %> </td>
+                <td> <%= @shipping.mobile %> </td>
+                <td> <%= @shipping.postal_code %> </td>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

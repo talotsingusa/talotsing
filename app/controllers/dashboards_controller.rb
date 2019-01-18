@@ -617,6 +617,15 @@ class DashboardsController < ApplicationController
     redirect_to pending_orders_path
   end
 
+  def order_shipping_details
+    begin
+      @shipping = Order.includes(:user).find(params[:order_id]).user.shipping
+    rescue
+      redirect_back(fallback_location: dashboards_path)
+    end
+    render layout: "dashboard_application"
+  end
+
   private
 
   def brand_params
@@ -678,7 +687,6 @@ class DashboardsController < ApplicationController
   def style_params
     params.require(:style).permit(:name)
   end
-
 
   def product_params
     params.require(:product).permit( :name, :description, :sku, :supplier_url, :sale_off_percent, :price, :additional_information, :article_number, :vendor_store_product_number, :weight, :store_id, :sale, :active, product_shipments_attributes: [:id, :name, :price, :_destroy], product_specifications_attributes: [:id, :spec_key, :spec_value, :_destroy], product_color_images_attributes: [:id, :color, :image, :_destroy])

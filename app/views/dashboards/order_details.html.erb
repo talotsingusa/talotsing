@@ -21,6 +21,7 @@
                 <th>Status</th>
                 <th>Change Status to</th>
                 <th>Price</th>
+                <th> Shipping details </th>
               </tr>
               </thead>
               <tbody>
@@ -36,6 +37,7 @@
                       <%= link_to "Ready to be shipped", change_product_status_path(id: item.id, status: "Ready to be shipped") %><br>
                       <%= link_to "Order dispatched", change_product_status_path(id: item.id, status: "Order dispatched") %></td>
                     <td><%= item.product.price if item.product.present? %></td>
+                    <td><%= link_to "Shipping", order_shipping_details_dashboards_path(order_id: @order.id) %></td>
                   </tr>
                 <% end %>
               <% end %>

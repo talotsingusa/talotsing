@@ -25,7 +25,11 @@ Rails.application.routes.draw do
   get 'home/privacy_policy' => "home#privacy_policy", as: :privacy_policy
   get 'home/shipping_help' => "home#shipping_help", as: :shipping_help
   get 'home/remove_item_from_cart' => "home#remove_item_from_cart"
-  resources :dashboards
+  resources :dashboards do
+    collection do
+      get :order_shipping_details
+    end
+  end
   get 'brands_list' => "dashboards#brands_list", as: :brands_list
   get 'add_brand' => "dashboards#add_brand", as: :add_brand
   post 'create_brand' => "dashboards#create_brand", as: :create_brand
