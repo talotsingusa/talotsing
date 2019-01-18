@@ -25,17 +25,19 @@
               </thead>
               <tbody>
               <% @order.order_items.each do |item| %>
-                <tr>
-                  <td><%= item.product.name if item.product.present? %></td>
-                  <td><%= item.product.supplier_url if item.product.present? %></td>
-                  <td><img style="max-width: 100px" src="<%= item.product.product_images.first.image.url(:medium) if item.product.present?  %>" alt=""></td>
-                  <td><%= item.status %></td>
-                  <td><%= link_to "Order received", change_product_status_path(id: item.id, status: "Order received") %><br>
-                    <%= link_to "Waiting from supplier", change_product_status_path(id: item.id, status: "Waiting from supplier") %><br>
-                    <%= link_to "Ready to be shipped", change_product_status_path(id: item.id, status: "Ready to be shipped") %><br>
-                    <%= link_to "Order dispatched", change_product_status_path(id: item.id, status: "Order dispatched") %></td>
-                  <td><%= item.product.price if item.product.present? %></td>
-                </tr>
+                <% if item.product.present? %>
+                  <tr>
+                    <td><%= item.product.name if item.product.name.present? %></td>
+                    <a href="<%= item.product.supplier_url if item.product.supplier_url.present? %>">Supplier</a>
+                    <td><img style="max-width: 100px" src="<%= item.product.product_images.first.image.url(:medium) if item.product.product_images.present?  %>" alt=""></td>
+                    <td><%= item.status %></td>
+                    <td><%= link_to "Order received", change_product_status_path(id: item.id, status: "Order received") %><br>
+                      <%= link_to "Waiting from supplier", change_product_status_path(id: item.id, status: "Waiting from supplier") %><br>
+                      <%= link_to "Ready to be shipped", change_product_status_path(id: item.id, status: "Ready to be shipped") %><br>
+                      <%= link_to "Order dispatched", change_product_status_path(id: item.id, status: "Order dispatched") %></td>
+                    <td><%= item.product.price if item.product.present? %></td>
+                  </tr>
+                <% end %>
               <% end %>
               </tbody>
             </table>
