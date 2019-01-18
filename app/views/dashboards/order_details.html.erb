@@ -28,7 +28,7 @@
                 <% if item.product.present? %>
                   <tr>
                     <td><%= item.product.name if item.product.name.present? %></td>
-                    <%= link_to "Supplier", item.product.supplier_url %>
+                    <td> <%= link_to "Supplier", item.product.supplier_url %></td>
                     <td><img style="max-width: 100px" src="<%= item.product.product_images.first.image.url(:medium) if item.product.product_images.present?  %>" alt=""></td>
                     <td><%= item.status %></td>
                     <td><%= link_to "Order received", change_product_status_path(id: item.id, status: "Order received") %><br>
