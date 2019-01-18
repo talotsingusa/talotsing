@@ -36,8 +36,8 @@
                   <td><%= order.total_amount %></td>
                   <td><%= order.status %></td>
                   <td><%= order.shipping_status %></td>
-                  <td><%= link_to "Order received", change_order_status_path(id: order.id, status: "Order received") %><br>
-                    <%= link_to "Order dispatched", change_order_status_path(id: order.id, status: "Order dispatched") %></td>
+                  <td><%= link_to "Order received", change_order_status_path(id: order.id, status: "Order dispatched") %><br>
+                    <%= link_to "Order dispatched", change_order_status_path(id: order.id, status: "Order received") %></td>
                   <td class="text-right"><%= order.created_at %></td>
                 </tr>
               <% end %>
