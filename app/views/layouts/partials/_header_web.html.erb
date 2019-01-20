@@ -75,7 +75,7 @@
                       <span class="custom_dropdown_placeholder clc">All Categories</span>
                       <i class="fas fa-chevron-down"></i>
                       <ul class="custom_list clc" id="category_search_params">
-                        <% Category.all.each do |category| %>
+                        <% Category.where(see_all:false).each do |category| %>
                             <li><a class="clc" data-value="<%= category.id %>" ><%= category.name %></a></li>
                         <% end %>
                         <!--<li><a class="clc" href="#">Computers</a></li>-->
@@ -168,7 +168,7 @@
                   <ul class="cat_menu">
                   <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
                   <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
-                  <% Category.all.order(:created_at).each do |category| %>
+                  <% Category.where(see_all:false).order(:created_at).each do |category| %>
                     <li class="hassubs">
                       <a href="<%= sub_categories_path(category: category.id)%>" style="font-size: 17px!important;">
                         <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
@@ -286,7 +286,7 @@
               <li class="page_menu_item">
                 <a href="<%= root_path %>">Home<i class="fa fa-angle-down"></i></a>
               </li>
-              <% Category.all.order(:created_at).each do |category| %>
+              <% Category.where(see_all:false).order(:created_at).each do |category| %>
                   <a href="<%= sub_categories_path(category: category.id)%>" style="float:left; width: 75%"><%= category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
                     font-size: 25px;
                     margin-top: 17px;
