@@ -6,34 +6,41 @@
       </div>
       <div class="card-body card-block">
         <%= form_for(ProductType.new, url: create_product_type_path, multipart: true, class: "form-horizontal") do |f| %>
-            <div class="row form-group">
-              <div class="col col-md-3">
-                <label for="text-input" class=" form-control-label">Product Type Name</label>
-              </div>
-              <div class="col-12 col-md-9">
-                <%= f.text_field :name, class: "form-control", id: "text-input", required: true %>
-              </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">Product Type Name</label>
             </div>
-            <div class="row form-group">
-              <div class="col col-md-3">
-                <label for="select" class=" form-control-label">Select</label>
-              </div>
-              <div class="col-12 col-md-9">
-                <%= f.collection_select :sub_category_id, SubCategory.all, :id, :name, class: "form-control", required: true %>
-              </div>
+            <div class="col-12 col-md-9">
+              <%= f.text_field :name, class: "form-control", id: "text-input", required: true %>
             </div>
-            <div class="row form-group">
-              <div class="col col-md-3">
-                <label for="file-input" class=" form-control-label">File input</label>
-              </div>
-              <div class="col-12 col-md-9">
-                <%= f.file_field :image, id: "file-input", class: "form-control-file" %>
-              </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select</label>
             </div>
-            <%= f.submit 'Submit', class: "btn btn-primary btn-sm" %>
+            <div class="col-12 col-md-9">
+              <%= f.collection_select :sub_category_id, SubCategory.all, :id, :name, class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="file-input" class=" form-control-label">File input</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.file_field :image, id: "file-input", class: "form-control-file" %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="text-input" class=" form-control-label">See All</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.check_box :see_all %>
+            </div>
+          </div>
+          <%= f.submit 'Submit', class: "btn btn-primary btn-sm" %>
         <% end %>
       </div>
     </div>
-
   </div>
 </div>

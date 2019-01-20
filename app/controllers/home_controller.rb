@@ -345,6 +345,10 @@ class HomeController < ApplicationController
     redirect_to cart_path
   end
 
+  def see_all
+    @categories = Category.includes(sub_categories: :product_types).all.order(:see_all_order)
+    render layout: "shop_application"
+  end
   private
 
   def shipping_params

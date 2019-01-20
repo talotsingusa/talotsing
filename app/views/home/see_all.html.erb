@@ -1,0 +1,19 @@
+<div class = "container">
+  <% @categories.each do |category| %>
+    <div class = "row">
+      <div class = "col-12">
+        <h3> <%= category.name %> </h3>
+      </div>
+    </div>
+    <% category.sub_categories.each do |sub_category| %>
+      <div class = "row">
+      <% sub_category.product_types.each do |product_type| %>
+        <div class = "col-lg-4">
+          <%= link_to product_type.name, shop_path(product_type: product_type.id) %>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+    <hr>
+  <% end %>
+</div>
