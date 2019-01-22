@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :dashboard do
+    resources :brands
+  end
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   root to: 'home#index'
   get 'home/shop' => "home#shop", as: :shop
