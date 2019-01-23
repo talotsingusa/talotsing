@@ -52,7 +52,7 @@ class HomeController < ApplicationController
 
     elsif params[:search_product].present? && params[:search_product][:category].present?
       ids = ProductCategory.where(category_id: params[:search_product][:category]).pluck(:product_id)
-      @products = Product.where("id IN (?)", ids).order(:price).paginate(:page => params[:page], :per_page => 16)
+      @products = Product.where("id IN (?)", ids).order(:price).paginate(:page => params[:page], :per_page => 30)
     else
       @products = Product.all.order(:price).paginate(:page => params[:page], :per_page => 30)
       if @products.present?
