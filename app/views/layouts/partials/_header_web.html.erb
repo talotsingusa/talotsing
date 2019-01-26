@@ -287,10 +287,11 @@
                 <a href="<%= root_path %>">Home<i class="fa fa-angle-down"></i></a>
               </li>
               <% Category.where(see_all:false).order(:created_at).each do |category| %>
-                  <a href="<%= sub_categories_path(category: category.id)%>" style="float:left; width: 75%"><%= category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
+                  <a href="<%= sub_categories_path(category: category.id)%>" style="float:left; width: 75%; color: white !important;"><%= category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
                     font-size: 25px;
                     margin-top: 17px;
-                    color: white;"></i>
+                    color: white;
+                    "></i>
                   <ul class="page_menu_selection">
                     <% category.sub_categories.order(:ui_order).each do |sub_category| %>
                       <% if sub_category.product_types.count > 0 %>
