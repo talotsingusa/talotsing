@@ -24,7 +24,7 @@
                 <div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
                   <div class="viewed_image" style="width: 85px;"><img src="<%= product.product_images.first.image.url(:medium) if product.product_images.present? %>" alt=""></div>
                   <div class="viewed_content text-center">
-                    <div class="viewed_price">$225<span>$<%= product.price%></span></div>
+                    <div class="viewed_price"><span>$<%= product.price%></span></div>
                     <div class="viewed_name"><a href="#"><%= product.name %></a></div>
                   </div>
                   <ul class="item_marks">
