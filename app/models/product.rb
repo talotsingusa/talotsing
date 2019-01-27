@@ -72,6 +72,7 @@ class Product < ApplicationRecord
 
   def multiply_price
     if self.price < 10 then self.price *= 2 else self.price += 10 end
+    self.price.round(2)
   end
 
 end
