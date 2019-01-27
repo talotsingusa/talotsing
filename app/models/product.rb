@@ -71,19 +71,7 @@ class Product < ApplicationRecord
   end
 
   def multiply_price
-    if self.price < 2
-      self.price *=4
-    elsif self.price >= 2 && self.price <3
-      self.price *= 3
-    elsif self.price >= 3 && self.price <10
-      self.price *= 3.2
-    elsif self.price >= 10 && self.price < 30
-      self.price *= 2.5
-    elsif self.price >=30 && self.price <60
-      self.price *= 2
-    else
-      self.price *= 1.6
-    end
+    if self.price < 10 then self.price *= 2 else self.price += 10 end
   end
 
 end
