@@ -3,7 +3,7 @@ class SubCategory < ApplicationRecord
   belongs_to :category
   has_many :product_sub_categories, dependent: :destroy
   has_many :products , through: :product_sub_categories
-  belongs_to :parent_subcategory, class_name: 'SubCategory', foreign_key: :parent_sub_category_id
+  belongs_to :parent_subcategory, class_name: 'SubCategory', foreign_key: :parent_sub_category_id, optional: true
   has_many :child_subcategories, class_name: 'SubCategory', foreign_key: :parent_sub_category_id
 
   has_attached_file :image, styles: {
