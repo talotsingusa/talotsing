@@ -637,7 +637,7 @@ class DashboardsController < ApplicationController
   end
 
   def sub_category_params
-    params.require(:sub_category).permit(:name, :category_id, :image, :see_all)
+    params.require(:sub_category).permit(:name, :category_id, :image, :see_all, :parent_sub_category_id)
   end
 
   def product_type_params

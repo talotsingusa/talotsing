@@ -24,6 +24,14 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Parent Subcategory</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.collection_select :parent_sub_category_id, SubCategory.all, :id, :name, class: "form-control", required: true %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
               <label for="file-input" class=" form-control-label">File input</label>
             </div>
             <div class="col-12 col-md-9">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190120185602) do
+ActiveRecord::Schema.define(version: 20190129125102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -365,6 +365,8 @@ ActiveRecord::Schema.define(version: 20190120185602) do
     t.datetime "image_updated_at"
     t.integer "ui_order", default: 0
     t.boolean "see_all", default: false
+    t.bigint "parent_sub_category_id"
+    t.index ["parent_sub_category_id"], name: "index_sub_categories_on_parent_sub_category_id"
   end
 
   create_table "user_favorites", force: :cascade do |t|
