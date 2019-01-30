@@ -9,7 +9,9 @@
       <div class = "row">
       <% sub_category.product_types.each do |product_type| %>
         <div class = "col-lg-4">
-          <%= link_to product_type.name, shop_path(product_type: product_type.id), style:"font-size:1.5em" %>
+          <% if product_type.see_all %>
+            <%= link_to product_type.name, shop_path(product_type: product_type.id), style:"font-size:1.5em" %>
+          <% end %>
         </div>
       <% end %>
     </div>
