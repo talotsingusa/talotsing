@@ -2,12 +2,10 @@ class Dashboard::ProductTypesController < Dashboard:: BaseController
 
   def index
     @product_types = ProductType.includes(:sub_category).all
-    render layout: "dashboard_application"
   end
 
   def new
     @product_type = ProductType.new
-    render layout: "dashboard_application"
   end
 
   def create
