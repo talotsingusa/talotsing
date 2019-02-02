@@ -16,10 +16,19 @@
           </div>
           <div class="row form-group">
             <div class="col col-md-3">
-              <label for="select" class=" form-control-label">Select</label>
+              <label for="select" class=" form-control-label">Select SubCategory</label>
             </div>
             <div class="col-12 col-md-9">
-              <%= f.collection_select :sub_category_id, SubCategory.all, :id, :name, class: "form-control", required: true %>
+              <%= f.grouped_collection_select :sub_category_id, Category.all, :sub_categories, :name, :id, :name,{ prompt: true }, class: "form-control",
+              label:false %>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col col-md-3">
+              <label for="select" class=" form-control-label">Select Parent Product Type</label>
+            </div>
+            <div class="col-12 col-md-9">
+              <%= f.grouped_collection_select :parent_product_type_id, SubCategory.all, :product_types, :name, :id, :name, { prompt: true }, class: "form-control",label: false %>
             </div>
           </div>
           <div class="row form-group">

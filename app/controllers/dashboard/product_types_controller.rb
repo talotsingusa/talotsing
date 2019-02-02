@@ -20,7 +20,7 @@ class Dashboard::ProductTypesController < Dashboard:: BaseController
   private
 
   def product_type_params
-    params.require(:product_type).permit(:name, :sub_category_id, :image, :see_all)
+    params.require(:product_type).permit(:name, :sub_category_id, :image, :see_all, :parent_product_type_id)
   end
 
 end
