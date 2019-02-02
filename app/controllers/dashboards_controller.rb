@@ -81,25 +81,6 @@ class DashboardsController < ApplicationController
     end
   end
 
-  def product_type_list
-    @product_types = ProductType.includes(:sub_category).all
-    render layout: "dashboard_application"
-  end
-
-  def add_product_type
-    @product_type = ProductType.new
-    render layout: "dashboard_application"
-  end
-
-  def create_product_type
-    product_type = ProductType.new(product_type_params)
-    if product_type.save
-      redirect_to product_type_list_path
-    else
-      redirect_to add_product_type_path
-    end
-  end
-
   def product_color_list
     @product_colors = Color.all
     render layout: "dashboard_application"
@@ -638,10 +619,6 @@ class DashboardsController < ApplicationController
 
   def sub_category_params
     params.require(:sub_category).permit(:name, :category_id, :image, :see_all, :parent_sub_category_id)
-  end
-
-  def product_type_params
-    params.require(:product_type).permit(:name, :sub_category_id, :image, :see_all)
   end
 
   def store_params

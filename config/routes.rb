@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   namespace :dashboard do
     resources :brands
+    resources :product_types, only: [:index, :new, :create]
   end
+
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   root to: 'home#index'
   get 'home/shop' => "home#shop", as: :shop
@@ -48,10 +50,6 @@ Rails.application.routes.draw do
   get 'sub_category_list' => "dashboards#sub_category_list", as: :sub_category_list
   get 'add_sub_category' => "dashboards#add_sub_category", as: :add_sub_category
   post 'create_sub_category' => "dashboards#create_sub_category", as: :create_sub_category
-
-  get 'product_type_list' => "dashboards#product_type_list", as: :product_type_list
-  get 'add_product_type' => "dashboards#add_product_type", as: :add_product_type
-  post 'create_product_type' => "dashboards#create_product_type", as: :create_product_type
 
   get 'store' => "dashboards#store", as: :store
   get 'add_store' => "dashboards#add_store", as: :add_store

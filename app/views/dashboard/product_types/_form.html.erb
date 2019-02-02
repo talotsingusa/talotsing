@@ -5,7 +5,7 @@
         <strong>Add</strong> Product Type
       </div>
       <div class="card-body card-block">
-        <%= form_for(ProductType.new, url: create_product_type_path, multipart: true, class: "form-horizontal") do |f| %>
+        <%= form_for [:dashboard, product_type], multipart: true, class: "form-horizontal" do |f| %>
           <div class="row form-group">
             <div class="col col-md-3">
               <label for="text-input" class=" form-control-label">Product Type Name</label>
