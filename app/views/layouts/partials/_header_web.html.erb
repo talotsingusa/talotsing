@@ -167,7 +167,7 @@
                   <ul class="cat_menu">
                   <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
                   <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
-                  <% Category.where(see_all:false).order(:created_at).each do |category| %>
+                  <% Category.where(see_all:false).order(:ui_order).each do |category| %>
                     <li class="hassubs">
                       <a href="<%= sub_categories_path(category: category.id)%>" style="font-size: 17px!important;">
                         <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
