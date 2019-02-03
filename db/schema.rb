@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190130125650) do
+ActiveRecord::Schema.define(version: 20190203130448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20190130125650) do
     t.boolean "see_all", default: false
     t.integer "see_all_order", default: 0
     t.string "see_all_name"
+    t.integer "ui_order", default: 0
   end
 
   create_table "closure_types", force: :cascade do |t|
@@ -272,6 +273,8 @@ ActiveRecord::Schema.define(version: 20190130125650) do
     t.integer "ui_id", default: 0
     t.boolean "see_all", default: false
     t.integer "see_all_order", default: 0
+    t.bigint "parent_product_type_id"
+    t.index ["parent_product_type_id"], name: "index_product_types_on_parent_product_type_id"
   end
 
   create_table "products", force: :cascade do |t|
