@@ -2214,17 +2214,19 @@ new dropdown css
   padding: 0 30px;
   margin: 0 5px 5px 0;
   border: none;
-  line-height: 42px
+  line-height: 42px;
+  float: left;
 }
 .buy_now {
 	position: relative;
-  line-height: 42px;
+  line-height: 38px;
   border: 1px solid #fd9729;
   color: #fff;
   background-color: #fd9729;
   padding: 0 35px;
   margin: 0 10px 5px 0;
   width: 150px;
+  font-size: 15px;
 }
 .item_price {
   font-size: 2em;
