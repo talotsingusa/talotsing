@@ -341,7 +341,7 @@ class HomeController < ApplicationController
   end
 
   def remove_item_from_cart
-    session[:shop_cart].delete_if {|product| product[0] == params[:product]}
+    session[:shop_cart].present? ? session[:shop_cart].delete_if {|product| product[0] == params[:product]} : OrderItem.find(params[:order_item].to_i).destroy
     redirect_to cart_path
   end
 
