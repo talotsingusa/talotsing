@@ -37,6 +37,7 @@
             <% end %>
           </ol>
         </div>
+        <b> 1. Select your shipping information: </b>
       </div>
     </div>
     <div id="review-order-panel">
@@ -151,9 +152,6 @@
             <%= f.hidden_field :user_id, value: current_user.id %>
             <%= hidden_field_tag "value", "review_order" %>
 
-
-            </div>
-            </div>
             <div class="row">
               <div class="col-lg-10 offset-lg-1">
                 <div class="cart_buttons" id="shipping_form_button">
@@ -162,101 +160,12 @@
                   <%= f.submit 'Submit', class: "button cart_button_checkout" %>
                   <!--            <button type="button" class="button cart_button_checkout">Submit</button>-->
                 </div>
-                <div class="cart_buttons" id="continue_to_payment">
-                  <%= link_to "Checkout", checkout_path(value: "payment"), class: "button cart_button_checkout" %>
-                </div>
               </div>
+            </div>
+            </div>
             </div>
           <% end %>
           </div>
-
-    <div id="payment-panel">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <%= simple_form_for :card_info, url: add_card_path, method: :post do |f| %>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">Card number:</label>
-<!--                  <input type="text" class="cc form-control" />-->
-                  <%= f.input :card, label: false, placeholder: "Add card number", class: "cc form-control", input_html: { maxlength: 16 } %>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Expiry Date:</label>
-                  <div class="row">
-                    <div class="col-md-5">
-                      <%= f.hidden_field :month, value: "", class: "form-control", id: "month_input" %>
-                      <%= select_month(Date.today,
-                                       {:add_month_numbers => false},
-                                       :class => 'form-control'
-                          ) %>
-<!--                      <input type="text" placeholder="MM" class="form-control" />-->
-                    </div>
-                    <div class="col-md-1">
-                      <p class="divider">/</p>
-                    </div>
-                    <div class="col-md-5">
-                      <%= f.hidden_field :year, value: "", class: "form-control", id: "year_input" %>
-                      <%= select_year(Date.today.year, {:field_name => "year", :start_year => Date.today.year, :end_year => Date.today.year+10}, {:class => "form-control"}) %>
-<!--                      <input type="text" placeholder="YY" class="form-control" />-->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">CVC:</label>
-                  <!--                  <input type="text" class="cc form-control" />-->
-                  <%= f.input :cvc, label: false, placeholder: "Add cvc number", class: "form-control", input_html: { maxlength: 4 } %>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">Cardholder Name:</label>
-                  <!--                  <input type="text" class="cc form-control" />-->
-                  <%= f.input :name, label: false, placeholder: "Add card name", class: "form-control" %>
-                </div>
-              </div>
-            </div>
-
-<!--            <div class="row">-->
-<!--              <div class="col-md-6">-->
-<!--                <div class="form-group">-->
-<!--                  <label class="form-label">Cardholder Name:</label>-->
-<!--                  <div class="row">-->
-<!--                    <div class="col-md-6">-->
-<!--                      <input type="text" placeholder="First Name" class="form-control" />-->
-<!--                    </div>-->
-<!--                    <div class="col-md-6">-->
-<!--                      <input type="text" placeholder="Last Name" class="form-control" />-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-            <div class="row">
-              <div class="col-lg-10 offset-lg-1">
-                <div class="cart_buttons">
-<!--                  <button type="button" class="button cart_button_clear">Cancel</button>-->
-                  <%= link_to "Cancel", shop_path, class: "button cart_button_clear" %>
-                  <%= f.submit class: "button cart_button_checkout", value: "Process Payment" %>
-<!--                  <button type="button" class="button cart_button_checkout">Done</button>-->
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
 
     <div id="payment-done-panel">
       <div class="row">
@@ -272,9 +181,9 @@
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="cart_container">
-            <div class="cart_title">Shopping Cart</div>
             <div class="cart_items">
-              <ul class="cart_list">
+              <div class="checkout_review_items"> 2. Review and confirm your order (<%= @order_items.size %>): </div>
+              <ul class="cart_list mb-5">
                 <% if !session[:shop_cart].nil? && session[:shop_cart].count > 0 %>
                   <% session[:shop_cart].each do |product| %>
                     <li class="cart_item clearfix">
@@ -340,25 +249,111 @@
                           </div>
                         </div>
                       </li>
+                      <hr>
                     <% end %>
                   <% end %>
                 <% end %>
-              </ul>
-            </div>
-
-            <!-- Order Total -->
-            <div class="order_total">
+                            <div class="order_total">
               <div class="order_total_content text-md-right">
                 <div class="order_total_title">Order Total:</div>
                 <div class="order_total_amount"><%= number_to_currency(cart_total) %></div>
               </div>
             </div>
-
-            <div class="cart_buttons">
-              <!--            <button type="button" class="button cart_button_clear">Checkout</button>-->
-              <%#= link_to "Checkout", checkout_path(value: "review_order"), class: "button cart_button_checkout" %>
-              <%= link_to "Continue Shopping", shop_path, class: "button cart_button_checkout" %>
+              </ul>
             </div>
+
+            <!-- Order Total -->
+    <b> 3. Payment method </b>
+    <div class="card" style="width: 50rem;">
+    <div class = "card-body" >
+    <div id="payment-panel">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <%= simple_form_for :card_info, url: add_card_path, method: :post do |f| %>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="card-label form-label">Card number:</label>
+  <!--                  <input type="text" class="cc form-control" />-->
+                  <%= f.input :card, label: false, placeholder: "Add card number", class: "cc form-control", input_html: { maxlength: 16 } %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-label">Expiry Date:</label>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <%= f.hidden_field :month, value: "", class: "form-control", id: "month_input" %>
+                      <%= select_month(Date.today,
+                                       {:add_month_numbers => false},
+                                       :class => 'form-control'
+                          ) %>
+  <!--                      <input type="text" placeholder="MM" class="form-control" />-->
+                    </div>
+                    <div class="col-md-1">
+                      <p class="divider">/</p>
+                    </div>
+                    <div class="col-md-5">
+                      <%= f.hidden_field :year, value: "", class: "form-control", id: "year_input" %>
+                      <%= select_year(Date.today.year, {:field_name => "year", :start_year => Date.today.year, :end_year => Date.today.year+10}, {:class => "form-control"}) %>
+  <!--                      <input type="text" placeholder="YY" class="form-control" />-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="card-label form-label">CVC:</label>
+                  <!--                  <input type="text" class="cc form-control" />-->
+                  <%= f.input :cvc, label: false, placeholder: "Add cvc number", class: "form-control", input_html: { maxlength: 4 } %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="card-label form-label">Cardholder Name:</label>
+                  <!--                  <input type="text" class="cc form-control" />-->
+                  <%= f.input :name, label: false, placeholder: "Add card name", class: "form-control" %>
+                </div>
+              </div>
+            </div>
+  <!--            <div class="row">-->
+  <!--              <div class="col-md-6">-->
+  <!--                <div class="form-group">-->
+  <!--                  <label class="form-label">Cardholder Name:</label>-->
+  <!--                  <div class="row">-->
+  <!--                    <div class="col-md-6">-->
+  <!--                      <input type="text" placeholder="First Name" class="form-control" />-->
+  <!--                    </div>-->
+  <!--                    <div class="col-md-6">-->
+  <!--                      <input type="text" placeholder="Last Name" class="form-control" />-->
+  <!--                    </div>-->
+  <!--                  </div>-->
+  <!--                </div>-->
+  <!--              </div>-->
+  <!--            </div>-->
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="row">
+              <div class="col-lg-10 offset-lg-1">
+                <div class="cart_buttons">
+  <!--                  <button type="button" class="button cart_button_clear">Cancel</button>-->
+              <%= link_to "Continue Shopping", shop_path, class: "button cart_button_checkout" %>
+                              <%= f.submit class: "button cart_button_checkout", value: "Confirm and Pay" %>
+  <!--                  <button type="button" class="button cart_button_checkout">Done</button>-->
+                </div>
+              </div>
+            </div>
+          <% end %>
           </div>
         </div>
       </div>
@@ -400,6 +395,11 @@
     }
   </style>
 <% end %>
+<style>
+  .form_border {
+    border-color: #28a745
+  }
+</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/13.0.2/js/intlTelInput.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/13.0.2/img/flags@2x.png"></script>
 <script>
@@ -425,7 +425,6 @@
             for (var i = 0; i < liarray.length; i++) {
                 if (i === 0 && liarray[i].className === 'progress-bar__steps current') {
                     $('#review-order-panel').show();
-                    $('#payment-panel').hide();
                     $('#payment-done-panel').hide();
                 } else if (i === 1 && liarray[i].className === 'progress-bar__steps current') {
                     $('#review-order-panel').hide();

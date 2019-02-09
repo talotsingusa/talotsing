@@ -1322,6 +1322,7 @@ select option
 {
 	margin-top: 60px;
 	text-align: right;
+	display: inline-block !important;
 }
 .cart_button_clear
 {
@@ -1705,4 +1706,8 @@ new dropdown css
     display: block !important;
     margin-bottom: 5px !important;
     white-space: initial;
+}
+.checkout_review_items {
+	font-size: 17px;
+  font-weight: 500;
 }

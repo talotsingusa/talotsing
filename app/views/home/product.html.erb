@@ -239,7 +239,8 @@
         <button type="button" class="add_to_cart_button" id="adding_products_in_cart">
           <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Cart
         </button>
-        <%= link_to "Buy Now", checkout_path(value: "review_order"), class: "btn buy_now", id:"buy_now" %>
+        <button type="button" class="buy_now" id="buy_now"> Buy Now </button>
+       
       </div>
       <% if check_favorite(@product.id) == true %>
           <%= link_to remove_favorite_path(product_id: @product.id), remote: true do %>
@@ -1571,6 +1572,9 @@
         $(document).on("click", "#buy_now", function(e) {
             $("#buy_now").prop('disabled', true);
             $("#cart_form_for").submit();
+            setTimeout(function() {
+              window.location.href = "<%= checkout_path(value: "review_order") %>"
+            }, 1000);
         });
     });
 
