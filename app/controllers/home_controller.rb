@@ -116,9 +116,7 @@ class HomeController < ApplicationController
   end
 
   def cart
-    if current_user.present? && current_user.orders.present?
-      @order_items = current_user.orders.where(status: "pending").last.order_items
-    end
+    current_user.present? && current_user.orders.where(status: "pending").present? ? @order_items = current_user.orders.where(status: "pending").last.order_itemss : @order_items = []
     render layout: "cart_application"
   end
 
