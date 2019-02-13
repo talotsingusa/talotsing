@@ -60,8 +60,8 @@ class HomeController < ApplicationController
       end
     end
     if @products.present?
-      @sub_categories = @products.includes(:category).last.category.sub_categories
-      @product_types = @products.includes([:sub_category, :product_images]).last.sub_category.product_types if @products.last.sub_category.present?
+      @sub_categories = @products.last.category.sub_categories
+      @product_types = @products.last.sub_category.product_types if @products.last.sub_category.present?
     end
     render layout: "shop_application"
   end
