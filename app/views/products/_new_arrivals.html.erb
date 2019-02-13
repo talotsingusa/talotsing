@@ -1,0 +1,174 @@
+  <div class="new_arrivals">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="tabbed_container">
+            <div class="tabs clearfix tabs-right">
+              <div class="new_arrivals_title">Hot New Arrivals</div>
+              <ul class="clearfix">
+                <li class="active">Men Shirts</li>
+                <li>Men Jeans</li>
+                <li>Men Underwear and Intimates</li>
+              </ul>
+              <div class="tabs_line"><span></span></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12" style="z-index:1;">
+
+                <!-- Product Panel -->
+                <div class="product_panel panel active">
+                  <div class="arrivals_slider slider">
+
+                    <!-- Slider Item -->
+                 <% if get_men_shirts.present? %>
+-                   <% get_men_shirts.each do |product| %>
+                        <div class="featured_slider_item">
+                          <div class="product_item is_new" id="product_<%= product.id %>">
+                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
+                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                              <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+                              <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
+
+                            </div>
+                            <% end %>
+                            <div class="product_content">
+                              <div class="product_price">$<%= product.price %></div>
+                              <div class="product_name">
+                                <div>
+                                  <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+                                </div>
+                              </div>
+                            </div>
+                            <% if check_favorite(product.id) == true %>
+                              <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                                <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+                                  <i class="fas fa-heart"></i>
+                                </div>
+                              <% end %>
+                            <% else %>
+                              <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                                <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+                                  <i class="fas fa-heart"></i>
+                                </div>
+                              <% end %>
+                            <% end %>
+                            <ul class="product_marks">
+                              <li class="product_mark product_discount">-25%</li>
+                              <li class="product_mark product_new">new</li>
+                            </ul>
+                          </div>
+                        </div>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <div class="arrivals_slider_dots_cover"></div>
+                </div>
+
+                <!-- Product Panel -->
+                <div class="product_panel panel">
+                  <div class="arrivals_slider slider">
+
+                    <!-- Slider Item -->
+                    <% if get_men_jeans.present? %>
+                      <% get_men_jeans.each do |product| %>
+                        <div class="featured_slider_item">
+                          <div class="product_item is_new" id="product_<%= product.id %>">
+                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
+                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                              <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+                              <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
+
+                            </div>
+                            <% end %>
+                            <div class="product_content">
+                              <div class="product_price">$<%= product.price %></div>
+                              <div class="product_name">
+                                <div>
+                                  <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+                                </div>
+                              </div>
+                            </div>
+                            <% if check_favorite(product.id) == true %>
+                              <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                                <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+                                  <i class="fas fa-heart"></i>
+                                </div>
+                              <% end %>
+                            <% else %>
+                              <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                                <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+                                  <i class="fas fa-heart"></i>
+                                </div>
+                              <% end %>
+                            <% end %>
+                            <ul class="product_marks">
+                              <li class="product_mark product_discount">-25%</li>
+                              <li class="product_mark product_new">new</li>
+                            </ul>
+                          </div>
+                        </div>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <div class="arrivals_slider_dots_cover"></div>
+                </div>
+
+                <!-- Product Panel -->
+                <div class="product_panel panel">
+                  <div class="arrivals_slider slider">
+
+                    <!-- Slider Item -->
+                    <% if get_men_under_garments.present? %>
+                      <% get_men_under_garments.sample(12).each do |product| %>
+                        <div class="featured_slider_item">
+                          <div class="product_item is_new" id="product_<%= product.id %>">
+                            <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
+                            <div class="product_image d-flex flex-column align-items-center justify-content-center">
+                              <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+                              <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
+
+                            </div>
+                            <% end %>
+                            <div class="product_content">
+                              <div class="product_price">$<%= product.price %></div>
+                              <div class="product_name">
+                                <div>
+                                  <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+                                </div>
+                              </div>
+                            </div>
+                            <% if check_favorite(product.id) == true %>
+                              <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                                <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+                                  <i class="fas fa-heart"></i>
+                                </div>
+                              <% end %>
+                            <% else %>
+                              <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                                <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+                                  <i class="fas fa-heart"></i>
+                                </div>
+                              <% end %>
+                            <% end %>
+                            <ul class="product_marks">
+                              <li class="product_mark product_discount">-25%</li>
+                              <li class="product_mark product_new">new</li>
+                            </ul>
+                          </div>
+                        </div>
+                      <% end %>
+                    <% end %>
+
+                  </div>
+                  <div class="arrivals_slider_dots_cover"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

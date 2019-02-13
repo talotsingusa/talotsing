@@ -1,0 +1,65 @@
+<div class="trends">
+  <div class="trends_background" style="background-image:url(/assets/trends_background.jpg)"></div>
+    <div class="trends_overlay"></div>
+    <div class="container">
+      <div class="row">
+        <!-- Trends Content -->
+        <div class="col-lg-3">
+          <div class="trends_container">
+            <h2 class="trends_title">Trends 2018</h2>
+            <div class="trends_text"><p>Most trending products of 2018.</p></div>
+            <div class="trends_slider_nav">
+              <div class="trends_prev trends_nav"><i class="fas fa-angle-left ml-auto"></i></div>
+              <div class="trends_next trends_nav"><i class="fas fa-angle-right ml-auto"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- Trends Slider -->
+          <div class="col-lg-9">
+            <div class="trends_slider_container">
+            <!-- Trends Slider -->
+              <div class="owl-carousel owl-theme trends_slider">
+              <!-- Trends Slider Item -->
+                <% if ProductType.find(1237).products.present? %>
+                  <% ProductType.find(1237).products.includes(:product_type, :product_images).sample(10).each do |product| %>
+                    <div class="owl-item">
+                      <div class="trends_item is_new">
+                        <%= link_to product_detail_modal_path(id: product.id) , remote: true, :class=>"btn" do %>
+                          <div class="trends_image d-flex flex-column align-items-center justify-content-center">
+                            <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+                          </div>
+                        <% end %>
+                    <div class="trends_content">
+                      <div class="trends_category"><a href="#"><%= product.product_type.name %></a></div>
+                      <div class="trends_info clearfix">
+                        <div class="trends_name"><a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a></div>
+                        <div class="trends_price">$<%= product.price %></div>
+                      </div>
+                    </div>
+                    <ul class="trends_marks">
+                      <li class="trends_mark trends_discount">-25%</li>
+                      <li class="trends_mark trends_new">new</li>
+                    </ul>
+                    <% if check_favorite(product.id) == true %>
+                      <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                        <div class="trends_fav active" id="<%= "in_product_#{product.id}"%>">
+                          <i class="fas fa-heart"></i>
+                        </div>
+                      <% end %>
+                    <% else %>
+                      <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                        <div class="trends_fav" id="<%= "in_product_#{product.id}"%>">
+                          <i class="fas fa-heart"></i>
+                        </div>
+                      <% end %>
+                    <% end %>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
