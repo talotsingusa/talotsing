@@ -160,7 +160,6 @@ class HomeController < ApplicationController
   end
 
   def add_card
-    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
     @order = current_user.orders
     total_price = 0
     if @order.present?
@@ -174,7 +173,7 @@ class HomeController < ApplicationController
     $card = params[:card_info]
     begin
       if current_user.customer_id.nil?
-        customer = Stripe::Customer.create(email: user.email)
+        customer = Stripe::Customer.create(email: current_user.email)
         current_user.update(customer_id: customer.id)
       end
       customer = Stripe::Customer.retrieve(current_user.customer_id)
