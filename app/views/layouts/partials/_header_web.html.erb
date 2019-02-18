@@ -75,13 +75,10 @@
                       <i class="fas fa-chevron-down"></i>
                       <ul class="custom_list clc" id="category_search_params">
                         <% Category.where(see_all:false).each do |category| %>
-                            <li><a class="clc" data-value="<%= category.id %>" ><%= category.name %></a></li>
+                        <%= link_to  sub_categories_path(category: category.id) do %>
+                        <li> <%= category.name %> </li>
                         <% end %>
-                        <!--<li><a class="clc" href="#">Computers</a></li>-->
-                        <!--<li><a class="clc" href="#">Laptops</a></li>-->
-                        <!--<li><a class="clc" href="#">Cameras</a></li>-->
-                        <!--<li><a class="clc" href="#">Hardware</a></li>-->
-                        <!--<li><a class="clc" href="#">Smartphones</a></li>-->
+                        <% end %>
                       </ul>
                     </div>
                   </div>
@@ -174,33 +171,22 @@
                         <%= category.name %></a>
                       <div class="headerCate_contain">
                         <div class="col-md-12">
-                          <div class="row">
                             <div class="col-md-8">
                               <div class="row">
                                 <% category.sub_categories.order(:ui_order).each do |sub_category| %>
 <!--                                  category.sub_categories.joins(:product_types).group('sub_categories.id').order('count(product_types.sub_category_id) DESC')-->
                                   <% if sub_category.product_types.count > 0 %>
-                                <div class="col-md-4 col-lg-4">
-                                  <div class="row">
-                                    <dl>
-                                      <dt>
+                                <div class="col-md-4 col-lg-4" style="height: min-content;">
                                         <a class="headerCate_subTitle" href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><hr id="break_line"></a>
-                                      </dt>
                                       <% sub_category.product_types.order(:ui_id).each do |product_type| %>
-                                        <dd style="margin: 15px 0;">
                                           <a class="headerCate_subList" href="<%= shop_path(product_type: product_type.id)%>" style="font-size: 12px!important;"><%= product_type.name %></a>
-                                        </dd>
                                       <% end %>
-                                    </dl>
-                                  </div>
                                 </div>
                                   <% end %>
                                 <% end %>
                               </div>
                             </div>
                             <div class="col-md-4">
-<!--                              <a href=""><%# if category.products.sample(1).first.product_images.first.present? %><img src="<%#= category.products.sample(1).first.product_images.first.image.url if category.products.present? && category.products.sample(1).first.product_images.present? %>" style="width: 100%"><%# end %></a>-->
-                            </div>
                             </div>
                         </div>
                       </div>
