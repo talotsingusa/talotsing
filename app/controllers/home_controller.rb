@@ -173,10 +173,12 @@ class HomeController < ApplicationController
     $card = params[:card_info]
     begin
       if current_user.customer_id.nil?
+        Stripe.api_key = ENV['STRIPE_SECRET_KEY']
         customer = Stripe::Customer.create(email: current_user.email)
         current_user.update(customer_id: customer.id)
+      else
+        customer = Stripe::Customer.retrieve(current_user.customer_id)
       end
-      customer = Stripe::Customer.retrieve(current_user.customer_id)
       id = customer.sources.create(source: generate_token).id
       user = current_user
       user.default_source = customer.default_source
