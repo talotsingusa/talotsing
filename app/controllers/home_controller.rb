@@ -181,7 +181,7 @@ class HomeController < ApplicationController
         customer = Stripe::Customer.retrieve(current_user.customer_id)
       end
       token = generate_token
-      id = customer.sources.create({source: token})
+      id = customer.sources.create({source: token}).id
       customer.default_source = customer.sources.retrieve(id)
       user = current_user
       user.default_source = customer.default_source
@@ -210,6 +210,7 @@ class HomeController < ApplicationController
       redirect_to checkout_path(value: "done")
       return
     rescue => e
+      byebug
       # Some other error; display an error message.
       flash[:notice] = e.message
       redirect_to checkout_path(value: "payment")
