@@ -210,7 +210,6 @@ class HomeController < ApplicationController
       redirect_to checkout_path(value: "done")
       return
     rescue => e
-      byebug
       # Some other error; display an error message.
       flash[:notice] = e.message
       redirect_to checkout_path(value: "payment")
