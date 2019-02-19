@@ -203,8 +203,8 @@ class HomeController < ApplicationController
       order.total_amount = total_price
       order.save
       url = "#{request.base_url}/my_order_details?id=#{order.id}"
-      MessageMailer.order_email(user.email, user.full_name, user, url ,order).deliver_now
-      MessageMailer.email_admin(user.full_name, user, url ,order).deliver_now
+      # MessageMailer.order_email(user.email, user.full_name, user, url ,order).deliver_now
+      # MessageMailer.email_admin(user.full_name, user, url ,order).deliver_now
       session.delete(:shop_cart)
       flash[:notice] = 'Card charged successfully.'
       redirect_to checkout_path(value: "done")
