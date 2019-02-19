@@ -172,19 +172,13 @@ class HomeController < ApplicationController
     end
     $card = params[:card_info]
     begin
-      if current_user.customer_id.nil?
-        Stripe.api_key = ENV['STRIPE_SECRET_KEY']
-        customer = Stripe::Customer.create(email: current_user.email)
-        current_user.update(customer_id: customer.id)
-      else
-        customer = Stripe::Customer.retrieve(current_user.customer_id)
-      end
+      customer = Stripe::Customer.retrieve(current_user.customer_id)
       id = customer.sources.create(source: generate_token).id
       user = current_user
       user.default_source = customer.default_source
       user.save
     rescue => e
-      # Some other error; display an error message.
+      # Some other error; display an error message
       flash[:notice] = e.message
       redirect_to checkout_path(value: "payment")
       return
@@ -193,8 +187,8 @@ class HomeController < ApplicationController
       charge = Stripe::Charge.create({
                                          amount: total_price.ceil.to_i*100,
                                          currency: 'usd',
-                                         description: "Order no #{current_user.orders.last.id}",
-                                         customer: current_user.customer_id,
+                                         description: "Order no #{user.orders.last.id}",
+                                         customer: user.customer_id
                                      })
       order = current_user.orders.where(status: "pending").last
       order.status = "Paid"
