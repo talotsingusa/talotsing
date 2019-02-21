@@ -1,0 +1,23 @@
+<div class="contact_form">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="contact_form_container">
+          <div class="form-top">
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <%= f.email_field :email, autofocus: true, class: "contact_form_name input_field", placeholder: "Your Email", required: true %>
+              </div>
+              <div class="contact_form_button">
+                <%= f.submit "Reset Password", class: 'button contact_submit_button' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 offset-lg-2">
+        <img src="/assets/logoo 3.png" class="mt-5 pt-5" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
