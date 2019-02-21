@@ -172,16 +172,18 @@
                       <div class="headerCate_contain">
                         <div class="col-md-12">
                             <div class="col-md-8">
-                              <div class="row">
+                              <div class = "masonry-layout">
                                 <% category.sub_categories.order(:ui_order).each do |sub_category| %>
 <!--                                  category.sub_categories.joins(:product_types).group('sub_categories.id').order('count(product_types.sub_category_id) DESC')-->
                                   <% if sub_category.product_types.count > 0 %>
-                                <div class="col-md-4 col-lg-4" style="height: min-content;">
+                                  <div class="masonry-layout__panel">
+                                    <div class = "masonry-layout__panel-content">
                                         <a class="headerCate_subTitle" href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><hr id="break_line"></a>
                                       <% sub_category.product_types.order(:ui_id).each do |product_type| %>
                                           <a class="headerCate_subList" href="<%= shop_path(product_type: product_type.id)%>" style="font-size: 12px!important;"><%= product_type.name %></a>
                                       <% end %>
-                                </div>
+                                    </div>
+                                  </div>
                                   <% end %>
                                 <% end %>
                               </div>
