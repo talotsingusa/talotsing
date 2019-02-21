@@ -454,13 +454,14 @@ button.close {
 }
 
 .masonry-layout {
-  column-count: 3;
-  column-gap: 0;
+  column-count: 4;
+  column-gap: 50px;
 }
 .masonry-layout__panel {
   break-inside: avoid;
 }
 .masonry-layout__panel-content {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0px;
+  border-radius: 15px;
+  width: 100px;
 }
