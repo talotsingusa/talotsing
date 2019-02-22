@@ -170,7 +170,6 @@
                         <%= category.name %></a>
                       <div class="headerCate_contain">
                         <div class="col-md-12">
-                            <div class="col-md-8">
                               <div class = "masonry-layout">
                                 <% category.sub_categories.order(:ui_order).each do |sub_category| %>
 <!--                                  category.sub_categories.joins(:product_types).group('sub_categories.id').order('count(product_types.sub_category_id) DESC')-->
@@ -186,7 +185,6 @@
                                   <% end %>
                                 <% end %>
                               </div>
-                            </div>
                             <div class="col-md-4">
                             </div>
                         </div>

@@ -455,7 +455,7 @@ button.close {
 
 .masonry-layout {
   column-count: 4;
-  column-gap: 50px;
+  column-gap: 25px;
 }
 .masonry-layout__panel {
   break-inside: avoid;
@@ -463,5 +463,5 @@ button.close {
 .masonry-layout__panel-content {
   padding: 0px;
   border-radius: 15px;
-  width: 100px;
+  width: 200px;
 }
