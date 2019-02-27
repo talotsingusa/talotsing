@@ -176,9 +176,9 @@
                                   <% if sub_category.product_types.count > 0 %>
                                   <div class="masonry-layout__panel">
                                     <div class = "masonry-layout__panel-content">
-                                        <a class="headerCate_subTitle" href="<%= product_types_path(sub_category: sub_category.id)%>"><%= sub_category.name %><hr id="break_line"></a>
+                                        <a class="headerCate_subTitle" href="<%= sub_categories_path(sub_category: sub_category.id)%>"><%= sub_category.name %><hr id="break_line"></a>
                                       <% sub_category.product_types.order(:ui_id).each do |product_type| %>
-                                          <a class="headerCate_subList" href="<%= shop_path(product_type: product_type.id)%>" style="font-size: 12px!important;"><%= product_type.name %></a>
+                                          <a class="headerCate_subList" href="<%= sub_categories_path(product_type: product_type.id)%>" style="font-size: 12px!important;"><%= product_type.name %></a>
                                       <% end %>
                                     </div>
                                   </div>
@@ -204,7 +204,7 @@
                   <a href="#">Fine Jewelry<i class="fas fa-chevron-down"></i></a>
                   <ul>
                    <% get_fine_jewlery_products.each do |jewelry| %>
-                      <li><a href="<%= shop_path(product_type: jewelry.id)%>"><%= jewelry.name %><i class="fas fa-chevron-down"></i></a></li>
+                      <li><a href="<%= sub_categories_path(product_type: jewelry.id)%>"><%= jewelry.name %><i class="fas fa-chevron-down"></i></a></li>
                    <% end %>
                   </ul>
                 </li>
@@ -212,7 +212,7 @@
                   <a href="#">Toys&Hobbies<i class="fas fa-chevron-down"></i></a>
                   <ul>
                     <% get_toys_and_hobbies_products.each do |product_type| %>
-                      <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
+                      <li><a href="<%= sub_categories_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
                 </li>
@@ -220,7 +220,7 @@
                   <a href="#">Mobile Phone Accessories<i class="fas fa-chevron-down"></i></a>
                   <ul>
                     <% get_mobile_phone_accessories_products.each do |product_type| %>
-                      <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
+                      <li><a href="<%= sub_categories_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
                 </li>
@@ -228,7 +228,7 @@
                   <a href="#">Makeup<i class="fas fa-chevron-down"></i></a>
                   <ul>
                     <% get_makeup_products.each do |product_type| %>
-                      <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
+                      <li><a href="<%= sub_categories_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fas fa-chevron-down"></i></a></li>
                     <% end %>
                   </ul>
                 </li>

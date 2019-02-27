@@ -68,11 +68,20 @@ class HomeController < ApplicationController
 
   def sub_categories
     if params[:category].present?
-      @sub_categories = SubCategory.where(category_id: params[:category]).limit(5)
+      @category = Category.find(params[:category])
+      @sub_categories = @category.sub_categories
+      @products = @category.products.paginate( page: params[:page], per_page: 25)
+    elsif params[:sub_category].present?
+      @sub_category = SubCategory.includes(:product_types).find(params[:sub_category])
+      @product_types = @sub_category.product_types
+      @products = SubCategory.includes(:products).find(params[:sub_category]).products.paginate( page: params[:page], per_page: 25)
     else
-      redirect_to root_path
+      @product_type = ProductType.where(id:params[:product_type]).take
+      @sub_category = @product_type.sub_category
+      @parent_product_type = @product_type.parent_product_type
+      @products = @product_type.products.paginate(page: params[:page], per_page: 25)
     end
-    render layout: "shop_application"
+    render layout: "shop_application", collection: @sub_categories
   end
 
   def product_types

@@ -1,0 +1,50 @@
+<div class=  "float-left ml-5" >
+  <div class = "pl-3">
+    <%= link_to @category.name, sub_categories_path(category: @category.id) %> >
+  </div>
+  <% @sub_categories.each do |sub_category| %>
+  <ol class = "pl-5"> <%= link_to sub_category.name, sub_categories_path(sub_category: sub_category.id) %></ol>
+  <% end %>
+</div>
+<div class="container">
+  <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-lg-3">
+          <div class="product_item is_new" id="product_<%= product.id %>">
+            <%= link_to product_path(id: product.id) do %>
+              <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
+                <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+                <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
+              </div>
+            <% end %>
+            <div class="product_content mt-5">
+              <div class="product_price">$<%= product.price %></div>
+              <div class="product_name">
+                <div>
+                  <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+                </div>
+              </div>
+            </div>
+            <% if check_favorite(product.id) == true %>
+              <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+                  <i class="fas fa-heart"></i>
+                </div>
+              <% end %>
+            <% else %>
+              <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+                  <i class="fas fa-heart"></i>
+                </div>
+              <% end %>
+            <% end %>
+            <ul class="product_marks">
+              <li class="product_mark product_discount">-25%</li>
+              <li class="product_mark product_new">new</li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+  </div>
+  <%= will_paginate @products %>
+</div>

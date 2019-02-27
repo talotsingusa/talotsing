@@ -1,4 +1,20 @@
 <br>
+  <div class=  "float-left ml-5" >
+    <div class="" lass = "pl-5">
+      <%= link_to @product.category.name, sub_categories_path(category: @product.category.id) %> >
+    </div>
+    <div class = "pl-3">
+      <%= link_to @product.sub_category.name, sub_categories_path(sub_category: @product.sub_category.id) %> >
+    </div>
+    <% if @product.product_type.parent_product_type.present? %>
+    <div class = "pl-5">
+     <%=  link_to @product.product_type.parent_product_type.name, sub_categories_path(product_type: @product.product_type.parent_product_type.id) %> >
+    </div>
+    <% end %>
+    <div class = "pl-5">
+      <%= @product.product_type.name %>
+    </div>
+  </div>
 <div class="container">
   <div class="row">
     <div class="col-lg-6">

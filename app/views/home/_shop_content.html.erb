@@ -1,5 +1,6 @@
 <div class="shop_bar clearfix">
   <div class="shop_product_count"><span><%= @products.count if @products.present? %></span> products found</div>
+
   <div class="shop_sorting">
     <span>Sort by:</span>
     <ul>
@@ -13,6 +14,8 @@
       </li>
     </ul>
   </div>
+  <br>
+  <div class="shop_product_count"><span><%= @products.last.category.name %> > <%= @products.last.sub_category.name %> > <%= @products.last.product_type.name %> </div>
 </div>
 
 <div class="row">
