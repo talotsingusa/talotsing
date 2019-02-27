@@ -317,8 +317,7 @@ class DashboardsController < ApplicationController
   end
 
   def product_list
-    @products = Product.includes([:product_images, :store, :brand, :colors, :category, :product_type,
-       :product_sizes, :sizes, :sub_category]).search(params, current_user).page params[:page]
+    @products = Product.search(params, current_user).limit(10).page params[:page]
     render layout: "dashboard_application"
   end
 
