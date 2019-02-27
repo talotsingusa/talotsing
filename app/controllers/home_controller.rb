@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   require 'will_paginate/array'
 
   def index
-    @products = Product.includes([:product_images]).paginate(page: params[:page], per_page: 25).order('created_at DESC')
+    @products = Product.paginate(page: params[:page], per_page: 25).order('created_at DESC')
     respond_to do |format|
       format.html
       format.js
