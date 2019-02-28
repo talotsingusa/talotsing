@@ -15,7 +15,7 @@
     </ul>
   </div>
   <br>
-  <div class="shop_product_count"><span><%= @products.last.category.name %> > <%= @products.last.sub_category.name %> > <%= @products.last.product_type.name %> </div>
+  <div class="shop_product_count"><span><%= @products.last.category.name if @products.present? %> > <%= @products.last.sub_category.name  if @products.present? %> > <%= @products.last.product_type.name if @products.present? %> </div>
 </div>
 
 <div class="row">

@@ -1,10 +1,12 @@
-<div class=  "float-left ml-5" >
-  <div class = "pl-3">
-    <%= link_to @category.name, sub_categories_path(category: @category.id) %> >
+<div class = "row">
+  <div class=  "float-left ml-5" >
+    <div class = "pl-3">
+      <%= link_to @category.name, sub_categories_path(category: @category.id) %> >
+    </div>
+    <% @sub_categories.each do |sub_category| %>
+    <ol class = "pl-5"> <%= link_to sub_category.name, sub_categories_path(sub_category: sub_category.id) %></ol>
+    <% end %>
   </div>
-  <% @sub_categories.each do |sub_category| %>
-  <ol class = "pl-5"> <%= link_to sub_category.name, sub_categories_path(sub_category: sub_category.id) %></ol>
-  <% end %>
 </div>
 <div class="container">
   <div class="row">

@@ -1,18 +1,20 @@
-<div class=  "float-left ml-5">
-  <div>
-    <%= link_to @sub_category.category.name, sub_categories_path(category: @sub_category.category.id) %> >
+<div class = "row">
+  <div class=  "float-left ml-5">
+    <div>
+      <%= link_to @sub_category.category.name, sub_categories_path(category: @sub_category.category.id) %> >
+    </div>
+    <div class = "pl-3">
+      <%= link_to @sub_category.name, sub_categories_path(sub_category: @sub_category.id) %> >
+    </div>
+    <% @product_types.each do |product_type| %>
+    <ol class="pl-5"> <%= link_to product_type.name, sub_categories_path(product_type: product_type.id) %></ol>
+    <% end %>
   </div>
-  <div class = "pl-3">
-    <%= link_to @sub_category.name, sub_categories_path(sub_category: @sub_category.id) %> >
-  </div>
-  <% @product_types.each do |product_type| %>
-  <ol class="pl-5"> <%= link_to product_type.name, sub_categories_path(product_type: product_type.id) %></ol>
-  <% end %>
 </div>
 <div class="container">
   <div class="row">
       <% @products.each do |product| %>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-sm-6">
           <div class="product_item is_new" id="product_<%= product.id %>">
             <%= link_to product_path(id: product.id) do %>
               <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
