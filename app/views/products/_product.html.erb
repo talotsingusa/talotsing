@@ -1,4 +1,4 @@
-<div class="col-lg-3 col-6">
+<div class="col-lg-3 col-4">
   <div class="product_item is_new" id="product_<%= product.id %>">
     <%= link_to product_path(id: product.id) do %>
       <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
@@ -6,8 +6,8 @@
         <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
       </div>
     <% end %>
-    <div class="product_content mt-5">
-      <div class="product_price">$<%= product.price %></div>
+    <div class="product_content md-mt-5">
+      <div class="product_price xs-mt-5">$<%= product.price %></div>
       <div class="product_name">
         <div>
           <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
@@ -35,6 +35,7 @@
 </div>
 
 <style type="text/css">
+@media screen and (min-height: 750px) {
 .product_item {
   display: flex;
     flex-direction: column;
@@ -81,4 +82,22 @@ a {
 .product_name div {
     width: 100%;
 }
+}
+@media screen and (max-width: 450px) {
+  .product_item {
+    padding-top: 0;
+    width: 80px;
+  }
+  .product_image {
+    height: 0;
+  }
+  .product_price {
+    font-size: 10px;
+    margin-top: 30px; 
+  }
+  .product_name div a {
+    font-size: 6px;
+    margin-top: 0;
+  }
+  }
 </style>

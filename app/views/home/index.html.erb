@@ -38,36 +38,34 @@
     </div>
   </div>
 </div>
-  <!-- Characteristics -->
+    <!-- Characteristics -->
 <div class = "shop">
   <div class  = "container">
     <div class = "row">
-      <div class = "col-lg-12" >
-        <div class="shop_content id="shop_products_section" styl="display: block; position: relative; box-sizing: border-box;"" >
+      <%= render partial: "layouts/mobile_side_nav_bar" %>
+      <div class = "col-lg-12 col-7 ml-auto">
+        <div class="shop_content" id="shop_products_section">
           <div class="row">
             <%= render @products %>
           </div>
         </div>
+        <div id="products" class="row">
+          <%= will_paginate @products %>
+        </div>
       </div>
+      <%= render "products/deals_of_the_week" %>
+      <%= render "products/new_arrivals" %>
+      <%= render "products/featured" %>
+      <%= render "products/popular_categories" %>
+      <%= render "products/new_arrivals" %>
+      <%= render "products/best_sellers" %>
+    <!-- Adverts -->
+      <%= render "products/adverts" %>
+  <!-- Trends -->
+    <%= render "products/trends" %>
     </div>
-    <div id="products">
-      <%= will_paginate @products %>
-    </div>
-  </div>
 </div>
   <!-- Deals of the week -->
-  <%= render "products/deals_of_the_week" %>
-  <!-- Popular Categories -->
-  <%= render "products/popular_categories" %>
-  <!-- Hot New Arrivals -->
-  <%= render "products/new_arrivals" %>
-  <!-- Best Sellers -->
-  <%= render "products/best_sellers" %>
-
-  <!-- Adverts -->
-  <%= render "products/adverts" %>
-  <!-- Trends -->
-  <%= render "products/trends" %>
 
 <div id="show-product-modal">
   <%= render 'product_modal' %>
@@ -453,7 +451,7 @@
         arrivalsSliderZIndex();
         bestsellersSlider();
         initTabs();
-        initTrendsSlider();
+        // initTrendsSlider();
         initReviewsSlider();
         initViewedSlider();
         initBrandsSlider();

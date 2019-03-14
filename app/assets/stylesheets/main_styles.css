@@ -1317,9 +1317,10 @@ select option
 6. Deals of the week
 *********************************/
 
+
 .deals_featured
 {
-	width: 100%;
+	width: auto;
 }
 
 /*********************************

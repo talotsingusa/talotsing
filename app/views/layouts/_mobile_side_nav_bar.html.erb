@@ -1,0 +1,81 @@
+<div class = "mobile-nav col-sm-3 col-md-2 col-5">
+  <div class="card" style="width: 13rem;">
+    <div class="card-header" style="background-color:#232f3e; color:white;">
+      Categories
+    </div>
+    <div class="card-body">
+      <% Category.includes(:sub_categories).all.each do |category| %>
+        <div id=Category-<%= category.id %> >
+          <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> ><i class="fas fa-arrow-down d-none" onclick="toggle_subcategories(event)" id=Category-<%= category.id %>></i> <i class="fas fa-arrow-down " onclick="toggle_subcategories(event)" id=Category-<%= category.id %>></i> <%= category.name %> </h6>
+          <div class ="mobile_display_sub_categories" id="mobile_sub_categories">
+            <% category.sub_categories.includes(:product_types).each do |sub_category| %>
+            <div id=SubCategory-<%= sub_category.id %> >
+              <p style="font-size: 7px;" id=SubCategory-<%= sub_category.id %> onclick="toggle_product_types(event)"> 
+                <b id=SubCategory-<%= sub_category.id %> style="color: black"> <%= sub_category.name %> </b>
+              </p>
+              <div id="mobile_product_types" class="">
+                <% sub_category.product_types.each do |product_type| %>
+                  <p style="font-size: 7px;" class="ml-2"> <%= link_to product_type.name, sub_categories_path(product_type: product_type.id)%> </p>
+                <% end %>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.mobile-nav{
+  height: 100%;
+  width: 160px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  display: block;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+h6 {
+  font-size: 10px;
+}
+@media screen and (max-height: 450px) {
+  .mobile-nav {padding-top: 15px;}
+  .mobile-nav a {font-size: 18px;}
+}
+p a{
+  border-bottom: none !important;
+}
+</style>
+<script>
+  function toggle_subcategories(event) {
+    sub_categories_id = "#" + event.target.id + " " + "#mobile_sub_categories"
+    $(sub_categories_id).is(":hidden") ?  $(sub_categories_id).show() : $(sub_categories_id).hide()
+    icon_down = "#" + event.target.id + ".fas.fa-arrow-down"
+    icon_up = "#" + event.target.id + ".fas.fa-arrow-up"  
+    $(sub_categories_id).is(":hidden") ? $(icon_up).show() : $(icon_up).hide()
+    $(sub_categories_id).is(":hidden") ? $(icon_down).hide() : $(icon_down).show()
+  }
+  function toggle_product_types(event) {
+    console.log((event.target.id))
+    product_types_id = "#" + event.target.id + " " + "#mobile_product_types"
+    $(product_types_id).is(":hidden") ? $(product_types_id).show() : $(product_types_id).hide()
+  }
+
+</script>

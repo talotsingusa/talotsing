@@ -10,43 +10,116 @@
 </div>
 <div class="container">
   <div class="row">
-      <% @products.each do |product| %>
-        <div class="col-lg-3 col-6">
-          <div class="product_item is_new" id="product_<%= product.id %>">
-            <%= link_to product_path(id: product.id) do %>
-              <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
-                <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
-                <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-              </div>
-            <% end %>
-            <div class="product_content mt-5">
-              <div class="product_price">$<%= product.price %></div>
-              <div class="product_name">
-                <div>
-                  <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+      <%= render partial: "layouts/mobile_side_nav_bar" %>
+      <div class= "col-7 ml-auto col-lg-12">
+        <div class="row">
+          <% @products.each do |product| %>
+            <div class="col-lg-3 col-3">
+              <div class="product_item is_new" id="product_<%= product.id %>">
+                <%= link_to product_path(id: product.id) do %>
+                  <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
+                    <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+                    <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
+                  </div>
+                <% end %>
+                <div class="product_content mt-5">
+                  <div class="product_price">$<%= product.price %></div>
+                  <div class="product_name">
+                    <div>
+                      <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+                    </div>
+                  </div>
+                </div>
+                <% if check_favorite(product.id) == true %>
+                  <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                    <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+                      <i class="fas fa-heart"></i>
+                    </div>
+                  <% end %>
+                <% else %>
+                  <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+                    <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+                      <i class="fas fa-heart"></i>
+                    </div>
+                  <% end %>
+                <% end %>
+                  <ul class="product_marks">
+                    <li class="product_mark product_discount">-25%</li>
+                    <li class="product_mark product_new">new</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <% if check_favorite(product.id) == true %>
-              <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
-                <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
-                  <i class="fas fa-heart"></i>
-                </div>
-              <% end %>
-            <% else %>
-              <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
-                <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
-                  <i class="fas fa-heart"></i>
-                </div>
-              <% end %>
             <% end %>
-            <ul class="product_marks">
-              <li class="product_mark product_discount">-25%</li>
-              <li class="product_mark product_new">new</li>
-            </ul>
           </div>
-        </div>
-      <% end %>
+          <div id="products" class="row">
+            <%= will_paginate @products %>
+          </div>
+    </div>
   </div>
-  <%= will_paginate @products %>
 </div>
+<style type="text/css">
+@media screen and (min-height: 750px) {
+.product_item {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background: #FFFFFF;
+    cursor: pointer;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    text-align: center;
+    padding-right: 15px
+}
+.product_image img {
+    display: block;
+    position: relative;
+    max-width: 100%;
+}
+.product_image {
+    width: 100%;
+    height: auto;
+}
+.product_content {
+  width: 100%;
+}
+.product_price {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+.product_name {
+    margin-top: 4px;
+    overflow: hidden;
+}
+.product_name div 
+a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    white-space: nowrap; 
+    transition: all 200ms ease;
+}
+.product_name div {
+    width: 100%;
+}
+}
+@media screen and (max-width: 450px) {
+  .product_item {
+    padding-top: 0;
+    width: 100px;
+  }
+  .product_image {
+    height: 0;
+  }
+  .product_price {
+    font-size: 10px;
+  }
+  .product_name div a {
+    font-size: 6px;
+    white-space: nowrap;
+  }
+  }
+</style>

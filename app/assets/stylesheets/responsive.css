@@ -588,10 +588,6 @@
 	{
 		right: 5px;
 	}
-	.deals_item_name, .deals_item_price
-	{
-		font-size: 20px;
-	}
 	.deals_item_category a, .deals_item_price_a
 	{
 		font-size: 12px;
