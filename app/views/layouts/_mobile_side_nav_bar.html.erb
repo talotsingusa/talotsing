@@ -10,10 +10,10 @@
           <div class ="mobile_display_sub_categories" id="mobile_sub_categories">
             <% category.sub_categories.includes(:product_types).each do |sub_category| %>
             <div id=SubCategory-<%= sub_category.id %> >
-              <p style="font-size: 7px;" id=SubCategory-<%= sub_category.id %> onclick="toggle_product_types(event)"> 
+              <p style="font-size: 7px;" id=SubCategory-<%= sub_category.id %> onclick="toggle_product_types(event)" class="ml-2"> 
                 <b id=SubCategory-<%= sub_category.id %> style="color: black"> <%= sub_category.name %> </b>
               </p>
-              <div id="mobile_product_types" class="">
+              <div id="mobile_product_types" class="d-none">
                 <% sub_category.product_types.each do |product_type| %>
                   <p style="font-size: 7px;" class="ml-2"> <%= link_to product_type.name, sub_categories_path(product_type: product_type.id)%> </p>
                 <% end %>
@@ -73,9 +73,8 @@ p a{
     $(sub_categories_id).is(":hidden") ? $(icon_down).hide() : $(icon_down).show()
   }
   function toggle_product_types(event) {
-    console.log((event.target.id))
     product_types_id = "#" + event.target.id + " " + "#mobile_product_types"
-    $(product_types_id).is(":hidden") ? $(product_types_id).show() : $(product_types_id).hide()
+    $(product_types_id).is(":hidden") ? $(product_types_id).removeClass('d-none') : $(product_types_id).addClass('d-none')
   }
 
 </script>
