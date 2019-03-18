@@ -3,7 +3,7 @@
     <div id="all-categpries-mobile">
       <% Category.includes(:sub_categories).all.each do |category| %>
         <div id=Category-<%= category.id %> >
-          <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> class="ml-3" style="color:white;"><%= category.name %>
+          <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> class="ml-3" style="color:white; font-size: 15px;"><%= category.name %>
           <i class="fas fa-plus float-right" onclick="toggle_subcategories(event)"></i></h6>
           <hr style="background-color:white;" >
             <div class ="mobile_display_sub_categories d-none" id="mobile_sub_categories" >
