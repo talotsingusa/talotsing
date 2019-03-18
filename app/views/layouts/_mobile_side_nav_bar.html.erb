@@ -24,7 +24,6 @@
         <% end %>
       </div>
 </div>
-<span style="font-size:20px;cursor:pointer; color: white;" onclick="openNav()" class="mobile-nav">&#9776;Shop</span>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -64,15 +63,16 @@ p a{
 .sidenav {
   height: 100%;
   width: 0;
-  position: fixed;
+  position: inherit;
   z-index: 1;
-  top: 180px;
+  top: 160px;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
   padding-right: 2px;
+  overflow-y: scroll;
 }
 
 .sidenav a:hover {

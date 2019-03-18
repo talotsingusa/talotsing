@@ -28,8 +28,8 @@
   <!-- Header Main -->
 
   <div class="header_main" style="background-color: #232f3e;">
+    <span style="font-size:20px;cursor:pointer; color: white;" onclick="openNav()" class="mobile-nav">&#9776;Shop</span>
     <div class="container">
-
       <div class="row">
         <!-- Logo -->
         <div class="col-lg-2 col-sm-3 col-3 order-1">
@@ -37,7 +37,6 @@
             <div class="logo"><a href="<%= root_path %>"><img src="/assets/logoo 3.png"></a></div>
           </div>
         </div>
-        <%= render 'layouts/mobile_side_nav_bar' %>
         <!-- Search -->
         <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
           <div class="header_search">
@@ -70,7 +69,6 @@
             <a href="https://www.messenger.com/t/473678129767681" target="_blank" style="color:white;"> Live Support</a>
           </div>
         </div>
-
         <!-- Wishlist -->
         <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
           <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
@@ -121,6 +119,8 @@
       </div>
     </div>
   </div>
+  <%= render 'layouts/mobile_side_nav_bar' %>
+
   <!-- Main Navigation -->
 
   <nav class="main_nav navbar-expand">
