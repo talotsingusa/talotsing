@@ -1,34 +1,30 @@
-<div class = "mobile-nav col-sm-3 col-md-2 col-5">
-  <div class="card" style="width: 13rem;">
-    <div class="card-header" style="background-color:#232f3e; color:white;">
-      <%= link_to "Home", root_path, style:"color:white;" %>
-    </div>
-    <div class="card-header" style="background-color:#232f3e; color:white;">
-      Categories
-    </div>
-    <div class="card-body">
+<div id="mySidenav" class="sidenav mobile-nav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="all-categpries-mobile">
       <% Category.includes(:sub_categories).all.each do |category| %>
         <div id=Category-<%= category.id %> >
-          <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> ><i class="fas fa-arrow-down d-none" onclick="toggle_subcategories(event)" id=Category-<%= category.id %>></i> <i class="fas fa-arrow-down " onclick="toggle_subcategories(event)" id=Category-<%= category.id %>></i> <%= category.name %> </h6>
-          <div class ="mobile_display_sub_categories" id="mobile_sub_categories">
-            <% category.sub_categories.includes(:product_types).each do |sub_category| %>
-            <div id=SubCategory-<%= sub_category.id %> >
-              <p style="font-size: 7px;" id=SubCategory-<%= sub_category.id %> onclick="toggle_product_types(event)" class="ml-3"> 
-                <b id=SubCategory-<%= sub_category.id %> style="color: black"> <%= sub_category.name %> </b>
-              </p>
-              <div id="mobile_product_types" class="d-none">
-                <% sub_category.product_types.each do |product_type| %>
-                  <p style="font-size: 8px; color:darkslategrey;" class="ml-4"> <%= link_to product_type.name, sub_categories_path(product_type: product_type.id)%> </p>
-                <% end %>
+          <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> class="ml-3" style="color:white;"><%= category.name %>
+          <i class="fas fa-plus float-right" onclick="toggle_subcategories(event)"></i></h6>
+          <hr style="background-color:white;" >
+            <div class ="mobile_display_sub_categories d-none" id="mobile_sub_categories" >
+              <% category.sub_categories.includes(:product_types).each do |sub_category| %>
+              <div id=SubCategory-<%= sub_category.id %> class="ml-3">
+                <p style="font-size: 10px; color:white;" id=SubCategory-<%= sub_category.id %> class="ml-3"> 
+                  <p id=SubCategory-<%= sub_category.id %> style="color: white" onclick="toggle_product_types(event)"> <%= sub_category.name %> </p>
+                </p>
+                <div id="mobile_product_types" class="d-none">
+                  <% sub_category.product_types.each do |product_type| %>
+                    <p style="font-size: 10px; color:white;" class="ml-2"> <%= link_to product_type.name, sub_categories_path(product_type: product_type.id)%> </p>
+                  <% end %>
+                </div>
               </div>
+              <% end %>
             </div>
-            <% end %>
           </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+        <% end %>
+      </div>
 </div>
+<span style="font-size:20px;cursor:pointer; color: white;" onclick="openNav()" class="mobile-nav">&#9776;</span>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -65,19 +61,57 @@ h6 {
 p a{
   border-bottom: none !important;
 }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 180px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-right: 2px;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
 <script>
   function toggle_subcategories(event) {
     sub_categories_id = "#" + event.target.id + " " + "#mobile_sub_categories"
-    $(sub_categories_id).is(":hidden") ?  $(sub_categories_id).show() : $(sub_categories_id).hide()
-    icon_down = "#" + event.target.id + ".fas.fa-arrow-down"
-    icon_up = "#" + event.target.id + ".fas.fa-arrow-up"  
-    $(sub_categories_id).is(":hidden") ? $(icon_up).show() : $(icon_up).hide()
-    $(sub_categories_id).is(":hidden") ? $(icon_down).hide() : $(icon_down).show()
+    $(sub_categories_id).is(":hidden") ?  $(sub_categories_id).removeClass('d-none') : $(sub_categories_id).addClass('d-none')
   }
   function toggle_product_types(event) {
     product_types_id = "#" + event.target.id + " " + "#mobile_product_types"
     $(product_types_id).is(":hidden") ? $(product_types_id).removeClass('d-none') : $(product_types_id).addClass('d-none')
   }
 
+  function hide_categories(event) {
+    $('#all-categpries-mobile').is(":hidden") ? $('#all-categpries-mobile').removeClass('d-none') : $('#all-categpries-mobile').addClass('d-none')
+  }
+
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 </script>
