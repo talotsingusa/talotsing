@@ -39,7 +39,7 @@
         </div>
         <!-- Search -->
         <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
-          <div class="header_search">
+          <div class="header_search d-block" >
             <div class="header_search_content">
               <div class="header_search_form_container">
                 <%= form_for :search_product, url: shop_path, class: "header_search_form clearfix", method: :get do |f| %>
@@ -65,7 +65,7 @@
               </div>
             </div>
           </div>
-          <div class="row float-right d-lg-none">
+          <div class="row float-right d-lg-none mt-2">
             <a href="https://www.messenger.com/t/473678129767681" target="_blank" style="color:white;"> Live Support</a>
           </div>
         </div>
@@ -139,7 +139,7 @@
                 </div>
                 <% else %>
                   <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
-                    <div class="cat_menu_text">Departments</div>
+                    <div class="cat_menu_text d-none d-sm-block">Departments</div>
                   </div>
                   <ul class="cat_menu">
                   <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
@@ -316,6 +316,9 @@
   @media only screen and (max-width: 767px){
     .main_nav_content{
       background-color: #232f3e;
+    }
+    .custom_dropdown_placeholder {
+      font-size: 12px;
     }
   }
 </style>

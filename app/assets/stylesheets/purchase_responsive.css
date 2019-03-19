@@ -19,6 +19,7 @@
 12. 479px
 13. 400px
 
+
 ******************************/
 
 /************
@@ -267,10 +268,6 @@
 
 @media only screen and (max-width: 767px)
 {
-	.header_search
-	{
-		display: none;
-	}
 	.page_menu_search
 	{
 		display: block;
@@ -428,7 +425,6 @@
 	}
 	.header_search
 	{
-		display: none;
 	}
 	.main_nav
 	{
