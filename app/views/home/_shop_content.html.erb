@@ -1,7 +1,7 @@
 <div class="shop_bar clearfix">
   <div class="shop_product_count"><span><%= @products.count if @products.present? %></span> products found</div>
 
-  <div class="shop_sorting">
+  <div class="shop_sorting d-none d-sm-block">
     <span>Sort by:</span>
     <ul>
       <li>
@@ -15,51 +15,53 @@
     </ul>
   </div>
   <br>
-  <div class="shop_product_count"><span><%= @products.last.category.name if @products.present? %> > <%= @products.last.sub_category.name  if @products.present? %> > <%= @products.last.product_type.name if @products.present? %> </div>
+  <div class="shop_product_count d-none d-sm-block"><span><%= @products.last.category.name if @products.present? %> > <%= @products.last.sub_category.name  if @products.present? %> > <%= @products.last.product_type.name if @products.present? %> </div>
 </div>
 
-<div class="row">
-  <!-- Product Item -->
-  <% if @products.present? %>
+<div class="container">
+  <div class="row">
+  <div class="col-12 col-lg-12">
+    <div class="row">
       <% @products.each do |product| %>
-      <div class="col-lg-3 col">
-        <div class="product_item is_new" id="product_<%= product.id %>">
-          <%= link_to product_path(id: product.id) do %>
-          <div class="product_image d-flex flex-column align-items-center justify-content-center">
+        <div class="col-lg-3 col-6">
+  <div class="card">
+    <div class = "card-body">
+      <div class="product_item is_new" id="product_<%= product.id %>">
+        <%= link_to product_path(id: product.id) do %>
+          <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
             <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
             <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-
           </div>
-          <% end %>
-          <div class="product_content">
-            <div class="product_price">$<%= product.price %></div>
-            <div class="product_name">
-              <div>
-                <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
-              </div>
+        <% end %>
+        <div class="product_content md-mt-5">
+          <div class="product_price xs-mt-5">$<%= product.price %></div>
+          <div class="product_name">
+            <div>
+              <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
             </div>
           </div>
-          <% if check_favorite(product.id) == true %>
-            <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
-              <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
-                <i class="fas fa-heart"></i>
-              </div>
-            <% end %>
-          <% else %>
-            <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
-              <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
-                <i class="fas fa-heart"></i>
-              </div>
-            <% end %>
-          <% end %>
-          <ul class="product_marks">
-            <li class="product_mark product_discount">-25%</li>
-            <li class="product_mark product_new">new</li>
-          </ul>
         </div>
+        <% if check_favorite(product.id) == true %>
+          <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+            <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+              <i class="fas fa-heart"></i>
+            </div>
+          <% end %>
+        <% else %>
+          <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+            <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+              <i class="fas fa-heart"></i>
+            </div>
+          <% end %>
+        <% end %>
       </div>
+    </div>
+  </div>
+</div>
       <% end %>
-  <% end %>
+</div>
+</div>
+</div>
 </div>
 
 
