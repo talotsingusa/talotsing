@@ -3,58 +3,70 @@
     <div class="row">
       <div class="col-lg-5">
         <div class="contact_form_container">
-            <div class="form-top">
-              <h4 class="mb-5">Create an Account</h4>
-              <p class="text-center mb-5">You can also <a href="javascript:void(0)" class="js-social-link">sign up with your social media account</a>. It's fast and easy!</p>
-              <p class="text-center mb-5">Shopping for your business? <a href="javascript:void(0)">Create a business account</a>.</p>
-              <%= form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
-                  <%= devise_error_messages! %>
+          <div class="form-top">
+            <h4 class="mb-5">Create an Account</h4>
+            <p class="text-center mb-5">You can also <a href="javascript:void(0)" class="js-social-link">
+              sign up with your social media account</a>. It's fast and easy!
+            </p>
+            <p class="text-center mb-5">Shopping for your business? <a href="javascript:void(0)">Create a business account</a>.</p>
+            <%= form_for resource, as: resource_name, url: registration_path(resource_name) do |f| %>
+              <%= devise_error_messages! %>
+              <%= f.hidden_field :profile_type, :value => "customer", id: "custome_vendor" %>
 
-                  <%= f.hidden_field :profile_type, :value => "customer", id: "custome_vendor" %>
-                  <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-                    <%= f.text_field :first_name, autofocus: true, class: "contact_form_name input_field", placeholder: "First Name", required: true %>
-                  </div>
-                <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-                  <%= f.text_field :last_name, autofocus: true, class: "contact_form_name input_field", placeholder: "Last Name", required: true %>
-                </div>
-                <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-                  <%= f.email_field :email, autofocus: true, class: "contact_form_name input_field", placeholder: "Your Email", required: true %>
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <%= f.text_field :first_name, autofocus: true, class: "contact_form_name input_field", placeholder: "First Name", required: true %>
+              </div>
 
-                </div>
-                <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-                  <%= f.password_field :password, autofocus: true, class: "contact_form_name input_field", placeholder: "Password", required: true %>
-                </div>
-                <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-                  <%= f.password_field :password_confirmation, autofocus: true, class: "contact_form_name input_field", placeholder: "Password Confirmation", required: true %>
-                </div>
-                  <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-                    <label class="category-select">
-                      <%= check_box_tag "user_profile_type", :user_type %>
-                      Signing up as vendor
-                    </label>
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <%= f.text_field :last_name, autofocus: true, class: "contact_form_name input_field", placeholder: "Last Name", required: true %>
+              </div>
 
-                  </div>
-                <div class="contact_form_button">
-                  <%= f.submit "Create an Account", class: "button contact_submit_button" %>
-                </div>
-                <div class="mt-4">
-                  <p>By continuing you agree to our <a target="_blank" href="#">Terms and Conditions</a> and the <a target="_blank" href="#">My Talotsing<span class="super">®</span> Program Terms.</a></p>
-                </div>
-                <div class="line-full mt-5"></div>
-                <div class="mt-5 social-section">
-                  <h4>Sign Up with Your Social Account</h4>
-                  <p>We'll never post anything without your permission.</p>
-                  <button class="__social-button">
-                      <i class="fab fa-facebook-square"></i>
-                      <span class="btn-text">Facebook</span>
-                  </button>
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <%= f.email_field :email, autofocus: true, class: "contact_form_name input_field", placeholder: "Your Email", required: true %>
+              </div>
 
-                  <button class="__social-button">
-                      <i class="icon-google"></i>
-                      <span class="btn-text">Google</span>
-                  </button>
-                </div>
-              <% end %>
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <%= f.text_field :phone_number, autofocus: true, class: "contact_form_name input_field", placeholder: "Phone Number (Optional)" %>
+              </div>
+
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <%= f.password_field :password, autofocus: true, class: "contact_form_name input_field", placeholder: "Password", required: true %>
+              </div>
+
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <%= f.password_field :password_confirmation, autofocus: true, class: "contact_form_name input_field", placeholder: "Password Confirmation", required: true %>
+              </div>
+
+              <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                <label class="category-select">
+                  <%= check_box_tag "user_profile_type", :user_type %>
+                  Signing up as vendor
+                </label>
+              </div>
+
+              <div class="contact_form_button">
+                <%= f.submit "Create an Account", class: "button contact_submit_button" %>
+              </div>
+
+              <div class="mt-4">
+                <p>By continuing you agree to our <a target="_blank" href="#">Terms and Conditions</a> and the <a target="_blank" href="#">My Talotsing<span class="super">®</span> Program Terms.</a></p>
+              </div>
+
+              <div class="line-full mt-5"></div>
+              <div class="mt-5 social-section">
+                <h4>Sign Up with Your Social Account</h4>
+                <p>We'll never post anything without your permission.</p>
+                <button class="__social-button">
+                    <i class="fab fa-facebook-square"></i>
+                    <span class="btn-text">Facebook</span>
+                </button>
+
+                <button class="__social-button">
+                    <i class="icon-google"></i>
+                    <span class="btn-text">Google</span>
+                </button>
+              </div>
+            <% end %>
             </div>
             <div class="form-bottom">
               <div class="bottom-content">
