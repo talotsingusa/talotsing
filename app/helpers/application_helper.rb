@@ -23,11 +23,11 @@ module ApplicationHelper
     if current_user.present?
       recently_viewed = RecentView.where(user_id: current_user.id).pluck(:product_id).uniq
       if recently_viewed.present?
-        return Product.where("id IN (?)", recently_viewed)
+        return Product.where("id IN (?)", recently_viewed).includes(:product_images)
       end
     else
       if !session[:recent_views].nil? && session[:recent_views].count > 0
-        return Product.where("id IN (?)", session[:recent_views].uniq)
+        return Product.where("id IN (?)", session[:recent_views].uniq).includes(:product_images)
       end
     end
   end
