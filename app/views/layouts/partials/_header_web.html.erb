@@ -85,7 +85,7 @@
             </div>
 
             <!-- Cart -->
-            <a href="<%= cart_path %>">
+            <a href="<%= checkout_shopping_carts_path %>">
               <div class="cart">
                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                   <div class="cart_icon">
@@ -98,10 +98,10 @@
                   </div>
                   <div class="cart_content">
                     <% if current_user.present? && current_user.orders.where(status: "pending").present? %>
-                      <div class="cart_text"><a href="<%= cart_path %>" style="    color: #ffffff;">Cart</a></div>
+                      <div class="cart_text"><a href="<%= checkout_shopping_carts_path %>" style="    color: #ffffff;">Cart</a></div>
                       <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) %></div>
                     <% elsif !session[:shop_cart].nil? %>
-                      <div class="cart_text"><a  href="<%= cart_path %>" style=" color: #ffffff;">Cart</a></div>
+                      <div class="cart_text"><a  href="<%= checkout_shopping_carts_path %>" style=" color: #ffffff;">Cart</a></div>
                       <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) if !session[:shop_cart].nil? %></div>
                     <% else %>
                       <div class="cart_text"><a  style="    color: #ffffff;">Cart</a></div>

@@ -1,0 +1,242 @@
+<div class="cart_section">
+  <div class="container">
+    <%= render "checkout_order_states" %>
+    <div id="review-order-panel">
+      <%= render "order_address" %>
+      <div class="row" id="form-inputs-group">
+        <div class="col-lg-6 offset-lg-1">
+          <%= render "shipping_form" %>
+          </div>
+      </div>
+    </div>
+    <div id="payment-done-panel">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="thanksforshoping">
+            <img src="/assets/char_1.png" alt="">
+            <p>Thanks for shoping with us</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if @value != "done" %>
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="cart_container">
+            <%= render "review_order" %>
+            <%= render "order_payment" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% if current_user.shipping.nil? %>
+  <style>
+    #address-group-penal{
+      display: none;
+    }
+    #form-inputs-group{
+      display: block;
+    }
+  </style>
+<% end %>
+<% if current_user.present? && current_user.shipping.present? %>
+  <style>
+    #address-group-penal{
+      display: block;
+    }
+    #form-inputs-group{
+      display: none;
+    }
+      #continue_to_payment{
+        display: block;
+      }
+      #shipping_form_button{
+        display: none;
+      }
+  </style>
+  <% else %>
+  <style>
+    #continue_to_payment{
+      display: none;
+    }
+    #shipping_form_button{
+      display: block;
+    }
+  </style>
+<% end %>
+<style>
+  .form_border {
+    border-color: #28a745
+  }
+.date select.date.form-control {
+  width: auto;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/13.0.2/js/intlTelInput.js"></script>
+<script>
+    $( document ).ready(function() {
+        $('#month_input').val($('#date_month').val());
+        $('#year_input').val($('#date_year').val());
+        $('#date_month').on('change', function() {
+            $('#month_input').val( this.value );
+        });
+        $('#date_year').on('change', function() {
+            $('#year_input').val( this.value );
+        });
+        $(".progress-bar").css("flex-direction", "row");
+        $('.show-inputs-group').click(function () {
+            $('#address-group-penal').hide('slow');
+            $('#form-inputs-group').show('slow');
+            $('#shipping_form_button').show('slow');
+            $('#continue_to_payment').hide('slow');
+        });
+        $(document).ready(function () {
+            var pro = document.getElementsByClassName('progress-bar');
+            var liarray = pro[0].getElementsByTagName('li');
+            for (var i = 0; i < liarray.length; i++) {
+                if (i === 0 && liarray[i].className === 'progress-bar__steps current') {
+                    $('#review-order-panel').show();
+                    $('#payment-done-panel').hide();
+                } else if (i === 1 && liarray[i].className === 'progress-bar__steps current') {
+                    $('#review-order-panel').hide();
+                    $('#payment-panel').show();
+                    $('#payment-done-panel').hide();
+                } else if (i === 2 && liarray[i].className === 'progress-bar__steps current') {
+                    $('#review-order-panel').hide();
+                    $('#payment-panel').hide();
+                    $('#payment-done-panel').show();
+                }
+            }
+        });
+
+        function checkLuhn(input) {
+            var sum = 0;
+            var numdigits = input.length;
+            var parity = numdigits % 2;
+            for (var i = 0; i < numdigits; i++) {
+                var digit = parseInt(input.charAt(i))
+                if (i % 2 == parity) digit *= 2;
+                if (digit > 9) digit -= 9;
+                sum += digit;
+            }
+            return (sum % 10) == 0;
+        };
+
+        function detectCard(input) {
+            var typeTest = 'undefined',
+                ltest1 = 16,
+                ltest2 = 16;
+            if (/^4/.test(input)) {
+                typeTest = 'visa';
+                ltest1 = 13;
+            } else if (/^5[1-5]/.test(input)) {
+                typeTest = 'mastercard';
+            } else if (/^3[4-7]/.test(input)) {
+                typeTest = 'amex';
+                ltest1 = 15;
+                ltest2 = 15;
+            } else if (/^6(011|4[4-9]|5)/.test(input)) {
+                typeTest = 'discover';
+            }
+            return [typeTest, ltest1, ltest2];
+        }
+
+
+        $('input.cc').keyup(function () {
+            var val = this.value,
+                val = val.replace(/[^0-9]/g, ''),
+                detected = detectCard(val),
+                errorClass = '',
+                luhnCheck = checkLuhn(val),
+                valueCheck = (val.length == detected[1] || val.length == detected[2]);
+            if (luhnCheck && valueCheck) {
+                errorClass = 'verified';
+            } else if (valueCheck || val.length > detected[2]) {
+                errorClass = 'error';
+            }
+
+            $(this).attr('class', 'cc ' + detected[0] + ' ' + errorClass);
+        });
+
+        $("#card_info_card").addClass("cc");
+        $("#shipping_mobile").intlTelInput({
+            allowExtensions: true,
+            autoFormat: true,
+            autoHideDialCode: true,
+            autoPlaceholder: true,
+            preferredCountries: ['us', 'gb'],
+            defaultCountry: 'auto',
+            ipinfoToken: 'yolo',
+            nationalMode: false,
+            numberType: 'MOBILE',
+            preventInvalidNumbers: true
+        });
+        var imageUrl = "/assets/flags@2x.png";
+        $('.iti-flag').css('background-image', 'url(' + imageUrl + ')');
+    });
+</script>
+<script>
+    var placeSearch, autocomplete;
+    var componentForm = {
+        // street_number: 'short_name',
+        // route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+    };
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+    }
+
+    function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+            document.getElementById(component).value = '';
+            document.getElementById(component).disabled = false;
+        }
+
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+            var addressType = place.address_components[i].types[0];
+            if (componentForm[addressType]) {
+                var val = place.address_components[i][componentForm[addressType]];
+                document.getElementById(addressType).value = val;
+            }
+        }
+    }
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4c-wNONsOUCrHcva6LSl6Yznh1ZKPA-s&libraries=places&callback=initAutocomplete"
+        async defer></script>

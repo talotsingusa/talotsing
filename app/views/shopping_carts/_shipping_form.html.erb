@@ -1,0 +1,69 @@
+<%= simple_form_for @shipping, url: create_shipping_path, method: :post do |f| %>
+  <div class="form-group row">
+    <label class="form-label col-md-3">Contact Name:</label>
+    <div class="col-md-9">
+      <%= f.input :name, class: "form-control", label: false, required: true %>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <label class="form-label col-md-3">Street Address:</label>
+    <div class="col-md-9">
+      <div id="locationField">
+        <%= f.input :street_address_one, class: "form-control", label: false, required: true, prompt: "Street address", :input_html => { :onFocus => "geolocate()", :id => "autocomplete"} %>
+      </div>
+      <%= f.input :street_address_two, class: "form-control", label: false, required: true, placeholder: "Apartment, suite, unit etc." %>
+    </div>
+  </div>
+
+    <div id="address">
+      <div class="form-group row">
+        <label class="form-label col-md-3">Country/Region:</label>
+      <div class="col-md-9">
+        <%= f.input :cntry_name, class: "form-control", label: false, required: true, :input_html => { :id => "country"} %>
+      </div>
+      </div>
+
+    <div class="form-group row">
+      <label class="form-label col-md-3">State/Province:</label>
+      <div class="col-md-9">
+        <%= f.input :state, class: "form-control", label: false, required: true , :input_html => { :id => "administrative_area_level_1"}%>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="form-label col-md-3">City:</label>
+      <div class="col-md-9">
+        <%= f.input :city, class: "form-control", label: false, required: true, :input_html => { :id => "locality"} %>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="form-label col-md-3">Zip/Postal Code:</label>
+      <div class="col-md-9">
+        <%= f.input :postal_code, class: "form-control", label: false, required: true , :input_html => { :id => "postal_code"}%>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="form-label col-md-3">Mobile:</label>
+    <div class="col-md-9">
+      <%= f.input :mobile, class: "form-control", label: false, required: true, id: "mobile_no" %>
+    </div>
+  </div>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= hidden_field_tag "value", "review_order" %>
+
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <div class="cart_buttons" id="shipping_form_button">
+        <%= link_to "Cancel", shop_path, class: "button cart_button_clear" %>
+        <%= f.submit 'Submit', class: "button cart_button_checkout" %>
+      </div>
+    </div>
+  </div>
+<% end %>

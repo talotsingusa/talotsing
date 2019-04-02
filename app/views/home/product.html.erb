@@ -1589,7 +1589,7 @@
             $("#buy_now").prop('disabled', true);
             $("#cart_form_for").submit();
             setTimeout(function() {
-              window.location.href = "<%= checkout_path(value: "review_order") %>"
+              window.location.href = "<%= checkout_shopping_carts_path(value: "review_order") %>"
             }, 1000);
         });
     });

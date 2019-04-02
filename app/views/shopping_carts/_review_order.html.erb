@@ -1,0 +1,80 @@
+<div class="cart_items">
+  <div class="checkout_review_items"> 2. Review and confirm your order (<%= @order_items.size %>): </div>
+  <ul class="cart_list mb-5">
+    <% if !session[:shop_cart].nil? && session[:shop_cart].count > 0 %>
+      <% session[:shop_cart].each do |product| %>
+        <li class="cart_item clearfix">
+          <div class="cart_item_image"><img src="<%= product_details(product[0].to_i).product_images.first.image.url(:thumb) if product_details(product[0].to_i).product_images.present? %>" alt=""></div>
+          <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+            <div class="cart_item_name cart_info_col">
+              <div class="cart_item_title">Name</div>
+              <div class="cart_item_text"><%= product_details(product[0].to_i).name.truncate(18) %></div>
+            </div>
+            <div class="cart_item_color cart_info_col">
+              <div class="cart_item_title">Color</div>
+              <div class="cart_item_text"><%= product[3] %></div>
+            </div>
+            <div class="cart_item_quantity cart_info_col">
+              <div class="cart_item_title">Quantity</div>
+              <div class="cart_item_text"><%= product[1] %></div>
+            </div>
+            <div class="cart_item_quantity cart_info_col">
+              <div class="cart_item_title">Shipping Fee</div>
+              <div class="cart_item_text"><%= number_to_currency(product[4].to_i*product[1].to_i) %></div>
+            </div>
+            <div class="cart_item_price cart_info_col">
+              <div class="cart_item_title">Price</div>
+              <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price*product[1].to_i) %></div>
+            </div>
+            <div class="cart_item_total cart_info_col">
+              <div class="cart_item_title">Total</div>
+              <div class="cart_item_text"><%= number_to_currency(product_details(product[0].to_i).price*product[1].to_i+product[4].to_i*product[1].to_i) %></div>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    <% else %>
+      <% if @order_items.present? %>
+        <% @order_items.each do |product| %>
+          <li class="cart_item clearfix">
+            <div class="cart_item_image"><img src="<%= product_details(product.product_id).product_images.first.image.url(:thumb) if product_details(product.product_id).product_images.present? %>" alt=""></div>
+            <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+              <div class="cart_item_name cart_info_col">
+                <div class="cart_item_title">Name</div>
+                <div class="cart_item_text"><%= product_details(product.product_id).name.truncate(18) %></div>
+              </div>
+              <div class="cart_item_color cart_info_col">
+                <div class="cart_item_title">Color</div>
+                <div class="cart_item_text"><%= product.color %></div>
+              </div>
+              <div class="cart_item_quantity cart_info_col">
+                <div class="cart_item_title">Quantity</div>
+                <div class="cart_item_text"><%= product.quantity %></div>
+              </div>
+
+              <div class="cart_item_quantity cart_info_col">
+                <div class="cart_item_title">Shipping Fee</div>
+                <div class="cart_item_text"><%= number_to_currency(product.shipping.to_i*product.quantity) %></div>
+              </div>
+              <div class="cart_item_price cart_info_col">
+                <div class="cart_item_title">Price</div>
+                <div class="cart_item_text"><%= number_to_currency(product_details(product.product_id).price*product.quantity.to_i) %></div>
+              </div>
+              <div class="cart_item_total cart_info_col">
+                <div class="cart_item_title">Total</div>
+                <div class="cart_item_text"><%= number_to_currency((product_details(product.product_id).price+product.shipping.to_i)*product.quantity) %></div>
+              </div>
+            </div>
+          </li>
+          <hr>
+        <% end %>
+      <% end %>
+    <% end %>
+    <div class="order_total">
+      <div class="order_total_content text-md-right">
+        <div class="order_total_title">Order Total:</div>
+        <div class="order_total_amount"><%= number_to_currency(cart_total) %></div>
+      </div>
+    </div>
+  </ul>
+</div>

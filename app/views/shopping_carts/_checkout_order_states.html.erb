@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-lg-10 offset-lg-1">
+    <div class="purchase-main">
+      <ol class="progress-bar">
+        <% if @value == "review_order" %>
+          <li class="progress-bar__steps current">
+            <span class="progress-bar__steps--text ">Review your Order</span>
+          </li>
+          <li class="progress-bar__steps">
+            <span class="progress-bar__steps--text">Payment</span>
+          </li>
+          <li class="progress-bar__steps">
+            <span class="progress-bar__steps--text">Done</span>
+          </li>
+        <% elsif @value == "payment" %>
+          <li class="progress-bar__steps">
+            <span class="progress-bar__steps--text ">Review your Order</span>
+          </li>
+          <li class="progress-bar__steps current">
+            <span class="progress-bar__steps--text">Payment</span>
+          </li>
+          <li class="progress-bar__steps">
+            <span class="progress-bar__steps--text">Done</span>
+          </li>
+        <% elsif @value == "done" %>
+          <li class="progress-bar__steps">
+            <span class="progress-bar__steps--text ">Review your Order</span>
+          </li>
+          <li class="progress-bar__steps">
+            <span class="progress-bar__steps--text">Payment</span>
+          </li>
+          <li class="progress-bar__steps current">
+            <span class="progress-bar__steps--text">Done</span>
+          </li>
+        <% end %>
+      </ol>
+    </div>
+    <b> 1. Select your shipping information: </b>
+  </div>
+</div>

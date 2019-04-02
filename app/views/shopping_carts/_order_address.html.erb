@@ -1,0 +1,40 @@
+<div class="row" id="address-group-penal">
+  <div class="col-lg-10 offset-lg-1">
+    <div class="adress-panel">
+      <div class="default">
+        <p>Default address</p>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <input type="radio" checked>
+          <label><%= current_user.shipping.name if current_user.shipping.present? %></label>
+        </div>
+        <div class="row">
+          <div class="caption">
+            <img src="/assets/contact_3.png" alt="">
+            <p><%= "#{current_user.shipping.street_address_one}, #{current_user.shipping.street_address_two}" if current_user.shipping.present? %></p>
+            <p><%= "#{current_user.shipping.city}, #{current_user.shipping.state}, #{current_user.shipping.postal_code}"if current_user.shipping.present? %>
+            </p>
+            <p><%= current_user.shipping.cntry_name if current_user.shipping.present? %></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="caption">
+            <img src="/assets/phone.png" alt="">
+            <p><%= current_user.shipping.mobile if current_user.shipping.present? %></p>
+          </div>
+        </div>
+      </div>
+      <div class="edit">
+        <a href="#" class="show-inputs-group">
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+        </a>
+      </div>
+    </div>
+    <a href="#" class="show-inputs-group">
+      <span class="glyphicon glyphicon-plus"></span>
+      Add a new address
+    </a>
+  </div>
+</div>

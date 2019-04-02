@@ -132,10 +132,6 @@ h6::selection
 {
 	
 }
-.form-control
-{
-	color: #db5246;
-}
 section
 {
 	display: block;
@@ -718,20 +714,6 @@ section
 .custom_list li a:hover
 {
 	color: #24303e;
-}
-select
-{
-	display: inline;
-	border: 0;
-	width: auto;
-	margin-left: 10px;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	border-bottom: 2px solid #555;
-	color: #7b00ff;
-	-webkit-transition: all .4s ease-in-out;
-	transition: all .4s ease-in-out;
 }
 select:hover
 {

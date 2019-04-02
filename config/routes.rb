@@ -4,6 +4,13 @@ Rails.application.routes.draw do
     resources :product_types, only: [:index, :new, :create]
   end
 
+  resources :shopping_carts, except: [:new, :create, :edit, :update, :destroy, :index, :show] do
+    collection do
+      get 'checkout'
+      post 'process_payment'
+    end
+  end
+
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", passwords: 'users/passwords' }
   root to: 'home#index'
   get 'home/shop' => "home#shop", as: :shop
