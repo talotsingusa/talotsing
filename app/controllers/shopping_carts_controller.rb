@@ -36,6 +36,7 @@ class ShoppingCartsController < ApplicationController
       @order.update(status:"paid")
       redirect_to  checkout_shopping_carts_path(value: "done")
     else
+      @order.card.destroy
       flash[:notice] = response.message
     end
   end
