@@ -29,15 +29,15 @@ class ShoppingCartsController < ApplicationController
     @card.ip_address = request.remote_ip
     @order.card = @card
     @order.save
-    responce = @order.card.purchase
-    if responce.success?
+    charge_card = @order.card.purchase
+    if charge_card.success?
       flash[:notice] = 'Card charged successfully.'
       session.delete(:shop_cart)
       @order.update(status:"paid")
       redirect_to  checkout_shopping_carts_path(value: "done")
     else
       @order.card.destroy
-      flash[:notice] = response.message
+      flash[:notice] = charge_card.message
     end
   end
 
