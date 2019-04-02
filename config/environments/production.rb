@@ -115,4 +115,14 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { :host => 'https://www.talotsing.com' }
+
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :production
+      ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
+        login: ENV.fetch('PAY_PAL_LOGIN'),
+        password: ENV.fetch('PAY_PAL_PASSWORD'),
+        signature: ENV.fetch('PAY_PAL_SIGNATURE')
+      )
+  end
 end
