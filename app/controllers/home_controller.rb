@@ -129,28 +129,6 @@ class HomeController < ApplicationController
     render layout: "cart_application"
   end
 
-  def checkout
-    if params[:value].present?
-      @value = params[:value]
-    end
-    if current_user.present? && current_user.orders.present?
-      @order_items = current_user.orders.where(status: "pending")
-      if @order_items.present?
-        @order_items = current_user.orders.where(status: "pending").last.order_items
-      end
-    end
-    if current_user.present?
-      if current_user.shipping.present?
-        @shipping = current_user.shipping
-      else
-        @shipping = Shipping.new
-      end
-      render layout: "purchase_application"
-    else
-      redirect_to user_session_path
-    end
-  end
-
   def create_shipping
     if current_user.shipping.present?
       current_user.shipping.update_attributes(shipping_params)
@@ -168,74 +146,6 @@ class HomeController < ApplicationController
     end
   end
 
-  def add_card
-    @order = current_user.orders
-    total_price = 0
-    if @order.present?
-      @order = current_user.orders.where(status: "pending").last
-      @order_items = @order.order_items
-      @order_items.each do |o|
-        product = Product.find(o.product_id)
-        total_price += (product.price.to_f+o.shipping.to_i)*o.quantity.to_i
-      end
-    end
-    $card = params[:card_info]
-    begin
-      if current_user.customer_id.nil?
-        Stripe.api_key = ENV['STRIPE_SECRET_KEY']
-        customer = Stripe::Customer.create(email: current_user.email)
-        current_user.customer_id = customer.id
-        current_user.save
-      else
-        customer = Stripe::Customer.retrieve(current_user.customer_id)
-      end
-      token = generate_token
-      id = customer.sources.create({source: token}).id
-      customer.default_source = customer.sources.retrieve(id)
-      user = current_user
-      user.default_source = customer.default_source
-      user.save
-    rescue => e
-      flash[:notice] = e.message
-      redirect_to checkout_path(value: "payment")
-      return
-    end
-    begin
-      charge = Stripe::Charge.create({
-                                         amount: total_price.ceil.to_i*100,
-                                         currency: 'usd',
-                                         description: "Order no #{user.orders.last.id}",
-                                         customer: user.customer_id
-                                     })
-      order = current_user.orders.where(status: "pending").last
-      order.status = "Paid"
-      order.total_amount = total_price
-      order.save
-      url = "#{request.base_url}/my_order_details?id=#{order.id}"
-      MessageMailer.order_email(user.email, user.full_name, user, url ,order).deliver_now
-      MessageMailer.email_admin(user.full_name, user, url ,order).deliver_now
-      session.delete(:shop_cart)
-      flash[:notice] = 'Card charged successfully.'
-      redirect_to checkout_path(value: "done")
-      return
-    rescue => e
-      # Some other error; display an error message.
-      flash[:notice] = e.message
-      redirect_to checkout_path(value: "payment")
-      return
-    end
-  end
-
-  def generate_token
-    Stripe::Token.create(
-        card: {
-            number: $card[:card],
-            exp_month: $card[:month],
-            exp_year: $card[:year],
-            cvc: $card[:cvc]
-        }
-    ).id
-  end
   def contact
     render layout: "contact_application"
   end
@@ -353,11 +263,6 @@ class HomeController < ApplicationController
 
   def shipping_help
     render layout: "blog_single_application"
-  end
-
-  def remove_item_from_cart
-    session[:shop_cart].present? ? session[:shop_cart].delete_if {|product| product[0] == params[:product]} : OrderItem.find(params[:order_item].to_i).destroy
-    redirect_to cart_path
   end
 
   def see_all

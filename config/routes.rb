@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :dashboard do
-    resources :brands
+    resources :brands, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :product_types, only: [:index, :new, :create]
   end
 
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     collection do
       get 'checkout'
       post 'process_payment'
+      get 'remove_items_from_cart'
     end
   end
 
@@ -21,14 +22,12 @@ Rails.application.routes.draw do
   get 'home/contact' => "home#contact", as: :contact
   get 'home/blog' => "home#blog", as: :blog
   get 'home/blog_show' => "home#blog_show", as: :blog_show
-  get 'home/checkout' => "home#checkout", as: :checkout
   get 'home/add_favorite' => "home#add_favorite", as: :add_favorite
   get 'home/remove_favorite' => "home#remove_favorite", as: :remove_favorite
   get 'home/my_favorites' => "home#my_favorites", as: :my_favorites
   get 'home/add_to_cart' => "home#add_to_cart", as: :add_to_cart
   post 'home/create_shipping' => "home#create_shipping", as: :create_shipping
   get 'home/product_detail_modal' => "home#product_detail_modal", as: :product_detail_modal
-  post 'home/add_card' => "home#add_card", as: :add_card
   get 'home/about_us' => "home#about_us", as: :about_us
   get 'home/contact_us' => "home#contact_us", as: :contact_us
   get 'home/terms_of_use' => "home#terms_of_use", as: :terms_of_use
@@ -36,7 +35,6 @@ Rails.application.routes.draw do
   get 'home/return' => "home#return", as: :return
   get 'home/privacy_policy' => "home#privacy_policy", as: :privacy_policy
   get 'home/shipping_help' => "home#shipping_help", as: :shipping_help
-  get 'home/remove_item_from_cart' => "home#remove_item_from_cart"
   get 'home/see_all' => 'home#see_all'
   resources :dashboards do
     collection do
@@ -131,5 +129,6 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 
   #For static pages
-   get "/pages/:page" => "pages#show"
+  get "/pages/:page" => "pages#show"
+  resources :states, only: :index
 end
