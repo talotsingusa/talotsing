@@ -38,6 +38,7 @@ class ShoppingCartsController < ApplicationController
     else
       @order.card.destroy
       flash[:notice] = charge_card.message
+      redirect_to checkout_shopping_carts_path
     end
   end
 
