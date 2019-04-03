@@ -41,6 +41,11 @@ class ShoppingCartsController < ApplicationController
     end
   end
 
+  def remove_items_from_cart
+    session[:shop_cart].present? ? session[:shop_cart].delete_if {|product| product[0] == params[:product]} : OrderItem.find(params[:order_item].to_i).destroy
+    redirect_to checkout_shopping_carts_path
+  end
+
   private
     def card_params
       params.require(:card_info).permit(:first_name, :last_name, :card_type, :card_expires_on, :card_verification, :card_number)
