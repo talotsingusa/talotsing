@@ -1,7 +1,7 @@
 <div id="mySidenav" class="sidenav mobile-nav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div id="all-categpries-mobile">
-      <% Category.includes(:sub_categories).all.each do |category| %>
+      <% Category.all.each do |category| %>
         <div id=Category-<%= category.id %> >
           <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> class="ml-3" style="color:white; font-size: 15px;"><%= category.name %>
           <i class="fas fa-plus float-right" onclick="toggle_subcategories(event)"></i></h6>
