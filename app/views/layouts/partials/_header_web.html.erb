@@ -93,7 +93,7 @@
                     <% if !session[:shop_cart].nil? %>
                       <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= session[:shop_cart].count if !session[:shop_cart].nil? %></span></div>
                     <% elsif current_user.present? %>
-                      <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.where(status: "pending").last.order_items.count if current_user.orders.where(status: "pending").present? %></span></div>
+                      <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.where(status: "pending").last.order_items.size if current_user.orders.where(status: "pending").present? %></span></div>
                     <% end %>
                   </div>
                   <div class="cart_content">
@@ -144,7 +144,7 @@
                   <ul class="cat_menu">
                   <!--<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>-->
                   <!--<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>-->
-                  <% Category.where(see_all:false).order(:ui_order).each do |category| %>
+                  <% Category.where(see_all:false).includes(:sub_categories).order(:ui_order).each do |category| %>
                     <li class="hassubs">
                       <a href="<%= sub_categories_path(category: category.id)%>" style="font-size: 17px!important;">
                         <img src="<%= category.image(:original)%>" alt="icon" class="img-responsive">
@@ -154,7 +154,7 @@
                               <div class = "masonry-layout">
                                 <% category.sub_categories.order(:ui_order).each do |sub_category| %>
 <!--                                  category.sub_categories.joins(:product_types).group('sub_categories.id').order('count(product_types.sub_category_id) DESC')-->
-                                  <% if sub_category.product_types.count > 0 %>
+                                  <% if sub_category.product_types.size > 0 %>
                                   <div class="masonry-layout__panel">
                                     <div class = "masonry-layout__panel-content">
                                         <a class="headerCate_subTitle" href="<%= sub_categories_path(sub_category: sub_category.id)%>"><%= sub_category.name %><hr id="break_line"></a>
@@ -256,7 +256,7 @@
                     "></i>
                   <ul class="page_menu_selection">
                     <% category.sub_categories.order(:ui_order).each do |sub_category| %>
-                      <% if sub_category.product_types.count > 0 %>
+                      <% if sub_category.product_types.size > 0 %>
                       <div class = "col-lg-4">
                         <li class="page_menu_item has-children">
                           <a href="<%= product_types_path(sub_category: sub_category.id)%>" style="float:left; width: 75%"><%= sub_category.name %></a><i class="fa fa-angle-down mbl_cls_li" style="float: right;
@@ -264,12 +264,7 @@
                             margin-top: 17px;
                             color: white;"></i>
                           <ul class="page_menu_selection">
-                            <% sub_category.product_types.order(:ui_id).each do |product_type| %>
-                              <li><a href="<%= shop_path(product_type: product_type.id)%>"><%= product_type.name %><i class="fa fa-angle-down" style="    float: right;
-                                  font-size: 25px;
-                                  margin-top: 17px;
-                                  color: white;"></i></a></li>
-                            <%end %>
+                           
                           </ul>
                       </div>
                       <% end %>
