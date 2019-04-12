@@ -29,7 +29,7 @@
         <div class="footer_column">
           <div class="footer_title">Find it Fast</div>
           <ul class="footer_list">
-            <% @count = Category.all.count/2 %>
+            <% @count = Category.all.size/2 %>
             <% Category.first(@count).each do |category| %>
                 <li><a href="<%= shop_path(category: category.id)%>"><%= category.name %></a></li>
             <% end %>
