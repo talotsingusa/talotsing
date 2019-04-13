@@ -79,8 +79,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
 gem 'activemerchant'
-gem "braintree", "~> 2.95.0"
-gem 'gon', '~> 6.2.0'
 gem 'square_connect'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
