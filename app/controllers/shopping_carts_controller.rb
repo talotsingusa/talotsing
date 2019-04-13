@@ -38,6 +38,8 @@ class ShoppingCartsController < ApplicationController
     end
     if location.nil?
       flash[:notice] = "Your location is not permited to charge a card"
+      puts "*******************************************************************"
+      puts "location is nilllllllllllllll***************************************"
       redirect_to  checkout_shopping_carts_path
     end
     transactions_api = SquareConnect::TransactionsApi.new
@@ -50,6 +52,7 @@ class ShoppingCartsController < ApplicationController
     begin
       resp = transactions_api.charge('CBASECgcdcewy0xzfCr7Cb7FwssgAQ', request_body)
     rescue SquareConnect::ApiError => e
+      puts "errorrorrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
       flash[:notice] = "Error encountered while charging card: #{e.message}"
       redirect_to checkout_shopping_carts_path
     end
