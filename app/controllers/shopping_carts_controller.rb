@@ -48,7 +48,7 @@ class ShoppingCartsController < ApplicationController
       :currency => 'USD'},
       :idempotency_key => SecureRandom.uuid }
     begin
-      resp = transactions_api.charge('CBASECgcdcewy0xzfCr7Cb7FwssgAQ', request_body)
+      resp = transactions_api.charge(ENV['SQUARE_CONNECT_LOCATION_ID'], request_body)
     rescue SquareConnect::ApiError => e
       flash[:notice] = "Error encountered while charging card: #{e.message}"
       redirect_to checkout_shopping_carts_path and return
