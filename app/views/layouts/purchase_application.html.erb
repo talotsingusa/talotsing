@@ -8,6 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= favicon_link_tag 'iconn.png' %>
   <%= csrf_meta_tags %>
+    <script type="text/javascript">
+    window.applicationId = "<%= ENV['SQUARE_CONNECT_APPLICATION_ID'] %>"
+    window.locationId = "<%= ENV['SQUARE_CONNECT_LOCATION_ID'] %>"
+  </script>
+  <%= javascript_include_tag 'purchase_application', "https://js.squareup.com/v2/paymentform", 'data-turbolinks-track' => true%>
+  <%= stylesheet_link_tag 'purchase_application', 'sq-payment-form', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'purchase_application', 'sq-payment-form', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
   <%= stylesheet_link_tag    'purchase_application', media: 'all'  %>
@@ -27,14 +34,7 @@
   <%= render 'layouts/partials/footer_web' %>
   <%= render 'layouts/partials/copyright_web' %>
 </div>
-
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>-->
-<!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>-->
-<!--<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>-->
-<!-- or -->
-<!--<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/ScrollToPlugin.min.js"></script>-->
 </body>
 </html>

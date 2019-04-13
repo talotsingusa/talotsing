@@ -6,65 +6,48 @@
     <div id="payment-panel">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
-          <%= simple_form_for :card_info, url: process_payment_shopping_carts_path, method: :post do |f| %>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">First Name:</label>
-                  <%= f.input :first_name, label: false, placeholder: "First name", class: "form-control" %>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">Last Name:</label>
-                  <%= f.input :last_name, label: false, placeholder: "Last name", class: "form-control" %>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">Card Type:</label>
-                  <%= f.select :card_type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]], {}, class:"form-control" %>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">Card number:</label>
-                  <%= f.input :card_number, label: false, placeholder: "Add card number", class: "cc form-control", input_html: { maxlength: 16 } %>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label">Expiry Date:</label>
-                  <div class="row">
-                    <div class="col-md-10 form-inline">
-                      <%= f.date_select :card_expires_on, discard_day: true, start_year: Date.today.year, end_year: (Date.today.year+10), add_month_numbers: true,
-                        class:"form-control" %>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="card-label form-label">Card_verification:</label>
-                  <%= f.input :card_verification, label: false, placeholder: "Add cvc number", class: "form-control", input_html: { maxlength: 4 } %>
-                </div>
-              </div>
-            </div>
-
+          <div class="sq-payment-form">
+  <div id="sq-walletbox">
+    <button id="sq-google-pay" class="button-google-pay"></button>
+    <button id="sq-apple-pay" class="sq-apple-pay"></button>
+    <button id="sq-masterpass" class="sq-masterpass"></button>
+    <div class="sq-wallet-divider">
+      <span class="sq-wallet-divider__text">Or</span>
+    </div>
+  </div>
+  <div id="sq-ccbox">
+    <form id="nonce-form" novalidate action="/shopping_carts/process_payment" method="post">
+      <div class="sq-field">
+        <label class="sq-label">Card Number</label>
+        <div id="sq-card-number"></div>
+      </div>
+      <div class="sq-field-wrapper">
+        <div class="sq-field sq-field--in-wrapper">
+          <label class="sq-label">CVV</label>
+          <div id="sq-cvv"></div>
+        </div>
+        <div class="sq-field sq-field--in-wrapper">
+          <label class="sq-label">Expiration</label>
+          <div id="sq-expiration-date"></div>
+        </div>
+        <div class="sq-field sq-field--in-wrapper">
+          <label class="sq-label">Postal</label>
+          <div id="sq-postal-code"></div>
+        </div>
+      </div>
+      <div class="sq-field">
+        <button id="sq-creditcard" class="sq-button" onclick="onGetCardNonce(event)">
+          Pay <%= number_to_currency(cart_total) %> Now
+        </button>
+      </div>
+      <!--
+        After a nonce is generated it will be assigned to this hidden input field.
+      -->
+      <div id="error"></div>
+      <input type="hidden" id="card-nonce" name="nonce">
+    </form>
+  </div>
+</div>
           </div>
       </div>
     </div>
@@ -74,8 +57,8 @@
   <div class="col-lg-10 offset-lg-1">
     <div class="cart_buttons">
       <%= link_to "Continue Shopping", shop_path, class: "button cart_button_checkout" %>
-      <%= f.submit class: "button cart_button_checkout", value: "Confirm and Pay" %>
     </div>
   </div>
 </div>
-<% end %>
+
+<!-- End Payment Form -->

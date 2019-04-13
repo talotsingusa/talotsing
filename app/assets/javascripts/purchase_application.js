@@ -12,6 +12,7 @@
 //
 //= require jquery3
 //= require jquery_ujs
+//= require sq-payment-form
 //= require popper
 //= require bootstrap-sprockets
 //= require jquery-ui

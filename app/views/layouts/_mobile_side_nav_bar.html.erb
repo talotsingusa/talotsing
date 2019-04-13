@@ -6,8 +6,8 @@
           <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> class="ml-3" style="color:white; font-size: 15px;"><%= category.name %>
           <i class="fas fa-plus float-right" onclick="toggle_subcategories(event)"></i></h6>
           <hr style="background-color:white;" >
-            <div class ="mobile_display_sub_categories d-none" id="mobile_sub_categories" >
-              <% category.sub_categories.includes(:product_types).each do |sub_category| %>
+            <div  class ="mobile_display_sub_categories d-none" id="mobile_sub_categories" >
+              <% category.sub_categories.each do |sub_category| %>
               <div id=SubCategory-<%= sub_category.id %> class="ml-3">
                 <p style="font-size: 10px; color:white;" id=SubCategory-<%= sub_category.id %> class="ml-3"> 
                   <p id=SubCategory-<%= sub_category.id %> style="color: white" onclick="toggle_product_types(event)"> <%= sub_category.name %> </p>

@@ -29,6 +29,9 @@
 //= require jquery.slick
 //= require jquery.sliders
 //= require toastr
+//= require sq-payment-form
+//= require turbolinks
+//= require_tree 
 
 
 
