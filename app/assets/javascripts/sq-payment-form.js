@@ -1,4 +1,3 @@
-alert("Hello worldldlddl")
 /**
  * Define callback function for "sq-button"
  * @param {*} event
