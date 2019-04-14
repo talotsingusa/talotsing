@@ -44,7 +44,7 @@ class ShoppingCartsController < ApplicationController
     request_body = {
     :card_nonce => params[:nonce],
     :amount_money => {
-      :amount => @order.total_price.to_i,
+      :amount => @order.total_price.round(0),
       :currency => 'USD'},
       :idempotency_key => SecureRandom.uuid }
     begin
