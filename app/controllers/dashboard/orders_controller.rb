@@ -4,16 +4,22 @@ class Dashboard::OrdersController < Dashboard:: BaseController
     @orders = Order.all
   end
 
-  def pending_orders
-    @orders = Order.where.not(shipping_status: "Order dispatched")
+  def unpaid_orders
+    @orders = Order.all.pending
   end
 
-  def dispatched_orders
-    @orders = Order.where(shipping_status: "Order dispatched")
+  def paid_orders
+    @orders = Order.all.paid
   end
 
-  def completed_orders
+  def shipped_orders
+    @orders = Order.all.shipped
+  end
 
+  def ship_order
+    @order = Order.find(params[:id])
+    @order.update(status: 'shipped')
+    redirect_to paid_orders_dashboard_orders_path
   end
 
 end

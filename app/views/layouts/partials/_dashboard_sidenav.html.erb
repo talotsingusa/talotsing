@@ -16,11 +16,14 @@
               <%= link_to users_path do  %>
                 <i class="fas fa-tachometer-alt"></i>Users
               <% end %>
-              <%= link_to pending_orders_path do  %>
-                <i class="fas fa-tachometer-alt"></i>Pending Orders
+              <%= link_to unpaid_orders_dashboard_orders_path do  %>
+                <i class="fas fa-tachometer-alt"></i>Unpaid Orders
               <% end %>
-              <%= link_to completed_orders_path do  %>
-                <i class="fas fa-tachometer-alt"></i>Completed Orders
+              <%= link_to paid_orders_dashboard_orders_path do  %>
+                <i class="fas fa-tachometer-alt"></i>To Be Shipped Orders
+              <% end %>
+              <%= link_to  shipped_orders_dashboard_orders_path do  %>
+                <i class="fas fa-tachometer-alt"></i>Shipped
               <% end %>
               <!--<ul class="list-unstyled navbar__sub-list js-sub-list">-->
                 <!--<li>-->

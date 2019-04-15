@@ -2,6 +2,16 @@ Rails.application.routes.draw do
   namespace :dashboard do
     resources :brands, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :product_types, only: [:index, :new, :create]
+    resources :orders, only: [] do
+      collection do
+        get :unpaid_orders
+        get :paid_orders
+        get :shipped_orders
+      end
+      member do
+        get :ship_order
+      end
+    end
   end
 
   resources :shopping_carts, except: [:new, :create, :edit, :update, :destroy, :index, :show] do

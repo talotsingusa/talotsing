@@ -3,7 +3,7 @@ class Order < ApplicationRecord
   belongs_to :user
   has_one :card
 
-  enum status: ["pending", "paid", "dispatched", "completed"]
+  enum status: ["pending", "paid", "shipped", "completed"]
 
   before_create :set_default_status
 

@@ -1,0 +1,54 @@
+<div class="main-content">
+  <div class="section__content section__content--p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Pending Orders</h2>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="table-responsive table--no-card m-b-30">
+            <table class="table table-borderless table-striped table-earning" id="orders_list">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th class="text-right">Action</th>
+                <th>Name</th>
+                <th class="text-right">No. of Items</th>
+                <th class="text-right">Total Amount</th>
+                <th class="text-right">Status</th>
+                <th class="text-right">Shipping Status</th>
+                <th>Change Status to</th>
+                <th class="text-right">Created at</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% orders.each do |order| %>
+                <tr>
+                  <td><%= order.id %></td>
+                  <td><%= link_to "View details", order_details_path(id: order.id) %></td>
+                  <td><%= "Order no #{order.id}" %></td>
+                  <td><%= order.order_items.count %></td>
+                  <td><%= order.total_amount %></td>
+                  <td><%= order.status %></td>
+                  <td><%= order.shipping_status %></td>
+                  <td><%= link_to "Ship Order", ship_order_dashboard_order_path(order) if order.paid? %> </td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $( document ).ready(function() {
+        $("#orders_list").dataTable();
+    });
+</script>
