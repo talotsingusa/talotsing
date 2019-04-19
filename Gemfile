@@ -27,14 +27,8 @@ gem 'turbolinks'
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-# bootstrap 4 gem
+#Styling gems
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'popper_js'
@@ -44,7 +38,6 @@ gem 'font-awesome-sass', '~> 5.0.13'
 gem 'greensock-rails'
 gem 'isotope-rails'
 gem 'jquery-ui-rails'
-gem 'devise'
 gem 'simple_form'
 gem 'toastr-rails'
 gem 'owlcarousel2'
@@ -57,7 +50,12 @@ gem 'bootstrap4-kaminari-views'
 gem 'jquery-slick-rails'
 gem 'jquery-sliders-rails'
 gem "select2-rails"
+
+#Authentication
+gem 'devise'
+
 gem 'pry'
+#Handle images in project
 gem 'paperclip', '~> 5.2.0'
 gem 'aws-sdk',   '~> 2.6'
 gem 'jquery-datatables'
@@ -66,8 +64,7 @@ gem "selectize-rails"
 gem 'slick_rails'
 gem "cocoon"
 gem 'dotenv-rails', groups: [:development, :test]
-# gem 'stripe-rails'
-gem 'stripe'
+
 gem 'intl-tel-input-rails'
 gem 'will_paginate-bootstrap4'
 gem 'geocomplete_rails'
@@ -78,8 +75,10 @@ gem 'elevatezoom-rails', '~> 1.0'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
-gem 'activemerchant'
+
+#Gem for payments
 gem 'square_connect'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
