@@ -81,13 +81,4 @@ Rails.application.configure do
     Bullet.rails_logger = true
   end
 
-  config.after_initialize do
-    ActiveMerchant::Billing::Base.mode = :test
-      ::GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(
-        login: ENV.fetch('PAY_PAL_LOGIN'),
-        password: ENV.fetch('PAY_PAL_PASSWORD'),
-        signature: ENV.fetch('PAY_PAL_SIGNATURE')
-      )
-  end
-
 end

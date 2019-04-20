@@ -9,9 +9,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     user = User.new(sign_up_params)
     user.profile_type = params[:user][:profile_type]
-    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
-    customer = Stripe::Customer.create(email: user.email)
-    user.customer_id = customer.id
     if user.save
       redirect_to dashboards_path
     else
