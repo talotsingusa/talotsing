@@ -30,4 +30,5 @@ class SquareConnectServices
         redirect_to checkout_shopping_carts_path and return
       end
     end
+  end
 end
