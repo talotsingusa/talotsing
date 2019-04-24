@@ -22,7 +22,6 @@
               </div>
             <% end %>
             <div class="product_content mt-5">
-              <div> <%= product.available_colors_count if product.available_colors_count > 0 %> </div>
               <div class="product_name">
                 <div>
                   <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
