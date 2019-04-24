@@ -68,18 +68,18 @@ class HomeController < ApplicationController
 
   def sub_categories
     if params[:category].present?
-      @category = Category.find(params[:category])
+      @category = Category.includes(:sub_categories, :products).find(params[:category])
       @sub_categories = @category.sub_categories
-      @products = @category.products.paginate( page: params[:page], per_page: 10)
+      @products = @category.products.paginate( page: params[:page], per_page: 48)
     elsif params[:sub_category].present?
-      @sub_category = SubCategory.includes(:product_types).find(params[:sub_category])
+      @sub_category = SubCategory.includes([:product_types, :products]).find(params[:sub_category])
       @product_types = @sub_category.product_types
-      @products = SubCategory.includes(:products).find(params[:sub_category]).products.paginate( page: params[:page], per_page: 10)
+      @products = @sub_category.products.paginate( page: params[:page], per_page: 48)
     else
-      @product_type = ProductType.where(id:params[:product_type]).take
+      @product_type = ProductType.includes(:sub_category, :products).where(id:params[:product_type]).take
       @sub_category = @product_type.sub_category
       @parent_product_type = @product_type.parent_product_type
-      @products = @product_type.products.paginate(page: params[:page], per_page: 10)
+      @products = @product_type.products.paginate(page: params[:page], per_page: 48)
     end
     render layout: "shop_application", collection: @sub_categories
   end
