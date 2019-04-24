@@ -1,40 +1,32 @@
-<div class="col-lg-3 col-6">
-  <div class="card">
-    <div class = "card-body">
-      <div class="product_item is_new" id="product_<%= product.id %>">
-        <%= link_to product_path(id: product.id) do %>
-          <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
-            <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
-            <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
-          </div>
-        <% end %>
-        <div class="product_content md-mt-5">
-          <div class="product_price xs-mt-5">$<%= product.price %></div>
-          <div class="product_name">
-            <div>
-              <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
-            </div>
-          </div>
-        </div>
-        <% if check_favorite(product.id) == true %>
-          <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
-            <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
-              <i class="fas fa-heart"></i>
-            </div>
-          <% end %>
-        <% else %>
-          <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
-            <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
-              <i class="fas fa-heart"></i>
-            </div>
-          <% end %>
-        <% end %>
-        <ul class="product_marks">
-          <li class="product_mark product_discount">-25%</li>
-          <li class="product_mark product_new">new</li>
-        </ul>
+ <div class="col-lg-3 col-6">
+  <div class="product_item is_new" id="product_<%= product.id %>">
+    <%= link_to product_path(id: product.id) do %>
+      <div class="product_image d-flex flex-column align-items-center justify-content-center mt-5">
+        <img src="<%= product.product_images.first.image.url(:original) if product.product_images.present? %>" alt="">
+        <img src="<%= product.product_images.second.image.url(:original) if product.product_images.present? && product.product_images.second.present? %>" alt="">
       </div>
+    <% end %>
+    <div class="product_content mt-5">
+      <div class="product_name">
+        <div>
+          <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
+        </div>
+      </div>
+      <div class="product_price">$<%= product.price %></div>
     </div>
+    <% if check_favorite(product.id) == true %>
+      <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+        <div class="product_fav active" id="<%= "in_product_#{product.id}"%>">
+          <i class="fas fa-heart"></i>
+        </div>
+      <% end %>
+    <% else %>
+      <%= link_to add_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
+        <div class="product_fav" id="<%= "in_product_#{product.id}"%>">
+          <i class="fas fa-heart"></i>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 <style type="text/css">
@@ -67,8 +59,9 @@
 }
 .product_price {
     font-size: 16px;
-    font-weight: 500;
     margin-top: 25px;
+    color: #f60;
+    font-weight: 700;
 }
 .product_name {
     margin-top: 4px;
@@ -76,10 +69,10 @@
 }
 .product_name div 
 a {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 400;
     color: #000000;
-    white-space: nowrap; 
+    white-space: initial; 
     transition: all 200ms ease;
 }
 .product_name div {
@@ -88,20 +81,18 @@ a {
 }
 @media screen and (max-width: 450px) {
   .product_item {
-    padding-top: 100px;
-    width: 200px;
+    padding-top: 0;
+    width: 80px;
   }
   .product_image {
     height: 0;
-
   }
   .product_price {
-    font-size: 20px;
-    margin-top: 90px;
+    font-size: 10px;
   }
   .product_name div a {
-    font-size: 10px;
-    white-space: initial;
+    font-size: 6px;
+    white-space: nowrap;
   }
   }
 </style>
