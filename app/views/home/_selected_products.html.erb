@@ -32,12 +32,13 @@
           </div>
         <% end %>
         <div class="product_content md-mt-5">
-          <div class="product_price xs-mt-5">$<%= product.price %></div>
+          <div> <%= product.available_colors_count %> </div>
           <div class="product_name">
             <div>
               <a href="<%= product_path(id: product.id) %>" tabindex="0"><%= product.name %></a>
             </div>
           </div>
+          <div class="product_price xs-mt-5">$<%= product.price %></div>
         </div>
         <% if check_favorite(product.id) == true %>
           <%= link_to remove_favorite_path(product_id: product.id), class: "fav_link", remote: true do %>
@@ -67,18 +68,17 @@
 @media screen and (min-height: 750px) {
 .product_item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  background: #FFFFFF;
-  cursor: pointer;
-  padding-top: 40px;
-  padding-bottom: 24px;
-  text-align: center;
-  padding-right: 15px
-}
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background: #FFFFFF;
+    cursor: pointer;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    text-align: center;
+    padding-right: 15px
 }
 .product_image img {
     display: block;
@@ -94,20 +94,21 @@
 }
 .product_price {
     font-size: 16px;
-    font-weight: 500;
     margin-top: 25px;
+    color: #f60;
+    font-weight: 700;
 }
 .product_name {
-     font-size: 10px;
-    white-space: initial;
+    margin-top: 4px;
+    overflow: hidden;
 }
 .product_name div 
 a {
     font-size: 14px;
     font-weight: 400;
     color: #000000;
+    white-space: initial; 
     transition: all 200ms ease;
-    white-space: initial;
 }
 .product_name div {
     width: 100%;
@@ -116,23 +117,17 @@ a {
 @media screen and (max-width: 450px) {
   .product_item {
     padding-top: 0;
-    width: 100px;
+    width: 80px;
   }
   .product_image {
     height: 0;
   }
   .product_price {
-    font-size: 15px;
-    margin-top: 35px;
-
+    font-size: 10px;
   }
   .product_name div a {
-    font-size: 10px;
+    font-size: 6px;
     white-space: nowrap;
-    margin-top: 0px;
-  }
-  .shop {
-    padding-top: 32px;
   }
   }
 </style>
