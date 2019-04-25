@@ -1258,9 +1258,7 @@ select option
 .shop
 {
 	background: #FFFFFF;
-	padding-top: 80px;
 	padding-bottom: 139px;
-	margin-top: 210px;
 }
 @media screen and (max-width: 450px) {
 	.shop {
