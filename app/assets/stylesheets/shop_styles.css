@@ -1262,6 +1262,15 @@ select option
 	padding-bottom: 139px;
 	margin-top: 210px;
 }
+@media screen and (max-width: 450px) {
+	.shop {
+		background: #FFFFFF;
+		padding-top: 80px;
+		padding-bottom: 139px;
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+	}
 .shop_content
 {
 	width: 100%;
@@ -1431,6 +1440,7 @@ select option
 	font-size: 16px;
 	font-weight: 500;
 	margin-top: 25px;
+	color: #f60;
 }
 .product_item.discount
 {
@@ -1457,8 +1467,11 @@ select option
 }
 .product_name
 {
-	margin-top: 4px;
-	overflow: hidden;
+	font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  white-space: initial; 
+  transition: all 200ms ease;
 }
 .product_name div
 {

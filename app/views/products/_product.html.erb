@@ -30,7 +30,7 @@
   </div>
 </div>
 <style type="text/css">
-@media screen and (min-height: 750px) {
+@media screen and (min-height: 450px) {
 .product_item {
   display: flex;
     flex-direction: column;
@@ -64,8 +64,11 @@
     font-weight: 700;
 }
 .product_name {
-    margin-top: 4px;
-    overflow: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  white-space: initial; 
+  transition: all 200ms ease;
 }
 .product_name div 
 a {
@@ -80,19 +83,5 @@ a {
 }
 }
 @media screen and (max-width: 450px) {
-  .product_item {
-    padding-top: 0;
-    width: 80px;
-  }
-  .product_image {
-    height: 0;
-  }
-  .product_price {
-    font-size: 10px;
-  }
-  .product_name div a {
-    font-size: 6px;
-    white-space: nowrap;
-  }
   }
 </style>
