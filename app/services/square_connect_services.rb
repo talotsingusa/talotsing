@@ -1,6 +1,6 @@
 class SquareConnectServices
   class << self
-    def location
+    def location(flash)
       locations_api = SquareConnect::LocationsApi.new
       locations_response = locations_api.list_locations rescue nil
       unless locations_response.nil?
@@ -23,12 +23,7 @@ class SquareConnectServices
       },
         idempotency_key: SecureRandom.uuid
       }
-      begin
-        resp = transactions_api.charge(ENV['SQUARE_CONNECT_LOCATION_ID'], request_body)
-      rescue SquareConnect::ApiError => e
-        flash[:notice] = "Error encountered while charging card: #{e.message}"
-        redirect_to checkout_shopping_carts_path and return
-      end
+      transactions_api.charge(ENV['SQUARE_CONNECT_LOCATION_ID'], request_body)
     end
   end
 end

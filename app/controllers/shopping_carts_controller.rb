@@ -25,12 +25,17 @@ class ShoppingCartsController < ApplicationController
 
   def process_payment
     @order = current_user.orders.last
-    location = SquareConnectServices.location
-    SquareConnectServices.transaction(params[:nonce], @order.total_price)
-    flash[:notice] = "Card Charged successfully"
-    session.delete(:shop_cart)
-    @order.update(status:"paid")
-    redirect_to  checkout_shopping_carts_path(value: "done")
+    location = SquareConnectServices.location(flash)
+    begin
+      responce = SquareConnectServices.transaction(params[:nonce], @order.total_price)
+      flash[:notice] = "Card Charged successfully"
+      session.delete(:shop_cart)
+      @order.update(status:"paid")
+      redirect_to  checkout_shopping_carts_path(value: "done")
+    rescue SquareConnect::ApiError => e
+      flash[:notice] = "Error encountered while charging card: #{e.message}"
+      redirect_to checkout_shopping_carts_path and return
+    end
   end
 
   def remove_items_from_cart
