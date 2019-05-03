@@ -27,7 +27,7 @@ class ShoppingCartsController < ApplicationController
     @order = current_user.orders.last
     location = SquareConnectServices.location(flash)
     begin
-      responce = SquareConnectServices.transaction(params[:nonce], @order.total_price)
+      responce = SquareConnectServices.transaction(params[:nonce], @order.total_price.to_i)
       flash[:notice] = "Card Charged successfully"
       session.delete(:shop_cart)
       @order.update(status:"paid")
