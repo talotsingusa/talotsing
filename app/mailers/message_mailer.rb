@@ -16,11 +16,11 @@ class MessageMailer < ApplicationMailer
     end
   end
 
-  def email_admin( name, user, url, order)
-    @to = "talotsingusa@gmail.com"
+  def email_admin(user, url, order)
+    @to = "info@talotsing.com"
     @body = "#{user.first_name} #{user.last_name}"
     @url= url
-    @name = name
+    @name = "Talotsing"
     @order = order
     @user = user
     @subject = "New Order"
