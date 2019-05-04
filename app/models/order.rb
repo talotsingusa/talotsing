@@ -17,7 +17,7 @@ class Order < ApplicationRecord
       product = order.product
       total_price += (product.price.to_f+order.shipping.to_i)*order.quantity.to_i
     end
-    total_price.round(0) # In cents
+    total_price.round(0)*100 # In cents
   end
 
 end
