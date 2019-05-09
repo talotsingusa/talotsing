@@ -10,10 +10,10 @@ class MessageMailer < ApplicationMailer
     @order = order
     @user = user
     @subject = "Order Confirmation"
-    # attachments.inline["logo.png"] = File.read("#{Rails.root}/app/assets/images/logoo 3.png")
     mail(to: @to, from: "Talotsing", subject: @subject, body: @body) do |format|
-      format.html { render "message_mailer/order_email" }
+      format.html { render 'message_mailer/order_email' }
     end
+
   end
 
   def email_admin(user, url, order)
@@ -24,10 +24,10 @@ class MessageMailer < ApplicationMailer
     @order = order
     @user = user
     @subject = "New Order"
-    # attachments.inline["logo.png"] = File.read("#{Rails.root}/app/assets/images/logoo 3.png")
     mail(to: @to, from: "Talotsing", subject: @subject, body: @body) do |format|
-      format.html { render "message_mailer/order_email" }
+      format.html { render 'message_mailer/email_admin' }
     end
+
   end
 
 end

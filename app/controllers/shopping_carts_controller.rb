@@ -33,6 +33,7 @@ class ShoppingCartsController < ApplicationController
       @order.update(status:"paid")
       url = "#{request.base_url}/my_order_details?id=#{@order.id}"
       MessageMailer.email_admin(current_user, url, @order).deliver_now
+      MessageMailer.order_email(current_user.email, current_user.name, current_user, url, @order).deliver_now
       redirect_to  checkout_shopping_carts_path(value: "done")
     rescue SquareConnect::ApiError => e
       flash[:notice] = "Error encountered while charging card: #{e.message}"
