@@ -12,26 +12,29 @@
 //
 //= require jquery3
 //= require jquery_ujs
+//= require jquery-ui
+//= require bootstrap.min
+//= require jquery.parallaximage
+//= require jquery.parallax
+//= require jquery.slick
+//= require jquery.sliders
+//= require jquery.easing
 //= require popper
 //= require bootstrap-sprockets
-//= require jquery-ui
 //= require datatables
-//= require jquery.easing
 //= require greensock/TweenLite
 //= require greensock/easing/EasePack
 //= require greensock/jquery.gsap.js
 //= require owlcarousel2/owl.carousel
 //= require modernizr
-//= require jquery.parallaximage
 //= require parallax
-//= require jquery.parallax
 //= require slick
-//= require jquery.slick
-//= require jquery.sliders
 //= require toastr
 //= require sq-payment-form
+//= require pagination
+//= require_self
 //= require turbolinks
-//= require_tree 
+//= require_tree
 
 
 
