@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  self.per_page = 10
   belongs_to :store
 
   has_many :product_colors, dependent: :destroy
