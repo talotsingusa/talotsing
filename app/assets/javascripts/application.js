@@ -31,7 +31,6 @@
 //= require slick
 //= require toastr
 //= require sq-payment-form
-//= require pagination
 //= require_self
 //= require turbolinks
 //= require_tree
