@@ -947,6 +947,13 @@ select option
 	visibility: visible;
 	opacity: 1;
 }
+@media (max-height: 800px) and (min-width: 1280px) {
+    /* CSS stuff */
+  .cat_menu li
+	{
+		height: 43px !important;
+	}
+}
 .cat_menu li
 {
 	display: block;
