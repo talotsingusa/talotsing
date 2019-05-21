@@ -135,7 +135,7 @@ class HomeController < ApplicationController
     else
       shipping  = Shipping.create(shipping_params)
     end
-    redirect_to checkout_path(value: "review_order")
+    redirect_to  checkout_shopping_carts_path(value: "review_order")
   end
 
   def product_detail_modal
