@@ -37,7 +37,6 @@
       <% if @order_items.present? %>
         <% @order_items.each do |order_item| %>
           <li class="cart_item clearfix">
-             <%= link_to "Remove Item", remove_items_from_cart_shopping_carts_path(order_item: order_item), class:"float-right" %>
             <div class="cart_item_image"><img src="<%= product_details(order_item.product_id).product_images.first.image.url(:thumb) if product_details(order_item.product_id).product_images.present? %>" alt=""></div>
             <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
               <div class="cart_item_name cart_info_col">
@@ -64,6 +63,10 @@
               <div class="cart_item_total cart_info_col">
                 <div class="cart_item_title">Total</div>
                 <div class="cart_item_text"><%= number_to_currency((product_details(order_item.product_id).price+order_item.shipping.to_i)*order_item.quantity) %></div>
+              </div>
+              <div class="cart_item_name cart_info_col">
+                <div class="cart_item_title">Remove Item</div>
+                <div class="cart_item_text"> <%= link_to "Remove Item", remove_items_from_cart_shopping_carts_path(order_item: order_item), class:"float-right" %></div>
               </div>
             </div>
           </li>
