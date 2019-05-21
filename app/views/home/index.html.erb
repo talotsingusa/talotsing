@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!-- Banner -->
-<div class="grid" id="homepage_slider" style="
+<div class="grid row" id="homepage_slider" style="
     margin-top: 0px;">
   <div class="slider-box">
     <div class="slider" id="slider">
@@ -39,7 +39,7 @@
   </div>
 </div>
     <!-- Characteristics -->
-<div class = "shop">
+<div class = "shop row">
   <div class  = "container">
     <div class = "row">
       <div class = "col-lg-12 col-12 col-xl-9 offset-xl-3">
@@ -63,6 +63,7 @@
   <!-- Trends -->
     <%#= render "products/trends" %>
     </div>
+</div>
 </div>
   <!-- Deals of the week -->
 
@@ -110,12 +111,19 @@
   .grid {
     max-width: 960px;
     margin: auto;
+    position: fixed;
+    z-index: 2;
+    margin-left: 25%;
   }
 
 
   /*
   4.0 - Slider
   */
+  .slider-box {
+    position: fixed;
+    z-index: 2; 
+  }
 
   .slider-box,
   .slider__item {
