@@ -7,6 +7,10 @@
           <div class="cart_item_image"><img src="<%= product_details(product[0].to_i).product_images.first.image.url(:thumb) if product_details(product[0].to_i).product_images.present? %>" alt=""></div>
           <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
             <div class="cart_item_name cart_info_col">
+              <div class="cart_item_title">Remove Item</div>
+              <div class="cart_item_text"> <%= link_to "Remove Item", remove_items_from_cart_shopping_carts_path(order_item: product) %></div>
+            </div>
+            <div class="cart_item_name cart_info_col">
               <div class="cart_item_title">Name</div>
               <div class="cart_item_text"><%= product_details(product[0].to_i).name.truncate(18) %></div>
             </div>
