@@ -1,5 +1,6 @@
 <div id="mySidenav" class="sidenav mobile-nav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h6> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </h6>
+  <hr>
     <div id="all-categpries-mobile">
       <% Category.all.each do |category| %>
         <div id=Category-<%= category.id %> >
@@ -84,8 +85,7 @@ p a{
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  font-size: 25px;
 }
 
 @media screen and (max-height: 450px) {
