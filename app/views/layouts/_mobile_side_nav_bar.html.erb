@@ -1,17 +1,20 @@
-<div id="mySidenav" class="sidenav mobile-nav">
-  <h6> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </h6>
+<div id="mySidenav" class="sidenav mobile-nav card style="width: 18rem;">
+  <div class="card-header">
+    Departments <h6> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </h6>
+  </div>
   <hr>
+  <div class="card-body">
     <div id="all-categpries-mobile">
       <% Category.all.each do |category| %>
         <div id=Category-<%= category.id %> >
-          <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> class="ml-3" style="color:white; font-size: 12px;"><%= category.name %>
-          <i class="fas fa-plus float-right" onclick="toggle_subcategories(event)"></i></h6>
+          <h6 onclick="toggle_subcategories(event)" id=Category-<%= category.id %> class="ml-3" style="font-size: 12px;"><%= category.name %>
+          <i class="fas fa-chevron-right float-right" onclick="toggle_subcategories(event)"></i></h6>
           <hr style="background-color:white;" >
             <div  class ="mobile_display_sub_categories d-none" id="mobile_sub_categories" >
               <% category.sub_categories.each do |sub_category| %>
               <div id=SubCategory-<%= sub_category.id %> class="ml-3">
                 <p style="font-size: 7px; color:white;" id=SubCategory-<%= sub_category.id %> class="ml-3"> 
-                  <p id=SubCategory-<%= sub_category.id %> style="color: white" onclick="toggle_product_types(event)"> <%= sub_category.name %> </p>
+                  <p id=SubCategory-<%= sub_category.id %> onclick="toggle_product_types(event)"> <%= sub_category.name %> </p>
                 </p>
                 <div id="mobile_product_types" class="d-none">
                   <% sub_category.product_types.each do |product_type| %>
@@ -24,6 +27,7 @@
           </div>
         <% end %>
       </div>
+    </div>
 </div>
 <style>
 body {
@@ -66,10 +70,10 @@ p a{
   min-height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0px;
+  bottom: 0px;
   left: 0;
-  background-color: #232f3e;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 10px;
@@ -109,10 +113,12 @@ p a{
 
   function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
+  $('#departments-bars').hide()
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  $('#departments-bars').show()
 }
 </script>
 </script>
