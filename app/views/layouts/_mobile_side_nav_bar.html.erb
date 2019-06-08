@@ -91,7 +91,10 @@ p a{
   right: 25px;
   font-size: 25px;
 }
-
+.fixedPosition
+{
+  position: fixed;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -114,11 +117,13 @@ p a{
   function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   $('#departments-bars').hide()
+  $('body').addClass("fixedPosition");
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   $('#departments-bars').show()
+  $('body').removeClass("fixedPosition");
 }
 </script>
 </script>
