@@ -16,7 +16,7 @@
                 <% if product_types?(sub_category) %>
                   <p style="font-size: 7px; color:white;" id=SubCategory-<%= sub_category.id %> class="ml-3">
                     <p id=SubCategory-<%= sub_category.id %> onclick="toggle_product_types(event)"> <%= sub_category.name %>
-                     <i class="fas fa-chevron-right fa-xs float-right" onclick="toggle_product_types(event)"></i></p>
+                     <i class="fas fa-arrow-down fa-xs float-right" onclick="toggle_product_types(event)"></i></p>
                   </p>
                 <% else %>
                   <p style="font-size: 7px; color:white;" id=SubCategory-<%= sub_category.id %> class="ml-3">
