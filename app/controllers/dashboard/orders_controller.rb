@@ -9,7 +9,7 @@ class Dashboard::OrdersController < Dashboard:: BaseController
   end
 
   def paid_orders
-    @orders = Order.all.paid
+    @orders = Order.all.paid.order('id DESC')
   end
 
   def shipped_orders

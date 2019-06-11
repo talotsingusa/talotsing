@@ -23,7 +23,7 @@
                 <th class="text-right">Status</th>
                 <th class="text-right">Shipping Status</th>
                 <th>Change Status to</th>
-                <th class="text-right">Created at</th>
+                <th class="text-right">Time Stamps</th>
               </tr>
               </thead>
               <tbody>
@@ -37,6 +37,7 @@
                   <td><%= order.status %></td>
                   <td><%= order.shipping_status %></td>
                   <td><%= link_to "Ship Order", ship_order_dashboard_order_path(order) if order.paid? %> </td>
+                  <td><%= order.created_at.localtime.strftime '%Y-%m-%d %H:%M:%S' %>
                 </tr>
               <% end %>
               </tbody>

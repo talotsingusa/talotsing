@@ -23,6 +23,7 @@
                 <th>City</th>
                 <th>Phone Number</th>
                 <th>Postal Code</th>
+                <th> Email </th>
               </tr>
               </thead>
               <tbody>
@@ -34,6 +35,7 @@
                 <td> <%= @shipping.city %> </td>
                 <td> <%= @shipping.mobile %> </td>
                 <td> <%= @shipping.postal_code %> </td>
+                <td> <%= @shipping.user.email %> </td>
               </tbody>
             </table>
           </div>
