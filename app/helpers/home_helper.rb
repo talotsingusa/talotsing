@@ -24,9 +24,6 @@ module HomeHelper
   end
 
   def product_types? sub_category
-    puts "******************************************************************************"
-    puts sub_category.product_types.present?
-    puts sub_category.name
     sub_category.product_types.present?
   end
 end
