@@ -6,14 +6,14 @@
     <div class = "pl-3">
       <%= link_to @sub_category.name, sub_categories_path(sub_category: @sub_category.id) %> >
     </div>
-    <% if @product_type.parent_product_type.present? %>
-    <div class = "pl-5">
-     <%=  link_to @product_type.parent_product_type.name, sub_categories_path(product_type: @product_type.parent_product_type.id) %> >
-    </div>
+    <% if @product_type.present? and @product_type.parent_product_type.present? %>
+      <div class = "pl-5">
+       <%=  link_to @product_type.parent_product_type.name, sub_categories_path(product_type: @product_type.parent_product_type.id) %> >
+      </div>
+      <div class = "pl-5">
+        <%= @product_type.name %>
+      </div>
     <% end %>
-    <div class = "pl-5">
-      <%= @product_type.name %>
-    </div>
   </div>
 </div>
 <div class="container">
