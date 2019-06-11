@@ -8,3 +8,28 @@
     <%= render "selected_products" %>
   <% end %>
 </div>
+
+<script type="text/javascript">
+  $( document ).ready(function() {
+    setHeader();
+    function setHeader()
+      {
+        var controller = new ScrollMagic.Controller(
+          {
+            globalSceneOptions:
+            {
+              triggerHook: 'onLeave'
+            }
+          });
+        var pin = new ScrollMagic.Scene(
+        {
+          triggerElement: '.main_nav'
+        })
+        .setPin('.main_nav').addTo(controller);
+        if(window.innerWidth > 991 && menuActive)
+        {
+          closeMenu();
+        }
+      }
+  })
+</script>
