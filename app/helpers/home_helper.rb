@@ -22,4 +22,11 @@ module HomeHelper
   def get_men_under_garments
     ProductType.where(name:"Boxers").take.products.includes(:product_images)
   end
+
+  def product_types? sub_category
+    puts "******************************************************************************"
+    puts sub_category.product_types.present?
+    puts sub_category.name
+    sub_category.product_types.present?
+  end
 end
