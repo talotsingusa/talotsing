@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       dashboards_path
     elsif resource.profile_type == "vendor"
       dashboards_path
-    elsif resource.profile_type == "customer"
+    else
       if !session[:favorites].nil? && session[:favorites].count > 0
         session[:favorites].each do |favorite|
           UserFavorite.create(user_id: current_user.id, product_id: favorite)
@@ -39,8 +39,6 @@ class ApplicationController < ActionController::Base
       session.delete(:favorites)
       session.delete(:recent_views)
       root_path
-    else
-      # do nothing
     end
   end
 

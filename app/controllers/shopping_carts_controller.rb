@@ -2,6 +2,7 @@ class ShoppingCartsController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
   def checkout
+    # byebug
     if params[:value].present?
       @value = params[:value]
     end
@@ -42,7 +43,7 @@ class ShoppingCartsController < ApplicationController
   end
 
   def remove_items_from_cart
-    session[:shop_cart].present? ? session[:shop_cart].delete_if {|product| product[0] == params[:product]} : OrderItem.find(params[:order_item].to_i).destroy
+    session[:shop_cart].present? ? session[:shop_cart].each {|product| session[:shop_cart].delete(product) if product == params[:product]} : OrderItem.find(params[:order_item].to_i).destroy
     redirect_to checkout_shopping_carts_path
   end
 
