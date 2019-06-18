@@ -2307,7 +2307,8 @@ new dropdown css
  */
 .hassubs:hover .headerCate_contain {
   display: block;
-  min-height: 100%;
+  height: 100%; 
+  overflow-y: scroll;
 }
 .sub_cat_anch {
   line-height: 20px !important;
