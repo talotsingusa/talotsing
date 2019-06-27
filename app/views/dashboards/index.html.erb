@@ -540,7 +540,7 @@
           </div>
         </div>
       </div>
-  <% elsif current_user.profile_type == "customer" %>
+  <% elsif current_user.customer? %>
       <div class="section__content section__content--p30">
         <div class="container-fluid">
           <div class="row">
@@ -552,7 +552,7 @@
           </div>
         </div>
       </div>
-  <% elsif current_user.profile_type == "vendor" %>
+  <% elsif current_user.vendor? %>
       <% if current_user.approved == false %>
           <div class="section__content section__content--p30">
             <div class="container-fluid">

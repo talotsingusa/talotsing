@@ -135,7 +135,7 @@
     </aside>
     <!-- END MENU SIDEBAR-->
 
-<% elsif current_user.profile_type == "customer" %>
+<% elsif current_user.customer? %>
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
       <div class="logo">
@@ -160,7 +160,7 @@
     </aside>
     <!-- END MENU SIDEBAR-->
 
-<% elsif current_user.profile_type == "vendor" %>
+<% elsif current_user.vendor? %>
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
       <div class="logo">

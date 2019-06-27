@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     user = User.find(resource.id)
-    if resource.email  == "admin@gmail.com"
+    if resource.admin?
       dashboards_path
-    elsif resource.profile_type == "vendor"
+    elsif resource.vendor?
       dashboards_path
     else
       if !session[:favorites].nil? && session[:favorites].count > 0
@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
 
   protected
     def configure_permitted_parameters
-     devise_parameter_sanitizer.permit(:sign_up, keys: [:phone_number])
+     devise_parameter_sanitizer.permit(:sign_up, keys: [:phone_number, :user_type])
      devise_parameter_sanitizer.permit(:account_update, keys: [:phone_number])
     end
 end

@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_one :store
@@ -17,6 +15,8 @@ class User < ApplicationRecord
   has_many :cards
 #Omniauths
   devise :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
+
+  enum user_type: [:vendor, :admin, :customer]
 
   def self.new_with_session(params, session)
     super.tap do |user|
