@@ -1,0 +1,47 @@
+<div class="main-content">
+  <div class="section__content section__content--p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="overview-wrap">
+                <h2 class="title-1">Customers & Vendors</h2>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="table-responsive table--no-card m-b-30">
+            <table class="table table-borderless table-striped table-earning" id="orders_list">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th class="text-right">Action</th>
+                <th>Name</th>
+                <th class="text-right">User type</th>
+                <th class="text-right">Created at</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @users.each do |user| %>
+                <tr>
+                  <td><%= user.id %></td>
+                  <td><%= link_to 'Send a message', new_personal_message_path(receiver_id: user) %></td>
+                  <td><%= user.full_name %></td>
+                  <td><%= user.user_type %></td>
+                  <td class="text-right"><%= user.created_at %></td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $( document ).ready(function() {
+        $("#orders_list").dataTable();
+    });
+</script>
