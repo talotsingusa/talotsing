@@ -34,10 +34,13 @@ class User < ApplicationRecord
       user.image = auth.info.image # assuming the user model has an image
     end
   end
+
+  def self.admin
+    User.where(user_type:'admin').take
+  end
   def online?
     !Redis.new.get("user_#{self.id}_online").nil?
   end
-
   def full_name
     "#{first_name} #{last_name}"
   end

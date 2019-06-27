@@ -64,7 +64,7 @@
             </div>
           </div>
           <div class="row float-right d-lg-none mt-2">
-            <a href="https://www.messenger.com/t/473678129767681" target="_blank" style="color:white;"> Live Support</a>
+            <%= link_to "Live Support", new_personal_message_path(receiver_id: User.admin)%>
           </div>
          <!--  <span style="font-size:16px;cursor:pointer; color: white;" onclick="openNav()" class="mobile-nav row float-left d-lg-none mt-2">&#9776;Departments</span> -->
         </div>
