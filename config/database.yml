@@ -3,5 +3,3 @@ development:
   encoding: unicode
   database: talotsing_local
   pool: 5
-  username: root
-  password:  <%= ENV['TALOTSING-SERVER_DATABASE_PASSWORD'] %>
