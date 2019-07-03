@@ -4,31 +4,6 @@ class DashboardsController < ApplicationController
     render layout: "dashboard_application"
   end
 
-  def brands_list
-    @brands = Brand.all
-    render layout: "dashboard_application"
-  end
-
-  def add_brand
-    @brand = Brand.new
-    render layout: "dashboard_application"
-  end
-
-  def create_brand
-    brand = Brand.new(brand_params)
-    if brand.save
-      redirect_to brands_list_path
-    else
-      redirect_to add_brand_path
-    end
-  end
-
-  def delete_brand
-    @brand = Brand.find(params[:id])
-    @brand.destroy
-    redirect_to brands_list_path
-  end
-
   def catergory_list
     @categories = Category.all
     render layout: "dashboard_application"

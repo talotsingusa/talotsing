@@ -3,12 +3,10 @@ before_action :set_brand, only: [:show, :edit, :destroy]
 
   def index
     @brands = Brand.all
-    render layout: "dashboard_application"
   end
 
   def new
     @brand = Brand.new
-    render layout: "dashboard_application"
   end
 
   def create
@@ -20,10 +18,6 @@ before_action :set_brand, only: [:show, :edit, :destroy]
     end
   end
 
-  def show
-  end
-
-
   def edit
   end
 
@@ -33,6 +27,11 @@ before_action :set_brand, only: [:show, :edit, :destroy]
     else
       redirect_to new_dashboard_brand_path
     end
+  end
+
+  def destroy
+    @brand.destroy
+    redirect_to dashboard_brands_path
   end
 
   private

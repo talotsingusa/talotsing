@@ -7,7 +7,7 @@
             <div class="col-md-12">
               <div class="overview-wrap">
                 <h2 class="title-1">Brands</h2>
-                <%= link_to add_brand_path, class: "au-btn au-btn-icon au-btn--blue" do %>
+                <%= link_to new_dashboard_brand_path, class: "au-btn au-btn-icon au-btn--blue" do %>
                   <i class="zmdi zmdi-plus"></i>add brand
                 <% end %>
               </div>
@@ -33,7 +33,7 @@
                   <tr>
                     <td><%= brand.id %></td>
                     <td><%= brand.name %></td>
-                    <td><%= link_to "Delete", delete_brand_path(id: brand.id) %></td>
+                    <td><%= link_to "Delete", dashboard_brand_path(brand), method: :delete %></td>
                     <td><%= brand.vendor_name %></td>
                     <td><%= brand.vendor_email %></td>
                     <td><%= brand.vendor_number %></td>
