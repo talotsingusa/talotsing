@@ -1,11 +1,11 @@
-<h1 style="    margin-top: 52px;">Chatting with <%= @conversation.with(current_user).first_name %></h1>
+<h1 style=" margin-top: 52px;">Chatting with <%= @conversation.with(current_user).first_name %></h1>
 
 <div id="conversation-main" >
-  <div style="    margin-left: 20px;" id="conversation-body" data-conversation-id="<%= @conversation.id %>">
+  <div style="margin-left: 20px;" id="conversation-body" data-conversation-id="<%= @conversation.id %>">
     <%= render @conversation.personal_messages %>
   </div>
 
-  <%= form_for @personal_message do |f| %>
+  <%= form_for @personal_message, remote: true do |f| %>
     <%= hidden_field_tag 'conversation_id', @conversation.id %>
     <h3>Message</h3>
     <%= f.text_area :body, label: false, placeholder: "Type your message here", size: "100x5" %>
@@ -19,9 +19,10 @@
   }
 </style>
 <script>
-    $('#personal_message_body').keypress(function (e) {
-        if (e.which == 13) {
-            $('#send_mess').click();
-        }
-    });
+  $('#personal_message_body').keypress(function (e) {
+    if (e.which == 13) {
+      $('#send_mess').click();
+      $('#personal_message_body').val('')
+    }
+  });
 </script>
