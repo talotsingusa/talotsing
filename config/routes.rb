@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :brands, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :product_types, only: [:index, :new, :create]
     resources :users, only: [:index]
+    resources :conversations, only: [:index, :new, :show]
+    resources :personal_messages, only: [:new, :create]
     resources :orders, only: [] do
       collection do
         get :unpaid_orders

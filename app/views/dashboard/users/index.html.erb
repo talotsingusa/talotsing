@@ -26,7 +26,7 @@
               <% @users.each do |user| %>
                 <tr>
                   <td><%= user.id %></td>
-                  <td><%= link_to 'Send a message', new_personal_message_path(receiver_id: user) %></td>
+                  <td><%= link_to 'Send a message', new_dashboard_personal_message_path(receiver_id: user) %></td>
                   <td><%= user.full_name %></td>
                   <td><%= user.user_type %></td>
                   <td class="text-right"><%= user.created_at %></td>
