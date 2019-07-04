@@ -134,7 +134,6 @@ Rails.application.routes.draw do
 
   resources :conversations
   resources :personal_messages
-  resources :users, only: [:index]
   mount ActionCable.server => '/cable'
 
   #For static pages
