@@ -16,7 +16,6 @@ Rails.application.routes.draw do
       end
     end
   end
-
   resources :shopping_carts, except: [:new, :create, :edit, :update, :destroy, :index, :show] do
     collection do
       get 'checkout'
@@ -24,6 +23,8 @@ Rails.application.routes.draw do
       get 'remove_items_from_cart'
     end
   end
+  resources :conversations
+  resources :personal_messages
 
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", passwords: 'users/passwords' }
   root to: 'home#index'
@@ -131,9 +132,6 @@ Rails.application.routes.draw do
   get 'my_order_details' => "dashboards#my_order_details", as: :my_order_details
   get 'change_product_status' => "dashboards#change_product_status", as: :change_product_status
   get 'change_order_status' => "dashboards#change_order_status", as: :change_order_status
-
-  resources :conversations
-  resources :personal_messages
   mount ActionCable.server => '/cable'
 
   #For static pages
