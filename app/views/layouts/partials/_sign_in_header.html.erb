@@ -1,35 +1,20 @@
-<div class="top_bar" style="background-color: #232f3e;">
+<div class="top_bar">
   <div class="container">
     <div class="row">
       <div class="col d-flex flex-row">
-        <a href="<%= root_path%>"><div class="top_bar_contact_item"><div class="top_bar_icon"><img src="/assets/logoo 3.png" alt="" style="width: 146px"></div></div></a>
+        <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="/assets/phone.png" alt=""></div>+16266150262</div>
+        <div class="top_bar_contact_item">info@talotsing.com</div>
         <div class="top_bar_content ml-auto">
-          <div class="top_bar_menu">
-            <ul class="standard_dropdown top_bar_dropdown">
-              <!--<li>-->
-                <!--<a href="#">English<i class="fas fa-chevron-down"></i></a>-->
-                <!--<ul>-->
-                  <!--<li><a href="#">Italian</a></li>-->
-                  <!--<li><a href="#">Spanish</a></li>-->
-                  <!--<li><a href="#">Japanese</a></li>-->
-                <!--</ul>-->
-              <!--</li>-->
-              <!--<li>-->
-                <!--<a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>-->
-                <!--<ul>-->
-                  <!--<li><a href="#">EUR Euro</a></li>-->
-                  <!--<li><a href="#">GBP British Pound</a></li>-->
-                  <!--<li><a href="#">JPY Japanese Yen</a></li>-->
-                <!--</ul>-->
-              <!--</li>-->
-            </ul>
-          </div>
           <div class="top_bar_user">
-            <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
-            <div><a href="<%= new_user_registration_path%>" style="    color: white;
-            ">Register</a></div>
-            <div><a href="<%= user_session_path%>" style="    color: white;
-            ">Sign in</a></div>
+            <% if current_user.present? %>
+              <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
+              <div><%= current_user.full_name %></div>
+              <div><a href="<%= dashboards_path%>">Dashboard</a></div>
+            <% else %>
+              <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
+              <div><a href="<%= new_user_registration_path %>">Register</a></div>
+              <div><a href="<%= user_session_path %>">Sign in</a></div>
+            <% end %>
           </div>
         </div>
       </div>

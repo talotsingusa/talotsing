@@ -1,33 +1,6 @@
 <header class="header">
-
-  <!-- Top Bar -->
-
-  <div class="top_bar">
-    <div class="container">
-      <div class="row">
-        <div class="col d-flex flex-row">
-          <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="/assets/phone.png" alt=""></div>+16266150262</div>
-          <div class="top_bar_contact_item">info@talotsing.com</div>
-          <div class="top_bar_content ml-auto">
-            <div class="top_bar_user">
-              <% if current_user.present? %>
-                  <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
-                  <div><%= current_user.full_name %></div>
-                  <div><a href="<%= dashboards_path%>">Dashboard</a></div>
-              <% else %>
-                  <div class="user_icon"><img src="/assets/user.svg" alt=""></div>
-                  <div><a href="<%= new_user_registration_path %>">Register</a></div>
-                  <div><a href="<%= user_session_path %>">Sign in</a></div>
-              <% end %>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render "layouts/partials/sign_in_header" %>
   <!-- Header Main -->
-
   <div class="header_main" style="background-color: #232f3e;">
     <div class="container">
       <div class="row">
