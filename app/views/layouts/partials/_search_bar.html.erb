@@ -1,87 +1,91 @@
-<div class="row">
-  <div class="col-lg-2 col-sm-3 col-3 order-1">
-    <div class="logo_container">
-      <div class="logo"><a href="<%= root_path %>"><img src="/assets/logoo 3.png"></a></div>
-    </div>
-  </div>
-        <!-- Search -->
-  <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
-    <div class="header_search d-block" >
-      <div class="header_search_content">
-        <div class="header_search_form_container">
-          <%= form_for :search_product, url: shop_path, class: "header_search_form clearfix", method: :get do |f| %>
-            <%= f.text_field :keyword, class: "header_search_input", required: false,
-             placeholder: "Search for products..." %>
-            <%= f.hidden_field :category, id: "search_category" %>
-            <div class="custom_dropdown" style="background-color: white;">
-              <div class="custom_dropdown_list">
-                <span class="custom_dropdown_placeholder clc">All Categories</span>
-                <i class="fas fa-chevron-down"></i>
-                <ul class="custom_list clc" id="category_search_params">
-                  <% Category.where(see_all:false).each do |category| %>
-                    <li> <%= link_to category.name, sub_categories_path(category: category.id) %> </li>
+<div class="header_main" style="background-color: #232f3e;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-sm-3 col-3 order-1">
+        <div class="logo_container">
+          <div class="logo"><a href="<%= root_path %>"><img src="/assets/logoo 3.png"></a></div>
+        </div>
+      </div>
+            <!-- Search -->
+      <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+        <div class="header_search d-block" >
+          <div class="header_search_content">
+            <div class="header_search_form_container">
+              <%= form_for :search_product, url: shop_path, class: "header_search_form clearfix", method: :get do |f| %>
+                <%= f.text_field :keyword, class: "header_search_input", required: false,
+                 placeholder: "Search for products..." %>
+                <%= f.hidden_field :category, id: "search_category" %>
+                <div class="custom_dropdown" style="background-color: white;">
+                  <div class="custom_dropdown_list">
+                    <span class="custom_dropdown_placeholder clc">All Categories</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <ul class="custom_list clc" id="category_search_params">
+                      <% Category.where(see_all:false).each do |category| %>
+                        <li> <%= link_to category.name, sub_categories_path(category: category.id) %> </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+                <button type="submit" class="header_search_button trans_300" value="Submit"
+                 style="background-color: #febd69;"><img src="/assets/search.png" alt=""></button>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="row float-right d-lg-none mt-2">
+          <%= link_to "Live Support", new_personal_message_path(receiver_id: User.admin)%>
+        </div>
+      </div>
+            <!-- Wishlist -->
+      <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+        <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+          <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+            <a href="<%= my_favorites_path %>"><div class="wishlist_icon"><img src="/assets/heart.png" alt=""></div></a>
+            <div class="wishlist_content">
+              <div class="wishlist_text">
+                <a href="<%= my_favorites_path %>" style="color: #ffffff;">My Favorites</a>
+              </div>
+              <% if !session[:favorites].nil? %>
+                <div class="wishlist_count" style="color: #ffffff;">
+                  <%= session[:favorites].count if !session[:favorites].nil? %>
+                </div>
+              <% elsif current_user.present? %>
+                <div class="wishlist_count" style="color: #ffffff;">
+                  <%= current_user.user_favorites.count if current_user.user_favorites.present? %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+          <!-- Cart -->
+          <a href="<%= checkout_shopping_carts_path %>">
+            <div class="cart">
+              <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                <div class="cart_icon">
+                  <img src="/assets/cart.png" alt="">
+                  <% if !session[:shop_cart].nil? %>
+                    <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= session[:shop_cart].count if !session[:shop_cart].nil? %></span></div>
+                  <% elsif current_user.present? %>
+                    <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.where(status: "pending").last.order_items.size if current_user.orders.where(status: "pending").present? %></span></div>
                   <% end %>
-                </ul>
+                </div>
+                <div class="cart_content">
+                  <% if current_user.present? && current_user.orders.where(status: "pending").present? %>
+                    <div class="cart_text"><a href="<%= checkout_shopping_carts_path %>" style="    color: #ffffff;">Cart</a></div>
+                    <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) %></div>
+                  <% elsif !session[:shop_cart].nil? %>
+                    <div class="cart_text"><a  href="<%= checkout_shopping_carts_path %>" style=" color: #ffffff;">Cart</a></div>
+                    <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) if !session[:shop_cart].nil? %></div>
+                  <% else %>
+                    <div class="cart_text"><a  style="    color: #ffffff;">Cart</a></div>
+                    <div class="cart_price" style="color: #ffffff;">$0</div>
+                  <% end %>
+                </div>
               </div>
             </div>
-            <button type="submit" class="header_search_button trans_300" value="Submit"
-             style="background-color: #febd69;"><img src="/assets/search.png" alt=""></button>
-          <% end %>
+          </a>
         </div>
       </div>
-    </div>
-    <div class="row float-right d-lg-none mt-2">
-      <%= link_to "Live Support", new_personal_message_path(receiver_id: User.admin)%>
-    </div>
-  </div>
-        <!-- Wishlist -->
-  <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
-    <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-      <div class="wishlist d-flex flex-row align-items-center justify-content-end">
-        <a href="<%= my_favorites_path %>"><div class="wishlist_icon"><img src="/assets/heart.png" alt=""></div></a>
-        <div class="wishlist_content">
-          <div class="wishlist_text">
-            <a href="<%= my_favorites_path %>" style="color: #ffffff;">My Favorites</a>
-          </div>
-          <% if !session[:favorites].nil? %>
-            <div class="wishlist_count" style="color: #ffffff;">
-              <%= session[:favorites].count if !session[:favorites].nil? %>
-            </div>
-          <% elsif current_user.present? %>
-            <div class="wishlist_count" style="color: #ffffff;">
-              <%= current_user.user_favorites.count if current_user.user_favorites.present? %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-
-      <!-- Cart -->
-      <a href="<%= checkout_shopping_carts_path %>">
-        <div class="cart">
-          <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-            <div class="cart_icon">
-              <img src="/assets/cart.png" alt="">
-              <% if !session[:shop_cart].nil? %>
-                <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= session[:shop_cart].count if !session[:shop_cart].nil? %></span></div>
-              <% elsif current_user.present? %>
-                <div class="cart_count" style="background-color: #febd69; "><span style="color: black;"><%= current_user.orders.where(status: "pending").last.order_items.size if current_user.orders.where(status: "pending").present? %></span></div>
-              <% end %>
-            </div>
-            <div class="cart_content">
-              <% if current_user.present? && current_user.orders.where(status: "pending").present? %>
-                <div class="cart_text"><a href="<%= checkout_shopping_carts_path %>" style="    color: #ffffff;">Cart</a></div>
-                <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) %></div>
-              <% elsif !session[:shop_cart].nil? %>
-                <div class="cart_text"><a  href="<%= checkout_shopping_carts_path %>" style=" color: #ffffff;">Cart</a></div>
-                <div class="cart_price" style="color: #ffffff;"><%= number_to_currency(cart_total) if !session[:shop_cart].nil? %></div>
-              <% else %>
-                <div class="cart_text"><a  style="    color: #ffffff;">Cart</a></div>
-                <div class="cart_price" style="color: #ffffff;">$0</div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </a>
     </div>
   </div>
 </div>
