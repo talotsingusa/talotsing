@@ -1,5 +1,6 @@
 class PersonalMessagesController < ApplicationController
   before_action :find_conversation!
+  skip_before_action :verify_authenticity_token, only: [:create]
 
   def new
     redirect_to conversation_path(@conversation) and return if @conversation
