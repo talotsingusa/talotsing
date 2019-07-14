@@ -5,7 +5,7 @@
     <%= render @conversation.personal_messages %>
   </div>
 
-  <%= form_for @personal_message, remote: true do |f| %>
+  <%= form_for @personal_message, multipart: true, remote: true, authenticity_token: true  do |f| %>
     <%= hidden_field_tag 'conversation_id', @conversation.id %>
     <h3>Message</h3>
     <%= f.text_area :body, label: false, placeholder: "Type your message here", size: "100x5" %>
