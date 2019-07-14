@@ -1,11 +1,11 @@
 class PersonalMessagesController < ApplicationController
+  layout "user_dashboard"
   before_action :find_conversation!
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def new
     redirect_to conversation_path(@conversation) and return if @conversation
     @personal_message = current_user.personal_messages.build
-    render layout: "dashboard_application"
   end
 
   def create
