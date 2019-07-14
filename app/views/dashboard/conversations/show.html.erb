@@ -9,6 +9,7 @@
     <%= hidden_field_tag 'conversation_id', @conversation.id %>
     <h3>Message</h3>
     <%= f.text_area :body, label: false, placeholder: "Type your message here", size: "100x5" %>
+    <%= f.file_field :avatar %>
     <br>
     <%= f.submit "Send", class: "btn btn-primary", id: "send_mess" %>
   <% end %>
