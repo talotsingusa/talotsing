@@ -1,13 +1,13 @@
 <h1>New message to <%= @receiver.first_name %></h1>
-
-<%= form_for @personal_message do |f| %>
-  <%= hidden_field_tag 'receiver_id', @receiver.id %>
-
-  <h3>Message</h3>
-  <%= f.text_area :body, label: false, placeholder: "Type your message here", size: "100x5" %>
-  <br>
-  <%= f.submit "Send", class: "btn btn-primary", id: "send_mess" %>
-<% end %>
+<div class="form-group basic-textarea">
+  <%= form_for @personal_message do |f| %>
+    <%= hidden_field_tag 'receiver_id', @receiver.id %>
+    <h3>Message</h3>
+    <%= f.text_area :body, label: false, class:"form-control pl-2 my-0", id:"personal_message_body", size:"100x5" %>
+    <%= f.file_field :avatar %>
+    <%= f.submit "Send", class: "btn btn-info btn-rounded btn-sm waves-effect waves-light float-right", id: "send_mess" %>
+  <% end %>
+</div>
 
 <style>
   #new_personal_message{
