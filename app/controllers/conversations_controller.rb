@@ -1,11 +1,10 @@
 class ConversationsController < ApplicationController
-
+  layout "user_dashboard"
   before_action :set_conversation, except: [:index]
   before_action :check_participating!, except: [:index]
 
   def index
     @conversations = Conversation.participating(current_user).order('updated_at DESC')
-    render layout: "dashboard_application"
     respond_to do |format|
       format.html
       format.js
@@ -14,7 +13,6 @@ class ConversationsController < ApplicationController
 
   def show
     @personal_message = PersonalMessage.new
-    render layout: "dashboard_application"
   end
 
   def new
