@@ -25,5 +25,4 @@
 //= require cocoon
 //= require main.js
 //= require conversations
-//= require search_bar
 //= require cable
