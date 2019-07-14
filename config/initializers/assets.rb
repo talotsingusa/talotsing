@@ -27,6 +27,7 @@ Rails.application.config.assets.precompile += %w( purchase_application.css )
 Rails.application.config.assets.precompile += %w( purchase_application.js )
 Rails.application.config.assets.precompile += %w( sq-payment-form.css )
 Rails.application.config.assets.precompile += %w( sq-payment-form.js )
+Rails.application.config.assets.precompile += %w( user_dashboard_application.js )
 Rails.application.config.assets.precompile += %w( .js .css *.css.scss .svg .eot .woff .ttf)
 
 # Precompile additional assets.
