@@ -17,9 +17,7 @@
                   <hr class="w-100">
                   <p class="mb-0">
                     <%= message.body %>
-                    <% if message.avatar.present? %>
-                      <%= image_tag message.avatar.url(:thumb) %>
-                    <% end %>
+                    <%= image_tag message.avatar.url(:thumb) if message.avatar.present? %>
                   </p>
                 </div>
               </li>
@@ -27,7 +25,7 @@
             <li class="white">
               <div class="form-group basic-textarea">
                 <%= form_for @personal_message, html: { multipart: true }, remote: true do |f| %>
-                  <%= hidden_field_tag 'conversation_id', @conversation.id %>
+                 <%= hidden_field_tag 'conversation_id', @conversation.id %>
                  <%= f.text_area :body, label: false, class:"form-control pl-2 my-0", id:"personal_message_body" %>
                  <%= f.file_field :avatar %>
               </div>
