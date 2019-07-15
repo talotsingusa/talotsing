@@ -7,8 +7,20 @@ class PersonalMessage < ApplicationRecord
       square: '200x200#',
       medium: '300x300>'
   }
-  # Validate the attached image is image/jpg, image/png, etc
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+  has_attached_file :file, styles: { medium: { geometry: "300x300", format: 'flv'}, thumb: { geometry: "100x100#",
+    format: 'jpg', time: 15 }
+    }, :processors => [:ffmpeg]
+
+  validates_attachment_content_type :avatar, content_type: %w(video/mp4 video/3gp video/webm image/jpeg image/jpg image/png)
+
+  def is_video?
+    avatar.content_type =~ %r(video)
+  end
+
+  def is_image?
+    avatar.content_type =~ %r(image)
+  end
   after_create_commit do
     conversation.touch
     NotificationBroadcastJob.perform_later(self)

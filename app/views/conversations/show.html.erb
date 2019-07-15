@@ -17,7 +17,7 @@
                   <hr class="w-100">
                   <p class="mb-0">
                     <%= message.body %>
-                    <%= image_tag message.avatar.url(:thumb) if message.avatar.present? %>
+                    <%= get_file_type_tag(message) if message.avatar.present? %>
                   </p>
                 </div>
               </li>
