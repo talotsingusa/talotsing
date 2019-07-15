@@ -57,6 +57,8 @@ gem 'devise'
 gem 'pry'
 #Handle images in project
 gem 'paperclip', '~> 5.2.0'
+gem 'paperclip-ffmpeg'
+gem 'paperclip-av-transcoder'
 gem 'aws-sdk',   '~> 2.6'
 gem 'jquery-datatables'
 gem 'chosen-rails'
