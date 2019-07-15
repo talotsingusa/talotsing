@@ -4,7 +4,7 @@
       <div class="col-md-6 col-xl-8 pl-md-3 px-lg-auto px-0">
         <div class="chat-message" >
           <ul class="list-unstyled chat" id="conversation-body" data-conversation-id="<%= @conversation.id %>">
-            <% @conversation.personal_messages.last(5).each do |message| %>
+            <% @conversation.personal_messages.each do |message| %>
               <li class="d-flex mb-4">
                 <%= image_tag user_chat_image(message), size: "50x50"%>
                 <div class="chat-body white p-3 ml-2 z-depth-1">
@@ -26,7 +26,7 @@
               <div class="form-group basic-textarea">
                 <%= form_for @personal_message, html: { multipart: true }, remote: true do |f| %>
                  <%= hidden_field_tag 'conversation_id', @conversation.id %>
-                 <%= f.text_area :body, label: false, class:"form-control pl-2 my-0", id:"personal_message_body" %>
+                 <%= f.text_area :body, label: false, class:"form-control pl-2 my-0", id:"personal_message_body", size:"500x10" %>
                  <%= f.file_field :avatar %>
               </div>
             </li>
